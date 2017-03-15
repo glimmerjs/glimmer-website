@@ -1,0 +1,49 @@
+$background-color: #1E293B;
+$primary-text: white;
+$highlight-text: #FF794B;
+
+body {
+  font-family: "Helvetica";
+  text-align: center;
+  background: $background-color;
+  color: $primary-text;
+  margin: 0;
+}
+
+header {
+  min-height: 60px;
+  padding: 20px;
+}
+
+.main-navbar {
+  float: right;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    float: left;
+    margin-left: 20px;
+  }
+
+  a {
+    color: $primary-text;
+    text-decoration: none;
+  }
+}
+
+h1 {
+  color: $highlight-text;
+}
+
+.call-to-action {
+  text-align: center;
+  color: #9B9FA8;
+}
+.call-to-action__highlight {
+  color: $highlight-text;
+}
+.call-to-action--lighter {
+  color: #C8CBCF;
+}
