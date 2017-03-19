@@ -1,0 +1,13 @@
+{
+  "name": "glimmer-website",
+  "version": "1.0.0",
+  "repository": "git@github.com:tomdale/glimmer-website.git",
+  "author": "Max Schoening <max@max.wtf>",
+  "license": "MIT",
+  "scripts": {
+    "start": "harp server ."
+  },
+  "dependencies": {
+    "harp": "^0.23.0"
+  }
+}
