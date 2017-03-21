@@ -1,9 +1,12 @@
+$tint-color: #F5835F;
+
 $background-color: #1E293B;
 $border-color: rgba(255, 255, 255, 0.1);
-$highlight-color: #C9CBCF;
+$highlight-color: #BCCAE2;
 $link-color: white;
+$page-heading-color: white;
 $raised-panel-background: #2D3A4E;
-$section-heading-color: #F5835F;
+$section-heading-color: $tint-color;
 $text-color: #8C9AB1;
 
 body {
@@ -13,6 +16,10 @@ body {
 
 h1, h2, h3, h4 {
   font-weight: normal;
+}
+
+h1 {
+  color: $page-heading-color;
 }
 
 h2 {
@@ -26,10 +33,11 @@ pre {
 a:link,
 a:visited {
   color: $link-color;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
 }
 
+strong,
 em {
   color: $highlight-color;
 }
@@ -48,6 +56,28 @@ em {
 
 .section {
   margin: 4rem 0;
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+.logo::before {
+  background-color: $tint-color;
+  background-image: url(/images/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 2.75rem;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+  width: 2.75rem;
 }
 
 .footer {
