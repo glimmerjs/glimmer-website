@@ -42,6 +42,10 @@ em {
   color: $highlight-color;
 }
 
+code {
+  font-family: Menlo, Monaco, monospace;
+}
+
 .index {
   background: $background-color;
   color: $text-color;
