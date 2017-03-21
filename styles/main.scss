@@ -1,13 +1,26 @@
 $background-color: #1E293B;
+$border-color: rgba(255, 255, 255, 0.1);
 $highlight-color: #C9CBCF;
 $link-color: white;
+$raised-panel-background: #2D3A4E;
 $section-heading-color: #F5835F;
-$text-color: #9DA1A8;
-
-$raised-panel-background: rgba(255, 255, 255, 0.1);
+$text-color: #8C9AB1;
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+h2 {
+  color: $section-heading-color;
+}
+
+pre {
+  margin: 0;
 }
 
 a:link,
@@ -19,15 +32,6 @@ a:visited {
 
 em {
   color: $highlight-color;
-}
-
-h2 {
-  color: $section-heading-color;
-  font-weight: normal;
-}
-
-pre {
-  margin: 0;
 }
 
 .index {
