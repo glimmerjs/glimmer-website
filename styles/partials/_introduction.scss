@@ -5,3 +5,37 @@
 .introduction code {
   color: white;
 }
+
+.introduction ol {
+  margin-bottom: 2rem;
+  padding: 0;
+  position: relative;
+}
+
+.introduction li {
+  counter-increment: my-counter;
+  list-style: none;
+  margin-bottom: 1rem;
+  padding-left: calc(2.875rem + 1rem);
+}
+
+.introduction li:before {
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid $border-color;
+  content: counter(my-counter);
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 300;
+  height: 2.875rem;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  width: 2.875rem;
+}
+
+.introduction .video {
+  display: flex;
+  min-height: 200px;
+  width: 100%;
+}
