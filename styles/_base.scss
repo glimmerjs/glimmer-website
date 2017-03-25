@@ -1,0 +1,36 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+h1 {
+  color: $page-heading-color;
+}
+
+h2 {
+  color: $section-heading-color;
+}
+
+pre {
+  margin: 0;
+}
+
+a:link,
+a:visited {
+  color: $link-color;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+strong,
+em {
+  color: $highlight-color;
+}
+
+code {
+  font-family: Menlo, Monaco, monospace;
+}

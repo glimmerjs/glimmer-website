@@ -1,91 +1,12 @@
-$tint-color: #F5835F;
+@import "_config";
+@import "_base";
 
-$background-color: #1E293B;
-$border-color: rgba(255, 255, 255, 0.1);
-$highlight-color: #BCCAE2;
-$link-color: white;
-$page-heading-color: white;
-$raised-panel-background: #2D3A4E;
-$section-heading-color: $tint-color;
-$text-color: #8C9AB1;
+@import "components/_button";
+@import "components/_logo";
+@import "components/_page-section";
+@import "components/_raised-panel";
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-}
+@import "pages/_index";
 
-h1, h2, h3, h4 {
-  font-weight: normal;
-}
-
-h1 {
-  color: $page-heading-color;
-}
-
-h2 {
-  color: $section-heading-color;
-}
-
-pre {
-  margin: 0;
-}
-
-a:link,
-a:visited {
-  color: $link-color;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-strong,
-em {
-  color: $highlight-color;
-}
-
-code {
-  font-family: Menlo, Monaco, monospace;
-}
-
-.index {
-  background: $background-color;
-  color: $text-color;
-}
-
-.raised-panel {
-  background: $raised-panel-background;
-  border-radius: 5px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
-  padding: 1rem;
-}
-
-.section {
-  margin: 4rem 0;
-}
-
-.logo {
-  font-size: 1.75rem;
-  font-style: italic;
-  font-weight: 600;
-  text-transform: lowercase;
-}
-
-.logo::before {
-  background-color: $tint-color;
-  background-image: url(/images/logo.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 2rem;
-  border-radius: 50%;
-  content: '';
-  display: inline-block;
-  height: 2.75rem;
-  margin-right: 0.75rem;
-  vertical-align: middle;
-  width: 2.75rem;
-}
-
-.footer {
-  border-top: 1px solid $border-color;
-  font-size: 0.875rem;
-  padding-top: 1rem;
-}
+@import "partials/_introduction";
+@import "partials/_footer";

@@ -1,0 +1,21 @@
+.logo {
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+.logo::before {
+  background-color: $tint-color;
+  background-image: url(/images/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 2.75rem;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+  width: 2.75rem;
+}
