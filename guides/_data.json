@@ -5,10 +5,10 @@
   "getting-started": {
     "title": "Getting Started"
   },
-  "The Glimmer Instance": {
-    "title": "Glimmer Instance"
+  "glimmer-instance": {
+    "title": "The Glimmer Instance"
   },
-  "Template Syntax": {
+  "template-syntax": {
     "title": "Template Syntax"
   },
   "computed-and-tracked-properties": {
