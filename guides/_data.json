@@ -1,5 +1,20 @@
 {
+  "installation": {
+    "title": "Installation"
+  },
   "getting-started": {
     "title": "Getting Started"
+  },
+  "The Glimmer Instance": {
+    "title": "Glimmer Instance"
+  },
+  "Template Syntax": {
+    "title": "Template Syntax"
+  },
+  "Computed and Tracked Properties": {
+    "title": "computed-and-tracked-properties"
+  },
+  "Class and Style Bindings": {
+    "title": "style-bindings"
   }
 }
