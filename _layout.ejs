@@ -1,23 +1,27 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Glimmer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Glimmer</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto|Robot+Mono">
-    <link rel="stylesheet" href="/styles/normalize.css">
-    <link rel="stylesheet" href="/styles/basscss.css">
-    <link rel="stylesheet" href="/styles/main.css">
-  </head>
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto|Robot+Mono">
+      <link rel="stylesheet" href="/styles/normalize.css">
+      <link rel="stylesheet" href="/styles/basscss.css">
+      <link rel="stylesheet" href="/styles/main.css">
+    </head>
 
-  <body class="<%= current.source %>">
-    <div class="max-width-4 mx-auto p2">
-      <% for (let slug in public.guides._data) { %>
-        <li><a href="/posts/<%= slug %>"><%= public.guides._data[slug].title %></a></li>
-      <% }; %>
+    <body class="<%= current.source %>">
+      <div class="max-width-4 mx-auto p2">
+        <% if (current.path[0] == 'guides') {  %>
+          <% for (let slug in public.guides._data) { %>
+            <li><a href="/posts/<%= slug %>"><%= public.guides._data[slug].title %></a></li>
+          <% }; %>
 
-      <%- yield %>
-    </div>
-  </body>
+          <%- yield %>
+        <% } else { %>
+          <%- yield %>
+        <% } %>
+      </div>
+    </body>
 </html>
