@@ -11,10 +11,10 @@
   "Template Syntax": {
     "title": "Template Syntax"
   },
-  "Computed and Tracked Properties": {
-    "title": "computed-and-tracked-properties"
+  "computed-and-tracked-properties": {
+    "title": "Computed and Tracked Properties"
   },
-  "Class and Style Bindings": {
-    "title": "style-bindings"
+  "style-bindings": {
+    "title": "Class and Style Bindings"
   }
 }

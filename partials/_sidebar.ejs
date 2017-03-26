@@ -1,0 +1,5 @@
+<ul class="sidebar">
+  <% for (let slug in public.guides._data) { %>
+    <li><a href="/guides/<%= slug %>"><%= public.guides._data[slug].title %></a></li>
+  <% }; %>
+</ul>
