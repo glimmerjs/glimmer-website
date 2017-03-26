@@ -1,4 +1,22 @@
 .index {
   background: $background-color;
   color: $text-color;
+
+  h1 {
+    color: $page-heading-color;
+  }
+
+  h2 {
+    color: $section-heading-color;
+  }
+
+  a:link,
+  a:visited {
+    color: $link-color;
+  }
+
+  strong,
+  em {
+    color: $highlight-color;
+  }
 }

@@ -13,6 +13,10 @@
 
   <body class="<%= current.source %>">
     <div class="max-width-4 mx-auto p2">
+      <% for (let slug in public.guides._data) { %>
+        <li><a href="/posts/<%= slug %>"><%= public.guides._data[slug].title %></a></li>
+      <% }; %>
+
       <%- yield %>
     </div>
   </body>
