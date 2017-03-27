@@ -2,5 +2,10 @@
   background: $raised-panel-background;
   border-radius: 5px;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
   padding: 1rem;
+}
+
+.raised-panel--no-padding {
+  padding: 0;
 }
