@@ -1,5 +1,5 @@
 .introduction {
-  border-top: 1px solid $border-color;
+  border-top: 1px solid $dark-border-color;
 }
 
 .introduction code {
@@ -22,7 +22,7 @@
 .introduction li:before {
   align-items: center;
   border-radius: 50%;
-  border: 1px solid $border-color;
+  border: 1px solid $dark-border-color;
   content: counter(my-counter);
   display: flex;
   font-size: 1.2rem;

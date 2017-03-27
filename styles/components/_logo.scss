@@ -23,3 +23,7 @@
 .logo a {
   color: inherit;
 }
+
+.dark .logo::before {
+  background-color: $dark-tint-color;
+}

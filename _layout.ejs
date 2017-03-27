@@ -11,7 +11,7 @@
       <link rel="stylesheet" href="/styles/main.css">
     </head>
 
-    <body class="<%= current.source %>">
+    <body class="<%= current.source %> <%= current.path[0] == 'index' ? 'dark' : '' %>">
       <div class="max-width-4 mx-auto p2">
         <%- partial("partials/_header") %>
 

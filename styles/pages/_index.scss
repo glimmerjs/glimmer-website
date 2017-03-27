@@ -1,22 +1,22 @@
 .index {
-  background: $background-color;
-  color: $text-color;
+  background: $dark-background-color;
+  color: $dark-text-color;
 
   h1 {
-    color: $page-heading-color;
+    color: $dark-page-heading-color;
   }
 
   h2 {
-    color: $section-heading-color;
+    color: $dark-section-heading-color;
   }
 
   a:link,
   a:visited {
-    color: $link-color;
+    color: $dark-link-color;
   }
 
   strong,
   em {
-    color: $highlight-color;
+    color: $dark-highlight-color;
   }
 }

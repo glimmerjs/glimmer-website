@@ -1,4 +1,6 @@
 body {
+  background: $background-color;
+  color: $text-color;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.5;
 }
@@ -7,15 +9,53 @@ h1, h2, h3, h4 {
   font-weight: normal;
 }
 
+h1 {
+  color: $page-heading-color;
+}
+
+h2 {
+  color: $section-heading-color;
+}
+
 pre {
   margin: 0;
 }
 
 a {
+  color: $link-color;
   font-weight: 600;
   text-decoration: none;
 }
 
 code {
   font-family: "Roboto Mono", Menlo, Monaco, monospace;
+}
+
+strong,
+em {
+  color: $highlight-color;
+}
+
+.dark {
+  body {
+    background: $dark-background-color;
+    color: $dark-text-color;
+  }
+
+  h1 {
+    color: $dark-page-heading-color;
+  }
+
+  h2 {
+    color: $dark-section-heading-color;
+  }
+
+  a {
+    color: $dark-link-color;
+  }
+
+  strong,
+  em {
+    color: $dark-highlight-color;
+  }
 }

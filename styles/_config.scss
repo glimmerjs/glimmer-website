@@ -1,12 +1,12 @@
-$tint-color: #F5835F;
-$background-color: #1E293B;
-$border-color: rgba(255, 255, 255, 0.1);
+$tint-color: #F37746;
+$background-color: #FDFDFD;
+$border-color: rgba(0, 0, 0, 0.1);
 $highlight-color: #BCCAE2;
-$link-color: white;
-$page-heading-color: white;
+$link-color: #1E293C;
+$page-heading-color: $tint-color;
 $raised-panel-background: #2D3A4E;
 $section-heading-color: $tint-color;
-$text-color: #8C9AB1;
+$text-color: #1E293B;
 
 $dark-tint-color: #F5835F;
 $dark-background-color: #1E293B;
@@ -15,5 +15,5 @@ $dark-highlight-color: #BCCAE2;
 $dark-link-color: white;
 $dark-page-heading-color: white;
 $dark-raised-panel-background: #2D3A4E;
-$dark-section-heading-color: $tint-color;
+$dark-section-heading-color: $dark-tint-color;
 $dark-text-color: #8C9AB1;

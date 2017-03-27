@@ -3,3 +3,7 @@
   font-size: 0.875rem;
   padding-top: 1rem;
 }
+
+.dark .footer {
+  border-top: 1px solid $dark-border-color;
+}
