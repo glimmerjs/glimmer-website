@@ -1,3 +1,4 @@
 {
-  "root": "www/"
+  "root": "www/",
+  "clean_urls": true
 }
