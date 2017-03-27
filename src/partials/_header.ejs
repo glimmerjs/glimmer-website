@@ -7,7 +7,9 @@
     <div>
       <nav>
         <ul class="list-reset">
-          <li class="inline-block mr2"><a href="/guides/getting-started">Guides</a></li>
+          <% if (showGuides) { %>
+            <li class="inline-block mr2"><a href="/guides/getting-started">Guides</a></li>
+          <% } %>
           <li class="inline-block mr2"><a href="/api">API Docs</a></li>
           <li class="inline-block"><a href="https://github.com/glimmer">GitHub</a></li>
         </ul>

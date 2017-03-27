@@ -20,7 +20,12 @@
         </li>
       </ol>
 
-      <a class="button" href="/guides/getting-started">Getting Started Guide</a>
+
+      <% if (showGuides) { %>
+        <a class="button" href="/guides/getting-started">Getting Started Guide</a>
+      <% } else { %>
+        <a class="button" href="/api">Browse API Docs</a>
+      <% } %>
     </div>
 
     <div class="md-col md-col-6 px2">
