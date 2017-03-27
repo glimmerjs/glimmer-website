@@ -5,7 +5,7 @@
   "author": "Max Schoening <max@max.wtf>",
   "license": "MIT",
   "scripts": {
-    "start": "harp server .",
+    "dev": "harp server ./src",
     "heroku-postbuild": "harp compile src www"
   },
   "dependencies": {
