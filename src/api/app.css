@@ -544,6 +544,7 @@ html,
     color: #2A7F41; }
 
 .method-signature, .property-definition {
+  flex-wrap: wrap;
   padding: 10px 0px;
   font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
   display: flex;
