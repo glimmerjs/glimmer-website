@@ -170,8 +170,8 @@ var main = {
           }
         ],
         "comment": {
-          "shortText": "The `Component` class defines an encapsulated UI element that is rendered to\nthe DOM. A component is made up of a template and, optionally, this component\nobject.",
-          "text": "## Defining a Component\n\nTo define a component, subclass `Component` and add your own properties,\nmethods and lifecycle hooks:\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n}\n```\n\n## Lifecycle Hooks\n\nLifecycle hooks allow you to respond to changes to a component, such as when\nit gets created, rendered, updated or destroyed. To add a lifecycle hook to a\ncomponent, implement the hook as a method on your component subclass.\n\nFor example, to be notified when Glimmer has rendered your component so you\ncan attach a legacy jQuery plugin, implement the `didInsertElement()` method:\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n  didInsertElement() {\n    $(this.element).pickadate();\n  }\n}\n```\n\n## Data for Templates\n\n`Component`s have two different kinds of data, or state, that can be\ndisplayed in templates:\n\n1. Arguments\n2. Properties\n\nArguments are data that is passed in to a component from its parent\ncomponent. For example, if I have a `user-greeting` component, I can pass it\na name and greeting to use:\n\n```hbs\n<user-greeting @name=\"Ricardo\" @greeting=\"Olá\">\n```\n\nInside my `user-greeting` template, I can access the `@name` and `@greeting`\narguments that I've been given:\n\n```hbs\n{{@greeting}}, {{@name}}!\n```\n\nArguments are also available inside my component:\n\n```ts\nconsole.log(this.args.greeting); // prints \"Olá\"\n```\n\nProperties, on the other hand, are internal to the component and declared in\nthe class. You can use properties to store data that you want to show in the\ntemplate, or pass to another component as an argument.\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n  user = {\n    name: 'Robbie'\n  }\n}\n```\n\nIn the above example, we've defined a component with a `user` property that\ncontains an object with its own `name` property.\n\nWe can render that property in our template:\n\n```hbs\nHello, {{user.name}}!\n```\n\nWe can also take that property and pass it as an argument to the\n`user-greeting` component we defined above:\n\n```hbs\n<user-greeting @greeting=\"Hello\" @name={{user.name}} />\n```\n\n## Arguments vs. Properties\n\nRemember, arguments are data that was given to your component by its parent\ncomponent, and properties are data your component has defined for itself.\n\nYou can tell the difference between arguments and properties in templates\nbecause arguments always start with an `@` sign (think \"A is for arguments\"):\n\n```hbs\n{{@firstName}}\n```\n\nWe know that `@firstName` came from the parent component, not the current\ncomponent, because it starts with `@` and is therefore an argument.\n\nOn the other hand, if we see:\n\n```hbs\n{{name}}\n```\n\nWe know that `name` is a property on the component. If we want to know where\nthe data is coming from, we can go look at our component class to find out.\n\nInside the component itself, arguments always show up inside the component's\n`args` property. For example, if `{{@firstName}}` is `Tom` in the template,\ninside the component `this.args.firstName` would also be `Tom`.\n"
+          "shortText": "<p>The <code>Component</code> class defines an encapsulated UI element that is rendered to\nthe DOM. A component is made up of a template and, optionally, this component\nobject.</p>\n",
+          "text": "<h2 id=\"defining-a-component\">Defining a Component</h2>\n<p>To define a component, subclass <code>Component</code> and add your own properties,\nmethods and lifecycle hooks:</p>\n<pre><code class=\"lang-ts\"><span class=\"hljs-keyword\">import</span> Component <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'@glimmer/component'</span>;\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-keyword\">extends</span> Component {\n}\n</code></pre>\n<h2 id=\"lifecycle-hooks\">Lifecycle Hooks</h2>\n<p>Lifecycle hooks allow you to respond to changes to a component, such as when\nit gets created, rendered, updated or destroyed. To add a lifecycle hook to a\ncomponent, implement the hook as a method on your component subclass.</p>\n<p>For example, to be notified when Glimmer has rendered your component so you\ncan attach a legacy jQuery plugin, implement the <code>didInsertElement()</code> method:</p>\n<pre><code class=\"lang-ts\"><span class=\"hljs-keyword\">import</span> Component <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'@glimmer/component'</span>;\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-keyword\">extends</span> Component {\n  didInsertElement() {\n    $(<span class=\"hljs-keyword\">this</span>.element).pickadate();\n  }\n}\n</code></pre>\n<h2 id=\"data-for-templates\">Data for Templates</h2>\n<p><code>Component</code>s have two different kinds of data, or state, that can be\ndisplayed in templates:</p>\n<ol>\n<li>Arguments</li>\n<li>Properties</li>\n</ol>\n<p>Arguments are data that is passed in to a component from its parent\ncomponent. For example, if I have a <code>user-greeting</code> component, I can pass it\na name and greeting to use:</p>\n<pre><code class=\"lang-hbs\"><span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">user-greeting</span> @<span class=\"hljs-attr\">name</span>=<span class=\"hljs-string\">\"Ricardo\"</span> @<span class=\"hljs-attr\">greeting</span>=<span class=\"hljs-string\">\"Olá\"</span>&gt;</span></span>\n</code></pre>\n<p>Inside my <code>user-greeting</code> template, I can access the <code>@name</code> and <code>@greeting</code>\narguments that I&#39;ve been given:</p>\n<pre><code class=\"lang-hbs\"><span class=\"xml\"></span><span class=\"hljs-template-variable\">{{@greeting}}</span><span class=\"xml\">, </span><span class=\"hljs-template-variable\">{{@name}}</span><span class=\"xml\">!</span>\n</code></pre>\n<p>Arguments are also available inside my component:</p>\n<pre><code class=\"lang-ts\"><span class=\"hljs-built_in\">console</span>.log(<span class=\"hljs-keyword\">this</span>.args.greeting); <span class=\"hljs-comment\">// prints \"Olá\"</span>\n</code></pre>\n<p>Properties, on the other hand, are internal to the component and declared in\nthe class. You can use properties to store data that you want to show in the\ntemplate, or pass to another component as an argument.</p>\n<pre><code class=\"lang-ts\"><span class=\"hljs-keyword\">import</span> Component <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">'@glimmer/component'</span>;\n\n<span class=\"hljs-keyword\">export</span> <span class=\"hljs-keyword\">default</span> <span class=\"hljs-keyword\">class</span> <span class=\"hljs-keyword\">extends</span> Component {\n  user = {\n    name: <span class=\"hljs-string\">'Robbie'</span>\n  }\n}\n</code></pre>\n<p>In the above example, we&#39;ve defined a component with a <code>user</code> property that\ncontains an object with its own <code>name</code> property.</p>\n<p>We can render that property in our template:</p>\n<pre><code class=\"lang-hbs\"><span class=\"xml\">Hello, </span><span class=\"hljs-template-variable\">{{user.name}}</span><span class=\"xml\">!</span>\n</code></pre>\n<p>We can also take that property and pass it as an argument to the\n<code>user-greeting</code> component we defined above:</p>\n<pre><code class=\"lang-hbs\"><span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">user-greeting</span> @<span class=\"hljs-attr\">greeting</span>=<span class=\"hljs-string\">\"Hello\"</span> @<span class=\"hljs-attr\">name</span>=</span></span><span class=\"hljs-template-variable\">{{user.name}}</span><span class=\"xml\"><span class=\"hljs-tag\"> /&gt;</span></span>\n</code></pre>\n<h2 id=\"arguments-vs-properties\">Arguments vs. Properties</h2>\n<p>Remember, arguments are data that was given to your component by its parent\ncomponent, and properties are data your component has defined for itself.</p>\n<p>You can tell the difference between arguments and properties in templates\nbecause arguments always start with an <code>@</code> sign (think &quot;A is for arguments&quot;):</p>\n<pre><code class=\"lang-hbs\"><span class=\"xml\"></span><span class=\"hljs-template-variable\">{{@firstName}}</span><span class=\"xml\"></span>\n</code></pre>\n<p>We know that <code>@firstName</code> came from the parent component, not the current\ncomponent, because it starts with <code>@</code> and is therefore an argument.</p>\n<p>On the other hand, if we see:</p>\n<pre><code class=\"lang-hbs\"><span class=\"xml\"></span><span class=\"hljs-template-variable\">{{name}}</span><span class=\"xml\"></span>\n</code></pre>\n<p>We know that <code>name</code> is a property on the component. If we want to know where\nthe data is coming from, we can go look at our component class to find out.</p>\n<p>Inside the component itself, arguments always show up inside the component&#39;s\n<code>args</code> property. For example, if <code>{{@firstName}}</code> is <code>Tom</code> in the template,\ninside the component <code>this.args.firstName</code> would also be <code>Tom</code>.</p>\n"
         },
         "constructors": [
           {
@@ -199,7 +199,7 @@ var main = {
               }
             ],
             "comment": {
-              "shortText": "Constructs a new component and assigns itself the passed properties. You\nshould not construct new components yourself. Instead, Glimmer will\ninstantiate new components automatically as it renders.",
+              "shortText": "<p>Constructs a new component and assigns itself the passed properties. You\nshould not construct new components yourself. Instead, Glimmer will\ninstantiate new components automatically as it renders.</p>\n",
               "text": "",
               "tags": []
             },
@@ -221,7 +221,7 @@ var main = {
                   }
                 ],
                 "comment": {
-                  "shortText": "Constructs a new component and assigns itself the passed properties. You\nshould not construct new components yourself. Instead, Glimmer will\ninstantiate new components automatically as it renders.",
+                  "shortText": "<p>Constructs a new component and assigns itself the passed properties. You\nshould not construct new components yourself. Instead, Glimmer will\ninstantiate new components automatically as it renders.</p>\n",
                   "text": "",
                   "tags": []
                 },
@@ -260,10 +260,6 @@ var main = {
                     "fullName": "Component.constructor.new Component.options",
                     "hierarchy": "Parameter options:object",
                     "kindString": "Parameter",
-                    "comment": {
-                      "shortText": "\n",
-                      "text": ""
-                    },
                     "typeInfo": {
                       "isArray": false,
                       "name": "object"
@@ -300,8 +296,8 @@ var main = {
               }
             ],
             "comment": {
-              "shortText": "Named arguments passed to the component from its parent component.\nThey can be accessed in JavaScript via `this.args.argumentName` and in the template via `@argumentName`.",
-              "text": "Say you have the following component, which will have two `args`, `firstName` and `lastName`:\n\n```hbs\n<my-component @firstName=\"Arthur\" @lastName=\"Dent\" />\n```\n\nIf you needed to calculate `fullName` by combining both of them, you would do:\n\n```ts\ndidInsertElement() {\n  console.log(\"Hi,My full name is ${this.args.firstName} ${this.args.lastName\");\n}\n```\n\nWhile in the template you could do:\n\n```hbs\n<p>Welcome, {{@firstName}} {{@lastName}}!</p>\n```\n\n"
+              "shortText": "<p>Named arguments passed to the component from its parent component.\nThey can be accessed in JavaScript via <code>this.args.argumentName</code> and in the template via <code>@argumentName</code>.</p>\n",
+              "text": "<p>Say you have the following component, which will have two <code>args</code>, <code>firstName</code> and <code>lastName</code>:</p>\n<pre><code class=\"lang-hbs\"><span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">my-component</span> @<span class=\"hljs-attr\">firstName</span>=<span class=\"hljs-string\">\"Arthur\"</span> @<span class=\"hljs-attr\">lastName</span>=<span class=\"hljs-string\">\"Dent\"</span> /&gt;</span></span>\n</code></pre>\n<p>If you needed to calculate <code>fullName</code> by combining both of them, you would do:</p>\n<pre><code class=\"lang-ts\">didInsertElement() {\n  <span class=\"hljs-built_in\">console</span>.log(<span class=\"hljs-string\">\"Hi,My full name is ${this.args.firstName} ${this.args.lastName\"</span>);\n}\n</code></pre>\n<p>While in the template you could do:</p>\n<pre><code class=\"lang-hbs\"><span class=\"xml\"><span class=\"hljs-tag\">&lt;<span class=\"hljs-name\">p</span>&gt;</span>Welcome, </span><span class=\"hljs-template-variable\">{{@firstName}}</span><span class=\"xml\"> </span><span class=\"hljs-template-variable\">{{@lastName}}</span><span class=\"xml\">!<span class=\"hljs-tag\">&lt;/<span class=\"hljs-name\">p</span>&gt;</span></span>\n</code></pre>\n"
             },
             "typeInfo": {
               "isArray": false,
@@ -333,7 +329,7 @@ var main = {
               }
             ],
             "comment": {
-              "shortText": "Development-mode only name of the component, useful for debugging.",
+              "shortText": "<p>Development-mode only name of the component, useful for debugging.</p>\n",
               "text": ""
             },
             "typeInfo": {
@@ -366,7 +362,7 @@ var main = {
               }
             ],
             "comment": {
-              "shortText": "The element corresponding to the top-level element of the component's template.\nYou should not try to access this property until after the component's `didInsertElement()`\nlifecycle hook is called.",
+              "shortText": "<p>The element corresponding to the top-level element of the component&#39;s template.\nYou should not try to access this property until after the component&#39;s <code>didInsertElement()</code>\nlifecycle hook is called.</p>\n",
               "text": ""
             },
             "typeInfo": {
@@ -418,7 +414,7 @@ var main = {
                   }
                 ],
                 "comment": {
-                  "shortText": "Called when the component has been inserted into the DOM.\nOverride this function to do any set up that requires an element in the document body.",
+                  "shortText": "<p>Called when the component has been inserted into the DOM.\nOverride this function to do any set up that requires an element in the document body.</p>\n",
                   "text": ""
                 },
                 "typeInfo": {
@@ -470,7 +466,7 @@ var main = {
                   }
                 ],
                 "comment": {
-                  "shortText": "Called when the component has updated and rerendered itself.\nCalled only during a rerender, not during an initial render.",
+                  "shortText": "<p>Called when the component has updated and rerendered itself.\nCalled only during a rerender, not during an initial render.</p>\n",
                   "text": ""
                 },
                 "typeInfo": {
@@ -708,7 +704,7 @@ var main = {
                 "kindString": "Parameter",
                 "comment": {
                   "shortText": "",
-                  "text": "Optional dependents to be tracked.\n"
+                  "text": "<p>Optional dependents to be tracked.</p>\n"
                 },
                 "typeInfo": {
                   "isArray": true,
@@ -920,12 +916,14 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 17,
-                "character": 18
+                "character": 18,
+                "url": null
               },
               {
                 "fileName": "environment.ts",
                 "line": 39,
-                "character": 11
+                "character": 11,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -946,7 +944,8 @@ var main = {
                     {
                       "fileName": "environment.ts",
                       "line": 39,
-                      "character": 16
+                      "character": 16,
+                      "url": null
                     }
                   ],
                   "callSignatures": [
@@ -962,7 +961,8 @@ var main = {
                         {
                           "fileName": "environment.ts",
                           "line": 39,
-                          "character": 16
+                          "character": 16,
+                          "url": null
                         }
                       ],
                       "typeInfo": {
@@ -1021,7 +1021,8 @@ var main = {
                   {
                     "fileName": "environment.ts",
                     "line": 39,
-                    "character": 16
+                    "character": 16,
+                    "url": null
                   }
                 ],
                 "callSignatures": [
@@ -1037,7 +1038,8 @@ var main = {
                       {
                         "fileName": "environment.ts",
                         "line": 39,
-                        "character": 16
+                        "character": 16,
+                        "url": null
                       }
                     ],
                     "typeInfo": {
@@ -1103,7 +1105,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 19,
-                "character": 22
+                "character": 22,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1124,7 +1127,8 @@ var main = {
                     {
                       "fileName": "helpers/user-helper.ts",
                       "line": 19,
-                      "character": 24
+                      "character": 24,
+                      "url": null
                     }
                   ],
                   "callSignatures": [
@@ -1140,7 +1144,8 @@ var main = {
                         {
                           "fileName": "helpers/user-helper.ts",
                           "line": 19,
-                          "character": 24
+                          "character": 24,
+                          "url": null
                         }
                       ],
                       "typeInfo": {
@@ -1199,7 +1204,8 @@ var main = {
                   {
                     "fileName": "helpers/user-helper.ts",
                     "line": 19,
-                    "character": 24
+                    "character": 24,
+                    "url": null
                   }
                 ],
                 "callSignatures": [
@@ -1215,7 +1221,8 @@ var main = {
                       {
                         "fileName": "helpers/user-helper.ts",
                         "line": 19,
-                        "character": 24
+                        "character": 24,
+                        "url": null
                       }
                     ],
                     "typeInfo": {
@@ -1283,7 +1290,8 @@ var main = {
               {
                 "fileName": "environment.ts",
                 "line": 52,
-                "character": 21
+                "character": 21,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1311,7 +1319,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 89,
-                "character": 20
+                "character": 20,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1325,7 +1334,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 79,
-                    "character": 19
+                    "character": 19,
+                    "url": null
                   }
                 ],
                 "parent": {
@@ -1359,7 +1369,8 @@ var main = {
               {
                 "fileName": "environment.ts",
                 "line": 53,
-                "character": 21
+                "character": 21,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1387,7 +1398,8 @@ var main = {
                   {
                     "fileName": "environment.ts",
                     "line": 54,
-                    "character": 8
+                    "character": 8,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -1401,7 +1413,8 @@ var main = {
                       {
                         "fileName": "helpers/action.ts",
                         "line": 4,
-                        "character": 35
+                        "character": 35,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -1582,7 +1595,8 @@ var main = {
           {
             "fileName": "application.ts",
             "line": 45,
-            "character": 32
+            "character": 32,
+            "url": null
           }
         ],
         "constructors": [
@@ -1606,7 +1620,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 59,
-                "character": 31
+                "character": 31,
+                "url": null
               }
             ],
             "constructorSignatures": [
@@ -1622,7 +1637,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 59,
-                    "character": 31
+                    "character": 31,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -1636,7 +1652,8 @@ var main = {
                       {
                         "fileName": "application.ts",
                         "line": 45,
-                        "character": 32
+                        "character": 32,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -1670,7 +1687,8 @@ var main = {
                           {
                             "fileName": "application.ts",
                             "line": 28,
-                            "character": 35
+                            "character": 35,
+                            "url": null
                           }
                         ],
                         "parent": {
@@ -1708,7 +1726,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 52,
-                "character": 20
+                "character": 20,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1736,7 +1755,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 59,
-                "character": 22
+                "character": 22,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1764,7 +1784,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 58,
-                "character": 23
+                "character": 23,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1778,7 +1799,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 33,
-                    "character": 28
+                    "character": 28,
+                    "url": null
                   }
                 ],
                 "parent": {
@@ -1810,7 +1832,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 51,
-                "character": 19
+                "character": 19,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1838,7 +1861,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 53,
-                "character": 23
+                "character": 23,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1866,11 +1890,12 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 55,
-                "character": 19
+                "character": 19,
+                "url": null
               }
             ],
             "comment": {
-              "shortText": "Whether the initial render has completed.",
+              "shortText": "<p>Whether the initial render has completed.</p>\n",
               "text": ""
             },
             "typeInfo": {
@@ -1898,7 +1923,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 49,
-                "character": 16
+                "character": 16,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1912,7 +1938,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 38,
-                    "character": 24
+                    "character": 24,
+                    "url": null
                   }
                 ],
                 "parent": {
@@ -1944,7 +1971,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 50,
-                "character": 21
+                "character": 21,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -1972,11 +2000,12 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 57,
-                "character": 20
+                "character": 20,
+                "url": null
               }
             ],
             "comment": {
-              "shortText": "Whether a re-render has been scheduled.",
+              "shortText": "<p>Whether a re-render has been scheduled.</p>\n",
               "text": ""
             },
             "typeInfo": {
@@ -2004,7 +2033,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 48,
-                "character": 12
+                "character": 12,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -2018,7 +2048,8 @@ var main = {
                   {
                     "fileName": "environment.ts",
                     "line": 57,
-                    "character": 32
+                    "character": 32,
+                    "url": null
                   }
                 ],
                 "parent": {
@@ -2050,7 +2081,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 47,
-                "character": 17
+                "character": 17,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -2078,7 +2110,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 46,
-                "character": 17
+                "character": 17,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -2108,7 +2141,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 110,
-                "character": 6
+                "character": 6,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2124,7 +2158,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 110,
-                    "character": 6
+                    "character": 6,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2154,7 +2189,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 165,
-                "character": 12
+                "character": 12,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2170,7 +2206,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 165,
-                    "character": 12
+                    "character": 12,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2234,7 +2271,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 161,
-                "character": 10
+                "character": 10,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2250,11 +2288,12 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 161,
-                    "character": 10
+                    "character": 10,
+                    "url": null
                   }
                 ],
                 "comment": {
-                  "shortText": "Owner interface implementation",
+                  "shortText": "<p>Owner interface implementation</p>\n",
                   "text": ""
                 },
                 "typeInfo": {
@@ -2318,7 +2357,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 93,
-                "character": 15
+                "character": 15,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2334,7 +2374,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 93,
-                    "character": 15
+                    "character": 15,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2364,7 +2405,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 70,
-                "character": 14
+                "character": 14,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2380,7 +2422,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 70,
-                    "character": 14
+                    "character": 14,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2410,7 +2453,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 105,
-                "character": 12
+                "character": 12,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2426,7 +2470,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 105,
-                    "character": 12
+                    "character": 12,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2456,7 +2501,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 169,
-                "character": 8
+                "character": 8,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2472,7 +2518,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 169,
-                    "character": 8
+                    "character": 8,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2536,7 +2583,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 66,
-                "character": 21
+                "character": 21,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2552,7 +2600,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 66,
-                    "character": 21
+                    "character": 21,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2582,7 +2631,8 @@ var main = {
                           {
                             "fileName": "application.ts",
                             "line": 33,
-                            "character": 28
+                            "character": 28,
+                            "url": null
                           }
                         ],
                         "parent": {
@@ -2618,7 +2668,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 118,
-                "character": 8
+                "character": 8,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2634,7 +2685,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 118,
-                    "character": 8
+                    "character": 8,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2664,7 +2716,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 137,
-                "character": 17
+                "character": 17,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2680,7 +2733,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 137,
-                    "character": 17
+                    "character": 17,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2770,7 +2824,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 142,
-                "character": 10
+                "character": 10,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2786,7 +2841,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 142,
-                    "character": 10
+                    "character": 10,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2816,7 +2872,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 148,
-                "character": 18
+                "character": 18,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -2832,7 +2889,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 148,
-                    "character": 18
+                    "character": 18,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2875,7 +2933,8 @@ var main = {
           {
             "fileName": "application-registry.ts",
             "line": 13,
-            "character": 40
+            "character": 40,
+            "url": null
           }
         ],
         "constructors": [
@@ -2899,7 +2958,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 15,
-                "character": 30
+                "character": 30,
+                "url": null
               }
             ],
             "constructorSignatures": [
@@ -2915,7 +2975,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 15,
-                    "character": 30
+                    "character": 30,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -2929,7 +2990,8 @@ var main = {
                       {
                         "fileName": "application-registry.ts",
                         "line": 13,
-                        "character": 40
+                        "character": 40,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -2999,7 +3061,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 14,
-                "character": 19
+                "character": 19,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -3027,7 +3090,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 15,
-                "character": 19
+                "character": 19,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -3057,7 +3121,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 72,
-                "character": 36
+                "character": 36,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3073,7 +3138,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 72,
-                    "character": 36
+                    "character": 36,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3121,7 +3187,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 68,
-                "character": 30
+                "character": 30,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3137,7 +3204,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 68,
-                    "character": 30
+                    "character": 30,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3201,7 +3269,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 22,
-                "character": 10
+                "character": 10,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3217,7 +3286,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 22,
-                    "character": 10
+                    "character": 10,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3297,7 +3367,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 57,
-                "character": 19
+                "character": 19,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3313,7 +3384,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 57,
-                    "character": 19
+                    "character": 19,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3393,7 +3465,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 37,
-                "character": 16
+                "character": 16,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3409,7 +3482,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 37,
-                    "character": 16
+                    "character": 16,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3489,7 +3563,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 63,
-                "character": 22
+                "character": 22,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3505,7 +3580,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 63,
-                    "character": 22
+                    "character": 22,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3553,7 +3629,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 42,
-                "character": 18
+                "character": 18,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3569,7 +3646,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 42,
-                    "character": 18
+                    "character": 18,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3633,7 +3711,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 47,
-                "character": 19
+                "character": 19,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3649,7 +3728,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 47,
-                    "character": 19
+                    "character": 19,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3697,7 +3777,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 27,
-                "character": 14
+                "character": 14,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3713,7 +3794,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 27,
-                    "character": 14
+                    "character": 14,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3761,7 +3843,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 32,
-                "character": 12
+                "character": 12,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3777,7 +3860,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 32,
-                    "character": 12
+                    "character": 12,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3825,7 +3909,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 52,
-                "character": 18
+                "character": 18,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -3841,7 +3926,8 @@ var main = {
                   {
                     "fileName": "application-registry.ts",
                     "line": 52,
-                    "character": 18
+                    "character": 18,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3918,7 +4004,8 @@ var main = {
           {
             "fileName": "iterable.ts",
             "line": 19,
-            "character": 19
+            "character": 19,
+            "url": null
           }
         ],
         "constructors": [
@@ -3942,7 +4029,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 22,
-                "character": 23
+                "character": 23,
+                "url": null
               }
             ],
             "constructorSignatures": [
@@ -3958,7 +4046,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 22,
-                    "character": 23
+                    "character": 23,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -3972,7 +4061,8 @@ var main = {
                       {
                         "fileName": "iterable.ts",
                         "line": 19,
-                        "character": 19
+                        "character": 19,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -4022,12 +4112,14 @@ var main = {
                           {
                             "fileName": "iterable.ts",
                             "line": 17,
-                            "character": 18
+                            "character": 18,
+                            "url": null
                           },
                           {
                             "fileName": "environment.ts",
                             "line": 39,
-                            "character": 11
+                            "character": 11,
+                            "url": null
                           }
                         ],
                         "parent": {
@@ -4065,7 +4157,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 20,
-                "character": 15
+                "character": 15,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -4093,7 +4186,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 21,
-                "character": 16
+                "character": 16,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -4107,12 +4201,14 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 17,
-                    "character": 18
+                    "character": 18,
+                    "url": null
                   },
                   {
                     "fileName": "environment.ts",
                     "line": 39,
-                    "character": 11
+                    "character": 11,
+                    "url": null
                   }
                 ],
                 "parent": {
@@ -4144,7 +4240,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 22,
-                "character": 18
+                "character": 18,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -4174,7 +4271,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 29,
-                "character": 9
+                "character": 9,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -4190,7 +4288,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 29,
-                    "character": 9
+                    "character": 9,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -4220,7 +4319,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 33,
-                "character": 6
+                "character": 6,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -4236,7 +4336,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 33,
-                    "character": 6
+                    "character": 6,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -4279,7 +4380,8 @@ var main = {
           {
             "fileName": "environment.ts",
             "line": 46,
-            "character": 32
+            "character": 32,
+            "url": null
           }
         ]
       }
@@ -4314,7 +4416,8 @@ var main = {
           {
             "fileName": "dynamic-component.ts",
             "line": 46,
-            "character": 31
+            "character": 31,
+            "url": null
           }
         ],
         "constructors": [
@@ -4338,7 +4441,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 47,
-                "character": 38
+                "character": 38,
+                "url": null
               }
             ],
             "constructorSignatures": [
@@ -4354,7 +4458,8 @@ var main = {
                   {
                     "fileName": "dynamic-component.ts",
                     "line": 47,
-                    "character": 38
+                    "character": 38,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -4368,7 +4473,8 @@ var main = {
                       {
                         "fileName": "dynamic-component.ts",
                         "line": 46,
-                        "character": 31
+                        "character": 31,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -4454,7 +4560,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 49,
-                "character": 65
+                "character": 65,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -4482,7 +4589,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 49,
-                "character": 99
+                "character": 99,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -4510,7 +4618,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 49,
-                "character": 29
+                "character": 29,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -4538,7 +4647,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 47,
-                "character": 12
+                "character": 12,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -4568,7 +4678,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 65,
-                "character": 5
+                "character": 5,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -4584,7 +4695,8 @@ var main = {
                   {
                     "fileName": "dynamic-component.ts",
                     "line": 65,
-                    "character": 5
+                    "character": 5,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -4614,7 +4726,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 53,
-                "character": 7
+                "character": 7,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -4630,7 +4743,8 @@ var main = {
                   {
                     "fileName": "dynamic-component.ts",
                     "line": 53,
-                    "character": 7
+                    "character": 7,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -4673,7 +4787,8 @@ var main = {
           {
             "fileName": "dynamic-scope.ts",
             "line": 12,
-            "character": 33
+            "character": 33,
+            "url": null
           }
         ],
         "constructors": [
@@ -4697,7 +4812,8 @@ var main = {
               {
                 "fileName": "dynamic-scope.ts",
                 "line": 13,
-                "character": 17
+                "character": 17,
+                "url": null
               }
             ],
             "constructorSignatures": [
@@ -4713,7 +4829,8 @@ var main = {
                   {
                     "fileName": "dynamic-scope.ts",
                     "line": 13,
-                    "character": 17
+                    "character": 17,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -4727,7 +4844,8 @@ var main = {
                       {
                         "fileName": "dynamic-scope.ts",
                         "line": 12,
-                        "character": 33
+                        "character": 33,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -4781,7 +4899,8 @@ var main = {
               {
                 "fileName": "dynamic-scope.ts",
                 "line": 13,
-                "character": 16
+                "character": 16,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -4811,7 +4930,8 @@ var main = {
               {
                 "fileName": "dynamic-scope.ts",
                 "line": 31,
-                "character": 7
+                "character": 7,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -4827,7 +4947,8 @@ var main = {
                   {
                     "fileName": "dynamic-scope.ts",
                     "line": 31,
-                    "character": 7
+                    "character": 7,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -4841,7 +4962,8 @@ var main = {
                       {
                         "fileName": "dynamic-scope.ts",
                         "line": 12,
-                        "character": 33
+                        "character": 33,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -4875,7 +4997,8 @@ var main = {
               {
                 "fileName": "dynamic-scope.ts",
                 "line": 23,
-                "character": 5
+                "character": 5,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -4891,7 +5014,8 @@ var main = {
                   {
                     "fileName": "dynamic-scope.ts",
                     "line": 23,
-                    "character": 5
+                    "character": 5,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -4939,7 +5063,8 @@ var main = {
               {
                 "fileName": "dynamic-scope.ts",
                 "line": 27,
-                "character": 5
+                "character": 5,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -4955,7 +5080,8 @@ var main = {
                   {
                     "fileName": "dynamic-scope.ts",
                     "line": 27,
-                    "character": 5
+                    "character": 5,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -5032,7 +5158,8 @@ var main = {
           {
             "fileName": "iterable.ts",
             "line": 79,
-            "character": 19
+            "character": 19,
+            "url": null
           }
         ],
         "methods": [
@@ -5056,7 +5183,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 80,
-                "character": 9
+                "character": 9,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -5072,7 +5200,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 80,
-                    "character": 9
+                    "character": 9,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -5102,7 +5231,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 84,
-                "character": 6
+                "character": 6,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -5118,7 +5248,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 84,
-                    "character": 6
+                    "character": 6,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -5161,7 +5292,8 @@ var main = {
           {
             "fileName": "environment.ts",
             "line": 57,
-            "character": 32
+            "character": 32,
+            "url": null
           }
         ]
       }
@@ -5196,7 +5328,8 @@ var main = {
           {
             "fileName": "helpers/user-helper.ts",
             "line": 44,
-            "character": 28
+            "character": 28,
+            "url": null
           }
         ],
         "constructors": [
@@ -5220,7 +5353,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 47,
-                "character": 28
+                "character": 28,
+                "url": null
               }
             ],
             "constructorSignatures": [
@@ -5236,7 +5370,8 @@ var main = {
                   {
                     "fileName": "helpers/user-helper.ts",
                     "line": 47,
-                    "character": 28
+                    "character": 28,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -5250,7 +5385,8 @@ var main = {
                       {
                         "fileName": "helpers/user-helper.ts",
                         "line": 44,
-                        "character": 28
+                        "character": 28,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -5284,7 +5420,8 @@ var main = {
                           {
                             "fileName": "helpers/user-helper.ts",
                             "line": 19,
-                            "character": 22
+                            "character": 22,
+                            "url": null
                           }
                         ],
                         "parent": {
@@ -5338,7 +5475,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 46,
-                "character": 14
+                "character": 14,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -5366,7 +5504,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 45,
-                "character": 16
+                "character": 16,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -5380,7 +5519,8 @@ var main = {
                   {
                     "fileName": "helpers/user-helper.ts",
                     "line": 19,
-                    "character": 22
+                    "character": 22,
+                    "url": null
                   }
                 ],
                 "parent": {
@@ -5412,7 +5552,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 47,
-                "character": 12
+                "character": 12,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -5442,7 +5583,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 60,
-                "character": 5
+                "character": 5,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -5458,7 +5600,8 @@ var main = {
                   {
                     "fileName": "helpers/user-helper.ts",
                     "line": 60,
-                    "character": 5
+                    "character": 5,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -5472,7 +5615,8 @@ var main = {
                       {
                         "fileName": "helpers/user-helper.ts",
                         "line": 25,
-                        "character": 32
+                        "character": 32,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -5524,7 +5668,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 54,
-                "character": 7
+                "character": 7,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -5540,7 +5685,8 @@ var main = {
                   {
                     "fileName": "helpers/user-helper.ts",
                     "line": 54,
-                    "character": 7
+                    "character": 7,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -5583,7 +5729,8 @@ var main = {
           {
             "fileName": "iterable.ts",
             "line": 91,
-            "character": 29
+            "character": 29,
+            "url": null
           }
         ],
         "constructors": [
@@ -5607,7 +5754,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 94,
-                "character": 33
+                "character": 33,
+                "url": null
               }
             ],
             "constructorSignatures": [
@@ -5623,7 +5771,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 94,
-                    "character": 33
+                    "character": 33,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -5637,7 +5786,8 @@ var main = {
                       {
                         "fileName": "iterable.ts",
                         "line": 91,
-                        "character": 29
+                        "character": 29,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -5687,12 +5837,14 @@ var main = {
                           {
                             "fileName": "iterable.ts",
                             "line": 17,
-                            "character": 18
+                            "character": 18,
+                            "url": null
                           },
                           {
                             "fileName": "environment.ts",
                             "line": 39,
-                            "character": 11
+                            "character": 11,
+                            "url": null
                           }
                         ],
                         "parent": {
@@ -5730,7 +5882,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 94,
-                "character": 16
+                "character": 16,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -5744,12 +5897,14 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 17,
-                    "character": 18
+                    "character": 18,
+                    "url": null
                   },
                   {
                     "fileName": "environment.ts",
                     "line": 39,
-                    "character": 11
+                    "character": 11,
+                    "url": null
                   }
                 ],
                 "parent": {
@@ -5781,7 +5936,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 93,
-                "character": 13
+                "character": 13,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -5809,7 +5965,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 92,
-                "character": 12
+                "character": 12,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -5839,7 +5996,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 102,
-                "character": 9
+                "character": 9,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -5855,7 +6013,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 102,
-                    "character": 9
+                    "character": 9,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -5885,7 +6044,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 133,
-                "character": 18
+                "character": 18,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -5901,7 +6061,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 133,
-                    "character": 18
+                    "character": 18,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -5949,7 +6110,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 137,
-                "character": 21
+                "character": 21,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -5965,7 +6127,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 137,
-                    "character": 21
+                    "character": 21,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -6029,7 +6192,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 129,
-                "character": 22
+                "character": 22,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -6045,7 +6209,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 129,
-                    "character": 22
+                    "character": 22,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -6109,7 +6274,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 125,
-                "character": 19
+                "character": 19,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -6125,7 +6291,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 125,
-                    "character": 19
+                    "character": 19,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -6186,7 +6353,8 @@ var main = {
           {
             "fileName": "iterable.ts",
             "line": 48,
-            "character": 24
+            "character": 24,
+            "url": null
           }
         ],
         "constructors": [
@@ -6210,7 +6378,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 52,
-                "character": 23
+                "character": 23,
+                "url": null
               }
             ],
             "constructorSignatures": [
@@ -6226,7 +6395,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 52,
-                    "character": 23
+                    "character": 23,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -6240,7 +6410,8 @@ var main = {
                       {
                         "fileName": "iterable.ts",
                         "line": 48,
-                        "character": 24
+                        "character": 24,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -6306,12 +6477,14 @@ var main = {
                           {
                             "fileName": "iterable.ts",
                             "line": 17,
-                            "character": 18
+                            "character": 18,
+                            "url": null
                           },
                           {
                             "fileName": "environment.ts",
                             "line": 39,
-                            "character": 11
+                            "character": 11,
+                            "url": null
                           }
                         ],
                         "parent": {
@@ -6349,7 +6522,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 51,
-                "character": 16
+                "character": 16,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -6363,12 +6537,14 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 17,
-                    "character": 18
+                    "character": 18,
+                    "url": null
                   },
                   {
                     "fileName": "environment.ts",
                     "line": 39,
-                    "character": 11
+                    "character": 11,
+                    "url": null
                   }
                 ],
                 "parent": {
@@ -6400,7 +6576,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 49,
-                "character": 14
+                "character": 14,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -6428,7 +6605,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 52,
-                "character": 18
+                "character": 18,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -6456,7 +6634,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 50,
-                "character": 16
+                "character": 16,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -6486,7 +6665,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 60,
-                "character": 9
+                "character": 9,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -6502,7 +6682,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 60,
-                    "character": 9
+                    "character": 9,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -6532,7 +6713,8 @@ var main = {
               {
                 "fileName": "iterable.ts",
                 "line": 64,
-                "character": 6
+                "character": 6,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -6548,7 +6730,8 @@ var main = {
                   {
                     "fileName": "iterable.ts",
                     "line": 64,
-                    "character": 6
+                    "character": 6,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -6591,7 +6774,8 @@ var main = {
           {
             "fileName": "helpers/user-helper.ts",
             "line": 25,
-            "character": 32
+            "character": 32,
+            "url": null
           }
         ],
         "typeParameters": [
@@ -6626,7 +6810,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 28,
-                "character": 28
+                "character": 28,
+                "url": null
               }
             ],
             "constructorSignatures": [
@@ -6642,7 +6827,8 @@ var main = {
                   {
                     "fileName": "helpers/user-helper.ts",
                     "line": 28,
-                    "character": 28
+                    "character": 28,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -6656,7 +6842,8 @@ var main = {
                       {
                         "fileName": "helpers/user-helper.ts",
                         "line": 25,
-                        "character": 32
+                        "character": 32,
+                        "url": null
                       }
                     ],
                     "parent": {
@@ -6726,7 +6913,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 26,
-                "character": 16
+                "character": 16,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -6754,7 +6942,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 27,
-                "character": 18
+                "character": 18,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -6782,7 +6971,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 28,
-                "character": 12
+                "character": 12,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -6812,7 +7002,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 39,
-                "character": 5
+                "character": 5,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -6828,7 +7019,8 @@ var main = {
                   {
                     "fileName": "helpers/user-helper.ts",
                     "line": 39,
-                    "character": 5
+                    "character": 5,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -6876,7 +7068,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 35,
-                "character": 7
+                "character": 7,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -6892,7 +7085,8 @@ var main = {
                   {
                     "fileName": "helpers/user-helper.ts",
                     "line": 35,
-                    "character": 7
+                    "character": 7,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -6929,7 +7123,8 @@ var main = {
           {
             "fileName": "application.ts",
             "line": 38,
-            "character": 24
+            "character": 24,
+            "url": null
           }
         ],
         "properties": [
@@ -6953,7 +7148,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 40,
-                "character": 11
+                "character": 11,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -6991,7 +7187,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 39,
-                "character": 4
+                "character": 4,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7019,7 +7216,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 42,
-                "character": 13
+                "character": 13,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7047,7 +7245,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 41,
-                "character": 8
+                "character": 8,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7082,7 +7281,8 @@ var main = {
           {
             "fileName": "application.ts",
             "line": 28,
-            "character": 35
+            "character": 35,
+            "url": null
           }
         ],
         "properties": [
@@ -7106,7 +7306,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 30,
-                "character": 10
+                "character": 10,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7134,7 +7335,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 29,
-                "character": 10
+                "character": 10,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7169,7 +7371,8 @@ var main = {
           {
             "fileName": "component-definition-creator.ts",
             "line": 5,
-            "character": 36
+            "character": 36,
+            "url": null
           }
         ],
         "methods": [
@@ -7193,7 +7396,8 @@ var main = {
               {
                 "fileName": "component-definition-creator.ts",
                 "line": 6,
-                "character": 27
+                "character": 27,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -7209,7 +7413,8 @@ var main = {
                   {
                     "fileName": "component-definition-creator.ts",
                     "line": 6,
-                    "character": 27
+                    "character": 27,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -7296,7 +7501,8 @@ var main = {
           {
             "fileName": "environment.ts",
             "line": 41,
-            "character": 35
+            "character": 35,
+            "url": null
           }
         ],
         "properties": [
@@ -7320,7 +7526,8 @@ var main = {
               {
                 "fileName": "environment.ts",
                 "line": 43,
-                "character": 18
+                "character": 18,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7348,7 +7555,8 @@ var main = {
               {
                 "fileName": "environment.ts",
                 "line": 42,
-                "character": 10
+                "character": 10,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7389,7 +7597,8 @@ var main = {
           {
             "fileName": "template-meta.ts",
             "line": 3,
-            "character": 30
+            "character": 30,
+            "url": null
           }
         ]
       }
@@ -7418,7 +7627,8 @@ var main = {
           {
             "fileName": "application.ts",
             "line": 33,
-            "character": 28
+            "character": 28,
+            "url": null
           }
         ],
         "properties": [
@@ -7442,7 +7652,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 34,
-                "character": 6
+                "character": 6,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7472,7 +7683,8 @@ var main = {
               {
                 "fileName": "application.ts",
                 "line": 35,
-                "character": 12
+                "character": 12,
+                "url": null
               }
             ],
             "callSignatures": [
@@ -7488,7 +7700,8 @@ var main = {
                   {
                     "fileName": "application.ts",
                     "line": 35,
-                    "character": 12
+                    "character": 12,
+                    "url": null
                   }
                 ],
                 "typeInfo": {
@@ -7543,7 +7756,8 @@ var main = {
           {
             "fileName": "dynamic-component.ts",
             "line": 21,
-            "character": 35
+            "character": 35,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -7559,7 +7773,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 21,
-                "character": 35
+                "character": 35,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7676,7 +7891,8 @@ var main = {
           {
             "fileName": "helpers/action.ts",
             "line": 4,
-            "character": 35
+            "character": 35,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -7692,7 +7908,8 @@ var main = {
               {
                 "fileName": "helpers/action.ts",
                 "line": 4,
-                "character": 35
+                "character": 35,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7761,7 +7978,8 @@ var main = {
           {
             "fileName": "helpers/user-helper.ts",
             "line": 21,
-            "character": 39
+            "character": 39,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -7777,7 +7995,8 @@ var main = {
               {
                 "fileName": "helpers/user-helper.ts",
                 "line": 21,
-                "character": 39
+                "character": 39,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7830,7 +8049,8 @@ var main = {
           {
             "fileName": "environment.ts",
             "line": 239,
-            "character": 37
+            "character": 37,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -7846,7 +8066,8 @@ var main = {
               {
                 "fileName": "environment.ts",
                 "line": 239,
-                "character": 37
+                "character": 37,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7880,7 +8101,8 @@ var main = {
                           {
                             "fileName": "component-definition-creator.ts",
                             "line": 5,
-                            "character": 36
+                            "character": 36,
+                            "url": null
                           }
                         ],
                         "parent": {
@@ -7927,7 +8149,8 @@ var main = {
           {
             "fileName": "helpers/action.ts",
             "line": 32,
-            "character": 37
+            "character": 37,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -7943,7 +8166,8 @@ var main = {
               {
                 "fileName": "helpers/action.ts",
                 "line": 32,
-                "character": 37
+                "character": 37,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -7996,7 +8220,8 @@ var main = {
           {
             "fileName": "helpers/action.ts",
             "line": 54,
-            "character": 18
+            "character": 18,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -8012,7 +8237,8 @@ var main = {
               {
                 "fileName": "helpers/action.ts",
                 "line": 54,
-                "character": 18
+                "character": 18,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -8065,7 +8291,8 @@ var main = {
           {
             "fileName": "dynamic-component.ts",
             "line": 39,
-            "character": 28
+            "character": 28,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -8081,7 +8308,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 39,
-                "character": 28
+                "character": 28,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -8095,7 +8323,8 @@ var main = {
                   {
                     "fileName": "dynamic-component.ts",
                     "line": 46,
-                    "character": 31
+                    "character": 31,
+                    "url": null
                   }
                 ],
                 "parent": {
@@ -8184,7 +8413,8 @@ var main = {
           {
             "fileName": "dynamic-component.ts",
             "line": 70,
-            "character": 19
+            "character": 19,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -8200,7 +8430,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 70,
-                "character": 19
+                "character": 19,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -8253,7 +8484,8 @@ var main = {
           {
             "fileName": "dynamic-component.ts",
             "line": 30,
-            "character": 36
+            "character": 36,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -8269,7 +8501,8 @@ var main = {
               {
                 "fileName": "dynamic-component.ts",
                 "line": 30,
-                "character": 36
+                "character": 36,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -8370,7 +8603,8 @@ var main = {
           {
             "fileName": "application-registry.ts",
             "line": 9,
-            "character": 24
+            "character": 24,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -8386,7 +8620,8 @@ var main = {
               {
                 "fileName": "application-registry.ts",
                 "line": 9,
-                "character": 24
+                "character": 24,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -8439,7 +8674,8 @@ var main = {
           {
             "fileName": "environment.ts",
             "line": 234,
-            "character": 23
+            "character": 23,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -8455,7 +8691,8 @@ var main = {
               {
                 "fileName": "environment.ts",
                 "line": 234,
-                "character": 23
+                "character": 23,
+                "url": null
               }
             ],
             "typeInfo": {
@@ -8524,7 +8761,8 @@ var main = {
           {
             "fileName": "helpers/action.ts",
             "line": 27,
-            "character": 27
+            "character": 27,
+            "url": null
           }
         ],
         "callSignatures": [
@@ -8540,7 +8778,8 @@ var main = {
               {
                 "fileName": "helpers/action.ts",
                 "line": 27,
-                "character": 27
+                "character": 27,
+                "url": null
               }
             ],
             "typeInfo": {
