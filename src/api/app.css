@@ -582,10 +582,12 @@ html,
     content: "property"; }
 
 .signatures-list .method-signature h5 {
+  display: inline-flex;
   color: #AA4639; }
 
 .signature-modifiers {
   color: #888;
+  margin-right: 6px;
 }
 
 .constructors .method-signature h5::before {
@@ -759,9 +761,9 @@ strong.sub {
 
 .access {
   color: #666;
-  margin: 10px 0px 0px 0px;
-  font-size: 90%;
-  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace; }
+  font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+  margin-right: 6px;
+}
 
 .project-list {
   border-top: 1px solid #F3F3F3;
@@ -801,16 +803,3 @@ h5 a {
   .module-header h3 {
     display: inline;
     color: #222; }
-
-.content-container h3 {
-  font-size: 38px;
-  padding: 17px;
-  font-weight: lighter;
-}
-
-.method-category {
-  display: flex;
-}
-
-.method-category h4 {
-}
