@@ -49,7 +49,7 @@ installing component
   create app/src/ui/components/hello-portland/template.hbs
 ```
 
-As you can see, we generate two files (`component.js` and `template.hbs`) in our `src/ui/components` folder. A Glimmer component uses a template to generate all our HTML (using a [Handlebars](http://handlebarsjs.com) template with Glimmer/Ember additions) and a Typescript/Javascript file that provides additional properties and event handlers (known as actions) to our template. We'll cover more details about how Handlebars works on subsequent pages.
+As you can see, we generate two files (`component.ts` and `template.hbs`) in our `src/ui/components` folder. A Glimmer component uses a template to generate all our HTML (using a [Handlebars](http://handlebarsjs.com) template with Glimmer/Ember additions) and a Typescript/Javascript file that provides additional properties and event handlers (known as actions) to our template. We'll cover more details about how Handlebars works on subsequent pages.
 
 All other components will also live in `src/ui/components` unless we deliberately nest them. So for example, if we add a second component called `conference-speakers`:
 
