@@ -2,6 +2,12 @@
   "index": {
     "layout": false
   },
+  "installing": {
+    "title": "Installing"
+  },
+  "getting-started": {
+    "title": "Getting Started"
+  },
   "filesystem-layout": {
     "title": "Filesystem Layout"
   },
