@@ -594,7 +594,7 @@ html,
 .project-container .method-signature h5::before {
   content: "function"; }
 
-.type {
+.type-annotation a, .type {
   color: #6987C9; }
 
 .isArray {
