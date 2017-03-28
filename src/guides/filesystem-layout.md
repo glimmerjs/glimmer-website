@@ -43,7 +43,7 @@ As you can see, Glimmer puts all our components in the `app/src/ui/components` f
 So let's add a new component in Glimmer. To do so, we'll run the following command to generate an initial blueprint for a component:
 
 ```sh
-$ ember g component hello-portland
+$ ember g glimmer-component hello-portland
 installing component
   create app/src/ui/components/hello-portland/component.ts
   create app/src/ui/components/hello-portland/template.hbs
@@ -54,7 +54,7 @@ As you can see, we generate two files (`component.js` and `template.hbs`) in our
 All other components will also live in `src/ui/components` unless we deliberately nest them. So for example, if we add a second component called `hello-again`:
 
 ```sh
-$ ember g component hello-again
+$ ember g glimmer-component hello-again
 installing component
   create app/src/ui/components/hello-again/component.ts
   create app/src/ui/components/hello-again/template.hbs
@@ -93,7 +93,7 @@ This then allows us to use that component as a top-level component in our `main/
 But we can also add sub-components to our app to nest those components more deeply in our folder tree. Let's generate one more component:
 
 ```sh
-$ ember g component hello-portland/from-glimmer
+$ ember g glimmer-component hello-portland/from-glimmer
 installing component
   create app/src/ui/components/hello-portland/from-glimmer/component.ts
   create app/src/ui/components/hello-portland/from-glimmer/template.hbs
