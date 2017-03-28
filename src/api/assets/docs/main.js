@@ -10,7 +10,7 @@ var main = {
     "type": "docset",
     "attributes": {
       "title": "Glimmer",
-      "intro": "Everything is awesome",
+      "intro": "<div><p>Welcome to the Glimmer API documentation.</p><p>Choose a project or module from the table of contents to get started.</p></div>",
       "idMap": {
         "_glimmer_component": {
           "component": "1",
