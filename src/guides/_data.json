@@ -1,4 +1,7 @@
 {
+  "index": {
+    "layout": false
+  },
   "filesystem-layout": {
     "title": "Filesystem Layout"
   },
