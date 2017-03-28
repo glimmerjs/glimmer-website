@@ -1,4 +1,7 @@
 {
   "root": "www/",
-  "clean_urls": true
+  "clean_urls": true,
+  "routes": {
+    "/api/**": "api/index.html"
+  }
 }
