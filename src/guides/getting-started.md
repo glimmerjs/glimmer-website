@@ -1,39 +1,69 @@
-# Getting Started
+# Installation
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget lorem
-euismod, placerat odio eu, molestie elit. Phasellus nisl odio, ornare commodo
-sapien at, posuere posuere orci. Donec nec gravida lorem, non suscipit nibh.
-Nunc lobortis vehicula diam eget venenatis. Maecenas tristique cursus
-ullamcorper. Praesent porttitor viverra faucibus. Aenean vel porta ante, sed
-vehicula ipsum. Suspendisse potenti. Maecenas vel velit nibh.
+Glimmer uses [Ember CLI](https://ember-cli.com/), the battle-tested command-line interface tool (CLI) from the Ember project, to help you create and manage your applications.
+It provides the following features, among other:
 
-Nam vel odio vitae libero scelerisque semper vitae sed ligula. Nunc fermentum
-venenatis sapien quis lacinia. Nunc ac tristique urna, sit amet tincidunt
-libero. Maecenas sodales ultrices arcu vel imperdiet. Interdum et malesuada
-fames ac ante ipsum primis in faucibus. Pellentesque ut consequat ex, a tempus
-mauris. Phasellus tempus congue suscipit. Cras arcu libero, volutpat interdum
-lacinia eget, imperdiet at est. Nam a vehicula diam. Morbi eu volutpat leo,
-pretium bibendum justo. Nulla et bibendum nibh, non sollicitudin ex. Duis
-ultrices erat ut ex volutpat fermentum. Ut sed ligula nunc.
+* Creating a new application with a conventional project layout
+* A build pipeline with testing, development, and production environments
+* [TypeScript](http://www.typescriptlang.org/) support out-of-the-box
+* Generators for components and helpers
 
-Nunc molestie sollicitudin metus, ut varius risus pretium sed. Morbi
-sollicitudin risus vel porttitor gravida. Proin luctus, diam sit amet eleifend
-iaculis, nulla nisl placerat tellus, vitae pharetra ex nibh eget neque. Nunc
-neque turpis, malesuada vel consequat laoreet, euismod sit amet mi. Pellentesque
-commodo tortor id nunc volutpat, in imperdiet nunc consectetur. In ut ipsum id
-urna sodales sodales. Morbi facilisis ac tortor nec varius.
+## Pre-requisites
 
-Proin vehicula lacinia neque, at pellentesque ligula feugiat sit amet. Etiam ac
-libero et magna commodo volutpat non non dui. Vivamus sollicitudin ipsum ac
-tellus semper ornare. Vestibulum non odio ligula. Integer a libero vitae lorem
-pharetra consequat vel in urna. In auctor sit amet diam a elementum. Mauris eu
-ante pharetra, ullamcorper dui id, sodales justo. Quisque dapibus laoreet eros,
-nec facilisis tellus facilisis sit amet.
+### Git
 
-Suspendisse potenti. Suspendisse vestibulum est a elementum consectetur.
-Praesent sit amet dictum massa, eget posuere elit. Donec at metus sit amet ipsum
-ultricies tristique eget quis lectus. Nunc pharetra ante vel nisi aliquam
-elementum. Maecenas efficitur, diam at placerat lobortis, est ante facilisis
-libero, efficitur ultricies orci magna in odio. Ut quis nunc elit. Nullam
-commodo vel leo eu dapibus. Integer vel ante nisi. Phasellus fringilla in elit
-quis malesuada.
+Ember CLI requires Git to manage many of its dependencies. Git comes with Mac OS X and most Linux distributions. Windows users can download and run <a href="http://git-scm.com/download/win">this Git installer</a>.
+
+### Node.js and npm
+
+Ember CLI is built with JavaScript, and expects the [Node.js](https://nodejs.org/)
+runtime. It also requires dependencies fetched via [npm](https://www.npmjs.com/). npm is packaged with Node.js, so if your computer has Node.js
+installed you are ready to go.
+
+Ember requires Node.js 4 or higher and npm 2.14.2 or higher.
+If you're not sure whether you have Node.js or the right version, run this on your
+command line:
+
+```bash
+node --version
+npm --version
+```
+
+If you get a *"command not found"* error or an outdated version for Node:
+
+* Windows or Mac users can download and run [this Node.js installer](http://nodejs.org/download/).
+* Mac users often prefer to install Node using [Homebrew](http://brew.sh/). After
+installing Homebrew, run `brew install node` to install Node.js.
+* Linux users can use [this guide for Node.js installation on Linux](https://nodejs.org/en/download/package-manager/).
+
+If you get an outdated version of npm, run `npm install -g npm`.
+
+### Yarn
+
+We are going to use [Yarn](https://yarnpkg.com/en/) to manage dependencies in a Glimmer project, as it offers some advantages over npm, such as deterministic builds and the ability to work offline.
+
+You can follow their <a href="https://yarnpkg.com/en/docs/install">installation instructions</a> to get set up.
+
+## Installing
+
+To generate new projects, we will need an experimental feature that is only available in the Canary release channel.
+
+To install Ember CLI Canary, run the following command to install it from the `master` branch on GitHub:
+
+```bash
+yarn add global ember-cli/ember-cli
+```
+
+Alternatively, you can do:
+
+```bash
+npm install -g ember-cli/ember-cli
+```
+
+To verify that it's correctly installed, run the following command:
+
+```bash
+ember -v
+```
+
+You should see a version number with `beta`. Don't worry, this should be correct! Ember CLI doesn't have the concept of Canary versions, so it will show the latest beta release.
