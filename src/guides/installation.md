@@ -20,7 +20,7 @@ Ember CLI is built with JavaScript, and expects the [Node.js](https://nodejs.org
 runtime. It also requires dependencies fetched via [npm](https://www.npmjs.com/). npm is packaged with Node.js, so if your computer has Node.js
 installed you are ready to go.
 
-Ember requires Node.js 0.12 or higher and npm 2.7 or higher.
+Ember requires Node.js 4 or higher and npm 2.14.2 or higher.
 If you're not sure whether you have Node.js or the right version, run this on your
 command line:
 
