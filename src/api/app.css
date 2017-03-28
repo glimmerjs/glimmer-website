@@ -718,6 +718,12 @@ section.content-container:first-child {
   padding: 16px 20px;
   background-color: #f6f8fa; }
 
+.function-comment {
+  font-size: 90%;
+  padding: 10px 0px 0px 0px;
+  color: #888;
+}
+
 .method-body {
   margin-left: 10px;
   padding-bottom: 20px; }
