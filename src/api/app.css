@@ -936,3 +936,28 @@ h5 a {
     border-right: none;
   }
 }
+
+#footer {
+  border-top: 1px solid #DDD;
+  padding: 10px;
+  min-height: 28px;
+  color: #999;
+}
+
+.copyright {
+  float:right;
+}
+
+.links {
+  float: left;
+  display: flex;
+}
+
+.links li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+.links li a {
+  color: #555;
+}
