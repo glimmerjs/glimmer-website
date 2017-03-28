@@ -833,8 +833,8 @@ strong.sub {
     opacity: 0.7; }
 
 .hamburger-box {
-  width: 40px;
-  height: 24px;
+  width: 30px;
+  height: 17px;
   display: inline-block;
   position: relative; }
 
@@ -843,10 +843,10 @@ strong.sub {
   top: 50%;
   margin-top: -2px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
+    width: 30px;
+    height: 3px;
     background-color: #444;
-    border-radius: 4px;
+    border-radius: 3px;
     position: absolute;
     transition-property: transform;
     transition-duration: 0.15s;
@@ -919,8 +919,8 @@ h5 a {
   #menu-toggle {
     position: absolute;
     display: block;
-    right: 5px;
-    top: 5px;
+    right: 8px;
+    top: 8px;
   }
 
   #app,
