@@ -2,19 +2,22 @@
   "installation": {
     "title": "Installation"
   },
-  "getting-started": {
-    "title": "Getting Started"
+  "filesystem-layout": {
+    "title": "Filesystem Layout"
   },
-  "glimmer-instance": {
-    "title": "The Glimmer Instance"
+  "components-and-actions": {
+    "title": "Components and Actions"
   },
-  "template-syntax": {
-    "title": "Template Syntax"
+  "helpers": {
+    "title": "Helpers"
   },
-  "computed-and-tracked-properties": {
-    "title": "Computed and Tracked Properties"
+  "using-glimmer-as-web-components": {
+    "title": "Using Glimmer as Web Components"
   },
-  "style-bindings": {
-    "title": "Class and Style Bindings"
+  "build-process": {
+    "title": "The Build Process"
+  },
+  "deploys": {
+    "title": "Deploys"
   }
 }
