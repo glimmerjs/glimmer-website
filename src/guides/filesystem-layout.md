@@ -87,7 +87,7 @@ app
 ```
 This then allows us to use that component as a top-level component in our `main/template.hbs` file:
 
-``` 
+```hbs
 <hello-again />
 ```
 But we can also add sub-components to our app to nest those components more deeply in our folder tree. Let's generate one more component:
@@ -120,13 +120,13 @@ app
 ```
 Our new component then is only useable from inside our `hello-world/template.hbs` file:
 
-``` 
+```hbs
 <from-glimmer />
 ```
 
 Glimmer uses a "local resolution" with nested components where the following syntax will not work in our main component (`hello-glimmer/template.hbs`):
 
-``` 
+```hbs
 {{!-- invalid --}}
 <hello-world/from-glimmer />
 ```

@@ -6,7 +6,7 @@ In addition to using Glimmer for a widget on one section on a page, you can also
 
 When we add the `--web-component` flag, we reconfigure our app to expose our `display-tile` component as an Web Component to browsers. That in turn allows us to render markup like the following from a backend:
 
-``` 
+```hbs
 <ul>
   <li><display-tile @type="video" @url="kids.mp4" /></li>
   <li><display-tile @type="image" @url="skiing.jpg" /></li>
