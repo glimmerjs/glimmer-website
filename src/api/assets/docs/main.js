@@ -17,32 +17,35 @@ var main = {
           "tracked": "54"
         },
         "_glimmer_application": {
-          "application": "661",
+          "application": "698",
           "applicationregistry": "318",
           "arrayiterator": "384",
-          "defaultcomponentdefinition": "508",
+          "defaultcomponentdefinition": "543",
           "dynamiccomponentreference": "456",
           "dynamicscope": "370",
           "emptyiterator": "410",
-          "environment": "519",
+          "environment": "554",
+          "helperreference": "519",
           "iterable": "415",
           "objectkeysiterator": "396",
-          "approot": "656",
-          "applicationoptions": "648",
+          "simplepathreference": "505",
+          "approot": "693",
+          "applicationoptions": "685",
           "componentdefinitioncreator": "450",
-          "environmentoptions": "505",
+          "environmentoptions": "540",
           "extendedtemplatemeta": "445",
-          "initializer": "651",
+          "initializer": "688",
           "blockcomponentmacro": "470",
           "buildaction": "491",
-          "cancreatecomponentdefinition": "645",
+          "builduserhelper": "537",
+          "cancreatecomponentdefinition": "682",
           "debuginfoforreference": "499",
           "debugname": "502",
           "dynamiccomponentfor": "483",
           "hashtoargs": "488",
           "inlinecomponentmacro": "477",
           "istypespecifier": "367",
-          "populatemacros": "641",
+          "populatemacros": "678",
           "thrownoactionerror": "495"
         }
       }
@@ -161,14 +164,14 @@ var main = {
         "sources": [
           {
             "fileName": "component.ts",
-            "line": 123,
+            "line": 126,
             "character": 15,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L123"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L126"
           }
         ],
         "comment": {
           "shortText": "The `Component` class defines an encapsulated UI element that is rendered to\nthe DOM. A component is made up of a template and, optionally, this component\nobject.",
-          "text": "To define a component, subclass `Component` and add your own properties,\nmethods and lifecycle hooks:\n\n```ts import Component from '@glimmer/component';\n\nexport default class extends Component {\n}\n```\n\n## Lifecycle Hooks\n\nLifecycle hooks allow you to respond to changes to a component, such as when\nit gets created, rendered, updated or destroyed. To add a lifecycle hook to a\ncomponent, implement the hook as a method on your component subclass.\n\nFor example, to be notified when Glimmer has rendered your component so you\ncan attach a legacy jQuery plugin, implement the `didInsertElement()` method:\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n  didInsertElement() {\n    $(this.element).pickadate();\n  }\n}\n```\n\n## Data for Templates\n\n`Component`s have two different kinds of data, or state, that can be\ndisplayed in templates:\n\n1. Arguments\n2. Properties\n\nArguments are data that is passed in to a component from its parent\ncomponent. For example, if I have a `user-greeting` component, I can pass it\na name and greeting to use:\n\n```hbs\n<user-greeting @name=\"Ricardo\" @greeting=\"Olá\">\n```\n\nInside my `user-greeting` template, I can access the `@name` and `@greeting`\narguments that I've been given:\n\n```hbs\n{{@greeting}}, {{@name}}!\n```\n\nArguments are also available inside my component:\n\n```ts\nconsole.log(this.args.greeting); // prints \"Olá\"\n```\n\nProperties, on the other hand, are internal to the component and declared in\nthe class. You can use properties to store data that you want to show in the\ntemplate, or pass to another component as an argument.\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n  user = {\n    name: 'Robbie'\n  }\n}\n```\n\nIn the above example, we've defined a component with a `user` property that\ncontains an object with its own `name` property.\n\nWe can render that property in our template:\n\n```hbs\nHello, {{user.name}}!\n```\n\nWe can also take that property and pass it as an argument to the\n`user-greeting` component we defined above:\n\n```hbs\n<user-greeting @greeting=\"Hello\" @name={{user.name}} />\n```\n\n### Arguments vs. Properties\n\nRemember, arguments are data that was given to your component by its parent\ncomponent, and properties are data your component has defined for itself.\n\nYou can tell the difference between arguments and properties in templates\nbecause arguments always start with an `@` sign (think \"A is for arguments\"):\n\n```hbs\n{{@firstName}}\n```\n\nWe know that `@firstName` came from the parent component, not the current\ncomponent, because it starts with `@` and is therefore an argument.\n\nOn the other hand, if we see:\n\n``hbs\n{{name}}\n```\n\nWe know that `name` is a property on the component. If we want to know where\nthe data is coming from, we can go look at our component class to find out.\n\nInside the component itself, arguments always show up inside the component's\n`args` property. For example, if `{{@firstName}}` is `Tom` in the template,\ninside the component `this.args.firstName` would also be `Tom`.\n"
+          "text": "## Defining a Component\n\nTo define a component, subclass `Component` and add your own properties,\nmethods and lifecycle hooks:\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n}\n```\n\n## Lifecycle Hooks\n\nLifecycle hooks allow you to respond to changes to a component, such as when\nit gets created, rendered, updated or destroyed. To add a lifecycle hook to a\ncomponent, implement the hook as a method on your component subclass.\n\nFor example, to be notified when Glimmer has rendered your component so you\ncan attach a legacy jQuery plugin, implement the `didInsertElement()` method:\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n  didInsertElement() {\n    $(this.element).pickadate();\n  }\n}\n```\n\n## Data for Templates\n\n`Component`s have two different kinds of data, or state, that can be\ndisplayed in templates:\n\n1. Arguments\n2. Properties\n\nArguments are data that is passed in to a component from its parent\ncomponent. For example, if I have a `user-greeting` component, I can pass it\na name and greeting to use:\n\n```hbs\n<user-greeting @name=\"Ricardo\" @greeting=\"Olá\">\n```\n\nInside my `user-greeting` template, I can access the `@name` and `@greeting`\narguments that I've been given:\n\n```hbs\n{{@greeting}}, {{@name}}!\n```\n\nArguments are also available inside my component:\n\n```ts\nconsole.log(this.args.greeting); // prints \"Olá\"\n```\n\nProperties, on the other hand, are internal to the component and declared in\nthe class. You can use properties to store data that you want to show in the\ntemplate, or pass to another component as an argument.\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n  user = {\n    name: 'Robbie'\n  }\n}\n```\n\nIn the above example, we've defined a component with a `user` property that\ncontains an object with its own `name` property.\n\nWe can render that property in our template:\n\n```hbs\nHello, {{user.name}}!\n```\n\nWe can also take that property and pass it as an argument to the\n`user-greeting` component we defined above:\n\n```hbs\n<user-greeting @greeting=\"Hello\" @name={{user.name}} />\n```\n\n## Arguments vs. Properties\n\nRemember, arguments are data that was given to your component by its parent\ncomponent, and properties are data your component has defined for itself.\n\nYou can tell the difference between arguments and properties in templates\nbecause arguments always start with an `@` sign (think \"A is for arguments\"):\n\n```hbs\n{{@firstName}}\n```\n\nWe know that `@firstName` came from the parent component, not the current\ncomponent, because it starts with `@` and is therefore an argument.\n\nOn the other hand, if we see:\n\n```hbs\n{{name}}\n```\n\nWe know that `name` is a property on the component. If we want to know where\nthe data is coming from, we can go look at our component class to find out.\n\nInside the component itself, arguments always show up inside the component's\n`args` property. For example, if `{{@firstName}}` is `Tom` in the template,\ninside the component `this.args.firstName` would also be `Tom`.\n"
         },
         "constructors": [
           {
@@ -190,9 +193,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 165,
+                "line": 168,
                 "character": 3,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L165"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L168"
               }
             ],
             "comment": {
@@ -212,9 +215,9 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 165,
+                    "line": 168,
                     "character": 3,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L165"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L168"
                   }
                 ],
                 "comment": {
@@ -222,7 +225,7 @@ var main = {
                   "text": "",
                   "tags": []
                 },
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "Component",
                   "link": {
@@ -232,9 +235,9 @@ var main = {
                     "sources": [
                       {
                         "fileName": "component.ts",
-                        "line": 123,
+                        "line": 126,
                         "character": 15,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L123"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L126"
                       }
                     ],
                     "parent": {
@@ -261,7 +264,7 @@ var main = {
                       "shortText": "\n",
                       "text": ""
                     },
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "object"
                     }
@@ -291,16 +294,16 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 161,
+                "line": 164,
                 "character": 6,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L161"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L164"
               }
             ],
             "comment": {
               "shortText": "Named arguments passed to the component from its parent component.\nThey can be accessed in JavaScript via `this.args.argumentName` and in the template via `@argumentName`.",
               "text": "Say you have the following component, which will have two `args`, `firstName` and `lastName`:\n\n```hbs\n<my-component @firstName=\"Arthur\" @lastName=\"Dent\" />\n```\n\nIf you needed to calculate `fullName` by combining both of them, you would do:\n\n```ts\ndidInsertElement() {\n  console.log(\"Hi,My full name is ${this.args.firstName} ${this.args.lastName\");\n}\n```\n\nWhile in the template you could do:\n\n```hbs\n<p>Welcome, {{@firstName}} {{@lastName}}!</p>\n```\n\n"
             },
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "object"
             }
@@ -324,16 +327,16 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 134,
+                "line": 137,
                 "character": 11,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L134"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L137"
               }
             ],
             "comment": {
               "shortText": "Development-mode only name of the component, useful for debugging.",
               "text": ""
             },
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "string"
             }
@@ -357,16 +360,16 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 129,
+                "line": 132,
                 "character": 9,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L129"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L132"
               }
             ],
             "comment": {
               "shortText": "The element corresponding to the top-level element of the component's template.\nYou should not try to access this property until after the component's `didInsertElement()`\nlifecycle hook is called.",
               "text": ""
             },
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Element"
             }
@@ -392,9 +395,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 182,
+                "line": 185,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L182"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L185"
               }
             ],
             "callSignatures": [
@@ -409,16 +412,16 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 182,
+                    "line": 185,
                     "character": 18,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L182"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L185"
                   }
                 ],
                 "comment": {
                   "shortText": "Called when the component has been inserted into the DOM.\nOverride this function to do any set up that requires an element in the document body.",
                   "text": ""
                 },
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 }
@@ -444,9 +447,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 188,
+                "line": 191,
                 "character": 11,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L188"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L191"
               }
             ],
             "callSignatures": [
@@ -461,16 +464,16 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 188,
+                    "line": 191,
                     "character": 11,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L188"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L191"
                   }
                 ],
                 "comment": {
                   "shortText": "Called when the component has updated and rerendered itself.\nCalled only during a rerender, not during an initial render.",
                   "text": ""
                 },
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 }
@@ -496,9 +499,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 190,
+                "line": 193,
                 "character": 10,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L190"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L193"
               }
             ],
             "callSignatures": [
@@ -513,12 +516,12 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 190,
+                    "line": 193,
                     "character": 10,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L190"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L193"
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "string"
                 }
@@ -544,9 +547,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 163,
+                "line": 166,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L163"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L166"
               }
             ],
             "callSignatures": [
@@ -561,12 +564,12 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 163,
+                    "line": 166,
                     "character": 15,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L163"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L166"
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "Component",
                   "link": {
@@ -576,9 +579,9 @@ var main = {
                     "sources": [
                       {
                         "fileName": "component.ts",
-                        "line": 123,
+                        "line": 126,
                         "character": 15,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L123"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/component.ts#L126"
                       }
                     ],
                     "parent": {
@@ -601,7 +604,7 @@ var main = {
                     "fullName": "Component.create.create.injections",
                     "hierarchy": "Parameter injections:any",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "any"
                     }
@@ -636,27 +639,27 @@ var main = {
         "sources": [
           {
             "fileName": "tracked.ts",
-            "line": 14,
-            "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L14"
-          },
-          {
-            "fileName": "tracked.ts",
-            "line": 15,
-            "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L15"
-          },
-          {
-            "fileName": "tracked.ts",
             "line": 16,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L16"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/tracked.ts#L16"
           },
           {
             "fileName": "tracked.ts",
             "line": 17,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L17"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/tracked.ts#L17"
+          },
+          {
+            "fileName": "tracked.ts",
+            "line": 18,
+            "character": 23,
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/tracked.ts#L18"
+          },
+          {
+            "fileName": "tracked.ts",
+            "line": 19,
+            "character": 23,
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/tracked.ts#L19"
           }
         ],
         "callSignatures": [
@@ -671,17 +674,23 @@ var main = {
             "sources": [
               {
                 "fileName": "tracked.ts",
-                "line": 14,
+                "line": 16,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L14"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/tracked.ts#L16"
               }
             ],
             "comment": {
-              "shortText": "Marks a property has tracked.",
-              "text": "By default, a component's properties are expected to be static,\nmeaning you are not able to update them and have the template update accordingly.\nMarking a property as tracked means that when that property changes,\na rerender of the component is scheduled so the template is kept up to date.\n",
-              "tags": []
+              "shortText": "",
+              "text": "",
+              "tags": [
+                {
+                  "tagName": "decorator",
+                  "paramName": "",
+                  "text": "\n\nMarks a property has tracked.\n\nBy default, a component's properties are expected to be static,\nmeaning you are not able to update them and have the template update accordingly.\nMarking a property as tracked means that when that property changes,\na rerender of the component is scheduled so the template is kept up to date.\n"
+                }
+              ]
             },
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "MethodDecorator"
             },
@@ -701,7 +710,7 @@ var main = {
                   "shortText": "",
                   "text": "Optional dependents to be tracked.\n"
                 },
-                "type": {
+                "typeInfo": {
                   "isArray": true,
                   "name": "string"
                 }
@@ -719,12 +728,12 @@ var main = {
             "sources": [
               {
                 "fileName": "tracked.ts",
-                "line": 15,
+                "line": 17,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L15"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/tracked.ts#L17"
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "any"
             },
@@ -740,7 +749,7 @@ var main = {
                 "fullName": "tracked.tracked.target",
                 "hierarchy": "Parameter target:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -756,7 +765,7 @@ var main = {
                 "fullName": "tracked.tracked.key",
                 "hierarchy": "Parameter key:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -774,12 +783,12 @@ var main = {
             "sources": [
               {
                 "fileName": "tracked.ts",
-                "line": 16,
+                "line": 18,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L16"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/a1c0a24/src/tracked.ts#L18"
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "PropertyDescriptor"
             },
@@ -795,7 +804,7 @@ var main = {
                 "fullName": "tracked.tracked.target",
                 "hierarchy": "Parameter target:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -811,7 +820,7 @@ var main = {
                 "fullName": "tracked.tracked.key",
                 "hierarchy": "Parameter key:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -827,7 +836,7 @@ var main = {
                 "fullName": "tracked.tracked.descriptor",
                 "hierarchy": "Parameter descriptor:PropertyDescriptor",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "PropertyDescriptor"
                 }
@@ -848,10 +857,10 @@ var main = {
         },
         "alias": "_glimmer_application",
         "fullName": "@glimmer/application",
-        "hierarchy": "Global @glimmer/application\n  Class Application\n    Constructor constructor\n      ConstructorSignature new Application:Application\n        Parameter options:ApplicationOptions\n    Property _container:Container\n    Property _initialized:boolean\n    Property _initializers:Initializer[]\n    Property _registry:Registry\n    Property _renderResult:RenderResult\n    Property _rendered:boolean\n    Property _roots:AppRoot[]\n    Property _rootsIndex:number\n    Property _scheduled:boolean\n    Property env:Environment\n    Property resolver:Resolver\n    Property rootName:string\n    Method boot\n      CallSignature boot:void\n    Method factoryFor\n      CallSignature factoryFor:Factory<any>\n        Parameter specifier:string\n        Parameter referrer:string\n    Method identify\n      CallSignature identify:string\n        Parameter specifier:string\n        Parameter referrer:string\n    Method initContainer\n      CallSignature initContainer:void\n    Method initRegistry\n      CallSignature initRegistry:void\n    Method initialize\n      CallSignature initialize:void\n    Method lookup\n      CallSignature lookup:any\n        Parameter specifier:string\n        Parameter referrer:string\n    Method registerInitializer\n      CallSignature registerInitializer:void\n        Parameter initializer:Initializer\n    Method render\n      CallSignature render:void\n    Method renderComponent\n      CallSignature renderComponent:void\n        Parameter component:string | ComponentDefinition<Component>\n        Parameter parent:Node\n        Parameter nextSibling:Option<Node>\n    Method rerender\n      CallSignature rerender:void\n    Method scheduleRerender\n      CallSignature scheduleRerender:void\n  Class ApplicationRegistry\n    Constructor constructor\n      ConstructorSignature new ApplicationRegistry:ApplicationRegistry\n        Parameter registry:Registry\n        Parameter resolver:Resolver\n    Property _registry:Registry\n    Property _resolver:Resolver\n    Method _toAbsoluteOrTypeSpecifier\n      CallSignature _toAbsoluteOrTypeSpecifier:string\n        Parameter specifier:string\n    Method _toAbsoluteSpecifier\n      CallSignature _toAbsoluteSpecifier:string\n        Parameter specifier:string\n        Parameter referrer:string\n    Method register\n      CallSignature register:void\n        Parameter specifier:string\n        Parameter factory:any\n        Parameter options:RegistrationOptions\n    Method registerInjection\n      CallSignature registerInjection:void\n        Parameter specifier:string\n        Parameter property:string\n        Parameter injection:string\n    Method registerOption\n      CallSignature registerOption:void\n        Parameter specifier:string\n        Parameter option:string\n        Parameter value:any\n    Method registeredInjections\n      CallSignature registeredInjections:Injection[]\n        Parameter specifier:string\n    Method registeredOption\n      CallSignature registeredOption:any\n        Parameter specifier:string\n        Parameter option:string\n    Method registeredOptions\n      CallSignature registeredOptions:any\n        Parameter specifier:string\n    Method registration\n      CallSignature registration:any\n        Parameter specifier:string\n    Method unregister\n      CallSignature unregister:void\n        Parameter specifier:string\n    Method unregisterOption\n      CallSignature unregisterOption:void\n        Parameter specifier:string\n        Parameter option:string\n  Class ArrayIterator\n    Constructor constructor\n      ConstructorSignature new ArrayIterator:ArrayIterator\n        Parameter array:Opaque[]\n        Parameter keyFor:KeyFor<number>\n    Property array:Opaque[]\n    Property keyFor:KeyFor<number>\n    Property position:number\n    Method isEmpty\n      CallSignature isEmpty:boolean\n    Method next\n      CallSignature next:IterationItem<Opaque, number>\n  Class DefaultComponentDefinition\n    Constructor constructor\n      ConstructorSignature new DefaultComponentDefinition:DefaultComponentDefinition\n        Parameter name:string\n        Parameter manager:ComponentManager<any>\n        Parameter ComponentClass:ComponentClass\n    Property ComponentClass:ComponentClass\n    Property manager:ComponentManager<any>\n    Property name:string\n    Method toJSON\n      CallSignature toJSON:string\n  Class DynamicComponentReference\n    Constructor constructor\n      ConstructorSignature new DynamicComponentReference:DynamicComponentReference\n        Parameter nameRef:PathReference<Opaque>\n        Parameter env:GlimmerEnvironment\n        Parameter meta:TemplateMeta\n    Property env:GlimmerEnvironment\n    Property meta:TemplateMeta\n    Property nameRef:PathReference<Opaque>\n    Property tag:TagWrapper<RevisionTag>\n    Method get\n      CallSignature get:PrimitiveReference<undefined>\n    Method value\n      CallSignature value:ComponentDefinition<Opaque>\n  Class DynamicScope\n    Constructor constructor\n      ConstructorSignature new DynamicScope:DynamicScope\n        Parameter bucket:any\n    Property bucket:any\n    Method child\n      CallSignature child:DynamicScope\n    Method get\n      CallSignature get:PathReference<Opaque>\n        Parameter key:string\n    Method set\n      CallSignature set:VersionedPathReference<void | __type>\n        Parameter key:string\n        Parameter reference:PathReference<Opaque>\n  Class EmptyIterator\n    Method isEmpty\n      CallSignature isEmpty:boolean\n    Method next\n      CallSignature next:IterationItem<Opaque, Opaque>\n  Class Environment\n    Constructor constructor\n      ConstructorSignature new Environment:Environment\n        Parameter options:EnvironmentOptions\n    Property appendOperations:DOMTreeConstruction\n    Property components:Dict<ComponentDefinition<void | __type>>\n    Property constants:Constants\n    Property helpers:object\n      TypeLiteral __type\n        Variable action:buildAction\n    Property managers:Dict<ComponentManager<void | __type>>\n    Property modifiers:Dict<ModifierManager<void | __type>>\n    Property program:Program\n    Property updateOperations:DOMChanges\n    Property uselessAnchor:HTMLAnchorElement\n    Method attributeFor\n      CallSignature attributeFor:AttributeManager\n        Parameter element:Element\n        Parameter attr:string\n        Parameter isTrusting:boolean\n        Parameter namespace:string\n    Method begin\n      CallSignature begin:void\n    Method commit\n      CallSignature commit:void\n    Method didCreate\n      CallSignature didCreate<T>:void\n        TypeParameter T\n        Parameter component:T\n        Parameter manager:ComponentManager<T>\n    Method didDestroy\n      CallSignature didDestroy:void\n        Parameter d:Destroyable\n    Method didUpdate\n      CallSignature didUpdate<T>:void\n        TypeParameter T\n        Parameter component:T\n        Parameter manager:ComponentManager<T>\n    Method getAppendOperations\n      CallSignature getAppendOperations:DOMTreeConstruction\n    Method getComponentDefinition\n      CallSignature getComponentDefinition:ComponentDefinition<Component>\n        Parameter name:string\n        Parameter meta:TemplateMeta\n    Method getDOM\n      CallSignature getDOM:DOMChanges\n    Method getIdentity\n      CallSignature getIdentity:string\n        Parameter object:HasGuid\n    Method hasComponentDefinition\n      CallSignature hasComponentDefinition:boolean\n        Parameter name:string\n        Parameter meta:TemplateMeta\n    Method hasHelper\n      CallSignature hasHelper:boolean\n        Parameter helperName:string\n        Parameter blockMeta:TemplateMeta\n    Method hasModifier\n      CallSignature hasModifier:boolean\n        Parameter modifierName:string\n        Parameter blockMeta:TemplateMeta\n    Method hasPartial\n      CallSignature hasPartial:boolean\n    Method iterableFor\n      CallSignature iterableFor:OpaqueIterable\n        Parameter ref:Reference<Opaque>\n        Parameter keyPath:string\n    Method lookupHelper\n      CallSignature lookupHelper:any\n        Parameter name:string\n        Parameter blockMeta:TemplateMeta\n    Method lookupModifier\n      CallSignature lookupModifier:ModifierManager<Opaque>\n        Parameter modifierName:string\n        Parameter blockMeta:TemplateMeta\n    Method lookupPartial\n      CallSignature lookupPartial:any\n    Method macros\n      CallSignature macros:object\n        TypeLiteral __type\n          Variable blocks:BlockMacros\n          Variable inlines:InlineMacros\n    Method managerFor\n      CallSignature managerFor:ComponentManager<Component>\n        Parameter managerId:string\n    Method populateBuiltins\n      CallSignature populateBuiltins:object\n        TypeLiteral __type\n          Variable blocks:Blocks\n          Variable inlines:Inlines\n    Method protocolForURL\n      CallSignature protocolForURL:string\n        Parameter url:string\n    Method registerComponent\n      CallSignature registerComponent:ComponentDefinition<Component>\n        Parameter name:string\n        Parameter templateSpecifier:string\n        Parameter meta:TemplateMeta\n        Parameter owner:Owner\n    Method scheduleInstallModifier\n      CallSignature scheduleInstallModifier<T>:void\n        TypeParameter T\n        Parameter modifier:T\n        Parameter manager:ModifierManager<T>\n    Method scheduleUpdateModifier\n      CallSignature scheduleUpdateModifier<T>:void\n        TypeParameter T\n        Parameter modifier:T\n        Parameter manager:ModifierManager<T>\n    Method toConditionalReference\n      CallSignature toConditionalReference:Reference<boolean>\n        Parameter reference:Reference<Opaque>\n    Method create\n      CallSignature create:Environment\n        Parameter options:EnvironmentOptions\n  Class Iterable\n    Constructor constructor\n      ConstructorSignature new Iterable:Iterable\n        Parameter ref:Reference<Opaque>\n        Parameter keyFor:KeyFor<Opaque>\n    Property keyFor:KeyFor<Opaque>\n    Property ref:Reference<Opaque>\n    Property tag:Tag\n    Method iterate\n      CallSignature iterate:OpaqueIterator\n    Method memoReferenceFor\n      CallSignature memoReferenceFor:UpdatableReference<Opaque>\n        Parameter item:IterationItem<Opaque, Opaque>\n    Method updateMemoReference\n      CallSignature updateMemoReference:void\n        Parameter reference:UpdatableReference<Opaque>\n        Parameter item:IterationItem<Opaque, Opaque>\n    Method updateValueReference\n      CallSignature updateValueReference:void\n        Parameter reference:UpdatableReference<Opaque>\n        Parameter item:IterationItem<Opaque, Opaque>\n    Method valueReferenceFor\n      CallSignature valueReferenceFor:UpdatableReference<Opaque>\n        Parameter item:IterationItem<Opaque, Opaque>\n  Class ObjectKeysIterator\n    Constructor constructor\n      ConstructorSignature new ObjectKeysIterator:ObjectKeysIterator\n        Parameter keys:string[]\n        Parameter values:Opaque[]\n        Parameter keyFor:KeyFor<string>\n    Property keyFor:KeyFor<string>\n    Property keys:string[]\n    Property position:number\n    Property values:Opaque[]\n    Method isEmpty\n      CallSignature isEmpty:boolean\n    Method next\n      CallSignature next:IterationItem<Opaque, string>\n  Interface AppRoot\n    Property component:string | ComponentDefinition<Component>\n    Property id:number\n    Property nextSibling:Option<Node>\n    Property parent:Node\n  Interface ApplicationOptions\n    Property resolver:Resolver\n    Property rootName:string\n  Interface ComponentDefinitionCreator\n    Method createComponentDefinition\n      CallSignature createComponentDefinition:ComponentDefinition<Component>\n        Parameter name:string\n        Parameter template:Template<TemplateMeta>\n        Parameter componentFactory:Factory<Component>\n  Interface EnvironmentOptions\n    Property appendOperations:DOMTreeConstruction\n    Property document:HTMLDocument\n  Interface ExtendedTemplateMeta\n    Property <template-meta>:true\n    Property managerId:string\n    Property moduleName:string\n    Property specifier:string\n  Interface Initializer\n    Property name:string\n    Method initialize\n      CallSignature initialize:void\n        Parameter registry:RegistryWriter\n  TypeAlias KeyFor:function\n    TypeLiteral __type\n      CallSignature __call:string\n        Parameter item:Opaque\n        Parameter index:T\n  Variable DEFAULT_MANAGER:\"main\"\n  Variable EMPTY_ITERATOR:EmptyIterator\n  Function blockComponentMacro\n    CallSignature blockComponentMacro:boolean\n      Parameter params:any\n      Parameter hash:any\n      Parameter template:any\n      Parameter inverse:any\n      Parameter builder:any\n  Function buildAction\n    CallSignature buildAction:ConstReference<action>\n      Parameter vm:VM\n      Parameter _args:Arguments\n  Function canCreateComponentDefinition\n    CallSignature canCreateComponentDefinition:boolean\n      Parameter manager:ComponentDefinitionCreator | ComponentManager<Component>\n  Function debugInfoForReference\n    CallSignature debugInfoForReference:string\n      Parameter reference:any\n  Function debugName\n    CallSignature debugName:any\n      Parameter obj:any\n  Function dynamicComponentFor\n    CallSignature dynamicComponentFor:DynamicComponentReference\n      Parameter vm:VM\n      Parameter args:Arguments\n      Parameter meta:TemplateMeta\n  Function hashToArgs\n    CallSignature hashToArgs:Option<WireFormat.Core.Hash>\n      Parameter hash:Option<WireFormat.Core.Hash>\n  Function inlineComponentMacro\n    CallSignature inlineComponentMacro:boolean\n      Parameter _name:any\n      Parameter params:any\n      Parameter hash:any\n      Parameter builder:any\n  Function isTypeSpecifier\n    CallSignature isTypeSpecifier:boolean\n      Parameter specifier:string\n  Function populateMacros\n    CallSignature populateMacros:void\n      Parameter blocks:BlockMacros\n      Parameter inlines:InlineMacros\n  Function throwNoActionError\n    CallSignature throwNoActionError:void\n      Parameter actionFunc:any\n      Parameter actionFuncReference:Reference<any>\n  ObjectLiteral DEFAULT_HELPERS:object\n    Variable action:buildAction",
+        "hierarchy": "Global @glimmer/application\n  Class Application\n    Constructor constructor\n      ConstructorSignature new Application:Application\n        Parameter options:ApplicationOptions\n    Property _container:Container\n    Property _initialized:boolean\n    Property _initializers:Initializer[]\n    Property _registry:Registry\n    Property _renderResult:RenderResult\n    Property _rendered:boolean\n    Property _roots:AppRoot[]\n    Property _rootsIndex:number\n    Property _scheduled:boolean\n    Property env:Environment\n    Property resolver:Resolver\n    Property rootName:string\n    Method boot\n      CallSignature boot:void\n    Method factoryFor\n      CallSignature factoryFor:Factory<any>\n        Parameter specifier:string\n        Parameter referrer:string\n    Method identify\n      CallSignature identify:string\n        Parameter specifier:string\n        Parameter referrer:string\n    Method initContainer\n      CallSignature initContainer:void\n    Method initRegistry\n      CallSignature initRegistry:void\n    Method initialize\n      CallSignature initialize:void\n    Method lookup\n      CallSignature lookup:any\n        Parameter specifier:string\n        Parameter referrer:string\n    Method registerInitializer\n      CallSignature registerInitializer:void\n        Parameter initializer:Initializer\n    Method render\n      CallSignature render:void\n    Method renderComponent\n      CallSignature renderComponent:void\n        Parameter component:string | ComponentDefinition<Component>\n        Parameter parent:Node\n        Parameter nextSibling:Option<Node>\n    Method rerender\n      CallSignature rerender:void\n    Method scheduleRerender\n      CallSignature scheduleRerender:void\n  Class ApplicationRegistry\n    Constructor constructor\n      ConstructorSignature new ApplicationRegistry:ApplicationRegistry\n        Parameter registry:Registry\n        Parameter resolver:Resolver\n    Property _registry:Registry\n    Property _resolver:Resolver\n    Method _toAbsoluteOrTypeSpecifier\n      CallSignature _toAbsoluteOrTypeSpecifier:string\n        Parameter specifier:string\n    Method _toAbsoluteSpecifier\n      CallSignature _toAbsoluteSpecifier:string\n        Parameter specifier:string\n        Parameter referrer:string\n    Method register\n      CallSignature register:void\n        Parameter specifier:string\n        Parameter factory:any\n        Parameter options:RegistrationOptions\n    Method registerInjection\n      CallSignature registerInjection:void\n        Parameter specifier:string\n        Parameter property:string\n        Parameter injection:string\n    Method registerOption\n      CallSignature registerOption:void\n        Parameter specifier:string\n        Parameter option:string\n        Parameter value:any\n    Method registeredInjections\n      CallSignature registeredInjections:Injection[]\n        Parameter specifier:string\n    Method registeredOption\n      CallSignature registeredOption:any\n        Parameter specifier:string\n        Parameter option:string\n    Method registeredOptions\n      CallSignature registeredOptions:any\n        Parameter specifier:string\n    Method registration\n      CallSignature registration:any\n        Parameter specifier:string\n    Method unregister\n      CallSignature unregister:void\n        Parameter specifier:string\n    Method unregisterOption\n      CallSignature unregisterOption:void\n        Parameter specifier:string\n        Parameter option:string\n  Class ArrayIterator\n    Constructor constructor\n      ConstructorSignature new ArrayIterator:ArrayIterator\n        Parameter array:Opaque[]\n        Parameter keyFor:KeyFor<number>\n    Property array:Opaque[]\n    Property keyFor:KeyFor<number>\n    Property position:number\n    Method isEmpty\n      CallSignature isEmpty:boolean\n    Method next\n      CallSignature next:IterationItem<Opaque, number>\n  Class DefaultComponentDefinition\n    Constructor constructor\n      ConstructorSignature new DefaultComponentDefinition:DefaultComponentDefinition\n        Parameter name:string\n        Parameter manager:ComponentManager<any>\n        Parameter ComponentClass:ComponentClass\n    Property ComponentClass:ComponentClass\n    Property manager:ComponentManager<any>\n    Property name:string\n    Method toJSON\n      CallSignature toJSON:string\n  Class DynamicComponentReference\n    Constructor constructor\n      ConstructorSignature new DynamicComponentReference:DynamicComponentReference\n        Parameter nameRef:PathReference<Opaque>\n        Parameter env:GlimmerEnvironment\n        Parameter meta:TemplateMeta\n    Property env:GlimmerEnvironment\n    Property meta:TemplateMeta\n    Property nameRef:PathReference<Opaque>\n    Property tag:TagWrapper<RevisionTag>\n    Method get\n      CallSignature get:PrimitiveReference<undefined>\n    Method value\n      CallSignature value:ComponentDefinition<Opaque>\n  Class DynamicScope\n    Constructor constructor\n      ConstructorSignature new DynamicScope:DynamicScope\n        Parameter bucket:any\n    Property bucket:any\n    Method child\n      CallSignature child:DynamicScope\n    Method get\n      CallSignature get:PathReference<Opaque>\n        Parameter key:string\n    Method set\n      CallSignature set:VersionedPathReference<void | __type>\n        Parameter key:string\n        Parameter reference:PathReference<Opaque>\n  Class EmptyIterator\n    Method isEmpty\n      CallSignature isEmpty:boolean\n    Method next\n      CallSignature next:IterationItem<Opaque, Opaque>\n  Class Environment\n    Constructor constructor\n      ConstructorSignature new Environment:Environment\n        Parameter options:EnvironmentOptions\n    Property appendOperations:DOMTreeConstruction\n    Property components:Dict<ComponentDefinition<void | __type>>\n    Property constants:Constants\n    Property helpers:Dict<Helper>\n    Property managers:Dict<ComponentManager<void | __type>>\n    Property modifiers:Dict<ModifierManager<void | __type>>\n    Property program:Program\n    Property updateOperations:DOMChanges\n    Property uselessAnchor:HTMLAnchorElement\n    Method attributeFor\n      CallSignature attributeFor:AttributeManager\n        Parameter element:Element\n        Parameter attr:string\n        Parameter isTrusting:boolean\n        Parameter namespace:string\n    Method begin\n      CallSignature begin:void\n    Method commit\n      CallSignature commit:void\n    Method didCreate\n      CallSignature didCreate<T>:void\n        TypeParameter T\n        Parameter component:T\n        Parameter manager:ComponentManager<T>\n    Method didDestroy\n      CallSignature didDestroy:void\n        Parameter d:Destroyable\n    Method didUpdate\n      CallSignature didUpdate<T>:void\n        TypeParameter T\n        Parameter component:T\n        Parameter manager:ComponentManager<T>\n    Method getAppendOperations\n      CallSignature getAppendOperations:DOMTreeConstruction\n    Method getComponentDefinition\n      CallSignature getComponentDefinition:ComponentDefinition<Component>\n        Parameter name:string\n        Parameter meta:TemplateMeta\n    Method getDOM\n      CallSignature getDOM:DOMChanges\n    Method getIdentity\n      CallSignature getIdentity:string\n        Parameter object:HasGuid\n    Method hasComponentDefinition\n      CallSignature hasComponentDefinition:boolean\n        Parameter name:string\n        Parameter meta:TemplateMeta\n    Method hasHelper\n      CallSignature hasHelper:boolean\n        Parameter name:string\n        Parameter meta:TemplateMeta\n    Method hasModifier\n      CallSignature hasModifier:boolean\n        Parameter modifierName:string\n        Parameter blockMeta:TemplateMeta\n    Method hasPartial\n      CallSignature hasPartial:boolean\n    Method iterableFor\n      CallSignature iterableFor:OpaqueIterable\n        Parameter ref:Reference<Opaque>\n        Parameter keyPath:string\n    Method lookupHelper\n      CallSignature lookupHelper:GlimmerHelper\n        Parameter name:string\n        Parameter meta:TemplateMeta\n    Method lookupModifier\n      CallSignature lookupModifier:ModifierManager<Opaque>\n        Parameter modifierName:string\n        Parameter blockMeta:TemplateMeta\n    Method lookupPartial\n      CallSignature lookupPartial:any\n    Method macros\n      CallSignature macros:object\n        TypeLiteral __type\n          Variable blocks:BlockMacros\n          Variable inlines:InlineMacros\n    Method managerFor\n      CallSignature managerFor:ComponentManager<Component>\n        Parameter managerId:string\n    Method populateBuiltins\n      CallSignature populateBuiltins:object\n        TypeLiteral __type\n          Variable blocks:Blocks\n          Variable inlines:Inlines\n    Method protocolForURL\n      CallSignature protocolForURL:string\n        Parameter url:string\n    Method registerComponent\n      CallSignature registerComponent:ComponentDefinition<Component>\n        Parameter name:string\n        Parameter templateSpecifier:string\n        Parameter meta:TemplateMeta\n        Parameter owner:Owner\n    Method registerHelper\n      CallSignature registerHelper:GlimmerHelper\n        Parameter specifier:string\n        Parameter owner:Owner\n    Method scheduleInstallModifier\n      CallSignature scheduleInstallModifier<T>:void\n        TypeParameter T\n        Parameter modifier:T\n        Parameter manager:ModifierManager<T>\n    Method scheduleUpdateModifier\n      CallSignature scheduleUpdateModifier<T>:void\n        TypeParameter T\n        Parameter modifier:T\n        Parameter manager:ModifierManager<T>\n    Method toConditionalReference\n      CallSignature toConditionalReference:Reference<boolean>\n        Parameter reference:Reference<Opaque>\n    Method create\n      CallSignature create:Environment\n        Parameter options:EnvironmentOptions\n  Class HelperReference\n    Constructor constructor\n      ConstructorSignature new HelperReference:HelperReference\n        Parameter helper:UserHelper\n        Parameter args:Arguments\n    Property args:CapturedArguments\n    Property helper:UserHelper\n    Property tag:TagWrapper<any>\n    Method get\n      CallSignature get:SimplePathReference<Opaque>\n        Parameter prop:string\n    Method value\n      CallSignature value:any\n  Class Iterable\n    Constructor constructor\n      ConstructorSignature new Iterable:Iterable\n        Parameter ref:Reference<Opaque>\n        Parameter keyFor:KeyFor<Opaque>\n    Property keyFor:KeyFor<Opaque>\n    Property ref:Reference<Opaque>\n    Property tag:Tag\n    Method iterate\n      CallSignature iterate:OpaqueIterator\n    Method memoReferenceFor\n      CallSignature memoReferenceFor:UpdatableReference<Opaque>\n        Parameter item:IterationItem<Opaque, Opaque>\n    Method updateMemoReference\n      CallSignature updateMemoReference:void\n        Parameter reference:UpdatableReference<Opaque>\n        Parameter item:IterationItem<Opaque, Opaque>\n    Method updateValueReference\n      CallSignature updateValueReference:void\n        Parameter reference:UpdatableReference<Opaque>\n        Parameter item:IterationItem<Opaque, Opaque>\n    Method valueReferenceFor\n      CallSignature valueReferenceFor:UpdatableReference<Opaque>\n        Parameter item:IterationItem<Opaque, Opaque>\n  Class ObjectKeysIterator\n    Constructor constructor\n      ConstructorSignature new ObjectKeysIterator:ObjectKeysIterator\n        Parameter keys:string[]\n        Parameter values:Opaque[]\n        Parameter keyFor:KeyFor<string>\n    Property keyFor:KeyFor<string>\n    Property keys:string[]\n    Property position:number\n    Property values:Opaque[]\n    Method isEmpty\n      CallSignature isEmpty:boolean\n    Method next\n      CallSignature next:IterationItem<Opaque, string>\n  Class SimplePathReference<T>\n    TypeParameter T\n    Constructor constructor\n      ConstructorSignature new SimplePathReference:SimplePathReference\n        Parameter parent:Reference<T>\n        Parameter property:string\n    Property parent:Reference<T>\n    Property property:string\n    Property tag:TagWrapper<any>\n    Method get\n      CallSignature get:PathReference<Opaque>\n        Parameter prop:string\n    Method value\n      CallSignature value:T\n  Interface AppRoot\n    Property component:string | ComponentDefinition<Component>\n    Property id:number\n    Property nextSibling:Option<Node>\n    Property parent:Node\n  Interface ApplicationOptions\n    Property resolver:Resolver\n    Property rootName:string\n  Interface ComponentDefinitionCreator\n    Method createComponentDefinition\n      CallSignature createComponentDefinition:ComponentDefinition<Component>\n        Parameter name:string\n        Parameter template:Template<TemplateMeta>\n        Parameter componentFactory:Factory<Component>\n  Interface EnvironmentOptions\n    Property appendOperations:DOMTreeConstruction\n    Property document:HTMLDocument\n  Interface ExtendedTemplateMeta\n    Property <template-meta>:true\n    Property managerId:string\n    Property moduleName:string\n    Property specifier:string\n  Interface Initializer\n    Property name:string\n    Method initialize\n      CallSignature initialize:void\n        Parameter registry:RegistryWriter\n  TypeAlias KeyFor:function\n    TypeLiteral __type\n      CallSignature __call:string\n        Parameter item:Opaque\n        Parameter index:T\n  TypeAlias UserHelper:function\n    TypeLiteral __type\n      CallSignature __call:any\n        Parameter args:ReadonlyArray<Opaque>\n        Parameter named:Dict<Opaque>\n  Variable DEFAULT_MANAGER:\"main\"\n  Variable EMPTY_ITERATOR:EmptyIterator\n  Function blockComponentMacro\n    CallSignature blockComponentMacro:boolean\n      Parameter params:any\n      Parameter hash:any\n      Parameter template:any\n      Parameter inverse:any\n      Parameter builder:any\n  Function buildAction\n    CallSignature buildAction:ConstReference<action>\n      Parameter vm:VM\n      Parameter _args:Arguments\n  Function buildUserHelper\n    CallSignature buildUserHelper:GlimmerHelper\n      Parameter helperFunc:any\n  Function canCreateComponentDefinition\n    CallSignature canCreateComponentDefinition:boolean\n      Parameter manager:ComponentDefinitionCreator | ComponentManager<Component>\n  Function debugInfoForReference\n    CallSignature debugInfoForReference:string\n      Parameter reference:any\n  Function debugName\n    CallSignature debugName:any\n      Parameter obj:any\n  Function dynamicComponentFor\n    CallSignature dynamicComponentFor:DynamicComponentReference\n      Parameter vm:VM\n      Parameter args:Arguments\n      Parameter meta:TemplateMeta\n  Function hashToArgs\n    CallSignature hashToArgs:Option<WireFormat.Core.Hash>\n      Parameter hash:Option<WireFormat.Core.Hash>\n  Function inlineComponentMacro\n    CallSignature inlineComponentMacro:boolean\n      Parameter _name:any\n      Parameter params:any\n      Parameter hash:any\n      Parameter builder:any\n  Function isTypeSpecifier\n    CallSignature isTypeSpecifier:boolean\n      Parameter specifier:string\n  Function populateMacros\n    CallSignature populateMacros:void\n      Parameter blocks:BlockMacros\n      Parameter inlines:InlineMacros\n  Function throwNoActionError\n    CallSignature throwNoActionError:void\n      Parameter actionFunc:any\n      Parameter actionFuncReference:Reference<any>\n  ObjectLiteral DEFAULT_HELPERS:object\n    Variable action:buildAction",
         "packageInfo": {
           "name": "@glimmer/application",
-          "version": "0.3.10",
+          "version": "0.4.0",
           "description": "Glimmer standalone applications",
           "contributors": [
             "Dan Gebhardt <dan@cerebris.com>",
@@ -915,15 +924,15 @@ var main = {
               },
               {
                 "fileName": "environment.ts",
-                "line": 37,
+                "line": 39,
                 "character": 11
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "function",
               "declaration": {
-                "id": "634",
+                "id": "671",
                 "type": "type-literal",
                 "attributes": {
                   "name": "__type",
@@ -936,7 +945,7 @@ var main = {
                   "sources": [
                     {
                       "fileName": "environment.ts",
-                      "line": 37,
+                      "line": 39,
                       "character": 16
                     }
                   ],
@@ -952,11 +961,11 @@ var main = {
                       "sources": [
                         {
                           "fileName": "environment.ts",
-                          "line": 37,
+                          "line": 39,
                           "character": 16
                         }
                       ],
-                      "type": {
+                      "typeInfo": {
                         "isArray": false,
                         "name": "string"
                       },
@@ -972,7 +981,7 @@ var main = {
                           "fullName": "KeyFor.__type.__call.item",
                           "hierarchy": "Parameter item:Opaque",
                           "kindString": "Parameter",
-                          "type": {
+                          "typeInfo": {
                             "isArray": false,
                             "name": "Opaque"
                           }
@@ -988,7 +997,7 @@ var main = {
                           "fullName": "KeyFor.__type.__call.index",
                           "hierarchy": "Parameter index:T",
                           "kindString": "Parameter",
-                          "type": {
+                          "typeInfo": {
                             "isArray": false,
                             "name": "T"
                           }
@@ -1011,7 +1020,7 @@ var main = {
                 "sources": [
                   {
                     "fileName": "environment.ts",
-                    "line": 37,
+                    "line": 39,
                     "character": 16
                   }
                 ],
@@ -1027,11 +1036,11 @@ var main = {
                     "sources": [
                       {
                         "fileName": "environment.ts",
-                        "line": 37,
+                        "line": 39,
                         "character": 16
                       }
                     ],
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     },
@@ -1047,7 +1056,7 @@ var main = {
                         "fullName": "KeyFor.__type.__call.item",
                         "hierarchy": "Parameter item:Opaque",
                         "kindString": "Parameter",
-                        "type": {
+                        "typeInfo": {
                           "isArray": false,
                           "name": "Opaque"
                         }
@@ -1063,9 +1072,187 @@ var main = {
                         "fullName": "KeyFor.__type.__call.index",
                         "hierarchy": "Parameter index:T",
                         "kindString": "Parameter",
-                        "type": {
+                        "typeInfo": {
                           "isArray": false,
                           "name": "T"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "UserHelper",
+            "slug": "userhelper",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "userhelper",
+            "fullName": "UserHelper",
+            "hierarchy": "TypeAlias UserHelper:function\n  TypeLiteral __type\n    CallSignature __call:any\n      Parameter args:ReadonlyArray<Opaque>\n      Parameter named:Dict<Opaque>",
+            "kindString": "Type alias",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 19,
+                "character": 22
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "function",
+              "declaration": {
+                "id": "533",
+                "type": "type-literal",
+                "attributes": {
+                  "name": "__type",
+                  "slug": "__type",
+                  "flags": {},
+                  "alias": "__type",
+                  "fullName": "UserHelper.__type",
+                  "hierarchy": "TypeLiteral __type\n  CallSignature __call:any\n    Parameter args:ReadonlyArray<Opaque>\n    Parameter named:Dict<Opaque>",
+                  "kindString": "Type literal",
+                  "sources": [
+                    {
+                      "fileName": "helpers/user-helper.ts",
+                      "line": 19,
+                      "character": 24
+                    }
+                  ],
+                  "callSignatures": [
+                    {
+                      "name": "__call",
+                      "slug": "__call",
+                      "flags": {},
+                      "alias": "__call",
+                      "fullName": "UserHelper.__type.__call",
+                      "hierarchy": "CallSignature __call:any\n  Parameter args:ReadonlyArray<Opaque>\n  Parameter named:Dict<Opaque>",
+                      "kindString": "Call signature",
+                      "sources": [
+                        {
+                          "fileName": "helpers/user-helper.ts",
+                          "line": 19,
+                          "character": 24
+                        }
+                      ],
+                      "typeInfo": {
+                        "isArray": false,
+                        "name": "any"
+                      },
+                      "parameters": [
+                        {
+                          "name": "args",
+                          "slug": "args",
+                          "flags": {
+                            "isOptional": false,
+                            "isRest": false
+                          },
+                          "alias": "args",
+                          "fullName": "UserHelper.__type.__call.args",
+                          "hierarchy": "Parameter args:ReadonlyArray<Opaque>",
+                          "kindString": "Parameter",
+                          "typeInfo": {
+                            "isArray": false,
+                            "name": "ReadonlyArray"
+                          }
+                        },
+                        {
+                          "name": "named",
+                          "slug": "named",
+                          "flags": {
+                            "isOptional": false,
+                            "isRest": false
+                          },
+                          "alias": "named",
+                          "fullName": "UserHelper.__type.__call.named",
+                          "hierarchy": "Parameter named:Dict<Opaque>",
+                          "kindString": "Parameter",
+                          "typeInfo": {
+                            "isArray": false,
+                            "name": "Dict"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "typeLiterals": [
+              {
+                "name": "__type",
+                "slug": "__type",
+                "flags": {},
+                "alias": "__type",
+                "fullName": "UserHelper.__type",
+                "hierarchy": "TypeLiteral __type\n  CallSignature __call:any\n    Parameter args:ReadonlyArray<Opaque>\n    Parameter named:Dict<Opaque>",
+                "kindString": "Type literal",
+                "sources": [
+                  {
+                    "fileName": "helpers/user-helper.ts",
+                    "line": 19,
+                    "character": 24
+                  }
+                ],
+                "callSignatures": [
+                  {
+                    "name": "__call",
+                    "slug": "__call",
+                    "flags": {},
+                    "alias": "__call",
+                    "fullName": "UserHelper.__type.__call",
+                    "hierarchy": "CallSignature __call:any\n  Parameter args:ReadonlyArray<Opaque>\n  Parameter named:Dict<Opaque>",
+                    "kindString": "Call signature",
+                    "sources": [
+                      {
+                        "fileName": "helpers/user-helper.ts",
+                        "line": 19,
+                        "character": 24
+                      }
+                    ],
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "any"
+                    },
+                    "parameters": [
+                      {
+                        "name": "args",
+                        "slug": "args",
+                        "flags": {
+                          "isOptional": false,
+                          "isRest": false
+                        },
+                        "alias": "args",
+                        "fullName": "UserHelper.__type.__call.args",
+                        "hierarchy": "Parameter args:ReadonlyArray<Opaque>",
+                        "kindString": "Parameter",
+                        "typeInfo": {
+                          "isArray": false,
+                          "name": "ReadonlyArray"
+                        }
+                      },
+                      {
+                        "name": "named",
+                        "slug": "named",
+                        "flags": {
+                          "isOptional": false,
+                          "isRest": false
+                        },
+                        "alias": "named",
+                        "fullName": "UserHelper.__type.__call.named",
+                        "hierarchy": "Parameter named:Dict<Opaque>",
+                        "kindString": "Parameter",
+                        "typeInfo": {
+                          "isArray": false,
+                          "name": "Dict"
                         }
                       }
                     ]
@@ -1095,11 +1282,11 @@ var main = {
             "sources": [
               {
                 "fileName": "environment.ts",
-                "line": 50,
+                "line": 52,
                 "character": 21
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "main"
             }
@@ -1127,7 +1314,7 @@ var main = {
                 "character": 20
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "EmptyIterator",
               "link": {
@@ -1171,11 +1358,11 @@ var main = {
             "sources": [
               {
                 "fileName": "environment.ts",
-                "line": 51,
+                "line": 53,
                 "character": 21
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "object"
             },
@@ -1199,11 +1386,11 @@ var main = {
                 "sources": [
                   {
                     "fileName": "environment.ts",
-                    "line": 52,
+                    "line": 54,
                     "character": 8
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "buildAction",
                   "link": {
@@ -1235,7 +1422,7 @@ var main = {
           "data": [
             {
               "type": "class",
-              "id": "661"
+              "id": "698"
             },
             {
               "type": "class",
@@ -1247,7 +1434,7 @@ var main = {
             },
             {
               "type": "class",
-              "id": "508"
+              "id": "543"
             },
             {
               "type": "class",
@@ -1263,6 +1450,10 @@ var main = {
             },
             {
               "type": "class",
+              "id": "554"
+            },
+            {
+              "type": "class",
               "id": "519"
             },
             {
@@ -1272,6 +1463,10 @@ var main = {
             {
               "type": "class",
               "id": "396"
+            },
+            {
+              "type": "class",
+              "id": "505"
             }
           ]
         },
@@ -1279,11 +1474,11 @@ var main = {
           "data": [
             {
               "type": "interface",
-              "id": "656"
+              "id": "693"
             },
             {
               "type": "interface",
-              "id": "648"
+              "id": "685"
             },
             {
               "type": "interface",
@@ -1291,7 +1486,7 @@ var main = {
             },
             {
               "type": "interface",
-              "id": "505"
+              "id": "540"
             },
             {
               "type": "interface",
@@ -1299,7 +1494,7 @@ var main = {
             },
             {
               "type": "interface",
-              "id": "651"
+              "id": "688"
             }
           ]
         },
@@ -1315,7 +1510,11 @@ var main = {
             },
             {
               "type": "function",
-              "id": "645"
+              "id": "537"
+            },
+            {
+              "type": "function",
+              "id": "682"
             },
             {
               "type": "function",
@@ -1343,7 +1542,7 @@ var main = {
             },
             {
               "type": "function",
-              "id": "641"
+              "id": "678"
             },
             {
               "type": "function",
@@ -1354,7 +1553,7 @@ var main = {
       }
     },
     {
-      "id": "661",
+      "id": "698",
       "type": "class",
       "attributes": {
         "name": "Application",
@@ -1426,11 +1625,11 @@ var main = {
                     "character": 31
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "Application",
                   "link": {
-                    "id": "661",
+                    "id": "698",
                     "type": "class",
                     "slug": "application",
                     "sources": [
@@ -1460,11 +1659,11 @@ var main = {
                     "fullName": "Application.constructor.new Application.options",
                     "hierarchy": "Parameter options:ApplicationOptions",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "ApplicationOptions",
                       "link": {
-                        "id": "648",
+                        "id": "685",
                         "type": "interface",
                         "slug": "applicationoptions",
                         "sources": [
@@ -1512,7 +1711,7 @@ var main = {
                 "character": 20
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Container"
             }
@@ -1540,7 +1739,7 @@ var main = {
                 "character": 22
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "boolean"
             }
@@ -1568,11 +1767,11 @@ var main = {
                 "character": 23
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": true,
               "name": "Initializer",
               "link": {
-                "id": "651",
+                "id": "688",
                 "type": "interface",
                 "slug": "initializer",
                 "sources": [
@@ -1614,7 +1813,7 @@ var main = {
                 "character": 19
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Registry"
             }
@@ -1642,7 +1841,7 @@ var main = {
                 "character": 23
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "RenderResult"
             }
@@ -1674,7 +1873,7 @@ var main = {
               "shortText": "Whether the initial render has completed.",
               "text": ""
             },
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "boolean"
             }
@@ -1702,11 +1901,11 @@ var main = {
                 "character": 16
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": true,
               "name": "AppRoot",
               "link": {
-                "id": "656",
+                "id": "693",
                 "type": "interface",
                 "slug": "approot",
                 "sources": [
@@ -1748,7 +1947,7 @@ var main = {
                 "character": 21
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "number"
             }
@@ -1780,7 +1979,7 @@ var main = {
               "shortText": "Whether a re-render has been scheduled.",
               "text": ""
             },
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "boolean"
             }
@@ -1808,17 +2007,17 @@ var main = {
                 "character": 12
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Environment",
               "link": {
-                "id": "519",
+                "id": "554",
                 "type": "class",
                 "slug": "environment",
                 "sources": [
                   {
                     "fileName": "environment.ts",
-                    "line": 55,
+                    "line": 57,
                     "character": 32
                   }
                 ],
@@ -1854,7 +2053,7 @@ var main = {
                 "character": 17
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Resolver"
             }
@@ -1882,7 +2081,7 @@ var main = {
                 "character": 17
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "string"
             }
@@ -1908,7 +2107,7 @@ var main = {
             "sources": [
               {
                 "fileName": "application.ts",
-                "line": 109,
+                "line": 110,
                 "character": 6
               }
             ],
@@ -1924,11 +2123,11 @@ var main = {
                 "sources": [
                   {
                     "fileName": "application.ts",
-                    "line": 109,
+                    "line": 110,
                     "character": 6
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 }
@@ -1954,7 +2153,7 @@ var main = {
             "sources": [
               {
                 "fileName": "application.ts",
-                "line": 164,
+                "line": 165,
                 "character": 12
               }
             ],
@@ -1970,11 +2169,11 @@ var main = {
                 "sources": [
                   {
                     "fileName": "application.ts",
-                    "line": 164,
+                    "line": 165,
                     "character": 12
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "Factory"
                 },
@@ -1990,7 +2189,7 @@ var main = {
                     "fullName": "Application.factoryFor.factoryFor.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -2006,7 +2205,7 @@ var main = {
                     "fullName": "Application.factoryFor.factoryFor.referrer",
                     "hierarchy": "Parameter referrer:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -2034,7 +2233,7 @@ var main = {
             "sources": [
               {
                 "fileName": "application.ts",
-                "line": 160,
+                "line": 161,
                 "character": 10
               }
             ],
@@ -2050,7 +2249,7 @@ var main = {
                 "sources": [
                   {
                     "fileName": "application.ts",
-                    "line": 160,
+                    "line": 161,
                     "character": 10
                   }
                 ],
@@ -2058,7 +2257,7 @@ var main = {
                   "shortText": "Owner interface implementation",
                   "text": ""
                 },
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "string"
                 },
@@ -2074,7 +2273,7 @@ var main = {
                     "fullName": "Application.identify.identify.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -2090,7 +2289,7 @@ var main = {
                     "fullName": "Application.identify.identify.referrer",
                     "hierarchy": "Parameter referrer:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -2118,7 +2317,7 @@ var main = {
             "sources": [
               {
                 "fileName": "application.ts",
-                "line": 92,
+                "line": 93,
                 "character": 15
               }
             ],
@@ -2134,11 +2333,11 @@ var main = {
                 "sources": [
                   {
                     "fileName": "application.ts",
-                    "line": 92,
+                    "line": 93,
                     "character": 15
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 }
@@ -2184,7 +2383,7 @@ var main = {
                     "character": 14
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 }
@@ -2210,7 +2409,7 @@ var main = {
             "sources": [
               {
                 "fileName": "application.ts",
-                "line": 104,
+                "line": 105,
                 "character": 12
               }
             ],
@@ -2226,11 +2425,11 @@ var main = {
                 "sources": [
                   {
                     "fileName": "application.ts",
-                    "line": 104,
+                    "line": 105,
                     "character": 12
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 }
@@ -2256,7 +2455,7 @@ var main = {
             "sources": [
               {
                 "fileName": "application.ts",
-                "line": 168,
+                "line": 169,
                 "character": 8
               }
             ],
@@ -2272,11 +2471,11 @@ var main = {
                 "sources": [
                   {
                     "fileName": "application.ts",
-                    "line": 168,
+                    "line": 169,
                     "character": 8
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 },
@@ -2292,7 +2491,7 @@ var main = {
                     "fullName": "Application.lookup.lookup.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -2308,7 +2507,7 @@ var main = {
                     "fullName": "Application.lookup.lookup.referrer",
                     "hierarchy": "Parameter referrer:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -2356,7 +2555,7 @@ var main = {
                     "character": 21
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 },
@@ -2372,11 +2571,11 @@ var main = {
                     "fullName": "Application.registerInitializer.registerInitializer.initializer",
                     "hierarchy": "Parameter initializer:Initializer",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "Initializer",
                       "link": {
-                        "id": "651",
+                        "id": "688",
                         "type": "interface",
                         "slug": "initializer",
                         "sources": [
@@ -2418,7 +2617,7 @@ var main = {
             "sources": [
               {
                 "fileName": "application.ts",
-                "line": 117,
+                "line": 118,
                 "character": 8
               }
             ],
@@ -2434,11 +2633,11 @@ var main = {
                 "sources": [
                   {
                     "fileName": "application.ts",
-                    "line": 117,
+                    "line": 118,
                     "character": 8
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 }
@@ -2464,7 +2663,7 @@ var main = {
             "sources": [
               {
                 "fileName": "application.ts",
-                "line": 136,
+                "line": 137,
                 "character": 17
               }
             ],
@@ -2480,11 +2679,11 @@ var main = {
                 "sources": [
                   {
                     "fileName": "application.ts",
-                    "line": 136,
+                    "line": 137,
                     "character": 17
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 },
@@ -2500,7 +2699,7 @@ var main = {
                     "fullName": "Application.renderComponent.renderComponent.component",
                     "hierarchy": "Parameter component:string | ComponentDefinition<Component>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string | ComponentDefinition<Component>",
                       "types": [
@@ -2526,7 +2725,7 @@ var main = {
                     "fullName": "Application.renderComponent.renderComponent.parent",
                     "hierarchy": "Parameter parent:Node",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "Node"
                     }
@@ -2542,7 +2741,7 @@ var main = {
                     "fullName": "Application.renderComponent.renderComponent.nextSibling",
                     "hierarchy": "Parameter nextSibling:Option<Node>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "Option"
                     }
@@ -2570,7 +2769,7 @@ var main = {
             "sources": [
               {
                 "fileName": "application.ts",
-                "line": 141,
+                "line": 142,
                 "character": 10
               }
             ],
@@ -2586,11 +2785,11 @@ var main = {
                 "sources": [
                   {
                     "fileName": "application.ts",
-                    "line": 141,
+                    "line": 142,
                     "character": 10
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 }
@@ -2616,7 +2815,7 @@ var main = {
             "sources": [
               {
                 "fileName": "application.ts",
-                "line": 147,
+                "line": 148,
                 "character": 18
               }
             ],
@@ -2632,11 +2831,11 @@ var main = {
                 "sources": [
                   {
                     "fileName": "application.ts",
-                    "line": 147,
+                    "line": 148,
                     "character": 18
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 }
@@ -2719,7 +2918,7 @@ var main = {
                     "character": 30
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "ApplicationRegistry",
                   "link": {
@@ -2753,7 +2952,7 @@ var main = {
                     "fullName": "ApplicationRegistry.constructor.new ApplicationRegistry.registry",
                     "hierarchy": "Parameter registry:Registry",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "Registry"
                     }
@@ -2769,7 +2968,7 @@ var main = {
                     "fullName": "ApplicationRegistry.constructor.new ApplicationRegistry.resolver",
                     "hierarchy": "Parameter resolver:Resolver",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "Resolver"
                     }
@@ -2803,7 +3002,7 @@ var main = {
                 "character": 19
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Registry"
             }
@@ -2831,7 +3030,7 @@ var main = {
                 "character": 19
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Resolver"
             }
@@ -2877,7 +3076,7 @@ var main = {
                     "character": 36
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "string"
                 },
@@ -2893,7 +3092,7 @@ var main = {
                     "fullName": "ApplicationRegistry._toAbsoluteOrTypeSpecifier._toAbsoluteOrTypeSpecifier.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -2941,7 +3140,7 @@ var main = {
                     "character": 30
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "string"
                 },
@@ -2957,7 +3156,7 @@ var main = {
                     "fullName": "ApplicationRegistry._toAbsoluteSpecifier._toAbsoluteSpecifier.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -2973,7 +3172,7 @@ var main = {
                     "fullName": "ApplicationRegistry._toAbsoluteSpecifier._toAbsoluteSpecifier.referrer",
                     "hierarchy": "Parameter referrer:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3021,7 +3220,7 @@ var main = {
                     "character": 10
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 },
@@ -3037,7 +3236,7 @@ var main = {
                     "fullName": "ApplicationRegistry.register.register.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3053,7 +3252,7 @@ var main = {
                     "fullName": "ApplicationRegistry.register.register.factory",
                     "hierarchy": "Parameter factory:any",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "any"
                     }
@@ -3069,7 +3268,7 @@ var main = {
                     "fullName": "ApplicationRegistry.register.register.options",
                     "hierarchy": "Parameter options:RegistrationOptions",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "RegistrationOptions"
                     }
@@ -3117,7 +3316,7 @@ var main = {
                     "character": 19
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 },
@@ -3133,7 +3332,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registerInjection.registerInjection.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3149,7 +3348,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registerInjection.registerInjection.property",
                     "hierarchy": "Parameter property:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3165,7 +3364,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registerInjection.registerInjection.injection",
                     "hierarchy": "Parameter injection:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3213,7 +3412,7 @@ var main = {
                     "character": 16
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 },
@@ -3229,7 +3428,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registerOption.registerOption.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3245,7 +3444,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registerOption.registerOption.option",
                     "hierarchy": "Parameter option:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3261,7 +3460,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registerOption.registerOption.value",
                     "hierarchy": "Parameter value:any",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "any"
                     }
@@ -3309,7 +3508,7 @@ var main = {
                     "character": 22
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": true,
                   "name": "Injection"
                 },
@@ -3325,7 +3524,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registeredInjections.registeredInjections.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3373,7 +3572,7 @@ var main = {
                     "character": 18
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 },
@@ -3389,7 +3588,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registeredOption.registeredOption.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3405,7 +3604,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registeredOption.registeredOption.option",
                     "hierarchy": "Parameter option:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3453,7 +3652,7 @@ var main = {
                     "character": 19
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 },
@@ -3469,7 +3668,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registeredOptions.registeredOptions.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3517,7 +3716,7 @@ var main = {
                     "character": 14
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 },
@@ -3533,7 +3732,7 @@ var main = {
                     "fullName": "ApplicationRegistry.registration.registration.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3581,7 +3780,7 @@ var main = {
                     "character": 12
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 },
@@ -3597,7 +3796,7 @@ var main = {
                     "fullName": "ApplicationRegistry.unregister.unregister.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3645,7 +3844,7 @@ var main = {
                     "character": 18
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 },
@@ -3661,7 +3860,7 @@ var main = {
                     "fullName": "ApplicationRegistry.unregisterOption.unregisterOption.specifier",
                     "hierarchy": "Parameter specifier:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3677,7 +3876,7 @@ var main = {
                     "fullName": "ApplicationRegistry.unregisterOption.unregisterOption.option",
                     "hierarchy": "Parameter option:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -3762,7 +3961,7 @@ var main = {
                     "character": 23
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "ArrayIterator",
                   "link": {
@@ -3796,7 +3995,7 @@ var main = {
                     "fullName": "ArrayIterator.constructor.new ArrayIterator.array",
                     "hierarchy": "Parameter array:Opaque[]",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": true,
                       "name": "Opaque"
                     }
@@ -3812,7 +4011,7 @@ var main = {
                     "fullName": "ArrayIterator.constructor.new ArrayIterator.keyFor",
                     "hierarchy": "Parameter keyFor:KeyFor<number>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "KeyFor",
                       "link": {
@@ -3827,7 +4026,7 @@ var main = {
                           },
                           {
                             "fileName": "environment.ts",
-                            "line": 37,
+                            "line": 39,
                             "character": 11
                           }
                         ],
@@ -3869,7 +4068,7 @@ var main = {
                 "character": 15
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": true,
               "name": "Opaque"
             }
@@ -3897,7 +4096,7 @@ var main = {
                 "character": 16
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "KeyFor",
               "link": {
@@ -3912,7 +4111,7 @@ var main = {
                   },
                   {
                     "fileName": "environment.ts",
-                    "line": 37,
+                    "line": 39,
                     "character": 11
                   }
                 ],
@@ -3948,7 +4147,7 @@ var main = {
                 "character": 18
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "number"
             }
@@ -3994,7 +4193,7 @@ var main = {
                     "character": 9
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "boolean"
                 }
@@ -4040,7 +4239,7 @@ var main = {
                     "character": 6
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "IterationItem"
                 }
@@ -4051,7 +4250,7 @@ var main = {
       }
     },
     {
-      "id": "508",
+      "id": "543",
       "type": "class",
       "attributes": {
         "name": "DefaultComponentDefinition",
@@ -4079,7 +4278,7 @@ var main = {
         "sources": [
           {
             "fileName": "environment.ts",
-            "line": 44,
+            "line": 46,
             "character": 32
           }
         ]
@@ -4158,7 +4357,7 @@ var main = {
                     "character": 38
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "DynamicComponentReference",
                   "link": {
@@ -4192,7 +4391,7 @@ var main = {
                     "fullName": "DynamicComponentReference.constructor.new DynamicComponentReference.nameRef",
                     "hierarchy": "Parameter nameRef:PathReference<Opaque>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "PathReference"
                     }
@@ -4208,7 +4407,7 @@ var main = {
                     "fullName": "DynamicComponentReference.constructor.new DynamicComponentReference.env",
                     "hierarchy": "Parameter env:GlimmerEnvironment",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "GlimmerEnvironment"
                     }
@@ -4224,7 +4423,7 @@ var main = {
                     "fullName": "DynamicComponentReference.constructor.new DynamicComponentReference.meta",
                     "hierarchy": "Parameter meta:TemplateMeta",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "TemplateMeta"
                     }
@@ -4258,7 +4457,7 @@ var main = {
                 "character": 65
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "GlimmerEnvironment"
             }
@@ -4286,7 +4485,7 @@ var main = {
                 "character": 99
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "TemplateMeta"
             }
@@ -4314,7 +4513,7 @@ var main = {
                 "character": 29
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "PathReference"
             }
@@ -4342,7 +4541,7 @@ var main = {
                 "character": 12
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "TagWrapper"
             }
@@ -4388,7 +4587,7 @@ var main = {
                     "character": 5
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "PrimitiveReference"
                 }
@@ -4434,7 +4633,7 @@ var main = {
                     "character": 7
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "ComponentDefinition"
                 }
@@ -4517,7 +4716,7 @@ var main = {
                     "character": 17
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "DynamicScope",
                   "link": {
@@ -4551,7 +4750,7 @@ var main = {
                     "fullName": "DynamicScope.constructor.new DynamicScope.bucket",
                     "hierarchy": "Parameter bucket:any",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "any"
                     }
@@ -4585,7 +4784,7 @@ var main = {
                 "character": 16
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "any"
             }
@@ -4631,7 +4830,7 @@ var main = {
                     "character": 7
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "DynamicScope",
                   "link": {
@@ -4695,7 +4894,7 @@ var main = {
                     "character": 5
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "PathReference"
                 },
@@ -4711,7 +4910,7 @@ var main = {
                     "fullName": "DynamicScope.get.get.key",
                     "hierarchy": "Parameter key:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -4759,7 +4958,7 @@ var main = {
                     "character": 5
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "VersionedPathReference"
                 },
@@ -4775,7 +4974,7 @@ var main = {
                     "fullName": "DynamicScope.set.set.key",
                     "hierarchy": "Parameter key:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -4791,7 +4990,7 @@ var main = {
                     "fullName": "DynamicScope.set.set.reference",
                     "hierarchy": "Parameter reference:PathReference<Opaque>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "PathReference"
                     }
@@ -4876,7 +5075,7 @@ var main = {
                     "character": 9
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "boolean"
                 }
@@ -4922,7 +5121,7 @@ var main = {
                     "character": 6
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "IterationItem"
                 }
@@ -4933,7 +5132,7 @@ var main = {
       }
     },
     {
-      "id": "519",
+      "id": "554",
       "type": "class",
       "attributes": {
         "name": "Environment",
@@ -4950,7 +5149,7 @@ var main = {
         },
         "alias": "environment",
         "fullName": "Environment",
-        "hierarchy": "Class Environment\n  Constructor constructor\n    ConstructorSignature new Environment:Environment\n      Parameter options:EnvironmentOptions\n  Property appendOperations:DOMTreeConstruction\n  Property components:Dict<ComponentDefinition<void | __type>>\n  Property constants:Constants\n  Property helpers:object\n    TypeLiteral __type\n      Variable action:buildAction\n  Property managers:Dict<ComponentManager<void | __type>>\n  Property modifiers:Dict<ModifierManager<void | __type>>\n  Property program:Program\n  Property updateOperations:DOMChanges\n  Property uselessAnchor:HTMLAnchorElement\n  Method attributeFor\n    CallSignature attributeFor:AttributeManager\n      Parameter element:Element\n      Parameter attr:string\n      Parameter isTrusting:boolean\n      Parameter namespace:string\n  Method begin\n    CallSignature begin:void\n  Method commit\n    CallSignature commit:void\n  Method didCreate\n    CallSignature didCreate<T>:void\n      TypeParameter T\n      Parameter component:T\n      Parameter manager:ComponentManager<T>\n  Method didDestroy\n    CallSignature didDestroy:void\n      Parameter d:Destroyable\n  Method didUpdate\n    CallSignature didUpdate<T>:void\n      TypeParameter T\n      Parameter component:T\n      Parameter manager:ComponentManager<T>\n  Method getAppendOperations\n    CallSignature getAppendOperations:DOMTreeConstruction\n  Method getComponentDefinition\n    CallSignature getComponentDefinition:ComponentDefinition<Component>\n      Parameter name:string\n      Parameter meta:TemplateMeta\n  Method getDOM\n    CallSignature getDOM:DOMChanges\n  Method getIdentity\n    CallSignature getIdentity:string\n      Parameter object:HasGuid\n  Method hasComponentDefinition\n    CallSignature hasComponentDefinition:boolean\n      Parameter name:string\n      Parameter meta:TemplateMeta\n  Method hasHelper\n    CallSignature hasHelper:boolean\n      Parameter helperName:string\n      Parameter blockMeta:TemplateMeta\n  Method hasModifier\n    CallSignature hasModifier:boolean\n      Parameter modifierName:string\n      Parameter blockMeta:TemplateMeta\n  Method hasPartial\n    CallSignature hasPartial:boolean\n  Method iterableFor\n    CallSignature iterableFor:OpaqueIterable\n      Parameter ref:Reference<Opaque>\n      Parameter keyPath:string\n  Method lookupHelper\n    CallSignature lookupHelper:any\n      Parameter name:string\n      Parameter blockMeta:TemplateMeta\n  Method lookupModifier\n    CallSignature lookupModifier:ModifierManager<Opaque>\n      Parameter modifierName:string\n      Parameter blockMeta:TemplateMeta\n  Method lookupPartial\n    CallSignature lookupPartial:any\n  Method macros\n    CallSignature macros:object\n      TypeLiteral __type\n        Variable blocks:BlockMacros\n        Variable inlines:InlineMacros\n  Method managerFor\n    CallSignature managerFor:ComponentManager<Component>\n      Parameter managerId:string\n  Method populateBuiltins\n    CallSignature populateBuiltins:object\n      TypeLiteral __type\n        Variable blocks:Blocks\n        Variable inlines:Inlines\n  Method protocolForURL\n    CallSignature protocolForURL:string\n      Parameter url:string\n  Method registerComponent\n    CallSignature registerComponent:ComponentDefinition<Component>\n      Parameter name:string\n      Parameter templateSpecifier:string\n      Parameter meta:TemplateMeta\n      Parameter owner:Owner\n  Method scheduleInstallModifier\n    CallSignature scheduleInstallModifier<T>:void\n      TypeParameter T\n      Parameter modifier:T\n      Parameter manager:ModifierManager<T>\n  Method scheduleUpdateModifier\n    CallSignature scheduleUpdateModifier<T>:void\n      TypeParameter T\n      Parameter modifier:T\n      Parameter manager:ModifierManager<T>\n  Method toConditionalReference\n    CallSignature toConditionalReference:Reference<boolean>\n      Parameter reference:Reference<Opaque>\n  Method create\n    CallSignature create:Environment\n      Parameter options:EnvironmentOptions",
+        "hierarchy": "Class Environment\n  Constructor constructor\n    ConstructorSignature new Environment:Environment\n      Parameter options:EnvironmentOptions\n  Property appendOperations:DOMTreeConstruction\n  Property components:Dict<ComponentDefinition<void | __type>>\n  Property constants:Constants\n  Property helpers:Dict<Helper>\n  Property managers:Dict<ComponentManager<void | __type>>\n  Property modifiers:Dict<ModifierManager<void | __type>>\n  Property program:Program\n  Property updateOperations:DOMChanges\n  Property uselessAnchor:HTMLAnchorElement\n  Method attributeFor\n    CallSignature attributeFor:AttributeManager\n      Parameter element:Element\n      Parameter attr:string\n      Parameter isTrusting:boolean\n      Parameter namespace:string\n  Method begin\n    CallSignature begin:void\n  Method commit\n    CallSignature commit:void\n  Method didCreate\n    CallSignature didCreate<T>:void\n      TypeParameter T\n      Parameter component:T\n      Parameter manager:ComponentManager<T>\n  Method didDestroy\n    CallSignature didDestroy:void\n      Parameter d:Destroyable\n  Method didUpdate\n    CallSignature didUpdate<T>:void\n      TypeParameter T\n      Parameter component:T\n      Parameter manager:ComponentManager<T>\n  Method getAppendOperations\n    CallSignature getAppendOperations:DOMTreeConstruction\n  Method getComponentDefinition\n    CallSignature getComponentDefinition:ComponentDefinition<Component>\n      Parameter name:string\n      Parameter meta:TemplateMeta\n  Method getDOM\n    CallSignature getDOM:DOMChanges\n  Method getIdentity\n    CallSignature getIdentity:string\n      Parameter object:HasGuid\n  Method hasComponentDefinition\n    CallSignature hasComponentDefinition:boolean\n      Parameter name:string\n      Parameter meta:TemplateMeta\n  Method hasHelper\n    CallSignature hasHelper:boolean\n      Parameter name:string\n      Parameter meta:TemplateMeta\n  Method hasModifier\n    CallSignature hasModifier:boolean\n      Parameter modifierName:string\n      Parameter blockMeta:TemplateMeta\n  Method hasPartial\n    CallSignature hasPartial:boolean\n  Method iterableFor\n    CallSignature iterableFor:OpaqueIterable\n      Parameter ref:Reference<Opaque>\n      Parameter keyPath:string\n  Method lookupHelper\n    CallSignature lookupHelper:GlimmerHelper\n      Parameter name:string\n      Parameter meta:TemplateMeta\n  Method lookupModifier\n    CallSignature lookupModifier:ModifierManager<Opaque>\n      Parameter modifierName:string\n      Parameter blockMeta:TemplateMeta\n  Method lookupPartial\n    CallSignature lookupPartial:any\n  Method macros\n    CallSignature macros:object\n      TypeLiteral __type\n        Variable blocks:BlockMacros\n        Variable inlines:InlineMacros\n  Method managerFor\n    CallSignature managerFor:ComponentManager<Component>\n      Parameter managerId:string\n  Method populateBuiltins\n    CallSignature populateBuiltins:object\n      TypeLiteral __type\n        Variable blocks:Blocks\n        Variable inlines:Inlines\n  Method protocolForURL\n    CallSignature protocolForURL:string\n      Parameter url:string\n  Method registerComponent\n    CallSignature registerComponent:ComponentDefinition<Component>\n      Parameter name:string\n      Parameter templateSpecifier:string\n      Parameter meta:TemplateMeta\n      Parameter owner:Owner\n  Method registerHelper\n    CallSignature registerHelper:GlimmerHelper\n      Parameter specifier:string\n      Parameter owner:Owner\n  Method scheduleInstallModifier\n    CallSignature scheduleInstallModifier<T>:void\n      TypeParameter T\n      Parameter modifier:T\n      Parameter manager:ModifierManager<T>\n  Method scheduleUpdateModifier\n    CallSignature scheduleUpdateModifier<T>:void\n      TypeParameter T\n      Parameter modifier:T\n      Parameter manager:ModifierManager<T>\n  Method toConditionalReference\n    CallSignature toConditionalReference:Reference<boolean>\n      Parameter reference:Reference<Opaque>\n  Method create\n    CallSignature create:Environment\n      Parameter options:EnvironmentOptions",
         "kindString": "Class",
         "extendedTypes": [
           {
@@ -4961,8 +5160,395 @@ var main = {
         "sources": [
           {
             "fileName": "environment.ts",
-            "line": 55,
+            "line": 57,
             "character": 32
+          }
+        ]
+      }
+    },
+    {
+      "id": "519",
+      "type": "class",
+      "attributes": {
+        "name": "HelperReference",
+        "slug": "helperreference",
+        "flags": {
+          "isNormalized": true,
+          "isExported": true,
+          "isExternal": true,
+          "isOptional": false,
+          "isPrivate": false,
+          "isPublic": false,
+          "isProtected": false,
+          "isStatic": false
+        },
+        "alias": "helperreference",
+        "fullName": "HelperReference",
+        "hierarchy": "Class HelperReference\n  Constructor constructor\n    ConstructorSignature new HelperReference:HelperReference\n      Parameter helper:UserHelper\n      Parameter args:Arguments\n  Property args:CapturedArguments\n  Property helper:UserHelper\n  Property tag:TagWrapper<any>\n  Method get\n    CallSignature get:SimplePathReference<Opaque>\n      Parameter prop:string\n  Method value\n    CallSignature value:any",
+        "kindString": "Class",
+        "implementedTypes": [
+          {
+            "isArray": false,
+            "name": "VersionedPathReference"
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "helpers/user-helper.ts",
+            "line": 44,
+            "character": 28
+          }
+        ],
+        "constructors": [
+          {
+            "name": "constructor",
+            "slug": "constructor",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "constructor",
+            "fullName": "HelperReference.constructor",
+            "hierarchy": "Constructor constructor\n  ConstructorSignature new HelperReference:HelperReference\n    Parameter helper:UserHelper\n    Parameter args:Arguments",
+            "kindString": "Constructor",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 47,
+                "character": 28
+              }
+            ],
+            "constructorSignatures": [
+              {
+                "name": "new HelperReference",
+                "slug": "new_helperreference",
+                "flags": {},
+                "alias": "new_helperreference",
+                "fullName": "HelperReference.constructor.new HelperReference",
+                "hierarchy": "ConstructorSignature new HelperReference:HelperReference\n  Parameter helper:UserHelper\n  Parameter args:Arguments",
+                "kindString": "Constructor signature",
+                "sources": [
+                  {
+                    "fileName": "helpers/user-helper.ts",
+                    "line": 47,
+                    "character": 28
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "HelperReference",
+                  "link": {
+                    "id": "519",
+                    "type": "class",
+                    "slug": "helperreference",
+                    "sources": [
+                      {
+                        "fileName": "helpers/user-helper.ts",
+                        "line": 44,
+                        "character": 28
+                      }
+                    ],
+                    "parent": {
+                      "id": "317",
+                      "type": "0",
+                      "slug": "_glimmer_application",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "helper",
+                    "slug": "helper",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "helper",
+                    "fullName": "HelperReference.constructor.new HelperReference.helper",
+                    "hierarchy": "Parameter helper:UserHelper",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "UserHelper",
+                      "link": {
+                        "id": "532",
+                        "type": "type-alias",
+                        "slug": "userhelper",
+                        "sources": [
+                          {
+                            "fileName": "helpers/user-helper.ts",
+                            "line": 19,
+                            "character": 22
+                          }
+                        ],
+                        "parent": {
+                          "id": "317",
+                          "type": "0",
+                          "slug": "_glimmer_application",
+                          "sources": null
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "name": "args",
+                    "slug": "args",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "args",
+                    "fullName": "HelperReference.constructor.new HelperReference.args",
+                    "hierarchy": "Parameter args:Arguments",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Arguments"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "properties": [
+          {
+            "name": "args",
+            "slug": "args-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": true,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "args-1",
+            "fullName": "HelperReference.args",
+            "hierarchy": "Property args:CapturedArguments",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 46,
+                "character": 14
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "CapturedArguments"
+            }
+          },
+          {
+            "name": "helper",
+            "slug": "helper-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": true,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "helper-1",
+            "fullName": "HelperReference.helper",
+            "hierarchy": "Property helper:UserHelper",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 45,
+                "character": 16
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "UserHelper",
+              "link": {
+                "id": "532",
+                "type": "type-alias",
+                "slug": "userhelper",
+                "sources": [
+                  {
+                    "fileName": "helpers/user-helper.ts",
+                    "line": 19,
+                    "character": 22
+                  }
+                ],
+                "parent": {
+                  "id": "317",
+                  "type": "0",
+                  "slug": "_glimmer_application",
+                  "sources": null
+                }
+              }
+            }
+          },
+          {
+            "name": "tag",
+            "slug": "tag",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": true,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "tag",
+            "fullName": "HelperReference.tag",
+            "hierarchy": "Property tag:TagWrapper<any>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 47,
+                "character": 12
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "TagWrapper"
+            }
+          }
+        ],
+        "methods": [
+          {
+            "name": "get",
+            "slug": "get",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "get",
+            "fullName": "HelperReference.get",
+            "hierarchy": "Method get\n  CallSignature get:SimplePathReference<Opaque>\n    Parameter prop:string",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 60,
+                "character": 5
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "get",
+                "slug": "get-1",
+                "flags": {},
+                "alias": "get-1",
+                "fullName": "HelperReference.get.get",
+                "hierarchy": "CallSignature get:SimplePathReference<Opaque>\n  Parameter prop:string",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "helpers/user-helper.ts",
+                    "line": 60,
+                    "character": 5
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "SimplePathReference",
+                  "link": {
+                    "id": "505",
+                    "type": "class",
+                    "slug": "simplepathreference",
+                    "sources": [
+                      {
+                        "fileName": "helpers/user-helper.ts",
+                        "line": 25,
+                        "character": 32
+                      }
+                    ],
+                    "parent": {
+                      "id": "317",
+                      "type": "0",
+                      "slug": "_glimmer_application",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "prop",
+                    "slug": "prop",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "prop",
+                    "fullName": "HelperReference.get.get.prop",
+                    "hierarchy": "Parameter prop:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "value",
+            "slug": "value",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "value",
+            "fullName": "HelperReference.value",
+            "hierarchy": "Method value\n  CallSignature value:any",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 54,
+                "character": 7
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "value",
+                "slug": "value-1",
+                "flags": {},
+                "alias": "value-1",
+                "fullName": "HelperReference.value.value",
+                "hierarchy": "CallSignature value:any",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "helpers/user-helper.ts",
+                    "line": 54,
+                    "character": 7
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "any"
+                }
+              }
+            ]
           }
         ]
       }
@@ -5040,7 +5626,7 @@ var main = {
                     "character": 33
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "Iterable",
                   "link": {
@@ -5074,7 +5660,7 @@ var main = {
                     "fullName": "Iterable.constructor.new Iterable.ref",
                     "hierarchy": "Parameter ref:Reference<Opaque>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "Reference"
                     }
@@ -5090,7 +5676,7 @@ var main = {
                     "fullName": "Iterable.constructor.new Iterable.keyFor",
                     "hierarchy": "Parameter keyFor:KeyFor<Opaque>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "KeyFor",
                       "link": {
@@ -5105,7 +5691,7 @@ var main = {
                           },
                           {
                             "fileName": "environment.ts",
-                            "line": 37,
+                            "line": 39,
                             "character": 11
                           }
                         ],
@@ -5147,7 +5733,7 @@ var main = {
                 "character": 16
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "KeyFor",
               "link": {
@@ -5162,7 +5748,7 @@ var main = {
                   },
                   {
                     "fileName": "environment.ts",
-                    "line": 37,
+                    "line": 39,
                     "character": 11
                   }
                 ],
@@ -5198,7 +5784,7 @@ var main = {
                 "character": 13
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Reference"
             }
@@ -5226,7 +5812,7 @@ var main = {
                 "character": 12
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Tag"
             }
@@ -5272,7 +5858,7 @@ var main = {
                     "character": 9
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "OpaqueIterator"
                 }
@@ -5318,7 +5904,7 @@ var main = {
                     "character": 18
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "UpdatableReference"
                 },
@@ -5334,7 +5920,7 @@ var main = {
                     "fullName": "Iterable.memoReferenceFor.memoReferenceFor.item",
                     "hierarchy": "Parameter item:IterationItem<Opaque, Opaque>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "IterationItem"
                     }
@@ -5382,7 +5968,7 @@ var main = {
                     "character": 21
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 },
@@ -5398,7 +5984,7 @@ var main = {
                     "fullName": "Iterable.updateMemoReference.updateMemoReference.reference",
                     "hierarchy": "Parameter reference:UpdatableReference<Opaque>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "UpdatableReference"
                     }
@@ -5414,7 +6000,7 @@ var main = {
                     "fullName": "Iterable.updateMemoReference.updateMemoReference.item",
                     "hierarchy": "Parameter item:IterationItem<Opaque, Opaque>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "IterationItem"
                     }
@@ -5462,7 +6048,7 @@ var main = {
                     "character": 22
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 },
@@ -5478,7 +6064,7 @@ var main = {
                     "fullName": "Iterable.updateValueReference.updateValueReference.reference",
                     "hierarchy": "Parameter reference:UpdatableReference<Opaque>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "UpdatableReference"
                     }
@@ -5494,7 +6080,7 @@ var main = {
                     "fullName": "Iterable.updateValueReference.updateValueReference.item",
                     "hierarchy": "Parameter item:IterationItem<Opaque, Opaque>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "IterationItem"
                     }
@@ -5542,7 +6128,7 @@ var main = {
                     "character": 19
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "UpdatableReference"
                 },
@@ -5558,7 +6144,7 @@ var main = {
                     "fullName": "Iterable.valueReferenceFor.valueReferenceFor.item",
                     "hierarchy": "Parameter item:IterationItem<Opaque, Opaque>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "IterationItem"
                     }
@@ -5643,7 +6229,7 @@ var main = {
                     "character": 23
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "ObjectKeysIterator",
                   "link": {
@@ -5677,7 +6263,7 @@ var main = {
                     "fullName": "ObjectKeysIterator.constructor.new ObjectKeysIterator.keys",
                     "hierarchy": "Parameter keys:string[]",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": true,
                       "name": "string"
                     }
@@ -5693,7 +6279,7 @@ var main = {
                     "fullName": "ObjectKeysIterator.constructor.new ObjectKeysIterator.values",
                     "hierarchy": "Parameter values:Opaque[]",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": true,
                       "name": "Opaque"
                     }
@@ -5709,7 +6295,7 @@ var main = {
                     "fullName": "ObjectKeysIterator.constructor.new ObjectKeysIterator.keyFor",
                     "hierarchy": "Parameter keyFor:KeyFor<string>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "KeyFor",
                       "link": {
@@ -5724,7 +6310,7 @@ var main = {
                           },
                           {
                             "fileName": "environment.ts",
-                            "line": 37,
+                            "line": 39,
                             "character": 11
                           }
                         ],
@@ -5766,7 +6352,7 @@ var main = {
                 "character": 16
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "KeyFor",
               "link": {
@@ -5781,7 +6367,7 @@ var main = {
                   },
                   {
                     "fileName": "environment.ts",
-                    "line": 37,
+                    "line": 39,
                     "character": 11
                   }
                 ],
@@ -5817,7 +6403,7 @@ var main = {
                 "character": 14
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": true,
               "name": "string"
             }
@@ -5845,7 +6431,7 @@ var main = {
                 "character": 18
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "number"
             }
@@ -5873,7 +6459,7 @@ var main = {
                 "character": 16
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": true,
               "name": "Opaque"
             }
@@ -5919,7 +6505,7 @@ var main = {
                     "character": 9
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "boolean"
                 }
@@ -5965,7 +6551,7 @@ var main = {
                     "character": 6
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "IterationItem"
                 }
@@ -5976,7 +6562,351 @@ var main = {
       }
     },
     {
-      "id": "656",
+      "id": "505",
+      "type": "class",
+      "attributes": {
+        "name": "SimplePathReference",
+        "slug": "simplepathreference",
+        "flags": {
+          "isNormalized": true,
+          "isExported": true,
+          "isExternal": true,
+          "isOptional": false,
+          "isPrivate": false,
+          "isPublic": false,
+          "isProtected": false,
+          "isStatic": false
+        },
+        "alias": "simplepathreference",
+        "fullName": "SimplePathReference",
+        "hierarchy": "Class SimplePathReference<T>\n  TypeParameter T\n  Constructor constructor\n    ConstructorSignature new SimplePathReference:SimplePathReference\n      Parameter parent:Reference<T>\n      Parameter property:string\n  Property parent:Reference<T>\n  Property property:string\n  Property tag:TagWrapper<any>\n  Method get\n    CallSignature get:PathReference<Opaque>\n      Parameter prop:string\n  Method value\n    CallSignature value:T",
+        "kindString": "Class",
+        "implementedTypes": [
+          {
+            "isArray": false,
+            "name": "VersionedPathReference"
+          }
+        ],
+        "sources": [
+          {
+            "fileName": "helpers/user-helper.ts",
+            "line": 25,
+            "character": 32
+          }
+        ],
+        "typeParameters": [
+          {
+            "name": "T",
+            "slug": "t",
+            "flags": {},
+            "alias": "t",
+            "fullName": "SimplePathReference.T",
+            "hierarchy": "TypeParameter T",
+            "kindString": "Type parameter"
+          }
+        ],
+        "constructors": [
+          {
+            "name": "constructor",
+            "slug": "constructor",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "constructor",
+            "fullName": "SimplePathReference.constructor",
+            "hierarchy": "Constructor constructor\n  ConstructorSignature new SimplePathReference:SimplePathReference\n    Parameter parent:Reference<T>\n    Parameter property:string",
+            "kindString": "Constructor",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 28,
+                "character": 28
+              }
+            ],
+            "constructorSignatures": [
+              {
+                "name": "new SimplePathReference",
+                "slug": "new_simplepathreference",
+                "flags": {},
+                "alias": "new_simplepathreference",
+                "fullName": "SimplePathReference.constructor.new SimplePathReference",
+                "hierarchy": "ConstructorSignature new SimplePathReference:SimplePathReference\n  Parameter parent:Reference<T>\n  Parameter property:string",
+                "kindString": "Constructor signature",
+                "sources": [
+                  {
+                    "fileName": "helpers/user-helper.ts",
+                    "line": 28,
+                    "character": 28
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "SimplePathReference",
+                  "link": {
+                    "id": "505",
+                    "type": "class",
+                    "slug": "simplepathreference",
+                    "sources": [
+                      {
+                        "fileName": "helpers/user-helper.ts",
+                        "line": 25,
+                        "character": 32
+                      }
+                    ],
+                    "parent": {
+                      "id": "317",
+                      "type": "0",
+                      "slug": "_glimmer_application",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "parent",
+                    "slug": "parent",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "parent",
+                    "fullName": "SimplePathReference.constructor.new SimplePathReference.parent",
+                    "hierarchy": "Parameter parent:Reference<T>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Reference"
+                    }
+                  },
+                  {
+                    "name": "property",
+                    "slug": "property",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "property",
+                    "fullName": "SimplePathReference.constructor.new SimplePathReference.property",
+                    "hierarchy": "Parameter property:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "properties": [
+          {
+            "name": "parent",
+            "slug": "parent-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": true,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "parent-1",
+            "fullName": "SimplePathReference.parent",
+            "hierarchy": "Property parent:Reference<T>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 26,
+                "character": 16
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Reference"
+            }
+          },
+          {
+            "name": "property",
+            "slug": "property-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": true,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "property-1",
+            "fullName": "SimplePathReference.property",
+            "hierarchy": "Property property:string",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 27,
+                "character": 18
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "string"
+            }
+          },
+          {
+            "name": "tag",
+            "slug": "tag",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": true,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "tag",
+            "fullName": "SimplePathReference.tag",
+            "hierarchy": "Property tag:TagWrapper<any>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 28,
+                "character": 12
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "TagWrapper"
+            }
+          }
+        ],
+        "methods": [
+          {
+            "name": "get",
+            "slug": "get",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "get",
+            "fullName": "SimplePathReference.get",
+            "hierarchy": "Method get\n  CallSignature get:PathReference<Opaque>\n    Parameter prop:string",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 39,
+                "character": 5
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "get",
+                "slug": "get-1",
+                "flags": {},
+                "alias": "get-1",
+                "fullName": "SimplePathReference.get.get",
+                "hierarchy": "CallSignature get:PathReference<Opaque>\n  Parameter prop:string",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "helpers/user-helper.ts",
+                    "line": 39,
+                    "character": 5
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "PathReference"
+                },
+                "parameters": [
+                  {
+                    "name": "prop",
+                    "slug": "prop",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "prop",
+                    "fullName": "SimplePathReference.get.get.prop",
+                    "hierarchy": "Parameter prop:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "value",
+            "slug": "value",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "value",
+            "fullName": "SimplePathReference.value",
+            "hierarchy": "Method value\n  CallSignature value:T",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 35,
+                "character": 7
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "value",
+                "slug": "value-1",
+                "flags": {},
+                "alias": "value-1",
+                "fullName": "SimplePathReference.value.value",
+                "hierarchy": "CallSignature value:T",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "helpers/user-helper.ts",
+                    "line": 35,
+                    "character": 7
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "T"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "693",
       "type": "interface",
       "attributes": {
         "name": "AppRoot",
@@ -6026,7 +6956,7 @@ var main = {
                 "character": 11
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "string | ComponentDefinition<Component>",
               "types": [
@@ -6064,7 +6994,7 @@ var main = {
                 "character": 4
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "number"
             }
@@ -6092,7 +7022,7 @@ var main = {
                 "character": 13
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Option"
             }
@@ -6120,7 +7050,7 @@ var main = {
                 "character": 8
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Node"
             }
@@ -6129,7 +7059,7 @@ var main = {
       }
     },
     {
-      "id": "648",
+      "id": "685",
       "type": "interface",
       "attributes": {
         "name": "ApplicationOptions",
@@ -6179,7 +7109,7 @@ var main = {
                 "character": 10
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Resolver"
             }
@@ -6207,7 +7137,7 @@ var main = {
                 "character": 10
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "string"
             }
@@ -6282,7 +7212,7 @@ var main = {
                     "character": 27
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "ComponentDefinition"
                 },
@@ -6298,7 +7228,7 @@ var main = {
                     "fullName": "ComponentDefinitionCreator.createComponentDefinition.createComponentDefinition.name",
                     "hierarchy": "Parameter name:string",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "string"
                     }
@@ -6314,7 +7244,7 @@ var main = {
                     "fullName": "ComponentDefinitionCreator.createComponentDefinition.createComponentDefinition.template",
                     "hierarchy": "Parameter template:Template<TemplateMeta>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "Template"
                     }
@@ -6330,7 +7260,7 @@ var main = {
                     "fullName": "ComponentDefinitionCreator.createComponentDefinition.createComponentDefinition.componentFactory",
                     "hierarchy": "Parameter componentFactory:Factory<Component>",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "Factory"
                     }
@@ -6343,7 +7273,7 @@ var main = {
       }
     },
     {
-      "id": "505",
+      "id": "540",
       "type": "interface",
       "attributes": {
         "name": "EnvironmentOptions",
@@ -6365,7 +7295,7 @@ var main = {
         "sources": [
           {
             "fileName": "environment.ts",
-            "line": 39,
+            "line": 41,
             "character": 35
           }
         ],
@@ -6389,11 +7319,11 @@ var main = {
             "sources": [
               {
                 "fileName": "environment.ts",
-                "line": 41,
+                "line": 43,
                 "character": 18
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "DOMTreeConstruction"
             }
@@ -6417,11 +7347,11 @@ var main = {
             "sources": [
               {
                 "fileName": "environment.ts",
-                "line": 40,
+                "line": 42,
                 "character": 10
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "HTMLDocument"
             }
@@ -6465,7 +7395,7 @@ var main = {
       }
     },
     {
-      "id": "651",
+      "id": "688",
       "type": "interface",
       "attributes": {
         "name": "Initializer",
@@ -6515,7 +7445,7 @@ var main = {
                 "character": 6
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "string"
             }
@@ -6561,7 +7491,7 @@ var main = {
                     "character": 12
                   }
                 ],
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "void"
                 },
@@ -6577,7 +7507,7 @@ var main = {
                     "fullName": "Initializer.initialize.initialize.registry",
                     "hierarchy": "Parameter registry:RegistryWriter",
                     "kindString": "Parameter",
-                    "type": {
+                    "typeInfo": {
                       "isArray": false,
                       "name": "RegistryWriter"
                     }
@@ -6632,7 +7562,7 @@ var main = {
                 "character": 35
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "boolean"
             },
@@ -6648,7 +7578,7 @@ var main = {
                 "fullName": "blockComponentMacro.blockComponentMacro.params",
                 "hierarchy": "Parameter params:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -6664,7 +7594,7 @@ var main = {
                 "fullName": "blockComponentMacro.blockComponentMacro.hash",
                 "hierarchy": "Parameter hash:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -6680,7 +7610,7 @@ var main = {
                 "fullName": "blockComponentMacro.blockComponentMacro.template",
                 "hierarchy": "Parameter template:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -6696,7 +7626,7 @@ var main = {
                 "fullName": "blockComponentMacro.blockComponentMacro.inverse",
                 "hierarchy": "Parameter inverse:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -6712,7 +7642,7 @@ var main = {
                 "fullName": "blockComponentMacro.blockComponentMacro.builder",
                 "hierarchy": "Parameter builder:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -6765,7 +7695,7 @@ var main = {
                 "character": 35
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "ConstReference"
             },
@@ -6781,7 +7711,7 @@ var main = {
                 "fullName": "buildAction.buildAction.vm",
                 "hierarchy": "Parameter vm:VM",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "VM"
                 }
@@ -6797,7 +7727,7 @@ var main = {
                 "fullName": "buildAction.buildAction._args",
                 "hierarchy": "Parameter _args:Arguments",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "Arguments"
                 }
@@ -6808,7 +7738,76 @@ var main = {
       }
     },
     {
-      "id": "645",
+      "id": "537",
+      "type": "function",
+      "attributes": {
+        "name": "buildUserHelper",
+        "slug": "builduserhelper",
+        "flags": {
+          "isNormalized": true,
+          "isExported": true,
+          "isExternal": true,
+          "isOptional": false,
+          "isPrivate": false,
+          "isPublic": false,
+          "isProtected": false,
+          "isStatic": false
+        },
+        "alias": "builduserhelper",
+        "fullName": "buildUserHelper",
+        "hierarchy": "Function buildUserHelper\n  CallSignature buildUserHelper:GlimmerHelper\n    Parameter helperFunc:any",
+        "kindString": "Function",
+        "sources": [
+          {
+            "fileName": "helpers/user-helper.ts",
+            "line": 21,
+            "character": 39
+          }
+        ],
+        "callSignatures": [
+          {
+            "name": "buildUserHelper",
+            "slug": "builduserhelper-1",
+            "flags": {},
+            "alias": "builduserhelper-1",
+            "fullName": "buildUserHelper.buildUserHelper",
+            "hierarchy": "CallSignature buildUserHelper:GlimmerHelper\n  Parameter helperFunc:any",
+            "kindString": "Call signature",
+            "sources": [
+              {
+                "fileName": "helpers/user-helper.ts",
+                "line": 21,
+                "character": 39
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "GlimmerHelper"
+            },
+            "parameters": [
+              {
+                "name": "helperFunc",
+                "slug": "helperfunc",
+                "flags": {
+                  "isOptional": false,
+                  "isRest": false
+                },
+                "alias": "helperfunc",
+                "fullName": "buildUserHelper.buildUserHelper.helperFunc",
+                "hierarchy": "Parameter helperFunc:any",
+                "kindString": "Parameter",
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "any"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "682",
       "type": "function",
       "attributes": {
         "name": "canCreateComponentDefinition",
@@ -6830,7 +7829,7 @@ var main = {
         "sources": [
           {
             "fileName": "environment.ts",
-            "line": 215,
+            "line": 239,
             "character": 37
           }
         ],
@@ -6846,11 +7845,11 @@ var main = {
             "sources": [
               {
                 "fileName": "environment.ts",
-                "line": 215,
+                "line": 239,
                 "character": 37
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "boolean"
             },
@@ -6866,7 +7865,7 @@ var main = {
                 "fullName": "canCreateComponentDefinition.canCreateComponentDefinition.manager",
                 "hierarchy": "Parameter manager:ComponentDefinitionCreator | ComponentManager<Component>",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "ComponentDefinitionCreator | ComponentManager<Component>",
                   "types": [
@@ -6947,7 +7946,7 @@ var main = {
                 "character": 37
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "string"
             },
@@ -6963,7 +7962,7 @@ var main = {
                 "fullName": "debugInfoForReference.debugInfoForReference.reference",
                 "hierarchy": "Parameter reference:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -7016,7 +8015,7 @@ var main = {
                 "character": 18
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "any"
             },
@@ -7032,7 +8031,7 @@ var main = {
                 "fullName": "debugName.debugName.obj",
                 "hierarchy": "Parameter obj:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -7085,7 +8084,7 @@ var main = {
                 "character": 28
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "DynamicComponentReference",
               "link": {
@@ -7119,7 +8118,7 @@ var main = {
                 "fullName": "dynamicComponentFor.dynamicComponentFor.vm",
                 "hierarchy": "Parameter vm:VM",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "VM"
                 }
@@ -7135,7 +8134,7 @@ var main = {
                 "fullName": "dynamicComponentFor.dynamicComponentFor.args",
                 "hierarchy": "Parameter args:Arguments",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "Arguments"
                 }
@@ -7151,7 +8150,7 @@ var main = {
                 "fullName": "dynamicComponentFor.dynamicComponentFor.meta",
                 "hierarchy": "Parameter meta:TemplateMeta",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "TemplateMeta"
                 }
@@ -7204,7 +8203,7 @@ var main = {
                 "character": 19
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "Option"
             },
@@ -7220,7 +8219,7 @@ var main = {
                 "fullName": "hashToArgs.hashToArgs.hash",
                 "hierarchy": "Parameter hash:Option<WireFormat.Core.Hash>",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "Option"
                 }
@@ -7273,7 +8272,7 @@ var main = {
                 "character": 36
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "boolean"
             },
@@ -7289,7 +8288,7 @@ var main = {
                 "fullName": "inlineComponentMacro.inlineComponentMacro._name",
                 "hierarchy": "Parameter _name:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -7305,7 +8304,7 @@ var main = {
                 "fullName": "inlineComponentMacro.inlineComponentMacro.params",
                 "hierarchy": "Parameter params:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -7321,7 +8320,7 @@ var main = {
                 "fullName": "inlineComponentMacro.inlineComponentMacro.hash",
                 "hierarchy": "Parameter hash:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -7337,7 +8336,7 @@ var main = {
                 "fullName": "inlineComponentMacro.inlineComponentMacro.builder",
                 "hierarchy": "Parameter builder:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -7390,7 +8389,7 @@ var main = {
                 "character": 24
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "boolean"
             },
@@ -7406,7 +8405,7 @@ var main = {
                 "fullName": "isTypeSpecifier.isTypeSpecifier.specifier",
                 "hierarchy": "Parameter specifier:string",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "string"
                 }
@@ -7417,7 +8416,7 @@ var main = {
       }
     },
     {
-      "id": "641",
+      "id": "678",
       "type": "function",
       "attributes": {
         "name": "populateMacros",
@@ -7439,7 +8438,7 @@ var main = {
         "sources": [
           {
             "fileName": "environment.ts",
-            "line": 210,
+            "line": 234,
             "character": 23
           }
         ],
@@ -7455,11 +8454,11 @@ var main = {
             "sources": [
               {
                 "fileName": "environment.ts",
-                "line": 210,
+                "line": 234,
                 "character": 23
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "void"
             },
@@ -7475,7 +8474,7 @@ var main = {
                 "fullName": "populateMacros.populateMacros.blocks",
                 "hierarchy": "Parameter blocks:BlockMacros",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "BlockMacros"
                 }
@@ -7491,7 +8490,7 @@ var main = {
                 "fullName": "populateMacros.populateMacros.inlines",
                 "hierarchy": "Parameter inlines:InlineMacros",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "InlineMacros"
                 }
@@ -7544,7 +8543,7 @@ var main = {
                 "character": 27
               }
             ],
-            "type": {
+            "typeInfo": {
               "isArray": false,
               "name": "void"
             },
@@ -7560,7 +8559,7 @@ var main = {
                 "fullName": "throwNoActionError.throwNoActionError.actionFunc",
                 "hierarchy": "Parameter actionFunc:any",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "any"
                 }
@@ -7576,7 +8575,7 @@ var main = {
                 "fullName": "throwNoActionError.throwNoActionError.actionFuncReference",
                 "hierarchy": "Parameter actionFuncReference:Reference<any>",
                 "kindString": "Parameter",
-                "type": {
+                "typeInfo": {
                   "isArray": false,
                   "name": "Reference"
                 }
