@@ -629,13 +629,19 @@ html,
 
 .parameters-list {
   color: #666;
-  margin-left: 6px; }
+}
   .parameters-list div {
     display: inline; }
   .parameters-list li {
+    padding: 6px 8px;
     font-size: 90%;
+    background-color: #f6f8fa;
     font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
     margin-top: 8px; }
+
+.parameters-list li p {
+  padding: 6px 1px;
+}
 
 .param-name {
   color: #666; }
