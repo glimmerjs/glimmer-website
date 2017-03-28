@@ -176,7 +176,7 @@ The tradeoff is that updates require re-evaluating the component tree to figure
 out how the DOM needs to be mutated. Essentially, that means doing a full render
 pass on a component and all of its children every time a property changes.
 
-Rhile constructing virtual DOM is fast and applying diff updates can be
+While constructing virtual DOM is fast and applying diff updates can be
 optimized, it's far from instanteous, particularly as the size of your
 application grows. [As your virtual DOM-based app grows, you will have to do
 more work to make sure it stays
