@@ -722,6 +722,31 @@ section.content-container:first-child {
   padding-top: 0px;
 }
 
+.readme {
+  font-size: 90%;
+  color: #444;
+}
+
+.readme h1 {
+  font-size: 150%;
+}
+
+.readme h2 {
+  font-size: 140%;
+}
+
+.readme h3 {
+  font-size: 130%;
+}
+
+.readme h4 {
+  font-size: 120%;
+}
+
+.readme h5 {
+  font-size: 110%;
+}
+
 .function-comment {
   font-size: 90%;
   padding: 10px 0px 0px 0px;
