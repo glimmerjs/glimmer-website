@@ -5,11 +5,11 @@
   "filesystem-layout": {
     "title": "Filesystem Layout"
   },
+  "templates-and-helpers": {
+    "title": "Templates and Helpers"
+  },
   "components-and-actions": {
     "title": "Components and Actions"
-  },
-  "helpers": {
-    "title": "Helpers"
   },
   "using-glimmer-as-web-components": {
     "title": "Using Glimmer as Web Components"
