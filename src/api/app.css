@@ -725,7 +725,8 @@ section.content-container:first-child {
   background-color: #f6f8fa; }
 
 .readme .tag {
-  padding-top: 0px;
+  padding: 2px 0px;
+  color: #777;
 }
 
 div.readme {
@@ -764,14 +765,15 @@ div.readme h5 {
   padding-bottom: 20px; }
 
 strong {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 400;
   font-size: 120%;
-  color: #555; }
+  color: #666; }
 
 strong.sub {
   font-weight: 400;
   font-size: 100%;
-  color: #999; }
+  color: #888; }
 
 .methods-list {
   padding: 0px;
