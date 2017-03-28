@@ -14,12 +14,6 @@
   "using-glimmer-as-web-components": {
     "title": "Using Glimmer as Web Components"
   },
-  "build-process": {
-    "title": "The Build Process"
-  },
-  "deploys": {
-    "title": "Deploys"
-  },
   "tracked-properties": {
     "title": "Change Tracking with Tracked Properties"
   }
