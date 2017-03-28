@@ -939,7 +939,7 @@ h5 a {
 
 #footer {
   border-top: 1px solid #DDD;
-  padding: 10px;
+  padding: 10px 16px;
   min-height: 28px;
   color: #999;
 }
@@ -955,7 +955,7 @@ h5 a {
 
 .links li {
   list-style: none;
-  margin-left: 10px;
+  margin-right: 8px;
 }
 
 .links li a {
