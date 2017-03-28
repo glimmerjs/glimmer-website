@@ -51,7 +51,7 @@ To generate new projects, we will need an experimental feature that is only avai
 To install Ember CLI Canary, run the following command to install it from the `master` branch on GitHub:
 
 ```bash
-yarn add global ember-cli/ember-cli
+yarn global add ember-cli/ember-cli
 ```
 
 Alternatively, you can do:
