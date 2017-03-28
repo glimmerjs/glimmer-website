@@ -718,6 +718,10 @@ section.content-container:first-child {
   padding: 16px 20px;
   background-color: #f6f8fa; }
 
+.readme .tag {
+  padding-top: 0px;
+}
+
 .function-comment {
   font-size: 90%;
   padding: 10px 0px 0px 0px;
