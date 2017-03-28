@@ -1,6 +1,7 @@
 {
   "root": "www/",
   "clean_urls": true,
+  "https_only": true,
   "routes": {
     "/api/**": "api/index.html"
   }
