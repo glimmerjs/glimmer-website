@@ -74,7 +74,7 @@ var main = {
         },
         "alias": "_glimmer_component",
         "fullName": "@glimmer/component",
-        "hierarchy": "Global @glimmer/component\n  Class Component\n    Constructor constructor\n      ConstructorSignature new Component:Component\n        Parameter injections:object\n    Property args:object\n    Property debugName:string\n    Property element:Element\n    Method didInsertElement\n      CallSignature didInsertElement:void\n    Method didUpdate\n      CallSignature didUpdate:void\n    Method toString\n      CallSignature toString:string\n    Method create\n      CallSignature create:Component\n        Parameter injections:any\n  Function tracked\n    CallSignature tracked:MethodDecorator\n      Parameter dependencies:string[]\n    CallSignature tracked:any\n      Parameter target:any\n      Parameter key:any\n    CallSignature tracked:PropertyDescriptor\n      Parameter target:any\n      Parameter key:any\n      Parameter descriptor:PropertyDescriptor",
+        "hierarchy": "Global @glimmer/component\n  Class Component\n    Constructor constructor\n      ConstructorSignature new Component:Component\n        Parameter options:object\n    Property args:object\n    Property debugName:string\n    Property element:Element\n    Method didInsertElement\n      CallSignature didInsertElement:void\n    Method didUpdate\n      CallSignature didUpdate:void\n    Method toString\n      CallSignature toString:string\n    Method create\n      CallSignature create:Component\n        Parameter injections:any\n  Function tracked\n    CallSignature tracked:MethodDecorator\n      Parameter dependencies:string[]\n    CallSignature tracked:any\n      Parameter target:any\n      Parameter key:any\n    CallSignature tracked:PropertyDescriptor\n      Parameter target:any\n      Parameter key:any\n      Parameter descriptor:PropertyDescriptor",
         "packageInfo": {
           "name": "@glimmer/component",
           "version": "0.3.7",
@@ -156,19 +156,19 @@ var main = {
         },
         "alias": "component",
         "fullName": "Component",
-        "hierarchy": "Class Component\n  Constructor constructor\n    ConstructorSignature new Component:Component\n      Parameter injections:object\n  Property args:object\n  Property debugName:string\n  Property element:Element\n  Method didInsertElement\n    CallSignature didInsertElement:void\n  Method didUpdate\n    CallSignature didUpdate:void\n  Method toString\n    CallSignature toString:string\n  Method create\n    CallSignature create:Component\n      Parameter injections:any",
+        "hierarchy": "Class Component\n  Constructor constructor\n    ConstructorSignature new Component:Component\n      Parameter options:object\n  Property args:object\n  Property debugName:string\n  Property element:Element\n  Method didInsertElement\n    CallSignature didInsertElement:void\n  Method didUpdate\n    CallSignature didUpdate:void\n  Method toString\n    CallSignature toString:string\n  Method create\n    CallSignature create:Component\n      Parameter injections:any",
         "kindString": "Class",
         "sources": [
           {
             "fileName": "component.ts",
-            "line": 44,
+            "line": 123,
             "character": 15,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L44"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L123"
           }
         ],
         "comment": {
-          "shortText": "A `Component` is an isolated element that is composed by two parts, the class and the template.\nWhile the template file is required, the class file is optional if your template is simple enough to skip it.",
-          "text": "## Properties and arguments\n\n`Component`s have two different kinds of state, properties and arguments.\nProperties are internal to the component and declared in the class.\nArguments are any data passed to the component in the template.\n\nThis distinction avoids name collisions between internal and external data to the component.\nLet's see an example:\n\nIf you have the following component class:\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n  spelling = \"potato\"\n}\n```\n\nAnd template:\n\n```hbs\n<div>You say {{@spelling}}, I say {{spelling}}.</div>\n```\n\nWhen you render the component like so:\n\n```hbs\n<my-component @spelling=\"poteto\" />\n```\n\nYou will see it render:\n\n```html\n<div>You say poteto, I say potato.</div>\n```\n"
+          "shortText": "The `Component` class defines an encapsulated UI element that is rendered to\nthe DOM. A component is made up of a template and, optionally, this component\nobject.",
+          "text": "To define a component, subclass `Component` and add your own properties,\nmethods and lifecycle hooks:\n\n```ts import Component from '@glimmer/component';\n\nexport default class extends Component {\n}\n```\n\n## Lifecycle Hooks\n\nLifecycle hooks allow you to respond to changes to a component, such as when\nit gets created, rendered, updated or destroyed. To add a lifecycle hook to a\ncomponent, implement the hook as a method on your component subclass.\n\nFor example, to be notified when Glimmer has rendered your component so you\ncan attach a legacy jQuery plugin, implement the `didInsertElement()` method:\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n  didInsertElement() {\n    $(this.element).pickadate();\n  }\n}\n```\n\n## Data for Templates\n\n`Component`s have two different kinds of data, or state, that can be\ndisplayed in templates:\n\n1. Arguments\n2. Properties\n\nArguments are data that is passed in to a component from its parent\ncomponent. For example, if I have a `user-greeting` component, I can pass it\na name and greeting to use:\n\n```hbs\n<user-greeting @name=\"Ricardo\" @greeting=\"Olá\">\n```\n\nInside my `user-greeting` template, I can access the `@name` and `@greeting`\narguments that I've been given:\n\n```hbs\n{{@greeting}}, {{@name}}!\n```\n\nArguments are also available inside my component:\n\n```ts\nconsole.log(this.args.greeting); // prints \"Olá\"\n```\n\nProperties, on the other hand, are internal to the component and declared in\nthe class. You can use properties to store data that you want to show in the\ntemplate, or pass to another component as an argument.\n\n```ts\nimport Component from '@glimmer/component';\n\nexport default class extends Component {\n  user = {\n    name: 'Robbie'\n  }\n}\n```\n\nIn the above example, we've defined a component with a `user` property that\ncontains an object with its own `name` property.\n\nWe can render that property in our template:\n\n```hbs\nHello, {{user.name}}!\n```\n\nWe can also take that property and pass it as an argument to the\n`user-greeting` component we defined above:\n\n```hbs\n<user-greeting @greeting=\"Hello\" @name={{user.name}} />\n```\n\n### Arguments vs. Properties\n\nRemember, arguments are data that was given to your component by its parent\ncomponent, and properties are data your component has defined for itself.\n\nYou can tell the difference between arguments and properties in templates\nbecause arguments always start with an `@` sign (think \"A is for arguments\"):\n\n```hbs\n{{@firstName}}\n```\n\nWe know that `@firstName` came from the parent component, not the current\ncomponent, because it starts with `@` and is therefore an argument.\n\nOn the other hand, if we see:\n\n``hbs\n{{name}}\n```\n\nWe know that `name` is a property on the component. If we want to know where\nthe data is coming from, we can go look at our component class to find out.\n\nInside the component itself, arguments always show up inside the component's\n`args` property. For example, if `{{@firstName}}` is `Tom` in the template,\ninside the component `this.args.firstName` would also be `Tom`.\n"
         },
         "constructors": [
           {
@@ -185,16 +185,21 @@ var main = {
             },
             "alias": "constructor",
             "fullName": "Component.constructor",
-            "hierarchy": "Constructor constructor\n  ConstructorSignature new Component:Component\n    Parameter injections:object",
+            "hierarchy": "Constructor constructor\n  ConstructorSignature new Component:Component\n    Parameter options:object",
             "kindString": "Constructor",
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 84,
+                "line": 165,
                 "character": 3,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L84"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L165"
               }
             ],
+            "comment": {
+              "shortText": "Constructs a new component and assigns itself the passed properties. You\nshould not construct new components yourself. Instead, Glimmer will\ninstantiate new components automatically as it renders.",
+              "text": "",
+              "tags": []
+            },
             "constructorSignatures": [
               {
                 "name": "new Component",
@@ -202,16 +207,21 @@ var main = {
                 "flags": {},
                 "alias": "new_component",
                 "fullName": "Component.constructor.new Component",
-                "hierarchy": "ConstructorSignature new Component:Component\n  Parameter injections:object",
+                "hierarchy": "ConstructorSignature new Component:Component\n  Parameter options:object",
                 "kindString": "Constructor signature",
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 84,
+                    "line": 165,
                     "character": 3,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L84"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L165"
                   }
                 ],
+                "comment": {
+                  "shortText": "Constructs a new component and assigns itself the passed properties. You\nshould not construct new components yourself. Instead, Glimmer will\ninstantiate new components automatically as it renders.",
+                  "text": "",
+                  "tags": []
+                },
                 "type": {
                   "isArray": false,
                   "name": "Component",
@@ -222,9 +232,9 @@ var main = {
                     "sources": [
                       {
                         "fileName": "component.ts",
-                        "line": 44,
+                        "line": 123,
                         "character": 15,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L44"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L123"
                       }
                     ],
                     "parent": {
@@ -237,16 +247,20 @@ var main = {
                 },
                 "parameters": [
                   {
-                    "name": "injections",
-                    "slug": "injections",
+                    "name": "options",
+                    "slug": "options",
                     "flags": {
                       "isOptional": false,
                       "isRest": false
                     },
-                    "alias": "injections",
-                    "fullName": "Component.constructor.new Component.injections",
-                    "hierarchy": "Parameter injections:object",
+                    "alias": "options",
+                    "fullName": "Component.constructor.new Component.options",
+                    "hierarchy": "Parameter options:object",
                     "kindString": "Parameter",
+                    "comment": {
+                      "shortText": "\n",
+                      "text": ""
+                    },
                     "type": {
                       "isArray": false,
                       "name": "object"
@@ -277,9 +291,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 80,
+                "line": 161,
                 "character": 6,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L80"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L161"
               }
             ],
             "comment": {
@@ -310,9 +324,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 53,
+                "line": 134,
                 "character": 11,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L53"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L134"
               }
             ],
             "comment": {
@@ -343,13 +357,13 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 48,
+                "line": 129,
                 "character": 9,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L48"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L129"
               }
             ],
             "comment": {
-              "shortText": "The element corresponding to the top-level element of the component's template.",
+              "shortText": "The element corresponding to the top-level element of the component's template.\nYou should not try to access this property until after the component's `didInsertElement()`\nlifecycle hook is called.",
               "text": ""
             },
             "type": {
@@ -378,9 +392,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 94,
+                "line": 182,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L94"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L182"
               }
             ],
             "callSignatures": [
@@ -395,9 +409,9 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 94,
+                    "line": 182,
                     "character": 18,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L94"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L182"
                   }
                 ],
                 "comment": {
@@ -430,9 +444,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 100,
+                "line": 188,
                 "character": 11,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L100"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L188"
               }
             ],
             "callSignatures": [
@@ -447,9 +461,9 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 100,
+                    "line": 188,
                     "character": 11,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L100"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L188"
                   }
                 ],
                 "comment": {
@@ -482,9 +496,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 102,
+                "line": 190,
                 "character": 10,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L102"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L190"
               }
             ],
             "callSignatures": [
@@ -499,9 +513,9 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 102,
+                    "line": 190,
                     "character": 10,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L102"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L190"
                   }
                 ],
                 "type": {
@@ -530,9 +544,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 82,
+                "line": 163,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L82"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L163"
               }
             ],
             "callSignatures": [
@@ -547,9 +561,9 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 82,
+                    "line": 163,
                     "character": 15,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L82"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L163"
                   }
                 ],
                 "type": {
@@ -562,9 +576,9 @@ var main = {
                     "sources": [
                       {
                         "fileName": "component.ts",
-                        "line": 44,
+                        "line": 123,
                         "character": 15,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/component.ts#L44"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/component.ts#L123"
                       }
                     ],
                     "parent": {
@@ -578,12 +592,12 @@ var main = {
                 "parameters": [
                   {
                     "name": "injections",
-                    "slug": "injections-1",
+                    "slug": "injections",
                     "flags": {
                       "isOptional": false,
                       "isRest": false
                     },
-                    "alias": "injections-1",
+                    "alias": "injections",
                     "fullName": "Component.create.create.injections",
                     "hierarchy": "Parameter injections:any",
                     "kindString": "Parameter",
@@ -624,25 +638,25 @@ var main = {
             "fileName": "tracked.ts",
             "line": 14,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/tracked.ts#L14"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L14"
           },
           {
             "fileName": "tracked.ts",
             "line": 15,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/tracked.ts#L15"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L15"
           },
           {
             "fileName": "tracked.ts",
             "line": 16,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/tracked.ts#L16"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L16"
           },
           {
             "fileName": "tracked.ts",
             "line": 17,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/tracked.ts#L17"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L17"
           }
         ],
         "callSignatures": [
@@ -659,7 +673,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 14,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/tracked.ts#L14"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L14"
               }
             ],
             "comment": {
@@ -707,7 +721,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 15,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/tracked.ts#L15"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L15"
               }
             ],
             "type": {
@@ -762,7 +776,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 16,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/8abd55c/src/tracked.ts#L16"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/7b97bde/src/tracked.ts#L16"
               }
             ],
             "type": {

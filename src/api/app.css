@@ -518,14 +518,14 @@ li, ul, ol {
 
 body,
 html,
-.ember-application > .ember-view {
+#app {
   height: 100%; }
 
-.ember-application > .ember-view,
+#app,
 #column-container {
   display: flex; }
 
-.ember-application > .ember-view {
+#app {
   flex-direction: column; }
 
 #column-container {
