@@ -811,3 +811,17 @@ h5 a {
   .module-header h3 {
     display: inline;
     color: #222; }
+
+@media (max-width: 760px) {
+  #app,
+  #column-container {
+    display: block; 
+  }
+
+  #menu-container {
+    width: auto;
+    max-width: 100%;
+    border-bottom: 1px solid #DDD;
+    border-right: none;
+  }
+}
