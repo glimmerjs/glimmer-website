@@ -656,6 +656,13 @@ html,
       border-left: 3px solid #DDD; }
       #menu-container ul ul li {
         font-size: 80%; }
+      #menu-container ul ul li.function::after {
+        margin-left: -4px;
+        letter-spacing: -0.1em;
+        content:"()";
+        color: #888;
+        font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+      }
   #menu-container li {
     list-style: none; }
   #menu-container a {
