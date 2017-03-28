@@ -1,6 +1,6 @@
 # File System Layout
 
-Now that we're up and running, let's take a look at how things are setup. Here's what our brand-new `hello-glimmer` app currently looks like:
+Now that we're up and running, let's take a look at how things are setup. Here's what our brand-new `my-app` currently looks like:
 
 ``` 
 app
@@ -13,7 +13,7 @@ app
 │   │   └── resolver-configuration.ts
 │   ├── ui
 │   │   ├── components
-│   │   │   └── hello-glimmer
+│   │   │   └── my-app
 │   │   │       ├── component.ts
 │   │   │       └── template.hbs
 │   │   ├── styles
@@ -38,7 +38,7 @@ However, where we'll spend most of our time is in the `app/src/ui` folder.
 
 ## The UI folder
 
-As you can see, Glimmer puts all our components in the `app/src/ui/components` folder with the `hello-glimmer` component being where our app logic really begins. All other logic and components should be referenced in the `hello-glimmer/template.hbs` file (and we can nest them as deeply as we desire).
+As you can see, Glimmer puts all our components in the `app/src/ui/components` folder with the `my-app` component being where our app logic really begins. All other logic and components should be referenced in the `my-app/template.hbs` file (and we can nest them as deeply as we desire).
 
 So let's add a new component in Glimmer. To do so, we'll run the following command to generate an initial blueprint for a component:
 
@@ -85,7 +85,7 @@ app
 
 ... snipped ...
 ```
-This then allows us to use that component as a top-level component in our `hello-glimmer/template.hbs` file:
+This then allows us to use that component as a top-level component in our `my-app/template.hbs` file:
 
 ```hbs
 <hello-again />
@@ -124,7 +124,7 @@ Our new component then is only useable from inside our `conference-speakers/temp
 <conference-speaker />
 ```
 
-Glimmer uses a "local resolution" with nested components where the following syntax will not work in our main component (`hello-glimmer/template.hbs`):
+Glimmer uses a "local resolution" with nested components where the following syntax will not work in our main component (`my-app/template.hbs`):
 
 ```hbs
 {{!-- invalid --}}
@@ -151,7 +151,7 @@ app
 
 ... snipped ...
 
-│   │   └── hello-glimmer
+│   │   └── my-app
 │   │       ├── component.ts
 │   │       └── template.hbs
 │   ├── styles
