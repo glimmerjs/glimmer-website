@@ -1,0 +1,22 @@
+.previous-guide,
+.next-guide {
+  display: inline-block;
+
+  &::before, &::after {
+    margin: 0 0.5em;
+  }
+}
+
+.previous-guide {
+  &::before {
+    content: "\2039";
+  }
+}
+
+.next-guide {
+  float: right;
+
+  &::after {
+    content: "\203A";
+  }
+}
