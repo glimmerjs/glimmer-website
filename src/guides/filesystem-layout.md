@@ -2,7 +2,7 @@
 
 Now that we're up and running, let's take a look at how things are setup. Here's what our brand-new `my-app` currently looks like:
 
-``` 
+```sh
 app
 ├── config 
 │   └── environment.js
@@ -62,7 +62,7 @@ installing component
 
 we will see our new `conference-speakers` component added to our UI folder:
 
-``` 
+```sh
 app
 │
 ... snipped ...
@@ -101,7 +101,7 @@ installing component
 
 This generates our component inside our `conference-speakers` folder:
 
-``` 
+```sh
 app
 │
 ... snipped ...
@@ -137,7 +137,7 @@ More details on the "local resolution" strategy will be posted shortly.
 
 Depending on where you are using your Glimmer app, your containing apps styles will already be affecting the look of your app. However, you can also add new styles that only apply to your Glimmer components by editing `src/ui/styles/app.css`
 
-``` 
+```sh
 app
 │
 ... snipped ...

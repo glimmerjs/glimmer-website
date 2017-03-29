@@ -2,7 +2,9 @@
 
 In addition to using Glimmer for a widget on one section on a page, you can also use Glimmer components as web components. Let's do another new app setup. Instead of doing an installation like we did originally, we'll now run the following command:
 
-`ember new display-tile -b @glimmer/blueprint --web-component`
+```sh
+ember new display-tile -b @glimmer/blueprint --web-component
+```
 
 When we add the `--web-component` flag, we reconfigure our app to expose our `display-tile` component as an Web Component to browsers. That in turn allows us to render markup like the following from a backend:
 

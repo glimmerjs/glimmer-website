@@ -3,6 +3,7 @@
 Let's start making our `conference-speakers` component more interactive.
 
 ```js
+// app/src/ui/components/conference-speakers/component.js
 import Component, { tracked } from "@glimmer/component";
 
 export default class ConferenceSpeakers extends Component {
@@ -26,6 +27,7 @@ export default class ConferenceSpeakers extends Component {
 ```
 
 ```hbs
+{{!-- app/src/ui/components/conference-speakers/template.hbs --}}
 <div>
   <p>Speaking: {{currentlySpeaking}}</p>
   <ul>
