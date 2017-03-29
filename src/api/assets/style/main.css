@@ -735,7 +735,7 @@ body, html {
   flex: 3; }
 
 section.content-container {
-  padding: 10px 20px;
+  padding: 10px 30px 10px 20px;
   border-top: 1px solid #DDD; }
   section.content-container:first-child {
     border: none; }
@@ -768,11 +768,6 @@ div.readme {
     font-size: 120%; }
   div.readme h5 {
     font-size: 110%; }
-
-.function-comment {
-  font-size: 90%;
-  padding: 10px 0px 0px 0px;
-  color: #888; }
 
 .method-body {
   margin-left: 10px;
@@ -808,6 +803,16 @@ strong {
     font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 90%;
     line-height: 1.8em; }
+  .methods-list .function-comment {
+    font-size: 90%;
+    padding: 10px 0px 0px 0px;
+    color: #888; }
+    .methods-list .function-comment p {
+      padding: 0px 0px 8px 0px;
+      margin: 0px; }
+    .methods-list .function-comment strong {
+      display: block;
+      margin-bottom: 4px; }
 
 .properties-list {
   padding: 0px;
@@ -912,7 +917,9 @@ h5 a {
     border-bottom: 1px solid #DDD;
     border-right: none; }
     #menu-container.is-active {
-      display: block; } }
+      display: block; }
+  section.content-container {
+    padding: 10px 20px; } }
 
 #footer {
   border-top: 1px solid #DDD;
