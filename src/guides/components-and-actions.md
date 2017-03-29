@@ -22,7 +22,8 @@ export default class ConferenceSpeakers extends Component {
   next() {
     this.current = this.current + 1;
   }
-}```
+}
+```
 
 ```hbs
 <div>

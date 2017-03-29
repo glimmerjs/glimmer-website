@@ -133,7 +133,7 @@ that a component can only be updated when that root tracked property changes.
 JavaScript destructuring syntax can make this quite elegant:
 
 ```ts
-import Component from "@glimmer/component";
+import Component, { tracked } from "@glimmer/component";
 
 export default class extends Component {
   @tracked state = {
