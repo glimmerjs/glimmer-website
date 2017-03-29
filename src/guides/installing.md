@@ -1,7 +1,7 @@
 # Installing
 
 Glimmer uses [Ember CLI](https://ember-cli.com/), the battle-tested command-line interface tool (CLI) from the Ember project, to help you create and manage your applications.
-It provides the following features, among other:
+It provides the following features, among others:
 
 * Creating a new application with a conventional project layout
 * A build pipeline with testing, development, and production environments
