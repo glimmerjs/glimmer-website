@@ -1,8 +1,9 @@
 {
-  "root": "www/",
+  "root": "dist/",
   "clean_urls": true,
   "https_only": true,
   "routes": {
-    "/api/**": "api/index.html"
+    "/**": "index.html",
+    "/api/**": "/src/api/index.html"
   }
 }

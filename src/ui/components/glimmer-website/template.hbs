@@ -1,0 +1,11 @@
+<div class="max-width-4 mx-auto p2">
+  <site-header></site-header>
+
+  {{#if isIndex}}
+    <landing-page></landing-page>
+  {{else}}
+    <guides-page @currentGuidePage={{currentGuidePage}}></guides-page>
+  {{/if}}
+
+  <site-footer></site-footer>
+</div>

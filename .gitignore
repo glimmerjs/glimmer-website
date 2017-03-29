@@ -1,2 +1,4 @@
 src/styles/.sass-cache
 node_modules
+tmp
+dist

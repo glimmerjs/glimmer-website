@@ -8,16 +8,32 @@ The source for the [Glimmer website](https://glimmerjs.com/).
  * [glimmer-component](https://github.com/glimmerjs/glimmer-component)
  * [glimmer-vm](https://github.com/tildeio/glimmer)
 
-## Running locally
+## Prerequisites
 
-The homepage and guides are powered by [Harp](http://harpjs.com/) and the API
-docs are vendored in as a compiled Glimmer app.
+You will need the following things properly installed on your computer.
 
-```
-yarn
-yarn run dev
-```
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with NPM)
+* [Yarn](https://yarnpkg.com/en/)
+* [Ember CLI](https://ember-cli.com/)
 
-## Deploying to production
+## Installation
 
-Through the magic of the ☁️, `master` deploys automatically.
+* `git clone https://github.com/glimmerjs/glimmer-website.git`
+* `cd glimmer-website`
+* `yarn`
+
+## Running / Development
+
+* `ember serve`
+* Visit your app at [http://localhost:4200](http://localhost:4200).
+
+### Building
+
+* `ember build` (development)
+* `ember build --environment production` (production)
+
+## Further Reading / Useful Links
+
+* [glimmerjs](http://github.com/glimmerjs/glimmer-vm/)
+* [ember-cli](https://ember-cli.com/)

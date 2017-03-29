@@ -1,0 +1,6 @@
+<ul class="sidebar">
+  {{#each menuItems key='@index' as |guide|}}
+    <li><link-to href="/guides/{{guide.slug}}" title={{guide.title}}>{{guide.title}}</link-to></li>
+  {{/each}}
+</ul>
+
