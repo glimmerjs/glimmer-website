@@ -1,102 +1,68 @@
-      /*
+/*
 
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
-
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
   color: #333;
-  background: #f8f8f8;
-}
+  background: #f8f8f8; }
 
-.hljs-comment,
-.hljs-quote {
+.hljs-comment, .hljs-quote {
   color: #998;
-  font-style: italic;
-}
+  font-style: italic; }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
+.hljs-keyword, .hljs-selector-tag, .hljs-subst {
   color: #333;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-.hljs-number,
-.hljs-literal,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag .hljs-attr {
-  color: #008080;
-}
+.hljs-number, .hljs-literal, .hljs-variable, .hljs-template-variable, .hljs-tag .hljs-attr {
+  color: #008080; }
 
-.hljs-string,
-.hljs-doctag {
-  color: #d14;
-}
+.hljs-string, .hljs-doctag {
+  color: #d14; }
 
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
+.hljs-title, .hljs-section, .hljs-selector-id {
   color: #900;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .hljs-subst {
-  font-weight: normal;
-}
+  font-weight: normal; }
 
-.hljs-type,
-.hljs-class .hljs-title {
+.hljs-type, .hljs-class .hljs-title {
   color: #458;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-.hljs-tag,
-.hljs-name,
-.hljs-attribute {
+.hljs-tag, .hljs-name, .hljs-attribute {
   color: #000080;
-  font-weight: normal;
-}
+  font-weight: normal; }
 
-.hljs-regexp,
-.hljs-link {
-  color: #009926;
-}
+.hljs-regexp, .hljs-link {
+  color: #009926; }
 
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073;
-}
+.hljs-symbol, .hljs-bullet {
+  color: #990073; }
 
-.hljs-built_in,
-.hljs-builtin-name {
-  color: #0086b3;
-}
+.hljs-built_in, .hljs-builtin-name {
+  color: #0086b3; }
 
 .hljs-meta {
   color: #999;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .hljs-deletion {
-  background: #fdd;
-}
+  background: #fdd; }
 
 .hljs-addition {
-  background: #dfd;
-}
+  background: #dfd; }
 
 .hljs-emphasis {
-  font-style: italic;
-}
+  font-style: italic; }
 
 .hljs-strong {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -126,29 +92,14 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-menu,
-nav,
-section,
-summary {
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-audio,
-canvas,
-progress,
-video {
+audio, canvas, progress, video {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
@@ -166,8 +117,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-[hidden],
-template {
+[hidden], template {
   display: none; }
 
 /* Links
@@ -177,14 +127,12 @@ template {
  */
 a {
   background-color: transparent; }
+  a:active, a:hover {
+    outline: 0; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-a:active,
-a:hover {
-  outline: 0; }
-
 /* Text-level semantics
    ========================================================================== */
 /**
@@ -196,8 +144,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-b,
-strong {
+b, strong {
   font-weight: bold; }
 
 /**
@@ -230,14 +177,17 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-sub,
-sup {
+sub {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline; }
 
 sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
   top: -0.5em; }
 
 sub {
@@ -282,10 +232,7 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
@@ -301,11 +248,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
   color: inherit;
   /* 1 */
   font: inherit;
@@ -317,7 +260,8 @@ textarea {
  * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 button {
-  overflow: visible; }
+  overflow: visible;
+  text-transform: none; }
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -325,7 +269,6 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button,
 select {
   text-transform: none; }
 
@@ -336,10 +279,13 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button, html input[type="button"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+input[type="reset"], input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -348,25 +294,42 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled],
-html input[disabled] {
+button[disabled], html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner {
   border: 0;
   padding: 0; }
+
+input {
+  line-height: normal; }
+  input::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+  input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */ }
+  input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    height: auto; }
+  input[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    /* 2 */
+    box-sizing: content-box; }
+    input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+      -webkit-appearance: none; }
 
 /**
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-input {
-  line-height: normal; }
-
 /**
  * It's recommended that you don't attempt to style these elements.
  * Firefox's implementation doesn't respect box-sizing, padding, or width.
@@ -374,44 +337,21 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */ }
-
 /**
  * Fix the cursor style for Chrome's increment/decrement buttons. For certain
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
  * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
  *    (include `-moz` to future-proof).
  */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  /* 2 */
-  box-sizing: content-box; }
-
 /**
  * Remove inner padding and search cancel button in Safari and Chrome on OS X.
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
-
 /**
  * Define consistent border, margin, and padding.
  */
@@ -452,8 +392,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-td,
-th {
+td, th {
   padding: 0; }
 
 html {
@@ -504,6 +443,89 @@ li, ul, ol {
   margin: 0px;
   padding: 0px; }
 
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 5px 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; }
+  .hamburger:hover {
+    opacity: 0.7; }
+
+.hamburger-box {
+  width: 30px;
+  height: 17px;
+  display: inline-block;
+  position: relative; }
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+  width: 30px;
+  height: 3px;
+  background-color: #444;
+  border-radius: 3px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    width: 30px;
+    height: 3px;
+    background-color: #444;
+    border-radius: 3px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+  .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; }
+  .hamburger-inner::before {
+    top: -10px; }
+  .hamburger-inner::after {
+    bottom: -10px; }
+
+/*
+   * Elastic
+   */
+.hamburger--elastic .hamburger-inner {
+  top: 2px;
+  transition-duration: 0.275s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+  .hamburger--elastic .hamburger-inner::before {
+    top: 10px;
+    transition: opacity 0.125s 0.275s ease; }
+  .hamburger--elastic .hamburger-inner::after {
+    top: 20px;
+    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.hamburger--elastic.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(135deg);
+  transition-delay: 0.075s; }
+  .hamburger--elastic.is-active .hamburger-inner::before {
+    transition-delay: 0s;
+    opacity: 0; }
+  .hamburger--elastic.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-270deg);
+    transition-delay: 0.075s; }
+
 #top-menu {
   border-bottom: 1px solid #DDD; }
   #top-menu a {
@@ -515,37 +537,34 @@ li, ul, ol {
     margin: 5px 10px;
     padding: 5px;
     letter-spacing: 0.05em;
-
     font-size: 1.75rem;
     font-style: italic;
-    text-transform: lowercase;  
+    text-transform: lowercase;
     font-weight: 600;
     text-decoration: none;
     font-family: Roboto,-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;
-    line-height: 1.5;
-  }
+    line-height: 1.5; }
+    #top-menu h1::before {
+      background-color: #F5835F;
+      background-image: url(https://glimmerjs.com/images/logo.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 2rem;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 2.75rem;
+      margin-right: 0.75rem;
+      vertical-align: middle;
+      width: 2.75rem; }
 
-#top-menu h1::before {
-  background-color: #F5835F;
-  background-image: url(https://glimmerjs.com/images/logo.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 2rem;
-  border-radius: 50%;
-  content: '';
-  display: inline-block;
-  height: 2.75rem;
-  margin-right: 0.75rem;
-  vertical-align: middle;
-  width: 2.75rem;
-}
-
-body,
-html,
-#app {
+body, html {
   height: 100%; }
 
-#app,
+#app {
+  height: 100%;
+  display: flex; }
+
 #column-container {
   display: flex; }
 
@@ -554,9 +573,8 @@ html,
 
 #column-container {
   flex: 1; }
-
-#column-container > div {
-  overflow-y: auto; }
+  #column-container > div {
+    overflow-y: auto; }
 
 #app-container {
   flex: 1; }
@@ -573,38 +591,50 @@ html,
   font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
   display: flex;
   font-size: 100%; }
-  .method-signature ol, .property-definition ol {
-    margin: 0px;
-    padding: 0px; }
-  .method-signature li::after, .property-definition li::after {
-    content: ",";
-    color: #BBB; }
-  .method-signature li:last-child::after, .property-definition li:last-child::after {
-    content: ""; }
-  .method-signature h5::before, .property-definition h5::before {
-    color: #999;
-    margin-right: 6px; }
-  .method-signature .parameters, .property-definition .parameters {
-    display: flex;
-    margin: 0px 4px; }
-    .method-signature .parameters li, .property-definition .parameters li {
-      padding: 0px 4px;
-      display: flex; }
-  .method-signature .parameters::after, .property-definition .parameters::after {
-    font-size: 110%;
-    color: #AA4639;
-    content: ")"; }
-  .method-signature .parameters::before, .property-definition .parameters::before {
-    font-size: 110%;
-    color: #AA4639;
-    content: "("; }
+
+.method-signature ol, .property-definition ol {
+  margin: 0px;
+  padding: 0px; }
+
+.method-signature li::after, .property-definition li::after {
+  content: ",";
+  color: #BBB; }
+
+.method-signature li:last-child::after, .property-definition li:last-child::after {
+  content: ""; }
+
+.method-signature h5::before, .property-definition h5::before {
+  color: #999;
+  margin-right: 6px; }
+
+.method-signature .parameters, .property-definition .parameters {
+  display: flex;
+  margin: 0px 4px; }
+
+.method-signature .parameters li, .property-definition .parameters li {
+  padding: 0px 4px;
+  display: flex; }
+
+.method-signature .parameters::after, .property-definition .parameters::after {
+  font-size: 110%;
+  color: #AA4639;
+  content: ")"; }
+
+.method-signature .parameters::before {
+  font-size: 110%;
+  color: #AA4639;
+  content: "("; }
 
 .property-definition {
   display: block; }
+  .property-definition .parameters::before {
+    font-size: 110%;
+    color: #AA4639;
+    content: "("; }
   .property-definition h5 {
     color: #2C4770; }
-  .property-definition h5::before {
-    content: "property"; }
+    .property-definition h5::before {
+      content: "property"; }
 
 .signatures-list .method-signature h5 {
   display: inline-flex;
@@ -612,8 +642,7 @@ html,
 
 .signature-modifiers {
   color: #888;
-  margin-right: 6px;
-}
+  margin-right: 6px; }
 
 .constructors .method-signature h5::before {
   content: ""; }
@@ -628,8 +657,7 @@ html,
   margin-left: -4px; }
 
 .parameters-list {
-  color: #666;
-}
+  color: #666; }
   .parameters-list div {
     display: inline; }
   .parameters-list li {
@@ -638,10 +666,8 @@ html,
     background-color: #f6f8fa;
     font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
     margin-top: 8px; }
-
-.parameters-list li p {
-  padding: 6px 1px;
-}
+    .parameters-list li p {
+      padding: 6px 1px; }
 
 .param-name {
   color: #666; }
@@ -649,11 +675,14 @@ html,
 .return-type, .property-type {
   margin-left: 4px;
   color: #6987C9; }
-  .return-type a, .property-type a {
-    color: #6987C9; }
+
+.return-type a {
+  color: #6987C9; }
 
 .property-type {
   margin-left: 8px; }
+  .property-type a {
+    color: #6987C9; }
 
 .return-type > div::before {
   content: "returns";
@@ -687,13 +716,12 @@ html,
       border-left: 3px solid #DDD; }
       #menu-container ul ul li {
         font-size: 80%; }
-      #menu-container ul ul li.function::after {
-        margin-left: -4px;
-        letter-spacing: -0.1em;
-        content:"()";
-        color: #888;
-        font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
-      }
+        #menu-container ul ul li.function::after {
+          margin-left: -4px;
+          letter-spacing: -0.1em;
+          content: "()";
+          color: #888;
+          font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace; }
   #menu-container li {
     list-style: none; }
   #menu-container a {
@@ -709,9 +737,8 @@ html,
 section.content-container {
   padding: 10px 20px;
   border-top: 1px solid #DDD; }
-
-section.content-container:first-child {
-  border: none; }
+  section.content-container:first-child {
+    border: none; }
 
 .readme ol, .readme ul {
   margin: 10px 30px; }
@@ -726,54 +753,40 @@ section.content-container:first-child {
 
 .readme .tag {
   padding: 2px 0px;
-  color: #777;
-}
+  color: #777; }
 
 div.readme {
   font-size: 90%;
-  color: #444;
-}
-
-div.readme h1 {
-  font-size: 150%;
-}
-
-div.readme h2 {
-  font-size: 140%;
-}
-
-div.readme h3 {
-  font-size: 130%;
-}
-
-div.readme h4 {
-  font-size: 120%;
-}
-
-div.readme h5 {
-  font-size: 110%;
-}
+  color: #444; }
+  div.readme h1 {
+    font-size: 150%; }
+  div.readme h2 {
+    font-size: 140%; }
+  div.readme h3 {
+    font-size: 130%; }
+  div.readme h4 {
+    font-size: 120%; }
+  div.readme h5 {
+    font-size: 110%; }
 
 .function-comment {
   font-size: 90%;
   padding: 10px 0px 0px 0px;
-  color: #888;
-}
+  color: #888; }
 
 .method-body {
   margin-left: 10px;
   padding-bottom: 20px; }
 
 strong {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 400;
   font-size: 120%;
   color: #666; }
-
-strong.sub {
-  font-weight: 400;
-  font-size: 100%;
-  color: #888; }
+  strong.sub {
+    font-weight: 400;
+    font-size: 100%;
+    color: #888; }
 
 .methods-list {
   padding: 0px;
@@ -837,8 +850,7 @@ strong.sub {
 .access {
   color: #666;
   font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
-  margin-right: 6px;
-}
+  margin-right: 6px; }
 
 .project-list {
   border-top: 1px solid #F3F3F3;
@@ -850,81 +862,6 @@ strong.sub {
 
 .project-breadcrumb a {
   color: #999; }
-
-/*!
- * Hamburgers
- * @description Tasty CSS-animated hamburgers
- * @author Jonathan Suh @jonsuh
- * @site https://jonsuh.com/hamburgers
- * @link https://github.com/jonsuh/hamburgers
- */
-.hamburger {
-  padding: 5px 5px;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  overflow: visible; }
-  .hamburger:hover {
-    opacity: 0.7; }
-
-.hamburger-box {
-  width: 30px;
-  height: 17px;
-  display: inline-block;
-  position: relative; }
-
-.hamburger-inner {
-  display: block;
-  top: 50%;
-  margin-top: -2px; }
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 30px;
-    height: 3px;
-    background-color: #444;
-    border-radius: 3px;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease; }
-  .hamburger-inner::before, .hamburger-inner::after {
-    content: "";
-    display: block; }
-  .hamburger-inner::before {
-    top: -10px; }
-  .hamburger-inner::after {
-    bottom: -10px; }
-
-/*
-   * Elastic
-   */
-.hamburger--elastic .hamburger-inner {
-  top: 2px;
-  transition-duration: 0.275s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-  .hamburger--elastic .hamburger-inner::before {
-    top: 10px;
-    transition: opacity 0.125s 0.275s ease; }
-  .hamburger--elastic .hamburger-inner::after {
-    top: 20px;
-    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
-
-.hamburger--elastic.is-active .hamburger-inner {
-  transform: translate3d(0, 10px, 0) rotate(135deg);
-  transition-delay: 0.075s; }
-  .hamburger--elastic.is-active .hamburger-inner::before {
-    transition-delay: 0s;
-    opacity: 0; }
-  .hamburger--elastic.is-active .hamburger-inner::after {
-    transform: translate3d(0, -20px, 0) rotate(-270deg);
-    transition-delay: 0.075s; }
 
 @media screen and (min-width: 800px) and (max-width: 1200px) {
   .project-list {
@@ -955,57 +892,40 @@ h5 a {
     color: #222; }
 
 #menu-toggle {
-  display: none;
-}
+  display: none; }
 
 @media (max-width: 760px) {
   #menu-toggle {
     position: absolute;
     display: block;
     right: 8px;
-    top: 8px;
-  }
-
-  #app,
-  #column-container {
-    display: block; 
-  }
-
+    top: 8px; }
+  #app, #column-container {
+    display: block; }
   #menu-container {
     display: none;
     width: auto;
     max-width: 100%;
     border-bottom: 1px solid #DDD;
-    border-right: none;
-  }
-
-  #menu-container.is-active {
-    display: block;
-  }
-}
+    border-right: none; }
+    #menu-container.is-active {
+      display: block; } }
 
 #footer {
   border-top: 1px solid #DDD;
   padding: 10px 16px;
   min-height: 28px;
   color: #999;
-  font-size: 85%;
-}
+  font-size: 85%; }
 
 .copyright {
-  float:right;
-}
+  float: right; }
 
 .links {
   float: left;
-  display: flex;
-}
-
-.links li {
-  list-style: none;
-  margin-right: 8px;
-}
-
-.links li a {
-  color: #555;
-}
+  display: flex; }
+  .links li {
+    list-style: none;
+    margin-right: 8px; }
+    .links li a {
+      color: #555; }
