@@ -16,7 +16,7 @@ export default class ConferenceSpeakers extends Component {
 
   @tracked('current')
   get moreSpeakers() {
-    return this.speakers.length > this.current;
+    return (this.speakers.length - 1) > this.current;
   }
 
   next() {
