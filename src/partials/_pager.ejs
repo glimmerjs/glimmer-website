@@ -1,0 +1,17 @@
+<%
+  let guideKeys = Object.keys(public.guides._data);
+  let currentIndex = guideKeys.indexOf(current.path[1]);
+%>
+
+<footer>
+  <% if (currentIndex > 1) { %>
+    <% let previousSlug = guideKeys[currentIndex - 1] %>
+    <% let previousGuide = public.guides._data[previousSlug] %>
+    <a class="previous-guide" href="/guides/<%= previousSlug %>"><%= previousGuide.title %></a>
+  <% } %>
+  <% if (currentIndex < guideKeys.length - 1) { %>
+    <% let nextSlug = guideKeys[currentIndex + 1] %>
+    <% let nextGuide = public.guides._data[nextSlug] %>
+    <a class="next-guide" href="/guides/<%= nextSlug %>"><%= nextGuide.title %></a>
+  <% } %>
+</footer>
