@@ -808,10 +808,11 @@ strong {
     padding: 10px 0px 0px 0px;
     color: #888; }
     .methods-list .function-comment p {
-      padding: 0px 0px 8px 0px;
+      padding: 0px 0px 8px 1px;
       margin: 0px; }
     .methods-list .function-comment strong {
       display: block;
+      padding-left: 1px;
       margin-bottom: 4px; }
 
 .properties-list {
