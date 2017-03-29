@@ -95,7 +95,7 @@ We can get our earlier example working again by indicating that the `person`
 property is tracked:
 
 ```ts
-import Component from '@glimmer/component';
+import Component, { tracked } from '@glimmer/component';
 
 export default class extends Component {
   @tracked
@@ -113,6 +113,8 @@ export default class extends Component {
   }
 }
 ```
+
+Notice that we are now also importing `tracked` from the `@glimmer/component` package.
 
 Now our component updates as soon as the JSON request comes back, without any
 errors. As you can see, because we made `person` a tracked property, Glimmer
