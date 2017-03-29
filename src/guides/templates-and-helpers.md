@@ -12,7 +12,7 @@ Components have two different kinds of data, or state, that can be displayed in 
 Arguments are data that we pass in to a component from its parent component. For example, if we have a `conference-speaker` component, we can pass it a `name` and `status` to use:
 
 ```hbs
-<conference-speaker @name="Tom" @status="Speaking">
+<conference-speaker @name="Tom" @status="Speaking" />
 ```
 
 Inside our `conference-speaker` template, we can access the `@name` and `@status` arguments that we've been given:
