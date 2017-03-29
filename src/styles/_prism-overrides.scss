@@ -6,3 +6,7 @@ pre[class*="language-"] {
 .token.block {
   display: initial;
 }
+
+code {
+  white-space: pre-wrap;
+}
