@@ -70,7 +70,7 @@ export default class extends Component {
 
 Unlike our first version, this component will throw an exception when we set the `person` property:
 
-```
+```markdown
 Uncaught Error: The 'person' property on the person-viewer component was changed after it had been rendered. Properties that change after being rendered must be tracked. Use the @tracked decorator to mark this as a tracked property.
 ```
 
