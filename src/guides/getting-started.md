@@ -25,4 +25,4 @@ Yarn: Installed dependencies
 Successfully initialized git.
 ```
 
-At this point, let's change into the directory (`cd my-app`), start the ember server (`ember s`) and we're ready to start.
+At this point, let's change into the directory (`cd my-app`), start the development server (`ember s`) and we're ready to begin.
