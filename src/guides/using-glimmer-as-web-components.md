@@ -7,10 +7,7 @@ In addition to using Glimmer for a widget on one section on a page, you can also
 When we add the `--web-component` flag, we reconfigure our app to expose our `display-tile` component as an Web Component to browsers. That in turn allows us to render markup like the following from a backend:
 
 ```hbs
-<ul>
-  <li><display-tile @type="video" @url="kids.mp4" /></li>
-  <li><display-tile @type="image" @url="skiing.jpg" /></li>
-</ul>
+<display-tile />
 ```
 Once we add our `app.js` file to the page, our browser will automatically load our Glimmer component into the DOM using the options provided by the backend and will boot each Glimmer app.
 
@@ -19,3 +16,5 @@ For more information about web components, browser support and various polyfills
 - [https://www.webcomponents.org/introduction](https://www.webcomponents.org/introduction)
 - [https://www.webcomponents.org/polyfills](https://www.webcomponents.org/polyfills)
 - [http://jonrimmer.github.io/are-we-componentized-yet/](http://jonrimmer.github.io/are-we-componentized-yet/)
+
+*Note* You cannot currently pass arguments to top-level Glimmer components due to technical limitations. We are working on removing this restriction.
