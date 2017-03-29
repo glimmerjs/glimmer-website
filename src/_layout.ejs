@@ -8,6 +8,7 @@
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto|Robot+Mono">
       <link rel="stylesheet" href="/styles/normalize.css">
       <link rel="stylesheet" href="/styles/basscss.css">
+      <link rel="stylesheet" href="/styles/prism.css">
       <link rel="stylesheet" href="/styles/main.css">
       <link rel="shortcut icon" href="/images/favicon.png">
     </head>
@@ -31,6 +32,9 @@
         <% } %>
 
         <%- partial("partials/_footer") %>
+
+        <script src="/scripts/prism.js"></script>
+        <script>Prism.languages.hbs = Prism.languages.extend('handlebars');</script>
       </div>
     </body>
 </html>
