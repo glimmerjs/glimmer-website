@@ -6,10 +6,11 @@
 
 var main = {
   "data": {
-    "id": "glimmer",
+    "id": "glimmer-api docs",
     "type": "docset",
     "attributes": {
-      "title": "Glimmer",
+      "header": "glimmer",
+      "title": "Glimmer API Docs",
       "intro": "<div><p>Welcome to the Glimmer API documentation.</p><p>Choose a project or module from the table of contents to get started.</p></div>",
       "idMap": {
         "_glimmer_component": {
