@@ -3,7 +3,7 @@
 Let's start making our `conference-speakers` component more interactive.
 
 ```js
-// app/src/ui/components/conference-speakers/component.js
+// my-app/src/ui/components/conference-speakers/component.js
 import Component, { tracked } from "@glimmer/component";
 
 export default class ConferenceSpeakers extends Component {
@@ -27,7 +27,7 @@ export default class ConferenceSpeakers extends Component {
 ```
 
 ```hbs
-{{!-- app/src/ui/components/conference-speakers/template.hbs --}}
+{{!-- my-app/src/ui/components/conference-speakers/template.hbs --}}
 <div>
   <p>Speaking: {{currentlySpeaking}}</p>
   <ul>
@@ -46,7 +46,7 @@ export default class ConferenceSpeakers extends Component {
 
 In the template above, we add the use of both the `{{if}}`/`{{else}}` and `{{action}}` helpers and reference several new internal component properties that we've added.
 
-We're also using an `{{action}}` helper to call our `next()` method/event handler to advance our current location in the speaker array (also known as our component's "state")
+We're using the `{{action}}` helper to call our `next()` method/event handler to advance our current location in the speaker array (also known as our component's "state")
 
 But there are two "interesting" syntax wrinkles in the component that may be unfamiliar.  We use the ES2015 `get` in front of our `currentlySpeaking()` method to define another property for our template (`{{currentlySpeaking}}`).
 
