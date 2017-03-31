@@ -940,3 +940,7 @@ h5 a {
       display: block; }
   section.content-container {
     padding: 10px 20px; } }
+
+#content-container p > p {
+  padding-left: 0px;
+  padding-top: 0px; }

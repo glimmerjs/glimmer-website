@@ -803,7 +803,7 @@ var main = {
             ],
             "comment": {
               "shortText": "<p>Constructs a new component and assigns itself the passed properties. You\nshould not construct new components yourself. Instead, Glimmer will\ninstantiate new components automatically as it renders.</p>\n",
-              "text": "",
+              "text": "<p>Constructs a new component and assigns itself the passed properties. You\nshould not construct new components yourself. Instead, Glimmer will\ninstantiate new components automatically as it renders.</p>\n",
               "tags": []
             },
             "constructorSignatures": [
@@ -825,7 +825,7 @@ var main = {
                 ],
                 "comment": {
                   "shortText": "<p>Constructs a new component and assigns itself the passed properties. You\nshould not construct new components yourself. Instead, Glimmer will\ninstantiate new components automatically as it renders.</p>\n",
-                  "text": "",
+                  "text": "<p>Constructs a new component and assigns itself the passed properties. You\nshould not construct new components yourself. Instead, Glimmer will\ninstantiate new components automatically as it renders.</p>\n",
                   "tags": []
                 },
                 "typeInfo": {
@@ -933,7 +933,7 @@ var main = {
             ],
             "comment": {
               "shortText": "<p>Development-mode only name of the component, useful for debugging.</p>\n",
-              "text": ""
+              "text": "<p>Development-mode only name of the component, useful for debugging.</p>\n"
             },
             "typeInfo": {
               "isArray": false,
@@ -966,7 +966,7 @@ var main = {
             ],
             "comment": {
               "shortText": "<p>The element corresponding to the top-level element of the component&#39;s template.\nYou should not try to access this property until after the component&#39;s <code>didInsertElement()</code>\nlifecycle hook is called.</p>\n",
-              "text": ""
+              "text": "<p>The element corresponding to the top-level element of the component&#39;s template.\nYou should not try to access this property until after the component&#39;s <code>didInsertElement()</code>\nlifecycle hook is called.</p>\n"
             },
             "typeInfo": {
               "isArray": false,
@@ -1018,7 +1018,7 @@ var main = {
                 ],
                 "comment": {
                   "shortText": "<p>Called when the component has been inserted into the DOM.\nOverride this function to do any set up that requires an element in the document body.</p>\n",
-                  "text": ""
+                  "text": "<p>Called when the component has been inserted into the DOM.\nOverride this function to do any set up that requires an element in the document body.</p>\n"
                 },
                 "typeInfo": {
                   "isArray": false,
@@ -1070,7 +1070,7 @@ var main = {
                 ],
                 "comment": {
                   "shortText": "<p>Called when the component has updated and rerendered itself.\nCalled only during a rerender, not during an initial render.</p>\n",
-                  "text": ""
+                  "text": "<p>Called when the component has updated and rerendered itself.\nCalled only during a rerender, not during an initial render.</p>\n"
                 },
                 "typeInfo": {
                   "isArray": false,
@@ -2787,7 +2787,7 @@ var main = {
         ],
         "comment": {
           "shortText": "<p>The base PathReference.</p>\n",
-          "text": ""
+          "text": "<p>The base PathReference.</p>\n"
         },
         "typeParameters": [
           {
@@ -3636,7 +3636,7 @@ var main = {
                 ],
                 "comment": {
                   "shortText": "<p>The tag used internally to invalidate when a tracked property is set. For\nstatic properties, this is the same DirtyableTag returned from <code>tagFor</code>.\nFor computed properties, it is the DirtyableTag used as one of the tags in\nthe tag combinator of the CP and its dependencies.</p>\n",
-                  "text": ""
+                  "text": "<p>The tag used internally to invalidate when a tracked property is set. For\nstatic properties, this is the same DirtyableTag returned from <code>tagFor</code>.\nFor computed properties, it is the DirtyableTag used as one of the tags in\nthe tag combinator of the CP and its dependencies.</p>\n"
                 },
                 "typeInfo": {
                   "isArray": false,
@@ -6060,7 +6060,7 @@ var main = {
         ],
         "comment": {
           "shortText": "<p>Function that can be used in development mode to generate more meaningful\nerror messages.</p>\n",
-          "text": ""
+          "text": "<p>Function that can be used in development mode to generate more meaningful\nerror messages.</p>\n"
         },
         "callSignatures": [
           {
@@ -6081,7 +6081,7 @@ var main = {
             ],
             "comment": {
               "shortText": "<p>Function that can be used in development mode to generate more meaningful\nerror messages.</p>\n",
-              "text": ""
+              "text": "<p>Function that can be used in development mode to generate more meaningful\nerror messages.</p>\n"
             },
             "typeInfo": {
               "isArray": false,
@@ -6828,7 +6828,7 @@ var main = {
             ],
             "comment": {
               "shortText": "<p>In development mode only, we install an ad hoc setter on properties where a\ntag is requested (i.e., it was used in a template) without being tracked. In\ncases where the property is set, we raise an error.</p>\n",
-              "text": ""
+              "text": "<p>In development mode only, we install an ad hoc setter on properties where a\ntag is requested (i.e., it was used in a template) without being tracked. In\ncases where the property is set, we raise an error.</p>\n"
             },
             "typeInfo": {
               "isArray": false,
@@ -8728,7 +8728,7 @@ var main = {
             ],
             "comment": {
               "shortText": "<p>Whether the initial render has completed.</p>\n",
-              "text": ""
+              "text": "<p>Whether the initial render has completed.</p>\n"
             },
             "typeInfo": {
               "isArray": false,
@@ -8838,7 +8838,7 @@ var main = {
             ],
             "comment": {
               "shortText": "<p>Whether a re-render has been scheduled.</p>\n",
-              "text": ""
+              "text": "<p>Whether a re-render has been scheduled.</p>\n"
             },
             "typeInfo": {
               "isArray": false,
