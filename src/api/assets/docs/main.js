@@ -1248,6 +1248,536 @@ var main = {
             "character": 40,
             "url": null
           }
+        ],
+        "constructors": [
+          {
+            "name": "constructor",
+            "slug": "constructor",
+            "flags": {
+              "isExported": true,
+              "isExternal": false,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "constructor",
+            "fullName": "ComponentDefinition.constructor",
+            "hierarchy": "Constructor constructor\n  ConstructorSignature new ComponentDefinition:ComponentDefinition\n    Parameter name:string\n    Parameter manager:ComponentManager\n    Parameter template:Template<TemplateMeta>\n    Parameter componentFactory:ComponentFactory",
+            "kindString": "Constructor",
+            "sources": [
+              {
+                "fileName": "component-definition.ts",
+                "line": 13,
+                "character": 26,
+                "url": null
+              }
+            ],
+            "constructorSignatures": [
+              {
+                "name": "new ComponentDefinition",
+                "slug": "new_componentdefinition",
+                "flags": {},
+                "alias": "new_componentdefinition",
+                "fullName": "ComponentDefinition.constructor.new ComponentDefinition",
+                "hierarchy": "ConstructorSignature new ComponentDefinition:ComponentDefinition\n  Parameter name:string\n  Parameter manager:ComponentManager\n  Parameter template:Template<TemplateMeta>\n  Parameter componentFactory:ComponentFactory",
+                "kindString": "Constructor signature",
+                "sources": [
+                  {
+                    "fileName": "component-definition.ts",
+                    "line": 13,
+                    "character": 26,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "ComponentDefinition",
+                  "link": {
+                    "id": "300",
+                    "type": "class",
+                    "slug": "componentdefinition",
+                    "sources": [
+                      {
+                        "fileName": "component-definition.ts",
+                        "line": 10,
+                        "character": 40,
+                        "url": null
+                      }
+                    ],
+                    "parent": {
+                      "id": "0",
+                      "type": "0",
+                      "slug": "_glimmer_component",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "name",
+                    "slug": "name",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "name",
+                    "fullName": "ComponentDefinition.constructor.new ComponentDefinition.name",
+                    "hierarchy": "Parameter name:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "manager",
+                    "slug": "manager",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "manager",
+                    "fullName": "ComponentDefinition.constructor.new ComponentDefinition.manager",
+                    "hierarchy": "Parameter manager:ComponentManager",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "ComponentManager",
+                      "link": {
+                        "id": "246",
+                        "type": "class",
+                        "slug": "componentmanager",
+                        "sources": [
+                          {
+                            "fileName": "component-manager.ts",
+                            "line": 52,
+                            "character": 37,
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L52"
+                          }
+                        ],
+                        "parent": {
+                          "id": "0",
+                          "type": "0",
+                          "slug": "_glimmer_component",
+                          "sources": null
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "name": "template",
+                    "slug": "template",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "template",
+                    "fullName": "ComponentDefinition.constructor.new ComponentDefinition.template",
+                    "hierarchy": "Parameter template:Template<TemplateMeta>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Template"
+                    }
+                  },
+                  {
+                    "name": "componentFactory",
+                    "slug": "componentfactory",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "componentfactory",
+                    "fullName": "ComponentDefinition.constructor.new ComponentDefinition.componentFactory",
+                    "hierarchy": "Parameter componentFactory:ComponentFactory",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "ComponentFactory",
+                      "link": {
+                        "id": "110",
+                        "type": "interface",
+                        "slug": "componentfactory",
+                        "sources": [
+                          {
+                            "fileName": "component.ts",
+                            "line": 201,
+                            "character": 33,
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L201"
+                          }
+                        ],
+                        "parent": {
+                          "id": "0",
+                          "type": "0",
+                          "slug": "_glimmer_component",
+                          "sources": null
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "properties": [
+          {
+            "name": "ComponentClass",
+            "slug": "componentclass",
+            "flags": {
+              "isExported": true,
+              "isExternal": false,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "componentclass",
+            "fullName": "ComponentDefinition.ComponentClass",
+            "hierarchy": "Property ComponentClass:ComponentClass",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                "line": 49,
+                "character": 18,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "ComponentClass",
+              "link": {
+                "id": "316",
+                "type": "property",
+                "slug": "componentclass",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                    "line": 49,
+                    "character": 18,
+                    "url": null
+                  }
+                ],
+                "parent": {
+                  "id": "300",
+                  "type": "class",
+                  "slug": "componentdefinition",
+                  "sources": [
+                    {
+                      "fileName": "component-definition.ts",
+                      "line": 10,
+                      "character": 40,
+                      "url": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "name": "args",
+            "slug": "args",
+            "flags": {
+              "isExported": true,
+              "isExternal": false,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "args",
+            "fullName": "ComponentDefinition.args",
+            "hierarchy": "Property args:CapturedArguments",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "component-definition.ts",
+                "line": 13,
+                "character": 6,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "CapturedArguments"
+            }
+          },
+          {
+            "name": "componentFactory",
+            "slug": "componentfactory-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": false,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "componentfactory-1",
+            "fullName": "ComponentDefinition.componentFactory",
+            "hierarchy": "Property componentFactory:ComponentFactory",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "component-definition.ts",
+                "line": 11,
+                "character": 18,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "ComponentFactory",
+              "link": {
+                "id": "110",
+                "type": "interface",
+                "slug": "componentfactory",
+                "sources": [
+                  {
+                    "fileName": "component.ts",
+                    "line": 201,
+                    "character": 33,
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L201"
+                  }
+                ],
+                "parent": {
+                  "id": "0",
+                  "type": "0",
+                  "slug": "_glimmer_component",
+                  "sources": null
+                }
+              }
+            }
+          },
+          {
+            "name": "manager",
+            "slug": "manager-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": false,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "manager-1",
+            "fullName": "ComponentDefinition.manager",
+            "hierarchy": "Property manager:ComponentManager<ComponentStateBucket>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                "line": 48,
+                "character": 11,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "ComponentManager"
+            }
+          },
+          {
+            "name": "name",
+            "slug": "name-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": false,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "name-1",
+            "fullName": "ComponentDefinition.name",
+            "hierarchy": "Property name:string",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                "line": 47,
+                "character": 8,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "string"
+            }
+          },
+          {
+            "name": "template",
+            "slug": "template-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": false,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "template-1",
+            "fullName": "ComponentDefinition.template",
+            "hierarchy": "Property template:Template<TemplateMeta>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "component-definition.ts",
+                "line": 12,
+                "character": 10,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Template"
+            }
+          }
+        ],
+        "methods": [
+          {
+            "name": "toJSON",
+            "slug": "tojson",
+            "flags": {
+              "isExported": true,
+              "isExternal": false,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "tojson",
+            "fullName": "ComponentDefinition.toJSON",
+            "hierarchy": "Method toJSON\n  CallSignature toJSON:object\n    TypeLiteral __type\n      Variable GlimmerDebug:string",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "component-definition.ts",
+                "line": 22,
+                "character": 8,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "toJSON",
+                "slug": "tojson-1",
+                "flags": {},
+                "alias": "tojson-1",
+                "fullName": "ComponentDefinition.toJSON.toJSON",
+                "hierarchy": "CallSignature toJSON:object\n  TypeLiteral __type\n    Variable GlimmerDebug:string",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "component-definition.ts",
+                    "line": 22,
+                    "character": 8,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "object",
+                  "declaration": {
+                    "id": "312",
+                    "type": "type-literal",
+                    "attributes": {
+                      "name": "__type",
+                      "slug": "__type",
+                      "flags": {},
+                      "alias": "__type",
+                      "fullName": "ComponentDefinition.toJSON.toJSON.__type",
+                      "hierarchy": "TypeLiteral __type\n  Variable GlimmerDebug:string",
+                      "kindString": "Type literal",
+                      "variables": [
+                        {
+                          "name": "GlimmerDebug",
+                          "slug": "glimmerdebug",
+                          "flags": {
+                            "isExported": false,
+                            "isExternal": false,
+                            "isOptional": false,
+                            "isPrivate": false,
+                            "isPublic": false,
+                            "isProtected": false,
+                            "isStatic": false
+                          },
+                          "alias": "glimmerdebug",
+                          "fullName": "ComponentDefinition.toJSON.toJSON.__type.GlimmerDebug",
+                          "hierarchy": "Variable GlimmerDebug:string",
+                          "kindString": "Variable",
+                          "sources": [
+                            {
+                              "fileName": "component-definition.ts",
+                              "line": 23,
+                              "character": 25,
+                              "url": null
+                            }
+                          ],
+                          "typeInfo": {
+                            "isArray": false,
+                            "name": "string"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "typeLiterals": [
+                  {
+                    "name": "__type",
+                    "slug": "__type",
+                    "flags": {},
+                    "alias": "__type",
+                    "fullName": "ComponentDefinition.toJSON.toJSON.__type",
+                    "hierarchy": "TypeLiteral __type\n  Variable GlimmerDebug:string",
+                    "kindString": "Type literal",
+                    "variables": [
+                      {
+                        "name": "GlimmerDebug",
+                        "slug": "glimmerdebug",
+                        "flags": {
+                          "isExported": false,
+                          "isExternal": false,
+                          "isOptional": false,
+                          "isPrivate": false,
+                          "isPublic": false,
+                          "isProtected": false,
+                          "isStatic": false
+                        },
+                        "alias": "glimmerdebug",
+                        "fullName": "ComponentDefinition.toJSON.toJSON.__type.GlimmerDebug",
+                        "hierarchy": "Variable GlimmerDebug:string",
+                        "kindString": "Variable",
+                        "sources": [
+                          {
+                            "fileName": "component-definition.ts",
+                            "line": 23,
+                            "character": 25,
+                            "url": null
+                          }
+                        ],
+                        "typeInfo": {
+                          "isArray": false,
+                          "name": "string"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         ]
       }
     },
@@ -3333,6 +3863,335 @@ var main = {
             "character": 33,
             "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L165"
           }
+        ],
+        "constructors": [
+          {
+            "name": "constructor",
+            "slug": "constructor",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "constructor",
+            "fullName": "ConditionalReference.constructor",
+            "hierarchy": "Constructor constructor\n  ConstructorSignature new ConditionalReference:ConditionalReference\n    Parameter inner:Reference<Opaque>",
+            "kindString": "Constructor",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/references.d.ts",
+                "line": 15,
+                "character": 13,
+                "url": null
+              }
+            ],
+            "constructorSignatures": [
+              {
+                "name": "new ConditionalReference",
+                "slug": "new_conditionalreference",
+                "flags": {},
+                "alias": "new_conditionalreference",
+                "fullName": "ConditionalReference.constructor.new ConditionalReference",
+                "hierarchy": "ConstructorSignature new ConditionalReference:ConditionalReference\n  Parameter inner:Reference<Opaque>",
+                "kindString": "Constructor signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/references.d.ts",
+                    "line": 15,
+                    "character": 13,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "ConditionalReference",
+                  "link": {
+                    "id": "216",
+                    "type": "class",
+                    "slug": "conditionalreference",
+                    "sources": [
+                      {
+                        "fileName": "references.ts",
+                        "line": 165,
+                        "character": 33,
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L165"
+                      }
+                    ],
+                    "parent": {
+                      "id": "0",
+                      "type": "0",
+                      "slug": "_glimmer_component",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "inner",
+                    "slug": "inner",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "inner",
+                    "fullName": "ConditionalReference.constructor.new ConditionalReference.inner",
+                    "hierarchy": "Parameter inner:Reference<Opaque>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Reference"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "properties": [
+          {
+            "name": "tag",
+            "slug": "tag",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "tag",
+            "fullName": "ConditionalReference.tag",
+            "hierarchy": "Property tag:Tag",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/references.d.ts",
+                "line": 15,
+                "character": 7,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Tag"
+            }
+          }
+        ],
+        "methods": [
+          {
+            "name": "toBool",
+            "slug": "tobool",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": true,
+              "isStatic": false
+            },
+            "alias": "tobool",
+            "fullName": "ConditionalReference.toBool",
+            "hierarchy": "Method toBool\n  CallSignature toBool:boolean\n    Parameter value:Opaque",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/references.d.ts",
+                "line": 18,
+                "character": 20,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "toBool",
+                "slug": "tobool-1",
+                "flags": {},
+                "alias": "tobool-1",
+                "fullName": "ConditionalReference.toBool.toBool",
+                "hierarchy": "CallSignature toBool:boolean\n  Parameter value:Opaque",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/references.d.ts",
+                    "line": 18,
+                    "character": 20,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "boolean"
+                },
+                "parameters": [
+                  {
+                    "name": "value",
+                    "slug": "value",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "value",
+                    "fullName": "ConditionalReference.toBool.toBool.value",
+                    "hierarchy": "Parameter value:Opaque",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Opaque"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "value",
+            "slug": "value-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "value-1",
+            "fullName": "ConditionalReference.value",
+            "hierarchy": "Method value\n  CallSignature value:boolean",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/references.d.ts",
+                "line": 17,
+                "character": 9,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "value",
+                "slug": "value-2",
+                "flags": {},
+                "alias": "value-2",
+                "fullName": "ConditionalReference.value.value",
+                "hierarchy": "CallSignature value:boolean",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/references.d.ts",
+                    "line": 17,
+                    "character": 9,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "create",
+            "slug": "create",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": true
+            },
+            "alias": "create",
+            "fullName": "ConditionalReference.create",
+            "hierarchy": "Method create\n  CallSignature create:PrimitiveReference<any> | ConditionalReference\n    Parameter reference:PathReference<any>",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "references.ts",
+                "line": 166,
+                "character": 15,
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L166"
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "create",
+                "slug": "create-1",
+                "flags": {},
+                "alias": "create-1",
+                "fullName": "ConditionalReference.create.create",
+                "hierarchy": "CallSignature create:PrimitiveReference<any> | ConditionalReference\n  Parameter reference:PathReference<any>",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "references.ts",
+                    "line": 166,
+                    "character": 15,
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L166"
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "PrimitiveReference<any> | ConditionalReference",
+                  "types": [
+                    {
+                      "isArray": false,
+                      "name": "PrimitiveReference"
+                    },
+                    {
+                      "isArray": false,
+                      "name": "ConditionalReference",
+                      "link": {
+                        "id": "216",
+                        "type": "class",
+                        "slug": "conditionalreference",
+                        "sources": [
+                          {
+                            "fileName": "references.ts",
+                            "line": 165,
+                            "character": 33,
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L165"
+                          }
+                        ],
+                        "parent": {
+                          "id": "0",
+                          "type": "0",
+                          "slug": "_glimmer_component",
+                          "sources": null
+                        }
+                      }
+                    }
+                  ]
+                },
+                "parameters": [
+                  {
+                    "name": "reference",
+                    "slug": "reference",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "reference",
+                    "fullName": "ConditionalReference.create.create.reference",
+                    "hierarchy": "Parameter reference:PathReference<any>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "PathReference"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
         ]
       }
     },
@@ -5341,6 +6200,317 @@ var main = {
             "character": 26,
             "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L51"
           }
+        ],
+        "constructors": [
+          {
+            "name": "constructor",
+            "slug": "constructor",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "constructor",
+            "fullName": "RootReference.constructor",
+            "hierarchy": "Constructor constructor\n  ConstructorSignature new RootReference:RootReference\n    Parameter inner:any",
+            "kindString": "Constructor",
+            "sources": [
+              {
+                "fileName": "@glimmer/reference/dist/types/lib/const.d.ts",
+                "line": 4,
+                "character": 13,
+                "url": null
+              }
+            ],
+            "constructorSignatures": [
+              {
+                "name": "new RootReference",
+                "slug": "new_rootreference",
+                "flags": {},
+                "alias": "new_rootreference",
+                "fullName": "RootReference.constructor.new RootReference",
+                "hierarchy": "ConstructorSignature new RootReference:RootReference\n  Parameter inner:any",
+                "kindString": "Constructor signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/reference/dist/types/lib/const.d.ts",
+                    "line": 4,
+                    "character": 13,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "RootReference",
+                  "link": {
+                    "id": "136",
+                    "type": "class",
+                    "slug": "rootreference",
+                    "sources": [
+                      {
+                        "fileName": "references.ts",
+                        "line": 51,
+                        "character": 26,
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L51"
+                      }
+                    ],
+                    "parent": {
+                      "id": "0",
+                      "type": "0",
+                      "slug": "_glimmer_component",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "inner",
+                    "slug": "inner",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "inner",
+                    "fullName": "RootReference.constructor.new RootReference.inner",
+                    "hierarchy": "Parameter inner:any",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "any"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "properties": [
+          {
+            "name": "children",
+            "slug": "children",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": true,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "children",
+            "fullName": "RootReference.children",
+            "hierarchy": "Property children:Dict<RootPropertyReference>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "references.ts",
+                "line": 52,
+                "character": 18,
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L52"
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Dict"
+            }
+          },
+          {
+            "name": "inner",
+            "slug": "inner-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": true,
+              "isStatic": false
+            },
+            "alias": "inner-1",
+            "fullName": "RootReference.inner",
+            "hierarchy": "Property inner:any",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/reference/dist/types/lib/const.d.ts",
+                "line": 3,
+                "character": 19,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "any"
+            }
+          },
+          {
+            "name": "tag",
+            "slug": "tag",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "tag",
+            "fullName": "RootReference.tag",
+            "hierarchy": "Property tag:Tag",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/reference/dist/types/lib/const.d.ts",
+                "line": 4,
+                "character": 7,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Tag"
+            }
+          }
+        ],
+        "methods": [
+          {
+            "name": "get",
+            "slug": "get",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "get",
+            "fullName": "RootReference.get",
+            "hierarchy": "Method get\n  CallSignature get:RootPropertyReference\n    Parameter propertyKey:string",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "references.ts",
+                "line": 54,
+                "character": 5,
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L54"
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "get",
+                "slug": "get-1",
+                "flags": {},
+                "alias": "get-1",
+                "fullName": "RootReference.get.get",
+                "hierarchy": "CallSignature get:RootPropertyReference\n  Parameter propertyKey:string",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "references.ts",
+                    "line": 54,
+                    "character": 5,
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L54"
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "RootPropertyReference",
+                  "link": {
+                    "id": "162",
+                    "type": "class",
+                    "slug": "rootpropertyreference",
+                    "sources": [
+                      {
+                        "fileName": "references.ts",
+                        "line": 84,
+                        "character": 34,
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L84"
+                      }
+                    ],
+                    "parent": {
+                      "id": "0",
+                      "type": "0",
+                      "slug": "_glimmer_component",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "propertyKey",
+                    "slug": "propertykey",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "propertykey",
+                    "fullName": "RootReference.get.get.propertyKey",
+                    "hierarchy": "Parameter propertyKey:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "value",
+            "slug": "value",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "value",
+            "fullName": "RootReference.value",
+            "hierarchy": "Method value\n  CallSignature value:any",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/reference/dist/types/lib/const.d.ts",
+                "line": 6,
+                "character": 9,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "value",
+                "slug": "value-1",
+                "flags": {},
+                "alias": "value-1",
+                "fullName": "RootReference.value.value",
+                "hierarchy": "CallSignature value:any",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/reference/dist/types/lib/const.d.ts",
+                    "line": 6,
+                    "character": 9,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "any"
+                }
+              }
+            ]
+          }
         ]
       }
     },
@@ -5376,6 +6546,301 @@ var main = {
             "line": 211,
             "character": 35,
             "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L211"
+          }
+        ],
+        "constructors": [
+          {
+            "name": "constructor",
+            "slug": "constructor",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "constructor",
+            "fullName": "UntrackedPropertyError.constructor",
+            "hierarchy": "Constructor constructor\n  ConstructorSignature new UntrackedPropertyError:UntrackedPropertyError\n    Parameter target:any\n    Parameter key:string\n    Parameter message:string",
+            "kindString": "Constructor",
+            "sources": [
+              {
+                "fileName": "tracked.ts",
+                "line": 211,
+                "character": 51,
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L211"
+              }
+            ],
+            "constructorSignatures": [
+              {
+                "name": "new UntrackedPropertyError",
+                "slug": "new_untrackedpropertyerror",
+                "flags": {},
+                "alias": "new_untrackedpropertyerror",
+                "fullName": "UntrackedPropertyError.constructor.new UntrackedPropertyError",
+                "hierarchy": "ConstructorSignature new UntrackedPropertyError:UntrackedPropertyError\n  Parameter target:any\n  Parameter key:string\n  Parameter message:string",
+                "kindString": "Constructor signature",
+                "sources": [
+                  {
+                    "fileName": "tracked.ts",
+                    "line": 211,
+                    "character": 51,
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L211"
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "UntrackedPropertyError",
+                  "link": {
+                    "id": "18",
+                    "type": "class",
+                    "slug": "untrackedpropertyerror",
+                    "sources": [
+                      {
+                        "fileName": "tracked.ts",
+                        "line": 211,
+                        "character": 35,
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L211"
+                      }
+                    ],
+                    "parent": {
+                      "id": "0",
+                      "type": "0",
+                      "slug": "_glimmer_component",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "target",
+                    "slug": "target",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "target",
+                    "fullName": "UntrackedPropertyError.constructor.new UntrackedPropertyError.target",
+                    "hierarchy": "Parameter target:any",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "any"
+                    }
+                  },
+                  {
+                    "name": "key",
+                    "slug": "key",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "key",
+                    "fullName": "UntrackedPropertyError.constructor.new UntrackedPropertyError.key",
+                    "hierarchy": "Parameter key:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "message",
+                    "slug": "message",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "message",
+                    "fullName": "UntrackedPropertyError.constructor.new UntrackedPropertyError.message",
+                    "hierarchy": "Parameter message:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "properties": [
+          {
+            "name": "key",
+            "slug": "key-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": true,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "key-1",
+            "fullName": "UntrackedPropertyError.key",
+            "hierarchy": "Property key:string",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "tracked.ts",
+                "line": 212,
+                "character": 44,
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L212"
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "string"
+            }
+          },
+          {
+            "name": "target",
+            "slug": "target-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": true,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "target-1",
+            "fullName": "UntrackedPropertyError.target",
+            "hierarchy": "Property target:any",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "tracked.ts",
+                "line": 212,
+                "character": 27,
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L212"
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "any"
+            }
+          },
+          {
+            "name": "Error",
+            "slug": "error",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": true
+            },
+            "alias": "error",
+            "fullName": "UntrackedPropertyError.Error",
+            "hierarchy": "Property Error:ErrorConstructor",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "typescript/lib/lib.es6.d.ts",
+                "line": 917,
+                "character": 19,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "ErrorConstructor"
+            }
+          },
+          {
+            "name": "message",
+            "slug": "message-1",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": true
+            },
+            "alias": "message-1",
+            "fullName": "UntrackedPropertyError.message",
+            "hierarchy": "Property message:string",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "typescript/lib/lib.es6.d.ts",
+                "line": 907,
+                "character": 11,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "string"
+            }
+          },
+          {
+            "name": "name",
+            "slug": "name",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": true
+            },
+            "alias": "name",
+            "fullName": "UntrackedPropertyError.name",
+            "hierarchy": "Property name:string",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "typescript/lib/lib.es6.d.ts",
+                "line": 906,
+                "character": 8,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "string"
+            }
+          },
+          {
+            "name": "stack",
+            "slug": "stack",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": true,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": true
+            },
+            "alias": "stack",
+            "fullName": "UntrackedPropertyError.stack",
+            "hierarchy": "Property stack:string",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "typescript/lib/lib.es6.d.ts",
+                "line": 908,
+                "character": 9,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "string"
+            }
           }
         ]
       }
@@ -10544,6 +12009,309 @@ var main = {
             "character": 32,
             "url": null
           }
+        ],
+        "constructors": [
+          {
+            "name": "constructor",
+            "slug": "constructor",
+            "flags": {
+              "isExported": false,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "constructor",
+            "fullName": "DefaultComponentDefinition.constructor",
+            "hierarchy": "Constructor constructor\n  ConstructorSignature new DefaultComponentDefinition:DefaultComponentDefinition\n    Parameter name:string\n    Parameter manager:ComponentManager<any>\n    Parameter ComponentClass:ComponentClass",
+            "kindString": "Constructor",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                "line": 49,
+                "character": 35,
+                "url": null
+              }
+            ],
+            "constructorSignatures": [
+              {
+                "name": "new DefaultComponentDefinition",
+                "slug": "new_defaultcomponentdefinition",
+                "flags": {},
+                "alias": "new_defaultcomponentdefinition",
+                "fullName": "DefaultComponentDefinition.constructor.new DefaultComponentDefinition",
+                "hierarchy": "ConstructorSignature new DefaultComponentDefinition:DefaultComponentDefinition\n  Parameter name:string\n  Parameter manager:ComponentManager<any>\n  Parameter ComponentClass:ComponentClass",
+                "kindString": "Constructor signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                    "line": 49,
+                    "character": 35,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "DefaultComponentDefinition",
+                  "link": {
+                    "id": "543",
+                    "type": "class",
+                    "slug": "defaultcomponentdefinition",
+                    "sources": [
+                      {
+                        "fileName": "environment.ts",
+                        "line": 46,
+                        "character": 32,
+                        "url": null
+                      }
+                    ],
+                    "parent": {
+                      "id": "317",
+                      "type": "0",
+                      "slug": "_glimmer_application",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "name",
+                    "slug": "name",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "name",
+                    "fullName": "DefaultComponentDefinition.constructor.new DefaultComponentDefinition.name",
+                    "hierarchy": "Parameter name:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "manager",
+                    "slug": "manager",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "manager",
+                    "fullName": "DefaultComponentDefinition.constructor.new DefaultComponentDefinition.manager",
+                    "hierarchy": "Parameter manager:ComponentManager<any>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "ComponentManager"
+                    }
+                  },
+                  {
+                    "name": "ComponentClass",
+                    "slug": "componentclass",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "componentclass",
+                    "fullName": "DefaultComponentDefinition.constructor.new DefaultComponentDefinition.ComponentClass",
+                    "hierarchy": "Parameter ComponentClass:ComponentClass",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "ComponentClass",
+                      "link": {
+                        "id": "553",
+                        "type": "parameter",
+                        "slug": "componentclass",
+                        "sources": null,
+                        "parent": {
+                          "id": "550",
+                          "type": "constructor-signature",
+                          "slug": "new_defaultcomponentdefinition",
+                          "sources": [
+                            {
+                              "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                              "line": 49,
+                              "character": 35,
+                              "url": null
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "properties": [
+          {
+            "name": "ComponentClass",
+            "slug": "componentclass-1",
+            "flags": {
+              "isExported": false,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "componentclass-1",
+            "fullName": "DefaultComponentDefinition.ComponentClass",
+            "hierarchy": "Property ComponentClass:ComponentClass",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                "line": 49,
+                "character": 18,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "ComponentClass",
+              "link": {
+                "id": "548",
+                "type": "property",
+                "slug": "componentclass-1",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                    "line": 49,
+                    "character": 18,
+                    "url": null
+                  }
+                ],
+                "parent": {
+                  "id": "543",
+                  "type": "class",
+                  "slug": "defaultcomponentdefinition",
+                  "sources": [
+                    {
+                      "fileName": "environment.ts",
+                      "line": 46,
+                      "character": 32,
+                      "url": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "name": "manager",
+            "slug": "manager-1",
+            "flags": {
+              "isExported": false,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "manager-1",
+            "fullName": "DefaultComponentDefinition.manager",
+            "hierarchy": "Property manager:ComponentManager<any>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                "line": 48,
+                "character": 11,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "ComponentManager"
+            }
+          },
+          {
+            "name": "name",
+            "slug": "name-1",
+            "flags": {
+              "isExported": false,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "name-1",
+            "fullName": "DefaultComponentDefinition.name",
+            "hierarchy": "Property name:string",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/component/interfaces.d.ts",
+                "line": 47,
+                "character": 8,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "string"
+            }
+          }
+        ],
+        "methods": [
+          {
+            "name": "toJSON",
+            "slug": "tojson",
+            "flags": {
+              "isExported": false,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "tojson",
+            "fullName": "DefaultComponentDefinition.toJSON",
+            "hierarchy": "Method toJSON\n  CallSignature toJSON:string",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 47,
+                "character": 8,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "toJSON",
+                "slug": "tojson-1",
+                "flags": {},
+                "alias": "tojson-1",
+                "fullName": "DefaultComponentDefinition.toJSON.toJSON",
+                "hierarchy": "CallSignature toJSON:string",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 47,
+                    "character": 8,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "string"
+                }
+              }
+            ]
+          }
         ]
       }
     },
@@ -11455,6 +13223,2771 @@ var main = {
             "line": 57,
             "character": 32,
             "url": null
+          }
+        ],
+        "constructors": [
+          {
+            "name": "constructor",
+            "slug": "constructor",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "constructor",
+            "fullName": "Environment.constructor",
+            "hierarchy": "Constructor constructor\n  ConstructorSignature new Environment:Environment\n    Parameter options:EnvironmentOptions",
+            "kindString": "Constructor",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 69,
+                "character": 3,
+                "url": null
+              }
+            ],
+            "constructorSignatures": [
+              {
+                "name": "new Environment",
+                "slug": "new_environment",
+                "flags": {},
+                "alias": "new_environment",
+                "fullName": "Environment.constructor.new Environment",
+                "hierarchy": "ConstructorSignature new Environment:Environment\n  Parameter options:EnvironmentOptions",
+                "kindString": "Constructor signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 69,
+                    "character": 3,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "Environment",
+                  "link": {
+                    "id": "554",
+                    "type": "class",
+                    "slug": "environment",
+                    "sources": [
+                      {
+                        "fileName": "environment.ts",
+                        "line": 57,
+                        "character": 32,
+                        "url": null
+                      }
+                    ],
+                    "parent": {
+                      "id": "317",
+                      "type": "0",
+                      "slug": "_glimmer_application",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "options",
+                    "slug": "options",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "options",
+                    "fullName": "Environment.constructor.new Environment.options",
+                    "hierarchy": "Parameter options:EnvironmentOptions",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "EnvironmentOptions",
+                      "link": {
+                        "id": "540",
+                        "type": "interface",
+                        "slug": "environmentoptions",
+                        "sources": [
+                          {
+                            "fileName": "environment.ts",
+                            "line": 41,
+                            "character": 35,
+                            "url": null
+                          }
+                        ],
+                        "parent": {
+                          "id": "317",
+                          "type": "0",
+                          "slug": "_glimmer_application",
+                          "sources": null
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "properties": [
+          {
+            "name": "appendOperations",
+            "slug": "appendoperations",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": true,
+              "isStatic": false
+            },
+            "alias": "appendoperations",
+            "fullName": "Environment.appendOperations",
+            "hierarchy": "Property appendOperations:DOMTreeConstruction",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 73,
+                "character": 30,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "DOMTreeConstruction"
+            }
+          },
+          {
+            "name": "components",
+            "slug": "components",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": true,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "components",
+            "fullName": "Environment.components",
+            "hierarchy": "Property components:Dict<ComponentDefinition<void | __type>>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 60,
+                "character": 20,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Dict"
+            }
+          },
+          {
+            "name": "constants",
+            "slug": "constants",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "constants",
+            "fullName": "Environment.constants",
+            "hierarchy": "Property constants:Constants",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 76,
+                "character": 13,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Constants"
+            }
+          },
+          {
+            "name": "helpers",
+            "slug": "helpers",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": true,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "helpers",
+            "fullName": "Environment.helpers",
+            "hierarchy": "Property helpers:Dict<Helper>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 58,
+                "character": 17,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Dict"
+            }
+          },
+          {
+            "name": "managers",
+            "slug": "managers",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": true,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "managers",
+            "fullName": "Environment.managers",
+            "hierarchy": "Property managers:Dict<ComponentManager<void | __type>>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 61,
+                "character": 18,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Dict"
+            }
+          },
+          {
+            "name": "modifiers",
+            "slug": "modifiers",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": true,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "modifiers",
+            "fullName": "Environment.modifiers",
+            "hierarchy": "Property modifiers:Dict<ModifierManager<void | __type>>",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 59,
+                "character": 19,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Dict"
+            }
+          },
+          {
+            "name": "program",
+            "slug": "program",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "program",
+            "fullName": "Environment.program",
+            "hierarchy": "Property program:Program",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 77,
+                "character": 11,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "Program"
+            }
+          },
+          {
+            "name": "updateOperations",
+            "slug": "updateoperations",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": true,
+              "isStatic": false
+            },
+            "alias": "updateoperations",
+            "fullName": "Environment.updateOperations",
+            "hierarchy": "Property updateOperations:DOMChanges",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 72,
+                "character": 30,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "DOMChanges"
+            }
+          },
+          {
+            "name": "uselessAnchor",
+            "slug": "uselessanchor",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": true,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "uselessanchor",
+            "fullName": "Environment.uselessAnchor",
+            "hierarchy": "Property uselessAnchor:HTMLAnchorElement",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 62,
+                "character": 23,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "HTMLAnchorElement"
+            }
+          }
+        ],
+        "methods": [
+          {
+            "name": "attributeFor",
+            "slug": "attributefor",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "attributefor",
+            "fullName": "Environment.attributeFor",
+            "hierarchy": "Method attributeFor\n  CallSignature attributeFor:AttributeManager\n    Parameter element:Element\n    Parameter attr:string\n    Parameter isTrusting:boolean\n    Parameter namespace:string",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 96,
+                "character": 16,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "attributeFor",
+                "slug": "attributefor-1",
+                "flags": {},
+                "alias": "attributefor-1",
+                "fullName": "Environment.attributeFor.attributeFor",
+                "hierarchy": "CallSignature attributeFor:AttributeManager\n  Parameter element:Element\n  Parameter attr:string\n  Parameter isTrusting:boolean\n  Parameter namespace:string",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 96,
+                    "character": 16,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "AttributeManager"
+                },
+                "parameters": [
+                  {
+                    "name": "element",
+                    "slug": "element",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "element",
+                    "fullName": "Environment.attributeFor.attributeFor.element",
+                    "hierarchy": "Parameter element:Element",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Element"
+                    }
+                  },
+                  {
+                    "name": "attr",
+                    "slug": "attr",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "attr",
+                    "fullName": "Environment.attributeFor.attributeFor.attr",
+                    "hierarchy": "Parameter attr:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "isTrusting",
+                    "slug": "istrusting",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "istrusting",
+                    "fullName": "Environment.attributeFor.attributeFor.isTrusting",
+                    "hierarchy": "Parameter isTrusting:boolean",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "boolean"
+                    }
+                  },
+                  {
+                    "name": "namespace",
+                    "slug": "namespace",
+                    "flags": {
+                      "isOptional": true,
+                      "isRest": false
+                    },
+                    "alias": "namespace",
+                    "fullName": "Environment.attributeFor.attributeFor.namespace",
+                    "hierarchy": "Parameter namespace:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "begin",
+            "slug": "begin",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "begin",
+            "fullName": "Environment.begin",
+            "hierarchy": "Method begin\n  CallSignature begin:void",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 88,
+                "character": 9,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "begin",
+                "slug": "begin-1",
+                "flags": {},
+                "alias": "begin-1",
+                "fullName": "Environment.begin.begin",
+                "hierarchy": "CallSignature begin:void",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 88,
+                    "character": 9,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "void"
+                }
+              }
+            ]
+          },
+          {
+            "name": "commit",
+            "slug": "commit",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "commit",
+            "fullName": "Environment.commit",
+            "hierarchy": "Method commit\n  CallSignature commit:void",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 95,
+                "character": 10,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "commit",
+                "slug": "commit-1",
+                "flags": {},
+                "alias": "commit-1",
+                "fullName": "Environment.commit.commit",
+                "hierarchy": "CallSignature commit:void",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 95,
+                    "character": 10,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "void"
+                }
+              }
+            ]
+          },
+          {
+            "name": "didCreate",
+            "slug": "didcreate",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "didcreate",
+            "fullName": "Environment.didCreate",
+            "hierarchy": "Method didCreate\n  CallSignature didCreate<T>:void\n    TypeParameter T\n    Parameter component:T\n    Parameter manager:ComponentManager<T>",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 90,
+                "character": 13,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "didCreate",
+                "slug": "didcreate-1",
+                "flags": {},
+                "alias": "didcreate-1",
+                "fullName": "Environment.didCreate.didCreate",
+                "hierarchy": "CallSignature didCreate<T>:void\n  TypeParameter T\n  Parameter component:T\n  Parameter manager:ComponentManager<T>",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 90,
+                    "character": 13,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "void"
+                },
+                "typeParameters": [
+                  {
+                    "name": "T",
+                    "slug": "t",
+                    "flags": {},
+                    "alias": "t",
+                    "fullName": "Environment.didCreate.didCreate.T",
+                    "hierarchy": "TypeParameter T",
+                    "kindString": "Type parameter"
+                  }
+                ],
+                "parameters": [
+                  {
+                    "name": "component",
+                    "slug": "component",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "component",
+                    "fullName": "Environment.didCreate.didCreate.component",
+                    "hierarchy": "Parameter component:T",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "T"
+                    }
+                  },
+                  {
+                    "name": "manager",
+                    "slug": "manager",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "manager",
+                    "fullName": "Environment.didCreate.didCreate.manager",
+                    "hierarchy": "Parameter manager:ComponentManager<T>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "ComponentManager"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "didDestroy",
+            "slug": "diddestroy",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "diddestroy",
+            "fullName": "Environment.didDestroy",
+            "hierarchy": "Method didDestroy\n  CallSignature didDestroy:void\n    Parameter d:Destroyable",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 94,
+                "character": 14,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "didDestroy",
+                "slug": "diddestroy-1",
+                "flags": {},
+                "alias": "diddestroy-1",
+                "fullName": "Environment.didDestroy.didDestroy",
+                "hierarchy": "CallSignature didDestroy:void\n  Parameter d:Destroyable",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 94,
+                    "character": 14,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "void"
+                },
+                "parameters": [
+                  {
+                    "name": "d",
+                    "slug": "d",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "d",
+                    "fullName": "Environment.didDestroy.didDestroy.d",
+                    "hierarchy": "Parameter d:Destroyable",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Destroyable"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "didUpdate",
+            "slug": "didupdate",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "didupdate",
+            "fullName": "Environment.didUpdate",
+            "hierarchy": "Method didUpdate\n  CallSignature didUpdate<T>:void\n    TypeParameter T\n    Parameter component:T\n    Parameter manager:ComponentManager<T>",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 91,
+                "character": 13,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "didUpdate",
+                "slug": "didupdate-1",
+                "flags": {},
+                "alias": "didupdate-1",
+                "fullName": "Environment.didUpdate.didUpdate",
+                "hierarchy": "CallSignature didUpdate<T>:void\n  TypeParameter T\n  Parameter component:T\n  Parameter manager:ComponentManager<T>",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 91,
+                    "character": 13,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "void"
+                },
+                "typeParameters": [
+                  {
+                    "name": "T",
+                    "slug": "t-1",
+                    "flags": {},
+                    "alias": "t-1",
+                    "fullName": "Environment.didUpdate.didUpdate.T",
+                    "hierarchy": "TypeParameter T",
+                    "kindString": "Type parameter"
+                  }
+                ],
+                "parameters": [
+                  {
+                    "name": "component",
+                    "slug": "component-1",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "component-1",
+                    "fullName": "Environment.didUpdate.didUpdate.component",
+                    "hierarchy": "Parameter component:T",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "T"
+                    }
+                  },
+                  {
+                    "name": "manager",
+                    "slug": "manager-1",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "manager-1",
+                    "fullName": "Environment.didUpdate.didUpdate.manager",
+                    "hierarchy": "Parameter manager:ComponentManager<T>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "ComponentManager"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "getAppendOperations",
+            "slug": "getappendoperations",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "getappendoperations",
+            "fullName": "Environment.getAppendOperations",
+            "hierarchy": "Method getAppendOperations\n  CallSignature getAppendOperations:DOMTreeConstruction",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 85,
+                "character": 23,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "getAppendOperations",
+                "slug": "getappendoperations-1",
+                "flags": {},
+                "alias": "getappendoperations-1",
+                "fullName": "Environment.getAppendOperations.getAppendOperations",
+                "hierarchy": "CallSignature getAppendOperations:DOMTreeConstruction",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 85,
+                    "character": 23,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "DOMTreeConstruction"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getComponentDefinition",
+            "slug": "getcomponentdefinition",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "getcomponentdefinition",
+            "fullName": "Environment.getComponentDefinition",
+            "hierarchy": "Method getComponentDefinition\n  CallSignature getComponentDefinition:ComponentDefinition<Component>\n    Parameter name:string\n    Parameter meta:TemplateMeta",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 113,
+                "character": 24,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "getComponentDefinition",
+                "slug": "getcomponentdefinition-1",
+                "flags": {},
+                "alias": "getcomponentdefinition-1",
+                "fullName": "Environment.getComponentDefinition.getComponentDefinition",
+                "hierarchy": "CallSignature getComponentDefinition:ComponentDefinition<Component>\n  Parameter name:string\n  Parameter meta:TemplateMeta",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 113,
+                    "character": 24,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "ComponentDefinition"
+                },
+                "parameters": [
+                  {
+                    "name": "name",
+                    "slug": "name",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "name",
+                    "fullName": "Environment.getComponentDefinition.getComponentDefinition.name",
+                    "hierarchy": "Parameter name:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "meta",
+                    "slug": "meta",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "meta",
+                    "fullName": "Environment.getComponentDefinition.getComponentDefinition.meta",
+                    "hierarchy": "Parameter meta:TemplateMeta",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "TemplateMeta"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "getDOM",
+            "slug": "getdom",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "getdom",
+            "fullName": "Environment.getDOM",
+            "hierarchy": "Method getDOM\n  CallSignature getDOM:DOMChanges",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 86,
+                "character": 10,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "getDOM",
+                "slug": "getdom-1",
+                "flags": {},
+                "alias": "getdom-1",
+                "fullName": "Environment.getDOM.getDOM",
+                "hierarchy": "CallSignature getDOM:DOMChanges",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 86,
+                    "character": 10,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "DOMChanges"
+                }
+              }
+            ]
+          },
+          {
+            "name": "getIdentity",
+            "slug": "getidentity",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "getidentity",
+            "fullName": "Environment.getIdentity",
+            "hierarchy": "Method getIdentity\n  CallSignature getIdentity:string\n    Parameter object:HasGuid",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 87,
+                "character": 15,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "getIdentity",
+                "slug": "getidentity-1",
+                "flags": {},
+                "alias": "getidentity-1",
+                "fullName": "Environment.getIdentity.getIdentity",
+                "hierarchy": "CallSignature getIdentity:string\n  Parameter object:HasGuid",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 87,
+                    "character": 15,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "string"
+                },
+                "parameters": [
+                  {
+                    "name": "object",
+                    "slug": "object",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "object",
+                    "fullName": "Environment.getIdentity.getIdentity.object",
+                    "hierarchy": "Parameter object:HasGuid",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "HasGuid"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "hasComponentDefinition",
+            "slug": "hascomponentdefinition",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "hascomponentdefinition",
+            "fullName": "Environment.hasComponentDefinition",
+            "hierarchy": "Method hasComponentDefinition\n  CallSignature hasComponentDefinition:boolean\n    Parameter name:string\n    Parameter meta:TemplateMeta",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 109,
+                "character": 24,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "hasComponentDefinition",
+                "slug": "hascomponentdefinition-1",
+                "flags": {},
+                "alias": "hascomponentdefinition-1",
+                "fullName": "Environment.hasComponentDefinition.hasComponentDefinition",
+                "hierarchy": "CallSignature hasComponentDefinition:boolean\n  Parameter name:string\n  Parameter meta:TemplateMeta",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 109,
+                    "character": 24,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "boolean"
+                },
+                "parameters": [
+                  {
+                    "name": "name",
+                    "slug": "name-1",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "name-1",
+                    "fullName": "Environment.hasComponentDefinition.hasComponentDefinition.name",
+                    "hierarchy": "Parameter name:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "meta",
+                    "slug": "meta-1",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "meta-1",
+                    "fullName": "Environment.hasComponentDefinition.hasComponentDefinition.meta",
+                    "hierarchy": "Parameter meta:TemplateMeta",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "TemplateMeta"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "hasHelper",
+            "slug": "hashelper",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "hashelper",
+            "fullName": "Environment.hasHelper",
+            "hierarchy": "Method hasHelper\n  CallSignature hasHelper:boolean\n    Parameter name:string\n    Parameter meta:TemplateMeta",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 158,
+                "character": 11,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "hasHelper",
+                "slug": "hashelper-1",
+                "flags": {},
+                "alias": "hashelper-1",
+                "fullName": "Environment.hasHelper.hasHelper",
+                "hierarchy": "CallSignature hasHelper:boolean\n  Parameter name:string\n  Parameter meta:TemplateMeta",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 158,
+                    "character": 11,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "boolean"
+                },
+                "parameters": [
+                  {
+                    "name": "name",
+                    "slug": "name-2",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "name-2",
+                    "fullName": "Environment.hasHelper.hasHelper.name",
+                    "hierarchy": "Parameter name:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "meta",
+                    "slug": "meta-2",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "meta-2",
+                    "fullName": "Environment.hasHelper.hasHelper.meta",
+                    "hierarchy": "Parameter meta:TemplateMeta",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "TemplateMeta"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "hasModifier",
+            "slug": "hasmodifier",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "hasmodifier",
+            "fullName": "Environment.hasModifier",
+            "hierarchy": "Method hasModifier\n  CallSignature hasModifier:boolean\n    Parameter modifierName:string\n    Parameter blockMeta:TemplateMeta",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 192,
+                "character": 13,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "hasModifier",
+                "slug": "hasmodifier-1",
+                "flags": {},
+                "alias": "hasmodifier-1",
+                "fullName": "Environment.hasModifier.hasModifier",
+                "hierarchy": "CallSignature hasModifier:boolean\n  Parameter modifierName:string\n  Parameter blockMeta:TemplateMeta",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 192,
+                    "character": 13,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "boolean"
+                },
+                "parameters": [
+                  {
+                    "name": "modifierName",
+                    "slug": "modifiername",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "modifiername",
+                    "fullName": "Environment.hasModifier.hasModifier.modifierName",
+                    "hierarchy": "Parameter modifierName:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "blockMeta",
+                    "slug": "blockmeta",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "blockmeta",
+                    "fullName": "Environment.hasModifier.hasModifier.blockMeta",
+                    "hierarchy": "Parameter blockMeta:TemplateMeta",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "TemplateMeta"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "hasPartial",
+            "slug": "haspartial",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "haspartial",
+            "fullName": "Environment.hasPartial",
+            "hierarchy": "Method hasPartial\n  CallSignature hasPartial:boolean",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 88,
+                "character": 12,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "hasPartial",
+                "slug": "haspartial-1",
+                "flags": {},
+                "alias": "haspartial-1",
+                "fullName": "Environment.hasPartial.hasPartial",
+                "hierarchy": "CallSignature hasPartial:boolean",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 88,
+                    "character": 12,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "boolean"
+                }
+              }
+            ]
+          },
+          {
+            "name": "iterableFor",
+            "slug": "iterablefor",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "iterablefor",
+            "fullName": "Environment.iterableFor",
+            "hierarchy": "Method iterableFor\n  CallSignature iterableFor:OpaqueIterable\n    Parameter ref:Reference<Opaque>\n    Parameter keyPath:string",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 203,
+                "character": 13,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "iterableFor",
+                "slug": "iterablefor-1",
+                "flags": {},
+                "alias": "iterablefor-1",
+                "fullName": "Environment.iterableFor.iterableFor",
+                "hierarchy": "CallSignature iterableFor:OpaqueIterable\n  Parameter ref:Reference<Opaque>\n  Parameter keyPath:string",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 203,
+                    "character": 13,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "OpaqueIterable"
+                },
+                "parameters": [
+                  {
+                    "name": "ref",
+                    "slug": "ref",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "ref",
+                    "fullName": "Environment.iterableFor.iterableFor.ref",
+                    "hierarchy": "Parameter ref:Reference<Opaque>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Reference"
+                    }
+                  },
+                  {
+                    "name": "keyPath",
+                    "slug": "keypath",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "keypath",
+                    "fullName": "Environment.iterableFor.iterableFor.keyPath",
+                    "hierarchy": "Parameter keyPath:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "lookupHelper",
+            "slug": "lookuphelper",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "lookuphelper",
+            "fullName": "Environment.lookupHelper",
+            "hierarchy": "Method lookupHelper\n  CallSignature lookupHelper:GlimmerHelper\n    Parameter name:string\n    Parameter meta:TemplateMeta",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 162,
+                "character": 14,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "lookupHelper",
+                "slug": "lookuphelper-1",
+                "flags": {},
+                "alias": "lookuphelper-1",
+                "fullName": "Environment.lookupHelper.lookupHelper",
+                "hierarchy": "CallSignature lookupHelper:GlimmerHelper\n  Parameter name:string\n  Parameter meta:TemplateMeta",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 162,
+                    "character": 14,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "GlimmerHelper"
+                },
+                "parameters": [
+                  {
+                    "name": "name",
+                    "slug": "name-3",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "name-3",
+                    "fullName": "Environment.lookupHelper.lookupHelper.name",
+                    "hierarchy": "Parameter name:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "meta",
+                    "slug": "meta-3",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "meta-3",
+                    "fullName": "Environment.lookupHelper.lookupHelper.meta",
+                    "hierarchy": "Parameter meta:TemplateMeta",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "TemplateMeta"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "lookupModifier",
+            "slug": "lookupmodifier",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "lookupmodifier",
+            "fullName": "Environment.lookupModifier",
+            "hierarchy": "Method lookupModifier\n  CallSignature lookupModifier:ModifierManager<Opaque>\n    Parameter modifierName:string\n    Parameter blockMeta:TemplateMeta",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 196,
+                "character": 16,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "lookupModifier",
+                "slug": "lookupmodifier-1",
+                "flags": {},
+                "alias": "lookupmodifier-1",
+                "fullName": "Environment.lookupModifier.lookupModifier",
+                "hierarchy": "CallSignature lookupModifier:ModifierManager<Opaque>\n  Parameter modifierName:string\n  Parameter blockMeta:TemplateMeta",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 196,
+                    "character": 16,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "ModifierManager"
+                },
+                "parameters": [
+                  {
+                    "name": "modifierName",
+                    "slug": "modifiername-1",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "modifiername-1",
+                    "fullName": "Environment.lookupModifier.lookupModifier.modifierName",
+                    "hierarchy": "Parameter modifierName:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "blockMeta",
+                    "slug": "blockmeta-1",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "blockmeta-1",
+                    "fullName": "Environment.lookupModifier.lookupModifier.blockMeta",
+                    "hierarchy": "Parameter blockMeta:TemplateMeta",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "TemplateMeta"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "lookupPartial",
+            "slug": "lookuppartial",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "lookuppartial",
+            "fullName": "Environment.lookupPartial",
+            "hierarchy": "Method lookupPartial\n  CallSignature lookupPartial:any",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 92,
+                "character": 15,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "lookupPartial",
+                "slug": "lookuppartial-1",
+                "flags": {},
+                "alias": "lookuppartial-1",
+                "fullName": "Environment.lookupPartial.lookupPartial",
+                "hierarchy": "CallSignature lookupPartial:any",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 92,
+                    "character": 15,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "any"
+                }
+              }
+            ]
+          },
+          {
+            "name": "macros",
+            "slug": "macros",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "macros",
+            "fullName": "Environment.macros",
+            "hierarchy": "Method macros\n  CallSignature macros:object\n    TypeLiteral __type\n      Variable blocks:BlockMacros\n      Variable inlines:InlineMacros",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 225,
+                "character": 8,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "macros",
+                "slug": "macros-1",
+                "flags": {},
+                "alias": "macros-1",
+                "fullName": "Environment.macros.macros",
+                "hierarchy": "CallSignature macros:object\n  TypeLiteral __type\n    Variable blocks:BlockMacros\n    Variable inlines:InlineMacros",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 225,
+                    "character": 8,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "object",
+                  "declaration": {
+                    "id": "616",
+                    "type": "type-literal",
+                    "attributes": {
+                      "name": "__type",
+                      "slug": "__type",
+                      "flags": {},
+                      "alias": "__type",
+                      "fullName": "Environment.macros.macros.__type",
+                      "hierarchy": "TypeLiteral __type\n  Variable blocks:BlockMacros\n  Variable inlines:InlineMacros",
+                      "kindString": "Type literal",
+                      "sources": [
+                        {
+                          "fileName": "environment.ts",
+                          "line": 225,
+                          "character": 11,
+                          "url": null
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "name": "blocks",
+                          "slug": "blocks",
+                          "flags": {
+                            "isExported": false,
+                            "isExternal": true,
+                            "isOptional": false,
+                            "isPrivate": false,
+                            "isPublic": false,
+                            "isProtected": false,
+                            "isStatic": false
+                          },
+                          "alias": "blocks",
+                          "fullName": "Environment.macros.macros.__type.blocks",
+                          "hierarchy": "Variable blocks:BlockMacros",
+                          "kindString": "Variable",
+                          "sources": [
+                            {
+                              "fileName": "environment.ts",
+                              "line": 225,
+                              "character": 20,
+                              "url": null
+                            }
+                          ],
+                          "typeInfo": {
+                            "isArray": false,
+                            "name": "BlockMacros"
+                          }
+                        },
+                        {
+                          "name": "inlines",
+                          "slug": "inlines",
+                          "flags": {
+                            "isExported": false,
+                            "isExternal": true,
+                            "isOptional": false,
+                            "isPrivate": false,
+                            "isPublic": false,
+                            "isProtected": false,
+                            "isStatic": false
+                          },
+                          "alias": "inlines",
+                          "fullName": "Environment.macros.macros.__type.inlines",
+                          "hierarchy": "Variable inlines:InlineMacros",
+                          "kindString": "Variable",
+                          "sources": [
+                            {
+                              "fileName": "environment.ts",
+                              "line": 225,
+                              "character": 42,
+                              "url": null
+                            }
+                          ],
+                          "typeInfo": {
+                            "isArray": false,
+                            "name": "InlineMacros"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "typeLiterals": [
+                  {
+                    "name": "__type",
+                    "slug": "__type",
+                    "flags": {},
+                    "alias": "__type",
+                    "fullName": "Environment.macros.macros.__type",
+                    "hierarchy": "TypeLiteral __type\n  Variable blocks:BlockMacros\n  Variable inlines:InlineMacros",
+                    "kindString": "Type literal",
+                    "sources": [
+                      {
+                        "fileName": "environment.ts",
+                        "line": 225,
+                        "character": 11,
+                        "url": null
+                      }
+                    ],
+                    "variables": [
+                      {
+                        "name": "blocks",
+                        "slug": "blocks",
+                        "flags": {
+                          "isExported": false,
+                          "isExternal": true,
+                          "isOptional": false,
+                          "isPrivate": false,
+                          "isPublic": false,
+                          "isProtected": false,
+                          "isStatic": false
+                        },
+                        "alias": "blocks",
+                        "fullName": "Environment.macros.macros.__type.blocks",
+                        "hierarchy": "Variable blocks:BlockMacros",
+                        "kindString": "Variable",
+                        "sources": [
+                          {
+                            "fileName": "environment.ts",
+                            "line": 225,
+                            "character": 20,
+                            "url": null
+                          }
+                        ],
+                        "typeInfo": {
+                          "isArray": false,
+                          "name": "BlockMacros"
+                        }
+                      },
+                      {
+                        "name": "inlines",
+                        "slug": "inlines",
+                        "flags": {
+                          "isExported": false,
+                          "isExternal": true,
+                          "isOptional": false,
+                          "isPrivate": false,
+                          "isPublic": false,
+                          "isProtected": false,
+                          "isStatic": false
+                        },
+                        "alias": "inlines",
+                        "fullName": "Environment.macros.macros.__type.inlines",
+                        "hierarchy": "Variable inlines:InlineMacros",
+                        "kindString": "Variable",
+                        "sources": [
+                          {
+                            "fileName": "environment.ts",
+                            "line": 225,
+                            "character": 42,
+                            "url": null
+                          }
+                        ],
+                        "typeInfo": {
+                          "isArray": false,
+                          "name": "InlineMacros"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "managerFor",
+            "slug": "managerfor",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "managerfor",
+            "fullName": "Environment.managerFor",
+            "hierarchy": "Method managerFor\n  CallSignature managerFor:ComponentManager<Component>\n    Parameter managerId:string",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 95,
+                "character": 12,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "managerFor",
+                "slug": "managerfor-1",
+                "flags": {},
+                "alias": "managerfor-1",
+                "fullName": "Environment.managerFor.managerFor",
+                "hierarchy": "CallSignature managerFor:ComponentManager<Component>\n  Parameter managerId:string",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 95,
+                    "character": 12,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "ComponentManager"
+                },
+                "parameters": [
+                  {
+                    "name": "managerId",
+                    "slug": "managerid",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "managerid",
+                    "fullName": "Environment.managerFor.managerFor.managerId",
+                    "hierarchy": "Parameter managerId:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "populateBuiltins",
+            "slug": "populatebuiltins",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "populatebuiltins",
+            "fullName": "Environment.populateBuiltins",
+            "hierarchy": "Method populateBuiltins\n  CallSignature populateBuiltins:object\n    TypeLiteral __type\n      Variable blocks:Blocks\n      Variable inlines:Inlines",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 101,
+                "character": 20,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "populateBuiltins",
+                "slug": "populatebuiltins-1",
+                "flags": {},
+                "alias": "populatebuiltins-1",
+                "fullName": "Environment.populateBuiltins.populateBuiltins",
+                "hierarchy": "CallSignature populateBuiltins:object\n  TypeLiteral __type\n    Variable blocks:Blocks\n    Variable inlines:Inlines",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 101,
+                    "character": 20,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "object",
+                  "declaration": {
+                    "id": "668",
+                    "type": "type-literal",
+                    "attributes": {
+                      "name": "__type",
+                      "slug": "__type-1",
+                      "flags": {},
+                      "alias": "__type-1",
+                      "fullName": "Environment.populateBuiltins.populateBuiltins.__type",
+                      "hierarchy": "TypeLiteral __type\n  Variable blocks:Blocks\n  Variable inlines:Inlines",
+                      "kindString": "Type literal",
+                      "sources": [
+                        {
+                          "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                          "line": 101,
+                          "character": 23,
+                          "url": null
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "name": "blocks",
+                          "slug": "blocks-1",
+                          "flags": {
+                            "isExported": false,
+                            "isExternal": true,
+                            "isOptional": false,
+                            "isPrivate": false,
+                            "isPublic": false,
+                            "isProtected": false,
+                            "isStatic": false
+                          },
+                          "alias": "blocks-1",
+                          "fullName": "Environment.populateBuiltins.populateBuiltins.__type.blocks",
+                          "hierarchy": "Variable blocks:Blocks",
+                          "kindString": "Variable",
+                          "sources": [
+                            {
+                              "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                              "line": 102,
+                              "character": 14,
+                              "url": null
+                            }
+                          ],
+                          "typeInfo": {
+                            "isArray": false,
+                            "name": "Blocks"
+                          }
+                        },
+                        {
+                          "name": "inlines",
+                          "slug": "inlines-1",
+                          "flags": {
+                            "isExported": false,
+                            "isExternal": true,
+                            "isOptional": false,
+                            "isPrivate": false,
+                            "isPublic": false,
+                            "isProtected": false,
+                            "isStatic": false
+                          },
+                          "alias": "inlines-1",
+                          "fullName": "Environment.populateBuiltins.populateBuiltins.__type.inlines",
+                          "hierarchy": "Variable inlines:Inlines",
+                          "kindString": "Variable",
+                          "sources": [
+                            {
+                              "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                              "line": 103,
+                              "character": 15,
+                              "url": null
+                            }
+                          ],
+                          "typeInfo": {
+                            "isArray": false,
+                            "name": "Inlines"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "typeLiterals": [
+                  {
+                    "name": "__type",
+                    "slug": "__type-1",
+                    "flags": {},
+                    "alias": "__type-1",
+                    "fullName": "Environment.populateBuiltins.populateBuiltins.__type",
+                    "hierarchy": "TypeLiteral __type\n  Variable blocks:Blocks\n  Variable inlines:Inlines",
+                    "kindString": "Type literal",
+                    "sources": [
+                      {
+                        "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                        "line": 101,
+                        "character": 23,
+                        "url": null
+                      }
+                    ],
+                    "variables": [
+                      {
+                        "name": "blocks",
+                        "slug": "blocks-1",
+                        "flags": {
+                          "isExported": false,
+                          "isExternal": true,
+                          "isOptional": false,
+                          "isPrivate": false,
+                          "isPublic": false,
+                          "isProtected": false,
+                          "isStatic": false
+                        },
+                        "alias": "blocks-1",
+                        "fullName": "Environment.populateBuiltins.populateBuiltins.__type.blocks",
+                        "hierarchy": "Variable blocks:Blocks",
+                        "kindString": "Variable",
+                        "sources": [
+                          {
+                            "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                            "line": 102,
+                            "character": 14,
+                            "url": null
+                          }
+                        ],
+                        "typeInfo": {
+                          "isArray": false,
+                          "name": "Blocks"
+                        }
+                      },
+                      {
+                        "name": "inlines",
+                        "slug": "inlines-1",
+                        "flags": {
+                          "isExported": false,
+                          "isExternal": true,
+                          "isOptional": false,
+                          "isPrivate": false,
+                          "isPublic": false,
+                          "isProtected": false,
+                          "isStatic": false
+                        },
+                        "alias": "inlines-1",
+                        "fullName": "Environment.populateBuiltins.populateBuiltins.__type.inlines",
+                        "hierarchy": "Variable inlines:Inlines",
+                        "kindString": "Variable",
+                        "sources": [
+                          {
+                            "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                            "line": 103,
+                            "character": 15,
+                            "url": null
+                          }
+                        ],
+                        "typeInfo": {
+                          "isArray": false,
+                          "name": "Inlines"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "protocolForURL",
+            "slug": "protocolforurl",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "protocolforurl",
+            "fullName": "Environment.protocolForURL",
+            "hierarchy": "Method protocolForURL\n  CallSignature protocolForURL:string\n    Parameter url:string",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 81,
+                "character": 16,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "protocolForURL",
+                "slug": "protocolforurl-1",
+                "flags": {},
+                "alias": "protocolforurl-1",
+                "fullName": "Environment.protocolForURL.protocolForURL",
+                "hierarchy": "CallSignature protocolForURL:string\n  Parameter url:string",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 81,
+                    "character": 16,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "string"
+                },
+                "parameters": [
+                  {
+                    "name": "url",
+                    "slug": "url",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "url",
+                    "fullName": "Environment.protocolForURL.protocolForURL.url",
+                    "hierarchy": "Parameter url:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "registerComponent",
+            "slug": "registercomponent",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "registercomponent",
+            "fullName": "Environment.registerComponent",
+            "hierarchy": "Method registerComponent\n  CallSignature registerComponent:ComponentDefinition<Component>\n    Parameter name:string\n    Parameter templateSpecifier:string\n    Parameter meta:TemplateMeta\n    Parameter owner:Owner",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 134,
+                "character": 19,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "registerComponent",
+                "slug": "registercomponent-1",
+                "flags": {},
+                "alias": "registercomponent-1",
+                "fullName": "Environment.registerComponent.registerComponent",
+                "hierarchy": "CallSignature registerComponent:ComponentDefinition<Component>\n  Parameter name:string\n  Parameter templateSpecifier:string\n  Parameter meta:TemplateMeta\n  Parameter owner:Owner",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 134,
+                    "character": 19,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "ComponentDefinition"
+                },
+                "parameters": [
+                  {
+                    "name": "name",
+                    "slug": "name-4",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "name-4",
+                    "fullName": "Environment.registerComponent.registerComponent.name",
+                    "hierarchy": "Parameter name:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "templateSpecifier",
+                    "slug": "templatespecifier",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "templatespecifier",
+                    "fullName": "Environment.registerComponent.registerComponent.templateSpecifier",
+                    "hierarchy": "Parameter templateSpecifier:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "meta",
+                    "slug": "meta-4",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "meta-4",
+                    "fullName": "Environment.registerComponent.registerComponent.meta",
+                    "hierarchy": "Parameter meta:TemplateMeta",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "TemplateMeta"
+                    }
+                  },
+                  {
+                    "name": "owner",
+                    "slug": "owner",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "owner",
+                    "fullName": "Environment.registerComponent.registerComponent.owner",
+                    "hierarchy": "Parameter owner:Owner",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Owner"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "registerHelper",
+            "slug": "registerhelper",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "registerhelper",
+            "fullName": "Environment.registerHelper",
+            "hierarchy": "Method registerHelper\n  CallSignature registerHelper:GlimmerHelper\n    Parameter specifier:string\n    Parameter owner:Owner",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 183,
+                "character": 16,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "registerHelper",
+                "slug": "registerhelper-1",
+                "flags": {},
+                "alias": "registerhelper-1",
+                "fullName": "Environment.registerHelper.registerHelper",
+                "hierarchy": "CallSignature registerHelper:GlimmerHelper\n  Parameter specifier:string\n  Parameter owner:Owner",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 183,
+                    "character": 16,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "GlimmerHelper"
+                },
+                "parameters": [
+                  {
+                    "name": "specifier",
+                    "slug": "specifier",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "specifier",
+                    "fullName": "Environment.registerHelper.registerHelper.specifier",
+                    "hierarchy": "Parameter specifier:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  },
+                  {
+                    "name": "owner",
+                    "slug": "owner-1",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "owner-1",
+                    "fullName": "Environment.registerHelper.registerHelper.owner",
+                    "hierarchy": "Parameter owner:Owner",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Owner"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "scheduleInstallModifier",
+            "slug": "scheduleinstallmodifier",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "scheduleinstallmodifier",
+            "fullName": "Environment.scheduleInstallModifier",
+            "hierarchy": "Method scheduleInstallModifier\n  CallSignature scheduleInstallModifier<T>:void\n    TypeParameter T\n    Parameter modifier:T\n    Parameter manager:ModifierManager<T>",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 92,
+                "character": 27,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "scheduleInstallModifier",
+                "slug": "scheduleinstallmodifier-1",
+                "flags": {},
+                "alias": "scheduleinstallmodifier-1",
+                "fullName": "Environment.scheduleInstallModifier.scheduleInstallModifier",
+                "hierarchy": "CallSignature scheduleInstallModifier<T>:void\n  TypeParameter T\n  Parameter modifier:T\n  Parameter manager:ModifierManager<T>",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 92,
+                    "character": 27,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "void"
+                },
+                "typeParameters": [
+                  {
+                    "name": "T",
+                    "slug": "t-2",
+                    "flags": {},
+                    "alias": "t-2",
+                    "fullName": "Environment.scheduleInstallModifier.scheduleInstallModifier.T",
+                    "hierarchy": "TypeParameter T",
+                    "kindString": "Type parameter"
+                  }
+                ],
+                "parameters": [
+                  {
+                    "name": "modifier",
+                    "slug": "modifier",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "modifier",
+                    "fullName": "Environment.scheduleInstallModifier.scheduleInstallModifier.modifier",
+                    "hierarchy": "Parameter modifier:T",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "T"
+                    }
+                  },
+                  {
+                    "name": "manager",
+                    "slug": "manager-2",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "manager-2",
+                    "fullName": "Environment.scheduleInstallModifier.scheduleInstallModifier.manager",
+                    "hierarchy": "Parameter manager:ModifierManager<T>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "ModifierManager"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "scheduleUpdateModifier",
+            "slug": "scheduleupdatemodifier",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "scheduleupdatemodifier",
+            "fullName": "Environment.scheduleUpdateModifier",
+            "hierarchy": "Method scheduleUpdateModifier\n  CallSignature scheduleUpdateModifier<T>:void\n    TypeParameter T\n    Parameter modifier:T\n    Parameter manager:ModifierManager<T>",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 93,
+                "character": 26,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "scheduleUpdateModifier",
+                "slug": "scheduleupdatemodifier-1",
+                "flags": {},
+                "alias": "scheduleupdatemodifier-1",
+                "fullName": "Environment.scheduleUpdateModifier.scheduleUpdateModifier",
+                "hierarchy": "CallSignature scheduleUpdateModifier<T>:void\n  TypeParameter T\n  Parameter modifier:T\n  Parameter manager:ModifierManager<T>",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 93,
+                    "character": 26,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "void"
+                },
+                "typeParameters": [
+                  {
+                    "name": "T",
+                    "slug": "t-3",
+                    "flags": {},
+                    "alias": "t-3",
+                    "fullName": "Environment.scheduleUpdateModifier.scheduleUpdateModifier.T",
+                    "hierarchy": "TypeParameter T",
+                    "kindString": "Type parameter"
+                  }
+                ],
+                "parameters": [
+                  {
+                    "name": "modifier",
+                    "slug": "modifier-1",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "modifier-1",
+                    "fullName": "Environment.scheduleUpdateModifier.scheduleUpdateModifier.modifier",
+                    "hierarchy": "Parameter modifier:T",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "T"
+                    }
+                  },
+                  {
+                    "name": "manager",
+                    "slug": "manager-3",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "manager-3",
+                    "fullName": "Environment.scheduleUpdateModifier.scheduleUpdateModifier.manager",
+                    "hierarchy": "Parameter manager:ModifierManager<T>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "ModifierManager"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "toConditionalReference",
+            "slug": "toconditionalreference",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "toconditionalreference",
+            "fullName": "Environment.toConditionalReference",
+            "hierarchy": "Method toConditionalReference\n  CallSignature toConditionalReference:Reference<boolean>\n    Parameter reference:Reference<Opaque>",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                "line": 82,
+                "character": 26,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "toConditionalReference",
+                "slug": "toconditionalreference-1",
+                "flags": {},
+                "alias": "toconditionalreference-1",
+                "fullName": "Environment.toConditionalReference.toConditionalReference",
+                "hierarchy": "CallSignature toConditionalReference:Reference<boolean>\n  Parameter reference:Reference<Opaque>",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "@glimmer/runtime/dist/types/lib/environment.d.ts",
+                    "line": 82,
+                    "character": 26,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "Reference"
+                },
+                "parameters": [
+                  {
+                    "name": "reference",
+                    "slug": "reference",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "reference",
+                    "fullName": "Environment.toConditionalReference.toConditionalReference.reference",
+                    "hierarchy": "Parameter reference:Reference<Opaque>",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "Reference"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "create",
+            "slug": "create",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": true
+            },
+            "alias": "create",
+            "fullName": "Environment.create",
+            "hierarchy": "Method create\n  CallSignature create:Environment\n    Parameter options:EnvironmentOptions",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "environment.ts",
+                "line": 64,
+                "character": 15,
+                "url": null
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "create",
+                "slug": "create-1",
+                "flags": {},
+                "alias": "create-1",
+                "fullName": "Environment.create.create",
+                "hierarchy": "CallSignature create:Environment\n  Parameter options:EnvironmentOptions",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "environment.ts",
+                    "line": 64,
+                    "character": 15,
+                    "url": null
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "Environment",
+                  "link": {
+                    "id": "554",
+                    "type": "class",
+                    "slug": "environment",
+                    "sources": [
+                      {
+                        "fileName": "environment.ts",
+                        "line": 57,
+                        "character": 32,
+                        "url": null
+                      }
+                    ],
+                    "parent": {
+                      "id": "317",
+                      "type": "0",
+                      "slug": "_glimmer_application",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "options",
+                    "slug": "options-1",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "options-1",
+                    "fullName": "Environment.create.create.options",
+                    "hierarchy": "Parameter options:EnvironmentOptions",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "EnvironmentOptions",
+                      "link": {
+                        "id": "540",
+                        "type": "interface",
+                        "slug": "environmentoptions",
+                        "sources": [
+                          {
+                            "fileName": "environment.ts",
+                            "line": 41,
+                            "character": 35,
+                            "url": null
+                          }
+                        ],
+                        "parent": {
+                          "id": "317",
+                          "type": "0",
+                          "slug": "_glimmer_application",
+                          "sources": null
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
@@ -13760,6 +18293,124 @@ var main = {
             "line": 3,
             "character": 30,
             "url": null
+          }
+        ],
+        "properties": [
+          {
+            "name": "<template-meta>",
+            "slug": "_template_meta_",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "_template_meta_",
+            "fullName": "ExtendedTemplateMeta.<template-meta>",
+            "hierarchy": "Property <template-meta>:true",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/wire-format/dist/types/index.d.ts",
+                "line": 111,
+                "character": 21,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "true"
+            }
+          },
+          {
+            "name": "managerId",
+            "slug": "managerid",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": true,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "managerid",
+            "fullName": "ExtendedTemplateMeta.managerId",
+            "hierarchy": "Property managerId:string",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "template-meta.ts",
+                "line": 5,
+                "character": 11,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "string"
+            }
+          },
+          {
+            "name": "moduleName",
+            "slug": "modulename",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": true,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "modulename",
+            "fullName": "ExtendedTemplateMeta.moduleName",
+            "hierarchy": "Property moduleName:string",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "@glimmer/wire-format/dist/types/index.d.ts",
+                "line": 112,
+                "character": 14,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "string"
+            }
+          },
+          {
+            "name": "specifier",
+            "slug": "specifier",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "specifier",
+            "fullName": "ExtendedTemplateMeta.specifier",
+            "hierarchy": "Property specifier:string",
+            "kindString": "Property",
+            "sources": [
+              {
+                "fileName": "template-meta.ts",
+                "line": 4,
+                "character": 11,
+                "url": null
+              }
+            ],
+            "typeInfo": {
+              "isArray": false,
+              "name": "string"
+            }
           }
         ]
       }
