@@ -35,11 +35,11 @@ import Component from '@glimmer/component';
 export default class ConferenceSpeaker extends Component {
   user = {
     name: 'Robbie'
-  }
+  };
 }
 ```
 
-In the above example, we've defined a component with a user property that contains an object with its own name property.
+In the above example, we've defined a component with a `user` property that contains an object with its own `name` property.
 
 We can render that property in our template:
 
@@ -47,7 +47,7 @@ We can render that property in our template:
 Hello, {{user.name}}!
 ```
 
-We can also take that property and pass it as an argument to the user-greeting component we defined above:
+We can also take that property and pass it as an argument to the conference-speaker component we defined before:
 
 ```hbs
 <conference-speaker @name={{user.name}} />
@@ -73,7 +73,7 @@ On the other hand, if we see:
 
 We know that name is a property on the component. If we want to know where the data is coming from, we can go look at our component class to find out.
 
-Inside the component itself, arguments always show up inside the component's args property. For example, if `{{@firstName}}` is Tom in the template, inside the component this.args.firstName would also be Tom.
+Inside the component itself, arguments always show up inside the component's `args` property. For example, if `{{@firstName}}` is Tom in the template, inside the component `this.args.firstName` would also be Tom.
 
 ## A Simple Loop
 
@@ -86,7 +86,8 @@ import Component, { tracked } from "@glimmer/component";
 
 export default class ConferenceSpeakers extends Component {
   speakers = ['Tom', 'Yehuda', 'Ed'];
-}```
+}
+```
 
 ```hbs
 <ul>
