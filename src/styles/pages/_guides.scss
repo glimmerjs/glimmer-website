@@ -1,0 +1,15 @@
+.guides {
+  .logo > a {
+    &, &:hover, &:focus {
+      color: #000;
+    }
+  }
+
+  a {
+    color: $tint-color;
+
+    &:hover, &:focus {
+      color: darken($tint-color, 10%);
+    }
+  }
+}
