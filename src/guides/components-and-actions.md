@@ -3,7 +3,7 @@
 Let's start making our `conference-speakers` component more interactive.
 
 ```js
-// my-app/src/ui/components/conference-speakers/component.js
+// my-app/src/ui/components/conference-speakers/component.ts
 import Component, { tracked } from "@glimmer/component";
 
 export default class ConferenceSpeakers extends Component {
