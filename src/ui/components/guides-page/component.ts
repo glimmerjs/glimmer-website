@@ -1,6 +1,13 @@
 import Component, { tracked } from '@glimmer/component';
 
+interface Window { docs: any; }
+declare var window: Window;
+
 export default class GuidesPage extends Component {
+  args: {
+    currentGuidePage: (string)
+  };
+
   @tracked('args')
   get guideText() {
     if (window.docs.guides.hasOwnProperty(this.args.currentGuidePage)) {
