@@ -2,14 +2,14 @@
 # yarn lockfile v1
 
 
-"@glimmer/application-pipeline@^0.5.2":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@glimmer/application-pipeline/-/application-pipeline-0.5.2.tgz#79255be77bf0ca6472f7fc204cbe69c70e80637d"
+"@glimmer/application-pipeline@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@glimmer/application-pipeline/-/application-pipeline-0.6.1.tgz#ce89b1f813a5866c66ffe92417bd5106a47036e4"
   dependencies:
     "@glimmer/compiler" "^0.23.0-alpha.11"
     "@glimmer/di" "^0.2.0"
-    "@glimmer/resolution-map-builder" "^0.3.0"
-    "@glimmer/resolver-configuration-builder" "^0.1.1"
+    "@glimmer/resolution-map-builder" "^0.3.4"
+    "@glimmer/resolver-configuration-builder" "^0.1.2"
     babel-plugin-external-helpers "^6.22.0"
     babel-preset-es2015 "^6.22.0"
     broccoli-asset-rev "^2.4.3"
@@ -27,6 +27,7 @@
     broccoli-string-replace "^0.1.1"
     broccoli-typescript-compiler "^1.0.1"
     broccoli-uglify-sourcemap "^1.4.0"
+    common-tags "^1.4.0"
     ember-cli-inject-live-reload "^1.4.1"
     ember-cli-normalize-entity-name "^1.0.0"
     ember-cli-string-utils "^1.1.0"
@@ -38,6 +39,7 @@
     rollup "^0.41.6"
     rollup-plugin-babel "^2.7.1"
     rollup-plugin-node-resolve "^2.0.0"
+    silent-error "^1.0.1"
     walk-sync "^0.3.1"
 
 "@glimmer/application@^0.3.6":
@@ -61,6 +63,12 @@
     "@glimmer/resolver" "^0.3.0"
     "@glimmer/runtime" "^0.23.0-alpha.6"
     "@glimmer/util" "^0.23.0-alpha.6"
+
+"@glimmer/blueprint@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@glimmer/blueprint/-/blueprint-0.2.0.tgz#095a99e5bc86bf6be625eb1fb1d0a579b51604ae"
+  dependencies:
+    ember-cli-string-utils "^1.1.0"
 
 "@glimmer/compiler@^0.23.0-alpha.11":
   version "0.23.0-alpha.11"
@@ -116,15 +124,16 @@
   dependencies:
     "@glimmer/util" "^0.23.0-alpha.11"
 
-"@glimmer/resolution-map-builder@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@glimmer/resolution-map-builder/-/resolution-map-builder-0.3.0.tgz#1d59e5d416272ef4400793eb96c482374426a640"
+"@glimmer/resolution-map-builder@^0.3.4":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@glimmer/resolution-map-builder/-/resolution-map-builder-0.3.5.tgz#20120e214bf2f1386d934d69ca45e73d234f098b"
   dependencies:
     broccoli-plugin "^1.3.0"
+    walk-sync "^0.3.1"
 
-"@glimmer/resolver-configuration-builder@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@glimmer/resolver-configuration-builder/-/resolver-configuration-builder-0.1.1.tgz#ec22f322b862989b60c4e28d8b1fdbbde4883d62"
+"@glimmer/resolver-configuration-builder@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@glimmer/resolver-configuration-builder/-/resolver-configuration-builder-0.1.2.tgz#27f1f73b56386b74b9a1af1f10f89e0b27a69c01"
   dependencies:
     broccoli-plugin "^1.3.0"
 
@@ -1257,23 +1266,7 @@ broccoli-plugin@^1.0.0, broccoli-plugin@^1.2.0, broccoli-plugin@^1.2.1, broccoli
     rimraf "^2.3.4"
     symlink-or-copy "^1.1.8"
 
-broccoli-rollup@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/broccoli-rollup/-/broccoli-rollup-1.1.3.tgz#3746e7464f81417747754c71b81e3135affa8617"
-  dependencies:
-    broccoli-plugin "^1.2.1"
-    es6-map "^0.1.4"
-    fs-extra "^0.30.0"
-    fs-tree-diff "^0.5.2"
-    heimdalljs "^0.2.1"
-    heimdalljs-logger "^0.1.7"
-    md5-hex "^1.3.0"
-    node-modules-path "^1.0.1"
-    rollup "^0.41.4"
-    symlink-or-copy "^1.1.8"
-    walk-sync "^0.3.1"
-
-broccoli-rollup@^1.2.0:
+broccoli-rollup@^1.1.3, broccoli-rollup@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/broccoli-rollup/-/broccoli-rollup-1.2.0.tgz#627636c05837d894a85724ef9b7ca04d12b66751"
   dependencies:
@@ -1596,6 +1589,12 @@ commander@^2.5.0, commander@^2.6.0:
 commander@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.1.0.tgz#d121bbae860d9992a3d517ba96f56588e47c6781"
+
+common-tags@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/common-tags/-/common-tags-1.4.0.tgz#1187be4f3d4cf0c0427d43f74eef1f73501614c0"
+  dependencies:
+    babel-runtime "^6.18.0"
 
 commoner@~0.10.3:
   version "0.10.8"

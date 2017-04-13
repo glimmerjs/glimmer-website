@@ -16,7 +16,8 @@
   },
   "devDependencies": {
     "@glimmer/application": "^0.4.0",
-    "@glimmer/application-pipeline": "^0.5.2",
+    "@glimmer/application-pipeline": "^0.6.1",
+    "@glimmer/blueprint": "^0.2.0",
     "@glimmer/component": "^0.3.9",
     "@glimmer/resolver": "^0.3.0",
     "broccoli-flatiron": "^0.0.0",
