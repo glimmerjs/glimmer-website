@@ -4,13 +4,12 @@ Now that we're up and running, let's take a look at how things are setup. Here's
 
 ```sh
 my-app
-├── config 
-│   └── environment.js
+├── config
+│   ├── environment.js
+│   ├── module-map.ts
+│   └── resolver-configuration.ts
 ├── dist/
 ├── src
-│   ├── config
-│   │   ├── module-map.ts
-│   │   └── resolver-configuration.ts
 │   ├── ui
 │   │   ├── components
 │   │   │   └── my-app
@@ -29,8 +28,8 @@ my-app
 Briefly, those files and folders are:
 
 - `my-app/config/environment.js`: the base Glimmer config file
+- `my-app/config/*.ts`: configuration files to keep Typescript happy. *Note: Glimmer only runs in Typescript at the moment. We aim to quickly add ES2015 Javascript support as well.*
 - `my-app/dist`: your built files end up here
-- `my-app/src/config/*`: configuration files to keep Typescript happy. *Note: Glimmer only runs in Typescript at the moment. We aim to quickly add ES2015 Javascript support as well.*
 - `my-app/src/index.ts`: used to do initial app config before our Glimmer app boots (the div ID Glimmer renders into is set here (see the `containerElement` variable)
 - `my-app/ember-cli-build.js`: used to configure Ember-CLI in various ways (importing vendor files, Broccoli options, etc.)
 
