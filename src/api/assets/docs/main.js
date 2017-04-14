@@ -14,69 +14,69 @@ var main = {
       "intro": "<div><p>Welcome to the Glimmer API documentation.</p><p>Choose a project or module from the table of contents to get started.</p></div>",
       "idMap": {
         "_glimmer_component": {
-          "cachedreference": "123",
-          "component": "94",
-          "componentdefinition": "300",
-          "componentmanager": "246",
-          "componentpathreference": "114",
-          "componentstatebucket": "235",
-          "conditionalreference": "216",
+          "cachedreference": "131",
+          "component": "98",
+          "componentdefinition": "309",
+          "componentmanager": "254",
+          "componentpathreference": "122",
+          "componentstatebucket": "243",
+          "conditionalreference": "224",
           "meta": "1",
-          "nestedpropertyreference": "181",
-          "propertyreference": "148",
-          "rootpropertyreference": "162",
-          "rootreference": "136",
+          "nestedpropertyreference": "189",
+          "propertyreference": "156",
+          "rootpropertyreference": "170",
+          "rootreference": "144",
           "untrackedpropertyerror": "18",
-          "updatablereference": "201",
-          "componentfactory": "110",
-          "constructoroptions": "233",
+          "updatablereference": "209",
+          "componentfactory": "118",
+          "constructoroptions": "241",
           "interceptors": "15",
-          "untrackedpropertyerrorthrower": "30",
-          "builderror": "229",
-          "combinatorforcomputedproperties": "55",
-          "defaulterrorthrower": "80",
-          "descriptorfortrackedcomputedproperty": "44",
-          "hasownproperty": "65",
-          "hastag": "76",
-          "installdevmodeerrorinterceptor": "89",
-          "installtrackedproperty": "51",
-          "metafor": "61",
-          "propertydidchange": "69",
-          "setpropertydidchange": "71",
-          "tagforproperty": "84",
-          "tracked": "34"
+          "untrackedpropertyerrorthrower": "34",
+          "builderror": "237",
+          "combinatorforcomputedproperties": "59",
+          "defaulterrorthrower": "84",
+          "descriptorfortrackedcomputedproperty": "48",
+          "hasownproperty": "69",
+          "hastag": "80",
+          "installdevmodeerrorinterceptor": "93",
+          "installtrackedproperty": "55",
+          "metafor": "65",
+          "propertydidchange": "73",
+          "setpropertydidchange": "75",
+          "tagforproperty": "88",
+          "tracked": "38"
         },
         "_glimmer_application": {
-          "application": "698",
-          "applicationregistry": "318",
-          "arrayiterator": "384",
-          "defaultcomponentdefinition": "543",
-          "dynamiccomponentreference": "456",
-          "dynamicscope": "370",
-          "emptyiterator": "410",
-          "environment": "554",
-          "helperreference": "519",
-          "iterable": "415",
-          "objectkeysiterator": "396",
-          "simplepathreference": "505",
-          "approot": "693",
-          "applicationoptions": "685",
-          "componentdefinitioncreator": "450",
-          "environmentoptions": "540",
-          "extendedtemplatemeta": "445",
-          "initializer": "688",
-          "blockcomponentmacro": "470",
-          "buildaction": "491",
-          "builduserhelper": "537",
-          "cancreatecomponentdefinition": "682",
-          "debuginfoforreference": "499",
-          "debugname": "502",
-          "dynamiccomponentfor": "483",
-          "hashtoargs": "488",
-          "inlinecomponentmacro": "477",
-          "istypespecifier": "367",
-          "populatemacros": "678",
-          "thrownoactionerror": "495"
+          "application": "707",
+          "applicationregistry": "327",
+          "arrayiterator": "393",
+          "defaultcomponentdefinition": "552",
+          "dynamiccomponentreference": "465",
+          "dynamicscope": "379",
+          "emptyiterator": "419",
+          "environment": "563",
+          "helperreference": "528",
+          "iterable": "424",
+          "objectkeysiterator": "405",
+          "simplepathreference": "514",
+          "approot": "702",
+          "applicationoptions": "694",
+          "componentdefinitioncreator": "459",
+          "environmentoptions": "549",
+          "extendedtemplatemeta": "454",
+          "initializer": "697",
+          "blockcomponentmacro": "479",
+          "buildaction": "500",
+          "builduserhelper": "546",
+          "cancreatecomponentdefinition": "691",
+          "debuginfoforreference": "508",
+          "debugname": "511",
+          "dynamiccomponentfor": "492",
+          "hashtoargs": "497",
+          "inlinecomponentmacro": "486",
+          "istypespecifier": "376",
+          "populatemacros": "687",
+          "thrownoactionerror": "504"
         }
       }
     },
@@ -107,10 +107,10 @@ var main = {
         },
         "alias": "_glimmer_component",
         "fullName": "@glimmer/component",
-        "hierarchy": "Global @glimmer/component\n  Class CachedReference<T>\n    TypeParameter T\n    Property _lastRevision:number | null\n    Property _lastValue:any\n    Accessor tag\n      GetSignature __get:Tag\n    Method compute\n      CallSignature compute:T\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method value\n      CallSignature value:any\n  Class Component\n    Constructor constructor\n      ConstructorSignature new Component:Component\n        Parameter options:object\n    Property args:object\n    Property debugName:string\n    Property element:Element\n    Method didInsertElement\n      CallSignature didInsertElement:void\n    Method didUpdate\n      CallSignature didUpdate:void\n    Method toString\n      CallSignature toString:string\n    Method create\n      CallSignature create:Component\n        Parameter injections:any\n  Class ComponentDefinition\n    Constructor constructor\n      ConstructorSignature new ComponentDefinition:ComponentDefinition\n        Parameter name:string\n        Parameter manager:ComponentManager\n        Parameter template:Template<TemplateMeta>\n        Parameter componentFactory:ComponentFactory\n    Property ComponentClass:ComponentClass\n    Property args:CapturedArguments\n    Property componentFactory:ComponentFactory\n    Property manager:ComponentManager<ComponentStateBucket>\n    Property name:string\n    Property template:Template<TemplateMeta>\n    Method toJSON\n      CallSignature toJSON:object\n        TypeLiteral __type\n          Variable GlimmerDebug:string\n  Class ComponentManager\n    Constructor constructor\n      ConstructorSignature new ComponentManager:ComponentManager\n        Parameter options:ConstructorOptions\n    Property env:Environment\n    Method create\n      CallSignature create:ComponentStateBucket | null\n        Parameter environment:Environment\n        Parameter definition:ComponentDefinition\n        Parameter volatileArgs:Arguments\n    Method createComponentDefinition\n      CallSignature createComponentDefinition:ComponentDefinition\n        Parameter name:string\n        Parameter template:Template<any>\n        Parameter componentFactory:Factory<Component>\n    Method didCreate\n      CallSignature didCreate:void\n        Parameter bucket:ComponentStateBucket\n    Method didCreateElement\n      CallSignature didCreateElement:void\n        Parameter bucket:ComponentStateBucket\n        Parameter element:Element\n    Method didRenderLayout\n      CallSignature didRenderLayout:void\n        Parameter bucket:ComponentStateBucket\n        Parameter bounds:Bounds\n    Method didUpdate\n      CallSignature didUpdate:void\n        Parameter bucket:ComponentStateBucket\n    Method didUpdateLayout\n      CallSignature didUpdateLayout:void\n    Method getDestructor\n      CallSignature getDestructor:null\n    Method getSelf\n      CallSignature getSelf:RootReference\n        Parameter bucket:ComponentStateBucket\n    Method getTag\n      CallSignature getTag:null\n    Method layoutFor\n      CallSignature layoutFor:CompiledDynamicProgram\n        Parameter definition:ComponentDefinition\n        Parameter bucket:ComponentStateBucket\n        Parameter env:Environment\n    Method prepareArgs\n      CallSignature prepareArgs:null\n        Parameter definition:ComponentDefinition\n        Parameter args:Arguments\n    Method update\n      CallSignature update:void\n        Parameter bucket:ComponentStateBucket\n        Parameter scope:DynamicScope\n    Method create\n      CallSignature create:ComponentManager\n        Parameter options:ConstructorOptions\n  Class ComponentPathReference<T>\n    TypeParameter T\n    Accessor tag\n      GetSignature __get:Tag\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method value\n      CallSignature value:T\n  Class ComponentStateBucket\n    Constructor constructor\n      ConstructorSignature new ComponentStateBucket:ComponentStateBucket\n        Parameter definition:ComponentDefinition\n        Parameter args:CapturedArguments\n        Parameter owner:Owner\n    Property args:CapturedArguments\n    Property component:Component\n    Property name:string\n    Method namedArgsSnapshot\n      CallSignature namedArgsSnapshot:Readonly<Dict<any | void>>\n  Class ConditionalReference\n    Constructor constructor\n      ConstructorSignature new ConditionalReference:ConditionalReference\n        Parameter inner:Reference<Opaque>\n    Property tag:Tag\n    Method toBool\n      CallSignature toBool:boolean\n        Parameter value:Opaque\n    Method value\n      CallSignature value:boolean\n    Method create\n      CallSignature create:PrimitiveReference<any> | ConditionalReference\n        Parameter reference:PathReference<any>\n  Class Meta\n    Constructor constructor\n      ConstructorSignature new Meta:Meta\n        Parameter parent:Meta\n    Property computedPropertyTags:Dict<TagWrapper<DirtyableTag>>\n    Property tags:Dict<Tag>\n    Property trackedProperties:Dict<boolean>\n    Property trackedPropertyDependencies:Dict<string[]>\n    Method dirtyableTagFor\n      CallSignature dirtyableTagFor:TagWrapper<DirtyableTag>\n        Parameter key:Key\n    Method tagFor\n      CallSignature tagFor:Tag\n        Parameter key:Key\n  Class NestedPropertyReference\n    Constructor constructor\n      ConstructorSignature new NestedPropertyReference:NestedPropertyReference\n        Parameter parentReference:PathReference<any>\n        Parameter propertyKey:string\n    Property _parentObjectTag:TagWrapper<UpdatableTag>\n    Property _parentReference:PathReference<any>\n    Property _propertyKey:string\n    Property tag:Tag\n    Method compute\n      CallSignature compute:any\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method value\n      CallSignature value:any\n    Method create\n      CallSignature create:RootPropertyReference | NestedPropertyReference\n        Parameter parentReference:PathReference<any>\n        Parameter propertyKey:string\n  Class PropertyReference\n    Accessor tag\n      GetSignature __get:Tag\n    Method compute\n      CallSignature compute:any\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method value\n      CallSignature value:any\n    Method create\n      CallSignature create:RootPropertyReference | NestedPropertyReference\n        Parameter parentReference:PathReference<any>\n        Parameter propertyKey:string\n  Class RootPropertyReference\n    Constructor constructor\n      ConstructorSignature new RootPropertyReference:RootPropertyReference\n        Parameter parentValue:object\n        Parameter propertyKey:string\n    Property _parentValue:object\n    Property _propertyKey:string\n    Property tag:Tag\n    Method compute\n      CallSignature compute:any\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method value\n      CallSignature value:any\n    Method create\n      CallSignature create:RootPropertyReference | NestedPropertyReference\n        Parameter parentReference:PathReference<any>\n        Parameter propertyKey:string\n  Class RootReference\n    Constructor constructor\n      ConstructorSignature new RootReference:RootReference\n        Parameter inner:any\n    Property children:Dict<RootPropertyReference>\n    Property inner:any\n    Property tag:Tag\n    Method get\n      CallSignature get:RootPropertyReference\n        Parameter propertyKey:string\n    Method value\n      CallSignature value:any\n  Class UntrackedPropertyError\n    Constructor constructor\n      ConstructorSignature new UntrackedPropertyError:UntrackedPropertyError\n        Parameter target:any\n        Parameter key:string\n        Parameter message:string\n    Property key:string\n    Property target:any\n    Property Error:ErrorConstructor\n    Property message:string\n    Property name:string\n    Property stack:string\n  Class UpdatableReference<T>\n    TypeParameter T\n    Constructor constructor\n      ConstructorSignature new UpdatableReference:UpdatableReference\n        Parameter value:T\n    Property _value:T\n    Property tag:TagWrapper<DirtyableTag>\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method update\n      CallSignature update:void\n        Parameter value:T\n    Method value\n      CallSignature value:T\n  Interface ComponentFactory\n    Method create\n      CallSignature create:Component\n        Parameter injections:object\n  Interface ConstructorOptions\n    Property env:Environment\n  Interface Interceptors\n    IndexSignature __index:boolean\n      Parameter key:string\n  Interface UntrackedPropertyErrorThrower\n    CallSignature __call:void\n      Parameter obj:any\n      Parameter key:string\n  TypeAlias Key:string\n  Variable META:symbol\n  Variable hOP:hasOwnProperty\n  Function buildError\n    CallSignature buildError:void\n      Parameter obj:any\n      Parameter key:string\n  Function combinatorForComputedProperties\n    CallSignature combinatorForComputedProperties:Tag\n      Parameter meta:Meta\n      Parameter key:Key\n      Parameter dependencies:Key[] | void\n  Function defaultErrorThrower\n    CallSignature defaultErrorThrower:UntrackedPropertyError\n      Parameter obj:any\n      Parameter key:string\n  Function descriptorForTrackedComputedProperty\n    CallSignature descriptorForTrackedComputedProperty:PropertyDescriptor\n      Parameter target:any\n      Parameter key:any\n      Parameter descriptor:PropertyDescriptor\n      Parameter dependencies:string[]\n  Function hasOwnProperty\n    CallSignature hasOwnProperty:any\n      Parameter obj:any\n      Parameter key:symbol\n  Function hasTag\n    CallSignature hasTag:boolean\n      Parameter obj:any\n      Parameter key:string\n  Function installDevModeErrorInterceptor\n    CallSignature installDevModeErrorInterceptor:void\n      Parameter obj:object\n      Parameter key:string\n      Parameter throwError:UntrackedPropertyErrorThrower\n  Function installTrackedProperty\n    CallSignature installTrackedProperty:void\n      Parameter target:any\n      Parameter key:Key\n  Function metaFor\n    CallSignature metaFor:Meta\n      Parameter obj:any\n  Function propertyDidChange\n    CallSignature propertyDidChange:void\n  Function setPropertyDidChange\n    CallSignature setPropertyDidChange:void\n      Parameter cb:function\n        TypeLiteral __type\n          CallSignature __call:void\n  Function tagForProperty\n    CallSignature tagForProperty:Tag\n      Parameter obj:any\n      Parameter key:string\n      Parameter throwError:UntrackedPropertyErrorThrower\n  Function tracked\n    CallSignature tracked:MethodDecorator\n      Parameter dependencies:string[]\n    CallSignature tracked:any\n      Parameter target:any\n      Parameter key:any\n    CallSignature tracked:PropertyDescriptor\n      Parameter target:any\n      Parameter key:any\n      Parameter descriptor:PropertyDescriptor",
+        "hierarchy": "Global @glimmer/component\n  Class CachedReference<T>\n    TypeParameter T\n    Property _lastRevision:number | null\n    Property _lastValue:any\n    Accessor tag\n      GetSignature __get:Tag\n    Method compute\n      CallSignature compute:T\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method value\n      CallSignature value:any\n  Class Component\n    Constructor constructor\n      ConstructorSignature new Component:Component\n        Parameter options:object\n    Property args:object\n    Property debugName:string\n    Property element:Element\n    Method destroy\n      CallSignature destroy:void\n    Method didInsertElement\n      CallSignature didInsertElement:void\n    Method didUpdate\n      CallSignature didUpdate:void\n    Method toString\n      CallSignature toString:string\n    Method willDestroy\n      CallSignature willDestroy:void\n    Method create\n      CallSignature create:Component\n        Parameter injections:any\n  Class ComponentDefinition\n    Constructor constructor\n      ConstructorSignature new ComponentDefinition:ComponentDefinition\n        Parameter name:string\n        Parameter manager:ComponentManager\n        Parameter template:Template<TemplateMeta>\n        Parameter componentFactory:ComponentFactory\n    Property ComponentClass:ComponentClass\n    Property args:CapturedArguments\n    Property componentFactory:ComponentFactory\n    Property manager:ComponentManager<ComponentStateBucket>\n    Property name:string\n    Property template:Template<TemplateMeta>\n    Method toJSON\n      CallSignature toJSON:object\n        TypeLiteral __type\n          Variable GlimmerDebug:string\n  Class ComponentManager\n    Constructor constructor\n      ConstructorSignature new ComponentManager:ComponentManager\n        Parameter options:ConstructorOptions\n    Property env:Environment\n    Method create\n      CallSignature create:ComponentStateBucket | null\n        Parameter environment:Environment\n        Parameter definition:ComponentDefinition\n        Parameter volatileArgs:Arguments\n    Method createComponentDefinition\n      CallSignature createComponentDefinition:ComponentDefinition\n        Parameter name:string\n        Parameter template:Template<any>\n        Parameter componentFactory:Factory<Component>\n    Method didCreate\n      CallSignature didCreate:void\n        Parameter bucket:ComponentStateBucket\n    Method didCreateElement\n      CallSignature didCreateElement:void\n        Parameter bucket:ComponentStateBucket\n        Parameter element:Element\n    Method didRenderLayout\n      CallSignature didRenderLayout:void\n        Parameter bucket:ComponentStateBucket\n        Parameter bounds:Bounds\n    Method didUpdate\n      CallSignature didUpdate:void\n        Parameter bucket:ComponentStateBucket\n    Method didUpdateLayout\n      CallSignature didUpdateLayout:void\n    Method getDestructor\n      CallSignature getDestructor:Destroyable\n        Parameter bucket:ComponentStateBucket\n    Method getSelf\n      CallSignature getSelf:RootReference\n        Parameter bucket:ComponentStateBucket\n    Method getTag\n      CallSignature getTag:null\n    Method layoutFor\n      CallSignature layoutFor:CompiledDynamicProgram\n        Parameter definition:ComponentDefinition\n        Parameter bucket:ComponentStateBucket\n        Parameter env:Environment\n    Method prepareArgs\n      CallSignature prepareArgs:null\n        Parameter definition:ComponentDefinition\n        Parameter args:Arguments\n    Method update\n      CallSignature update:void\n        Parameter bucket:ComponentStateBucket\n        Parameter scope:DynamicScope\n    Method create\n      CallSignature create:ComponentManager\n        Parameter options:ConstructorOptions\n  Class ComponentPathReference<T>\n    TypeParameter T\n    Accessor tag\n      GetSignature __get:Tag\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method value\n      CallSignature value:T\n  Class ComponentStateBucket\n    Constructor constructor\n      ConstructorSignature new ComponentStateBucket:ComponentStateBucket\n        Parameter definition:ComponentDefinition\n        Parameter args:CapturedArguments\n        Parameter owner:Owner\n    Property args:CapturedArguments\n    Property component:Component\n    Property name:string\n    Method namedArgsSnapshot\n      CallSignature namedArgsSnapshot:Readonly<Dict<any | void>>\n  Class ConditionalReference\n    Constructor constructor\n      ConstructorSignature new ConditionalReference:ConditionalReference\n        Parameter inner:Reference<Opaque>\n    Property tag:Tag\n    Method toBool\n      CallSignature toBool:boolean\n        Parameter value:Opaque\n    Method value\n      CallSignature value:boolean\n    Method create\n      CallSignature create:PrimitiveReference<any> | ConditionalReference\n        Parameter reference:PathReference<any>\n  Class Meta\n    Constructor constructor\n      ConstructorSignature new Meta:Meta\n        Parameter parent:Meta\n    Property computedPropertyTags:Dict<TagWrapper<DirtyableTag>>\n    Property tags:Dict<Tag>\n    Property trackedProperties:Dict<boolean>\n    Property trackedPropertyDependencies:Dict<string[]>\n    Method dirtyableTagFor\n      CallSignature dirtyableTagFor:TagWrapper<DirtyableTag>\n        Parameter key:Key\n    Method tagFor\n      CallSignature tagFor:Tag\n        Parameter key:Key\n  Class NestedPropertyReference\n    Constructor constructor\n      ConstructorSignature new NestedPropertyReference:NestedPropertyReference\n        Parameter parentReference:PathReference<any>\n        Parameter propertyKey:string\n    Property _parentObjectTag:TagWrapper<UpdatableTag>\n    Property _parentReference:PathReference<any>\n    Property _propertyKey:string\n    Property tag:Tag\n    Method compute\n      CallSignature compute:any\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method value\n      CallSignature value:any\n    Method create\n      CallSignature create:RootPropertyReference | NestedPropertyReference\n        Parameter parentReference:PathReference<any>\n        Parameter propertyKey:string\n  Class PropertyReference\n    Accessor tag\n      GetSignature __get:Tag\n    Method compute\n      CallSignature compute:any\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method value\n      CallSignature value:any\n    Method create\n      CallSignature create:RootPropertyReference | NestedPropertyReference\n        Parameter parentReference:PathReference<any>\n        Parameter propertyKey:string\n  Class RootPropertyReference\n    Constructor constructor\n      ConstructorSignature new RootPropertyReference:RootPropertyReference\n        Parameter parentValue:object\n        Parameter propertyKey:string\n    Property _parentValue:object\n    Property _propertyKey:string\n    Property tag:Tag\n    Method compute\n      CallSignature compute:any\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method value\n      CallSignature value:any\n    Method create\n      CallSignature create:RootPropertyReference | NestedPropertyReference\n        Parameter parentReference:PathReference<any>\n        Parameter propertyKey:string\n  Class RootReference\n    Constructor constructor\n      ConstructorSignature new RootReference:RootReference\n        Parameter inner:any\n    Property children:Dict<RootPropertyReference>\n    Property inner:any\n    Property tag:Tag\n    Method get\n      CallSignature get:RootPropertyReference\n        Parameter propertyKey:string\n    Method value\n      CallSignature value:any\n  Class UntrackedPropertyError\n    Constructor constructor\n      ConstructorSignature new UntrackedPropertyError:UntrackedPropertyError\n        Parameter target:any\n        Parameter key:string\n        Parameter message:string\n    Property key:string\n    Property target:any\n    Property Error:ErrorConstructor\n    Property message:string\n    Property name:string\n    Property stack:string\n    Method for\n      CallSignature for:UntrackedPropertyError\n        Parameter obj:any\n        Parameter key:string\n  Class UpdatableReference<T>\n    TypeParameter T\n    Constructor constructor\n      ConstructorSignature new UpdatableReference:UpdatableReference\n        Parameter value:T\n    Property _value:T\n    Property tag:TagWrapper<DirtyableTag>\n    Method get\n      CallSignature get:PathReference<any>\n        Parameter key:string\n    Method update\n      CallSignature update:void\n        Parameter value:T\n    Method value\n      CallSignature value:T\n  Interface ComponentFactory\n    Method create\n      CallSignature create:Component\n        Parameter injections:object\n  Interface ConstructorOptions\n    Property env:Environment\n  Interface Interceptors\n    IndexSignature __index:boolean\n      Parameter key:string\n  Interface UntrackedPropertyErrorThrower\n    CallSignature __call:void\n      Parameter obj:any\n      Parameter key:string\n  TypeAlias Key:string\n  Variable META:symbol\n  Variable hOP:hasOwnProperty\n  Function buildError\n    CallSignature buildError:void\n      Parameter obj:any\n      Parameter key:string\n  Function combinatorForComputedProperties\n    CallSignature combinatorForComputedProperties:Tag\n      Parameter meta:Meta\n      Parameter key:Key\n      Parameter dependencies:Key[] | void\n  Function defaultErrorThrower\n    CallSignature defaultErrorThrower:UntrackedPropertyError\n      Parameter obj:any\n      Parameter key:string\n  Function descriptorForTrackedComputedProperty\n    CallSignature descriptorForTrackedComputedProperty:PropertyDescriptor\n      Parameter target:any\n      Parameter key:any\n      Parameter descriptor:PropertyDescriptor\n      Parameter dependencies:string[]\n  Function hasOwnProperty\n    CallSignature hasOwnProperty:any\n      Parameter obj:any\n      Parameter key:symbol\n  Function hasTag\n    CallSignature hasTag:boolean\n      Parameter obj:any\n      Parameter key:string\n  Function installDevModeErrorInterceptor\n    CallSignature installDevModeErrorInterceptor:void\n      Parameter obj:object\n      Parameter key:string\n      Parameter throwError:UntrackedPropertyErrorThrower\n  Function installTrackedProperty\n    CallSignature installTrackedProperty:void\n      Parameter target:any\n      Parameter key:Key\n  Function metaFor\n    CallSignature metaFor:Meta\n      Parameter obj:any\n  Function propertyDidChange\n    CallSignature propertyDidChange:void\n  Function setPropertyDidChange\n    CallSignature setPropertyDidChange:void\n      Parameter cb:function\n        TypeLiteral __type\n          CallSignature __call:void\n  Function tagForProperty\n    CallSignature tagForProperty:Tag\n      Parameter obj:any\n      Parameter key:string\n      Parameter throwError:UntrackedPropertyErrorThrower\n  Function tracked\n    CallSignature tracked:MethodDecorator\n      Parameter dependencies:string[]\n    CallSignature tracked:any\n      Parameter target:any\n      Parameter key:any\n    CallSignature tracked:PropertyDescriptor\n      Parameter target:any\n      Parameter key:any\n      Parameter descriptor:PropertyDescriptor",
         "packageInfo": {
           "name": "@glimmer/component",
-          "version": "0.3.8",
+          "version": "0.3.9",
           "description": "Glimmer component library",
           "contributors": [
             "Dan Gebhardt <dan@cerebris.com>",
@@ -173,7 +173,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 52,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L52"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L52"
               }
             ],
             "typeInfo": {
@@ -204,7 +204,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 180,
                 "character": 8,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L180"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L180"
               }
             ],
             "typeInfo": {
@@ -233,7 +233,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 191,
                 "character": 7,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L191"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L191"
               }
             ],
             "typeInfo": {
@@ -254,31 +254,31 @@ var main = {
           "data": [
             {
               "type": "class",
-              "id": "123"
+              "id": "131"
             },
             {
               "type": "class",
-              "id": "94"
+              "id": "98"
             },
             {
               "type": "class",
-              "id": "300"
+              "id": "309"
             },
             {
               "type": "class",
-              "id": "246"
+              "id": "254"
             },
             {
               "type": "class",
-              "id": "114"
+              "id": "122"
             },
             {
               "type": "class",
-              "id": "235"
+              "id": "243"
             },
             {
               "type": "class",
-              "id": "216"
+              "id": "224"
             },
             {
               "type": "class",
@@ -286,19 +286,19 @@ var main = {
             },
             {
               "type": "class",
-              "id": "181"
+              "id": "189"
             },
             {
               "type": "class",
-              "id": "148"
+              "id": "156"
             },
             {
               "type": "class",
-              "id": "162"
+              "id": "170"
             },
             {
               "type": "class",
-              "id": "136"
+              "id": "144"
             },
             {
               "type": "class",
@@ -306,7 +306,7 @@ var main = {
             },
             {
               "type": "class",
-              "id": "201"
+              "id": "209"
             }
           ]
         },
@@ -314,11 +314,11 @@ var main = {
           "data": [
             {
               "type": "interface",
-              "id": "110"
+              "id": "118"
             },
             {
               "type": "interface",
-              "id": "233"
+              "id": "241"
             },
             {
               "type": "interface",
@@ -326,7 +326,7 @@ var main = {
             },
             {
               "type": "interface",
-              "id": "30"
+              "id": "34"
             }
           ]
         },
@@ -334,47 +334,11 @@ var main = {
           "data": [
             {
               "type": "function",
-              "id": "229"
+              "id": "237"
             },
             {
               "type": "function",
-              "id": "55"
-            },
-            {
-              "type": "function",
-              "id": "80"
-            },
-            {
-              "type": "function",
-              "id": "44"
-            },
-            {
-              "type": "function",
-              "id": "65"
-            },
-            {
-              "type": "function",
-              "id": "76"
-            },
-            {
-              "type": "function",
-              "id": "89"
-            },
-            {
-              "type": "function",
-              "id": "51"
-            },
-            {
-              "type": "function",
-              "id": "61"
-            },
-            {
-              "type": "function",
-              "id": "69"
-            },
-            {
-              "type": "function",
-              "id": "71"
+              "id": "59"
             },
             {
               "type": "function",
@@ -382,14 +346,50 @@ var main = {
             },
             {
               "type": "function",
-              "id": "34"
+              "id": "48"
+            },
+            {
+              "type": "function",
+              "id": "69"
+            },
+            {
+              "type": "function",
+              "id": "80"
+            },
+            {
+              "type": "function",
+              "id": "93"
+            },
+            {
+              "type": "function",
+              "id": "55"
+            },
+            {
+              "type": "function",
+              "id": "65"
+            },
+            {
+              "type": "function",
+              "id": "73"
+            },
+            {
+              "type": "function",
+              "id": "75"
+            },
+            {
+              "type": "function",
+              "id": "88"
+            },
+            {
+              "type": "function",
+              "id": "38"
             }
           ]
         }
       }
     },
     {
-      "id": "123",
+      "id": "131",
       "type": "class",
       "attributes": {
         "name": "CachedReference",
@@ -419,7 +419,7 @@ var main = {
             "isArray": false,
             "name": "ComponentPathReference",
             "link": {
-              "id": "114",
+              "id": "122",
               "type": "class",
               "slug": "componentpathreference",
               "sources": [
@@ -427,7 +427,7 @@ var main = {
                   "fileName": "references.ts",
                   "line": 24,
                   "character": 44,
-                  "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L24"
+                  "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L24"
                 }
               ],
               "parent": {
@@ -444,7 +444,7 @@ var main = {
             "fileName": "references.ts",
             "line": 33,
             "character": 37,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L33"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L33"
           }
         ],
         "typeParameters": [
@@ -480,7 +480,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 34,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L34"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L34"
               }
             ],
             "typeInfo": {
@@ -519,7 +519,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 35,
                 "character": 20,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L35"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L35"
               }
             ],
             "typeInfo": {
@@ -550,7 +550,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 26,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L26"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L26"
               }
             ],
             "getSignatures": [
@@ -567,7 +567,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 26,
                     "character": 18,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L26"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L26"
                   }
                 ],
                 "typeInfo": {
@@ -600,7 +600,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 37,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L37"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L37"
               }
             ],
             "callSignatures": [
@@ -617,7 +617,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 37,
                     "character": 18,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L37"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L37"
                   }
                 ],
                 "typeInfo": {
@@ -648,7 +648,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 28,
                 "character": 5,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L28"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L28"
               }
             ],
             "callSignatures": [
@@ -665,7 +665,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 28,
                     "character": 5,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L28"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L28"
                   }
                 ],
                 "typeInfo": {
@@ -714,7 +714,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 39,
                 "character": 7,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L39"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L39"
               }
             ],
             "callSignatures": [
@@ -731,7 +731,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 39,
                     "character": 7,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L39"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L39"
                   }
                 ],
                 "typeInfo": {
@@ -745,7 +745,7 @@ var main = {
       }
     },
     {
-      "id": "94",
+      "id": "98",
       "type": "class",
       "attributes": {
         "name": "Component",
@@ -762,14 +762,14 @@ var main = {
         },
         "alias": "component",
         "fullName": "Component",
-        "hierarchy": "Class Component\n  Constructor constructor\n    ConstructorSignature new Component:Component\n      Parameter options:object\n  Property args:object\n  Property debugName:string\n  Property element:Element\n  Method didInsertElement\n    CallSignature didInsertElement:void\n  Method didUpdate\n    CallSignature didUpdate:void\n  Method toString\n    CallSignature toString:string\n  Method create\n    CallSignature create:Component\n      Parameter injections:any",
+        "hierarchy": "Class Component\n  Constructor constructor\n    ConstructorSignature new Component:Component\n      Parameter options:object\n  Property args:object\n  Property debugName:string\n  Property element:Element\n  Method destroy\n    CallSignature destroy:void\n  Method didInsertElement\n    CallSignature didInsertElement:void\n  Method didUpdate\n    CallSignature didUpdate:void\n  Method toString\n    CallSignature toString:string\n  Method willDestroy\n    CallSignature willDestroy:void\n  Method create\n    CallSignature create:Component\n      Parameter injections:any",
         "kindString": "Class",
         "sources": [
           {
             "fileName": "component.ts",
             "line": 127,
             "character": 15,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L127"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L127"
           }
         ],
         "comment": {
@@ -798,7 +798,7 @@ var main = {
                 "fileName": "component.ts",
                 "line": 169,
                 "character": 3,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L169"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L169"
               }
             ],
             "comment": {
@@ -820,7 +820,7 @@ var main = {
                     "fileName": "component.ts",
                     "line": 169,
                     "character": 3,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L169"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L169"
                   }
                 ],
                 "comment": {
@@ -832,7 +832,7 @@ var main = {
                   "isArray": false,
                   "name": "Component",
                   "link": {
-                    "id": "94",
+                    "id": "98",
                     "type": "class",
                     "slug": "component",
                     "sources": [
@@ -840,7 +840,7 @@ var main = {
                         "fileName": "component.ts",
                         "line": 127,
                         "character": 15,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L127"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L127"
                       }
                     ],
                     "parent": {
@@ -895,7 +895,7 @@ var main = {
                 "fileName": "component.ts",
                 "line": 165,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L165"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L165"
               }
             ],
             "comment": {
@@ -928,7 +928,7 @@ var main = {
                 "fileName": "component.ts",
                 "line": 138,
                 "character": 11,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L138"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L138"
               }
             ],
             "comment": {
@@ -961,7 +961,7 @@ var main = {
                 "fileName": "component.ts",
                 "line": 133,
                 "character": 9,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L133"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L133"
               }
             ],
             "comment": {
@@ -975,6 +975,54 @@ var main = {
           }
         ],
         "methods": [
+          {
+            "name": "destroy",
+            "slug": "destroy",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "destroy",
+            "fullName": "Component.destroy",
+            "hierarchy": "Method destroy\n  CallSignature destroy:void",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "component.ts",
+                "line": 199,
+                "character": 9,
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L199"
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "destroy",
+                "slug": "destroy-1",
+                "flags": {},
+                "alias": "destroy-1",
+                "fullName": "Component.destroy.destroy",
+                "hierarchy": "CallSignature destroy:void",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "component.ts",
+                    "line": 199,
+                    "character": 9,
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L199"
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "void"
+                }
+              }
+            ]
+          },
           {
             "name": "didInsertElement",
             "slug": "didinsertelement",
@@ -996,7 +1044,7 @@ var main = {
                 "fileName": "component.ts",
                 "line": 186,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L186"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L186"
               }
             ],
             "callSignatures": [
@@ -1013,7 +1061,7 @@ var main = {
                     "fileName": "component.ts",
                     "line": 186,
                     "character": 18,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L186"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L186"
                   }
                 ],
                 "comment": {
@@ -1048,7 +1096,7 @@ var main = {
                 "fileName": "component.ts",
                 "line": 192,
                 "character": 11,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L192"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L192"
               }
             ],
             "callSignatures": [
@@ -1065,7 +1113,7 @@ var main = {
                     "fileName": "component.ts",
                     "line": 192,
                     "character": 11,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L192"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L192"
                   }
                 ],
                 "comment": {
@@ -1098,9 +1146,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 194,
+                "line": 203,
                 "character": 10,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L194"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L203"
               }
             ],
             "callSignatures": [
@@ -1115,14 +1163,66 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 194,
+                    "line": 203,
                     "character": 10,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L194"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L203"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "string"
+                }
+              }
+            ]
+          },
+          {
+            "name": "willDestroy",
+            "slug": "willdestroy",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": false
+            },
+            "alias": "willdestroy",
+            "fullName": "Component.willDestroy",
+            "hierarchy": "Method willDestroy\n  CallSignature willDestroy:void",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "component.ts",
+                "line": 197,
+                "character": 13,
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L197"
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "willDestroy",
+                "slug": "willdestroy-1",
+                "flags": {},
+                "alias": "willdestroy-1",
+                "fullName": "Component.willDestroy.willDestroy",
+                "hierarchy": "CallSignature willDestroy:void",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "component.ts",
+                    "line": 197,
+                    "character": 13,
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L197"
+                  }
+                ],
+                "comment": {
+                  "shortText": "<p>Called before the component has been removed from the DOM.</p>\n",
+                  "text": "<p>Called before the component has been removed from the DOM.</p>\n"
+                },
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "void"
                 }
               }
             ]
@@ -1148,7 +1248,7 @@ var main = {
                 "fileName": "component.ts",
                 "line": 167,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L167"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L167"
               }
             ],
             "callSignatures": [
@@ -1165,14 +1265,14 @@ var main = {
                     "fileName": "component.ts",
                     "line": 167,
                     "character": 15,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L167"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L167"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "Component",
                   "link": {
-                    "id": "94",
+                    "id": "98",
                     "type": "class",
                     "slug": "component",
                     "sources": [
@@ -1180,7 +1280,7 @@ var main = {
                         "fileName": "component.ts",
                         "line": 127,
                         "character": 15,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L127"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L127"
                       }
                     ],
                     "parent": {
@@ -1216,7 +1316,7 @@ var main = {
       }
     },
     {
-      "id": "300",
+      "id": "309",
       "type": "class",
       "attributes": {
         "name": "ComponentDefinition",
@@ -1295,7 +1395,7 @@ var main = {
                   "isArray": false,
                   "name": "ComponentDefinition",
                   "link": {
-                    "id": "300",
+                    "id": "309",
                     "type": "class",
                     "slug": "componentdefinition",
                     "sources": [
@@ -1346,7 +1446,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentManager",
                       "link": {
-                        "id": "246",
+                        "id": "254",
                         "type": "class",
                         "slug": "componentmanager",
                         "sources": [
@@ -1354,7 +1454,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 52,
                             "character": 37,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L52"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L52"
                           }
                         ],
                         "parent": {
@@ -1397,15 +1497,15 @@ var main = {
                       "isArray": false,
                       "name": "ComponentFactory",
                       "link": {
-                        "id": "110",
+                        "id": "118",
                         "type": "interface",
                         "slug": "componentfactory",
                         "sources": [
                           {
                             "fileName": "component.ts",
-                            "line": 201,
+                            "line": 210,
                             "character": 33,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L201"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L210"
                           }
                         ],
                         "parent": {
@@ -1451,7 +1551,7 @@ var main = {
               "isArray": false,
               "name": "ComponentClass",
               "link": {
-                "id": "316",
+                "id": "325",
                 "type": "property",
                 "slug": "componentclass",
                 "sources": [
@@ -1463,7 +1563,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "300",
+                  "id": "309",
                   "type": "class",
                   "slug": "componentdefinition",
                   "sources": [
@@ -1535,15 +1635,15 @@ var main = {
               "isArray": false,
               "name": "ComponentFactory",
               "link": {
-                "id": "110",
+                "id": "118",
                 "type": "interface",
                 "slug": "componentfactory",
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 201,
+                    "line": 210,
                     "character": 33,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L201"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L210"
                   }
                 ],
                 "parent": {
@@ -1689,7 +1789,7 @@ var main = {
                   "isArray": false,
                   "name": "object",
                   "declaration": {
-                    "id": "312",
+                    "id": "321",
                     "type": "type-literal",
                     "attributes": {
                       "name": "__type",
@@ -1782,7 +1882,7 @@ var main = {
       }
     },
     {
-      "id": "246",
+      "id": "254",
       "type": "class",
       "attributes": {
         "name": "ComponentManager",
@@ -1799,7 +1899,7 @@ var main = {
         },
         "alias": "componentmanager",
         "fullName": "ComponentManager",
-        "hierarchy": "Class ComponentManager\n  Constructor constructor\n    ConstructorSignature new ComponentManager:ComponentManager\n      Parameter options:ConstructorOptions\n  Property env:Environment\n  Method create\n    CallSignature create:ComponentStateBucket | null\n      Parameter environment:Environment\n      Parameter definition:ComponentDefinition\n      Parameter volatileArgs:Arguments\n  Method createComponentDefinition\n    CallSignature createComponentDefinition:ComponentDefinition\n      Parameter name:string\n      Parameter template:Template<any>\n      Parameter componentFactory:Factory<Component>\n  Method didCreate\n    CallSignature didCreate:void\n      Parameter bucket:ComponentStateBucket\n  Method didCreateElement\n    CallSignature didCreateElement:void\n      Parameter bucket:ComponentStateBucket\n      Parameter element:Element\n  Method didRenderLayout\n    CallSignature didRenderLayout:void\n      Parameter bucket:ComponentStateBucket\n      Parameter bounds:Bounds\n  Method didUpdate\n    CallSignature didUpdate:void\n      Parameter bucket:ComponentStateBucket\n  Method didUpdateLayout\n    CallSignature didUpdateLayout:void\n  Method getDestructor\n    CallSignature getDestructor:null\n  Method getSelf\n    CallSignature getSelf:RootReference\n      Parameter bucket:ComponentStateBucket\n  Method getTag\n    CallSignature getTag:null\n  Method layoutFor\n    CallSignature layoutFor:CompiledDynamicProgram\n      Parameter definition:ComponentDefinition\n      Parameter bucket:ComponentStateBucket\n      Parameter env:Environment\n  Method prepareArgs\n    CallSignature prepareArgs:null\n      Parameter definition:ComponentDefinition\n      Parameter args:Arguments\n  Method update\n    CallSignature update:void\n      Parameter bucket:ComponentStateBucket\n      Parameter scope:DynamicScope\n  Method create\n    CallSignature create:ComponentManager\n      Parameter options:ConstructorOptions",
+        "hierarchy": "Class ComponentManager\n  Constructor constructor\n    ConstructorSignature new ComponentManager:ComponentManager\n      Parameter options:ConstructorOptions\n  Property env:Environment\n  Method create\n    CallSignature create:ComponentStateBucket | null\n      Parameter environment:Environment\n      Parameter definition:ComponentDefinition\n      Parameter volatileArgs:Arguments\n  Method createComponentDefinition\n    CallSignature createComponentDefinition:ComponentDefinition\n      Parameter name:string\n      Parameter template:Template<any>\n      Parameter componentFactory:Factory<Component>\n  Method didCreate\n    CallSignature didCreate:void\n      Parameter bucket:ComponentStateBucket\n  Method didCreateElement\n    CallSignature didCreateElement:void\n      Parameter bucket:ComponentStateBucket\n      Parameter element:Element\n  Method didRenderLayout\n    CallSignature didRenderLayout:void\n      Parameter bucket:ComponentStateBucket\n      Parameter bounds:Bounds\n  Method didUpdate\n    CallSignature didUpdate:void\n      Parameter bucket:ComponentStateBucket\n  Method didUpdateLayout\n    CallSignature didUpdateLayout:void\n  Method getDestructor\n    CallSignature getDestructor:Destroyable\n      Parameter bucket:ComponentStateBucket\n  Method getSelf\n    CallSignature getSelf:RootReference\n      Parameter bucket:ComponentStateBucket\n  Method getTag\n    CallSignature getTag:null\n  Method layoutFor\n    CallSignature layoutFor:CompiledDynamicProgram\n      Parameter definition:ComponentDefinition\n      Parameter bucket:ComponentStateBucket\n      Parameter env:Environment\n  Method prepareArgs\n    CallSignature prepareArgs:null\n      Parameter definition:ComponentDefinition\n      Parameter args:Arguments\n  Method update\n    CallSignature update:void\n      Parameter bucket:ComponentStateBucket\n      Parameter scope:DynamicScope\n  Method create\n    CallSignature create:ComponentManager\n      Parameter options:ConstructorOptions",
         "kindString": "Class",
         "implementedTypes": [
           {
@@ -1812,7 +1912,7 @@ var main = {
             "fileName": "component-manager.ts",
             "line": 52,
             "character": 37,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L52"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L52"
           }
         ],
         "constructors": [
@@ -1837,7 +1937,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 57,
                 "character": 3,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L57"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L57"
               }
             ],
             "constructorSignatures": [
@@ -1854,14 +1954,14 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 57,
                     "character": 3,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L57"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L57"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "ComponentManager",
                   "link": {
-                    "id": "246",
+                    "id": "254",
                     "type": "class",
                     "slug": "componentmanager",
                     "sources": [
@@ -1869,7 +1969,7 @@ var main = {
                         "fileName": "component-manager.ts",
                         "line": 52,
                         "character": 37,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L52"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L52"
                       }
                     ],
                     "parent": {
@@ -1896,7 +1996,7 @@ var main = {
                       "isArray": false,
                       "name": "ConstructorOptions",
                       "link": {
-                        "id": "233",
+                        "id": "241",
                         "type": "interface",
                         "slug": "constructoroptions",
                         "sources": [
@@ -1904,7 +2004,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 23,
                             "character": 35,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L23"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L23"
                           }
                         ],
                         "parent": {
@@ -1943,7 +2043,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 53,
                 "character": 13,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L53"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L53"
               }
             ],
             "typeInfo": {
@@ -1974,7 +2074,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 67,
                 "character": 8,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L67"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L67"
               }
             ],
             "callSignatures": [
@@ -1991,7 +2091,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 67,
                     "character": 8,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L67"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L67"
                   }
                 ],
                 "typeInfo": {
@@ -2002,7 +2102,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentStateBucket",
                       "link": {
-                        "id": "235",
+                        "id": "243",
                         "type": "class",
                         "slug": "componentstatebucket",
                         "sources": [
@@ -2010,7 +2110,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 27,
                             "character": 33,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L27"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
                           }
                         ],
                         "parent": {
@@ -2059,7 +2159,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentDefinition",
                       "link": {
-                        "id": "300",
+                        "id": "309",
                         "type": "class",
                         "slug": "componentdefinition",
                         "sources": [
@@ -2120,7 +2220,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 75,
                 "character": 27,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L75"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L75"
               }
             ],
             "callSignatures": [
@@ -2137,14 +2237,14 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 75,
                     "character": 27,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L75"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L75"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "ComponentDefinition",
                   "link": {
-                    "id": "300",
+                    "id": "309",
                     "type": "class",
                     "slug": "componentdefinition",
                     "sources": [
@@ -2237,7 +2337,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 99,
                 "character": 11,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L99"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L99"
               }
             ],
             "callSignatures": [
@@ -2254,7 +2354,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 99,
                     "character": 11,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L99"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L99"
                   }
                 ],
                 "typeInfo": {
@@ -2277,7 +2377,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentStateBucket",
                       "link": {
-                        "id": "235",
+                        "id": "243",
                         "type": "class",
                         "slug": "componentstatebucket",
                         "sources": [
@@ -2285,7 +2385,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 27,
                             "character": 33,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L27"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
                           }
                         ],
                         "parent": {
@@ -2322,7 +2422,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 91,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L91"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L91"
               }
             ],
             "callSignatures": [
@@ -2339,7 +2439,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 91,
                     "character": 18,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L91"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L91"
                   }
                 ],
                 "typeInfo": {
@@ -2362,7 +2462,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentStateBucket",
                       "link": {
-                        "id": "235",
+                        "id": "243",
                         "type": "class",
                         "slug": "componentstatebucket",
                         "sources": [
@@ -2370,7 +2470,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 27,
                             "character": 33,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L27"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
                           }
                         ],
                         "parent": {
@@ -2423,7 +2523,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 96,
                 "character": 17,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L96"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L96"
               }
             ],
             "callSignatures": [
@@ -2440,7 +2540,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 96,
                     "character": 17,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L96"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L96"
                   }
                 ],
                 "typeInfo": {
@@ -2463,7 +2563,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentStateBucket",
                       "link": {
-                        "id": "235",
+                        "id": "243",
                         "type": "class",
                         "slug": "componentstatebucket",
                         "sources": [
@@ -2471,7 +2571,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 27,
                             "character": 33,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L27"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
                           }
                         ],
                         "parent": {
@@ -2524,7 +2624,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 120,
                 "character": 11,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L120"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L120"
               }
             ],
             "callSignatures": [
@@ -2541,7 +2641,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 120,
                     "character": 11,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L120"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L120"
                   }
                 ],
                 "typeInfo": {
@@ -2564,7 +2664,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentStateBucket",
                       "link": {
-                        "id": "235",
+                        "id": "243",
                         "type": "class",
                         "slug": "componentstatebucket",
                         "sources": [
@@ -2572,7 +2672,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 27,
                             "character": 33,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L27"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
                           }
                         ],
                         "parent": {
@@ -2609,7 +2709,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 118,
                 "character": 17,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L118"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L118"
               }
             ],
             "callSignatures": [
@@ -2626,7 +2726,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 118,
                     "character": 17,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L118"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L118"
                   }
                 ],
                 "typeInfo": {
@@ -2650,14 +2750,14 @@ var main = {
             },
             "alias": "getdestructor",
             "fullName": "ComponentManager.getDestructor",
-            "hierarchy": "Method getDestructor\n  CallSignature getDestructor:null",
+            "hierarchy": "Method getDestructor\n  CallSignature getDestructor:Destroyable\n    Parameter bucket:ComponentStateBucket",
             "kindString": "Method",
             "sources": [
               {
                 "fileName": "component-manager.ts",
                 "line": 122,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L122"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L122"
               }
             ],
             "callSignatures": [
@@ -2667,20 +2767,57 @@ var main = {
                 "flags": {},
                 "alias": "getdestructor-1",
                 "fullName": "ComponentManager.getDestructor.getDestructor",
-                "hierarchy": "CallSignature getDestructor:null",
+                "hierarchy": "CallSignature getDestructor:Destroyable\n  Parameter bucket:ComponentStateBucket",
                 "kindString": "Call signature",
                 "sources": [
                   {
                     "fileName": "component-manager.ts",
                     "line": 122,
                     "character": 15,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L122"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L122"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
-                  "name": "null"
-                }
+                  "name": "Destroyable"
+                },
+                "parameters": [
+                  {
+                    "name": "bucket",
+                    "slug": "bucket-4",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "bucket-4",
+                    "fullName": "ComponentManager.getDestructor.getDestructor.bucket",
+                    "hierarchy": "Parameter bucket:ComponentStateBucket",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "ComponentStateBucket",
+                      "link": {
+                        "id": "243",
+                        "type": "class",
+                        "slug": "componentstatebucket",
+                        "sources": [
+                          {
+                            "fileName": "component-manager.ts",
+                            "line": 27,
+                            "character": 33,
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
+                          }
+                        ],
+                        "parent": {
+                          "id": "0",
+                          "type": "0",
+                          "slug": "_glimmer_component",
+                          "sources": null
+                        }
+                      }
+                    }
+                  }
+                ]
               }
             ]
           },
@@ -2705,7 +2842,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 86,
                 "character": 9,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L86"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L86"
               }
             ],
             "callSignatures": [
@@ -2722,14 +2859,14 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 86,
                     "character": 9,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L86"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L86"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "RootReference",
                   "link": {
-                    "id": "136",
+                    "id": "144",
                     "type": "class",
                     "slug": "rootreference",
                     "sources": [
@@ -2737,7 +2874,7 @@ var main = {
                         "fileName": "references.ts",
                         "line": 51,
                         "character": 26,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L51"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L51"
                       }
                     ],
                     "parent": {
@@ -2751,12 +2888,12 @@ var main = {
                 "parameters": [
                   {
                     "name": "bucket",
-                    "slug": "bucket-4",
+                    "slug": "bucket-5",
                     "flags": {
                       "isOptional": false,
                       "isRest": false
                     },
-                    "alias": "bucket-4",
+                    "alias": "bucket-5",
                     "fullName": "ComponentManager.getSelf.getSelf.bucket",
                     "hierarchy": "Parameter bucket:ComponentStateBucket",
                     "kindString": "Parameter",
@@ -2764,7 +2901,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentStateBucket",
                       "link": {
-                        "id": "235",
+                        "id": "243",
                         "type": "class",
                         "slug": "componentstatebucket",
                         "sources": [
@@ -2772,7 +2909,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 27,
                             "character": 33,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L27"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
                           }
                         ],
                         "parent": {
@@ -2809,7 +2946,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 103,
                 "character": 8,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L103"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L103"
               }
             ],
             "callSignatures": [
@@ -2826,7 +2963,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 103,
                     "character": 8,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L103"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L103"
                   }
                 ],
                 "typeInfo": {
@@ -2857,7 +2994,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 79,
                 "character": 11,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L79"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L79"
               }
             ],
             "callSignatures": [
@@ -2874,7 +3011,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 79,
                     "character": 11,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L79"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L79"
                   }
                 ],
                 "typeInfo": {
@@ -2897,7 +3034,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentDefinition",
                       "link": {
-                        "id": "300",
+                        "id": "309",
                         "type": "class",
                         "slug": "componentdefinition",
                         "sources": [
@@ -2919,12 +3056,12 @@ var main = {
                   },
                   {
                     "name": "bucket",
-                    "slug": "bucket-5",
+                    "slug": "bucket-6",
                     "flags": {
                       "isOptional": false,
                       "isRest": false
                     },
-                    "alias": "bucket-5",
+                    "alias": "bucket-6",
                     "fullName": "ComponentManager.layoutFor.layoutFor.bucket",
                     "hierarchy": "Parameter bucket:ComponentStateBucket",
                     "kindString": "Parameter",
@@ -2932,7 +3069,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentStateBucket",
                       "link": {
-                        "id": "235",
+                        "id": "243",
                         "type": "class",
                         "slug": "componentstatebucket",
                         "sources": [
@@ -2940,7 +3077,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 27,
                             "character": 33,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L27"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
                           }
                         ],
                         "parent": {
@@ -2993,7 +3130,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 63,
                 "character": 13,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L63"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L63"
               }
             ],
             "callSignatures": [
@@ -3010,7 +3147,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 63,
                     "character": 13,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L63"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L63"
                   }
                 ],
                 "typeInfo": {
@@ -3033,7 +3170,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentDefinition",
                       "link": {
-                        "id": "300",
+                        "id": "309",
                         "type": "class",
                         "slug": "componentdefinition",
                         "sources": [
@@ -3094,7 +3231,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 107,
                 "character": 8,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L107"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L107"
               }
             ],
             "callSignatures": [
@@ -3111,7 +3248,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 107,
                     "character": 8,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L107"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L107"
                   }
                 ],
                 "typeInfo": {
@@ -3121,12 +3258,12 @@ var main = {
                 "parameters": [
                   {
                     "name": "bucket",
-                    "slug": "bucket-6",
+                    "slug": "bucket-7",
                     "flags": {
                       "isOptional": false,
                       "isRest": false
                     },
-                    "alias": "bucket-6",
+                    "alias": "bucket-7",
                     "fullName": "ComponentManager.update.update.bucket",
                     "hierarchy": "Parameter bucket:ComponentStateBucket",
                     "kindString": "Parameter",
@@ -3134,7 +3271,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentStateBucket",
                       "link": {
-                        "id": "235",
+                        "id": "243",
                         "type": "class",
                         "slug": "componentstatebucket",
                         "sources": [
@@ -3142,7 +3279,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 27,
                             "character": 33,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L27"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
                           }
                         ],
                         "parent": {
@@ -3195,7 +3332,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 55,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L55"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L55"
               }
             ],
             "callSignatures": [
@@ -3212,14 +3349,14 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 55,
                     "character": 15,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L55"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L55"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "ComponentManager",
                   "link": {
-                    "id": "246",
+                    "id": "254",
                     "type": "class",
                     "slug": "componentmanager",
                     "sources": [
@@ -3227,7 +3364,7 @@ var main = {
                         "fileName": "component-manager.ts",
                         "line": 52,
                         "character": 37,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L52"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L52"
                       }
                     ],
                     "parent": {
@@ -3254,7 +3391,7 @@ var main = {
                       "isArray": false,
                       "name": "ConstructorOptions",
                       "link": {
-                        "id": "233",
+                        "id": "241",
                         "type": "interface",
                         "slug": "constructoroptions",
                         "sources": [
@@ -3262,7 +3399,7 @@ var main = {
                             "fileName": "component-manager.ts",
                             "line": 23,
                             "character": 35,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L23"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L23"
                           }
                         ],
                         "parent": {
@@ -3282,7 +3419,7 @@ var main = {
       }
     },
     {
-      "id": "114",
+      "id": "122",
       "type": "class",
       "attributes": {
         "name": "ComponentPathReference",
@@ -3312,7 +3449,7 @@ var main = {
             "fileName": "references.ts",
             "line": 24,
             "character": 44,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L24"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L24"
           }
         ],
         "comment": {
@@ -3352,7 +3489,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 26,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L26"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L26"
               }
             ],
             "getSignatures": [
@@ -3369,7 +3506,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 26,
                     "character": 18,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L26"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L26"
                   }
                 ],
                 "typeInfo": {
@@ -3402,7 +3539,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 28,
                 "character": 5,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L28"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L28"
               }
             ],
             "callSignatures": [
@@ -3419,7 +3556,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 28,
                     "character": 5,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L28"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L28"
                   }
                 ],
                 "typeInfo": {
@@ -3468,7 +3605,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 25,
                 "character": 16,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L25"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L25"
               }
             ],
             "callSignatures": [
@@ -3485,7 +3622,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 25,
                     "character": 16,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L25"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L25"
                   }
                 ],
                 "typeInfo": {
@@ -3499,7 +3636,7 @@ var main = {
       }
     },
     {
-      "id": "235",
+      "id": "243",
       "type": "class",
       "attributes": {
         "name": "ComponentStateBucket",
@@ -3523,7 +3660,7 @@ var main = {
             "fileName": "component-manager.ts",
             "line": 27,
             "character": 33,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L27"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
           }
         ],
         "constructors": [
@@ -3548,7 +3685,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 30,
                 "character": 34,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L30"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L30"
               }
             ],
             "constructorSignatures": [
@@ -3565,14 +3702,14 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 30,
                     "character": 34,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L30"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L30"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "ComponentStateBucket",
                   "link": {
-                    "id": "235",
+                    "id": "243",
                     "type": "class",
                     "slug": "componentstatebucket",
                     "sources": [
@@ -3580,7 +3717,7 @@ var main = {
                         "fileName": "component-manager.ts",
                         "line": 27,
                         "character": 33,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L27"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L27"
                       }
                     ],
                     "parent": {
@@ -3607,7 +3744,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentDefinition",
                       "link": {
-                        "id": "300",
+                        "id": "309",
                         "type": "class",
                         "slug": "componentdefinition",
                         "sources": [
@@ -3686,7 +3823,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 30,
                 "character": 14,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L30"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L30"
               }
             ],
             "typeInfo": {
@@ -3715,14 +3852,14 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 29,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L29"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L29"
               }
             ],
             "typeInfo": {
               "isArray": false,
               "name": "Component",
               "link": {
-                "id": "94",
+                "id": "98",
                 "type": "class",
                 "slug": "component",
                 "sources": [
@@ -3730,7 +3867,7 @@ var main = {
                     "fileName": "component.ts",
                     "line": 127,
                     "character": 15,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L127"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L127"
                   }
                 ],
                 "parent": {
@@ -3763,7 +3900,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 28,
                 "character": 13,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L28"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L28"
               }
             ],
             "typeInfo": {
@@ -3794,7 +3931,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 47,
                 "character": 19,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L47"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L47"
               }
             ],
             "callSignatures": [
@@ -3811,7 +3948,7 @@ var main = {
                     "fileName": "component-manager.ts",
                     "line": 47,
                     "character": 19,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L47"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L47"
                   }
                 ],
                 "typeInfo": {
@@ -3825,7 +3962,7 @@ var main = {
       }
     },
     {
-      "id": "216",
+      "id": "224",
       "type": "class",
       "attributes": {
         "name": "ConditionalReference",
@@ -3861,7 +3998,7 @@ var main = {
             "fileName": "references.ts",
             "line": 165,
             "character": 33,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L165"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L165"
           }
         ],
         "constructors": [
@@ -3910,7 +4047,7 @@ var main = {
                   "isArray": false,
                   "name": "ConditionalReference",
                   "link": {
-                    "id": "216",
+                    "id": "224",
                     "type": "class",
                     "slug": "conditionalreference",
                     "sources": [
@@ -3918,7 +4055,7 @@ var main = {
                         "fileName": "references.ts",
                         "line": 165,
                         "character": 33,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L165"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L165"
                       }
                     ],
                     "parent": {
@@ -4118,7 +4255,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 166,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L166"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L166"
               }
             ],
             "callSignatures": [
@@ -4135,7 +4272,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 166,
                     "character": 15,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L166"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L166"
                   }
                 ],
                 "typeInfo": {
@@ -4150,7 +4287,7 @@ var main = {
                       "isArray": false,
                       "name": "ConditionalReference",
                       "link": {
-                        "id": "216",
+                        "id": "224",
                         "type": "class",
                         "slug": "conditionalreference",
                         "sources": [
@@ -4158,7 +4295,7 @@ var main = {
                             "fileName": "references.ts",
                             "line": 165,
                             "character": 33,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L165"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L165"
                           }
                         ],
                         "parent": {
@@ -4220,7 +4357,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 103,
             "character": 25,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L103"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L103"
           }
         ],
         "comment": {
@@ -4249,7 +4386,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 107,
                 "character": 46,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L107"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L107"
               }
             ],
             "constructorSignatures": [
@@ -4266,7 +4403,7 @@ var main = {
                     "fileName": "tracked.ts",
                     "line": 107,
                     "character": 46,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L107"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L107"
                   }
                 ],
                 "typeInfo": {
@@ -4281,7 +4418,7 @@ var main = {
                         "fileName": "tracked.ts",
                         "line": 103,
                         "character": 25,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L103"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L103"
                       }
                     ],
                     "parent": {
@@ -4316,7 +4453,7 @@ var main = {
                             "fileName": "tracked.ts",
                             "line": 103,
                             "character": 25,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L103"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L103"
                           }
                         ],
                         "parent": {
@@ -4355,7 +4492,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 105,
                 "character": 22,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L105"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L105"
               }
             ],
             "typeInfo": {
@@ -4384,7 +4521,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 104,
                 "character": 6,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L104"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L104"
               }
             ],
             "typeInfo": {
@@ -4413,7 +4550,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 106,
                 "character": 19,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L106"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L106"
               }
             ],
             "typeInfo": {
@@ -4442,7 +4579,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 107,
                 "character": 29,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L107"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L107"
               }
             ],
             "typeInfo": {
@@ -4473,7 +4610,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 143,
                 "character": 17,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L143"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L143"
               }
             ],
             "callSignatures": [
@@ -4490,7 +4627,7 @@ var main = {
                     "fileName": "tracked.ts",
                     "line": 143,
                     "character": 17,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L143"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L143"
                   }
                 ],
                 "comment": {
@@ -4517,7 +4654,7 @@ var main = {
                       "isArray": false,
                       "name": "Key",
                       "link": {
-                        "id": "50",
+                        "id": "54",
                         "type": "type-alias",
                         "slug": "key",
                         "sources": [
@@ -4525,7 +4662,7 @@ var main = {
                             "fileName": "tracked.ts",
                             "line": 52,
                             "character": 15,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L52"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L52"
                           }
                         ],
                         "parent": {
@@ -4562,7 +4699,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 125,
                 "character": 8,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L125"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L125"
               }
             ],
             "callSignatures": [
@@ -4579,7 +4716,7 @@ var main = {
                     "fileName": "tracked.ts",
                     "line": 125,
                     "character": 8,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L125"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L125"
                   }
                 ],
                 "comment": {
@@ -4606,7 +4743,7 @@ var main = {
                       "isArray": false,
                       "name": "Key",
                       "link": {
-                        "id": "50",
+                        "id": "54",
                         "type": "type-alias",
                         "slug": "key",
                         "sources": [
@@ -4614,7 +4751,7 @@ var main = {
                             "fileName": "tracked.ts",
                             "line": 52,
                             "character": 15,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L52"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L52"
                           }
                         ],
                         "parent": {
@@ -4634,7 +4771,7 @@ var main = {
       }
     },
     {
-      "id": "181",
+      "id": "189",
       "type": "class",
       "attributes": {
         "name": "NestedPropertyReference",
@@ -4664,7 +4801,7 @@ var main = {
             "isArray": false,
             "name": "PropertyReference",
             "link": {
-              "id": "148",
+              "id": "156",
               "type": "class",
               "slug": "propertyreference",
               "sources": [
@@ -4672,7 +4809,7 @@ var main = {
                   "fileName": "references.ts",
                   "line": 65,
                   "character": 39,
-                  "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L65"
+                  "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L65"
                 }
               ],
               "parent": {
@@ -4689,7 +4826,7 @@ var main = {
             "fileName": "references.ts",
             "line": 102,
             "character": 36,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L102"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L102"
           }
         ],
         "constructors": [
@@ -4714,7 +4851,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 106,
                 "character": 31,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L106"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L106"
               }
             ],
             "constructorSignatures": [
@@ -4731,14 +4868,14 @@ var main = {
                     "fileName": "references.ts",
                     "line": 106,
                     "character": 31,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L106"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L106"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "NestedPropertyReference",
                   "link": {
-                    "id": "181",
+                    "id": "189",
                     "type": "class",
                     "slug": "nestedpropertyreference",
                     "sources": [
@@ -4746,7 +4883,7 @@ var main = {
                         "fileName": "references.ts",
                         "line": 102,
                         "character": 36,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L102"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L102"
                       }
                     ],
                     "parent": {
@@ -4817,7 +4954,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 105,
                 "character": 26,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L105"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L105"
               }
             ],
             "typeInfo": {
@@ -4846,7 +4983,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 104,
                 "character": 26,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L104"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L104"
               }
             ],
             "typeInfo": {
@@ -4875,7 +5012,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 106,
                 "character": 22,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L106"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L106"
               }
             ],
             "typeInfo": {
@@ -4904,7 +5041,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 103,
                 "character": 12,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L103"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L103"
               }
             ],
             "typeInfo": {
@@ -4935,7 +5072,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 121,
                 "character": 9,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L121"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L121"
               }
             ],
             "callSignatures": [
@@ -4952,7 +5089,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 121,
                     "character": 9,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L121"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L121"
                   }
                 ],
                 "typeInfo": {
@@ -4983,7 +5120,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 74,
                 "character": 5,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L74"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L74"
               }
             ],
             "callSignatures": [
@@ -5000,7 +5137,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 74,
                     "character": 5,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L74"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L74"
                   }
                 ],
                 "typeInfo": {
@@ -5049,7 +5186,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 39,
                 "character": 7,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L39"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L39"
               }
             ],
             "callSignatures": [
@@ -5066,7 +5203,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 39,
                     "character": 7,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L39"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L39"
                   }
                 ],
                 "typeInfo": {
@@ -5097,7 +5234,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 66,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L66"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L66"
               }
             ],
             "callSignatures": [
@@ -5114,7 +5251,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 66,
                     "character": 15,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L66"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L66"
                   }
                 ],
                 "typeInfo": {
@@ -5125,7 +5262,7 @@ var main = {
                       "isArray": false,
                       "name": "RootPropertyReference",
                       "link": {
-                        "id": "162",
+                        "id": "170",
                         "type": "class",
                         "slug": "rootpropertyreference",
                         "sources": [
@@ -5133,7 +5270,7 @@ var main = {
                             "fileName": "references.ts",
                             "line": 84,
                             "character": 34,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L84"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L84"
                           }
                         ],
                         "parent": {
@@ -5148,7 +5285,7 @@ var main = {
                       "isArray": false,
                       "name": "NestedPropertyReference",
                       "link": {
-                        "id": "181",
+                        "id": "189",
                         "type": "class",
                         "slug": "nestedpropertyreference",
                         "sources": [
@@ -5156,7 +5293,7 @@ var main = {
                             "fileName": "references.ts",
                             "line": 102,
                             "character": 36,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L102"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L102"
                           }
                         ],
                         "parent": {
@@ -5210,7 +5347,7 @@ var main = {
       }
     },
     {
-      "id": "148",
+      "id": "156",
       "type": "class",
       "attributes": {
         "name": "PropertyReference",
@@ -5240,7 +5377,7 @@ var main = {
             "isArray": false,
             "name": "CachedReference",
             "link": {
-              "id": "123",
+              "id": "131",
               "type": "class",
               "slug": "cachedreference",
               "sources": [
@@ -5248,7 +5385,7 @@ var main = {
                   "fileName": "references.ts",
                   "line": 33,
                   "character": 37,
-                  "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L33"
+                  "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L33"
                 }
               ],
               "parent": {
@@ -5265,7 +5402,7 @@ var main = {
             "fileName": "references.ts",
             "line": 65,
             "character": 39,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L65"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L65"
           }
         ],
         "accessors": [
@@ -5290,7 +5427,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 26,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L26"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L26"
               }
             ],
             "getSignatures": [
@@ -5307,7 +5444,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 26,
                     "character": 18,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L26"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L26"
                   }
                 ],
                 "typeInfo": {
@@ -5340,7 +5477,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 37,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L37"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L37"
               }
             ],
             "callSignatures": [
@@ -5357,7 +5494,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 37,
                     "character": 18,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L37"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L37"
                   }
                 ],
                 "typeInfo": {
@@ -5388,7 +5525,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 74,
                 "character": 5,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L74"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L74"
               }
             ],
             "callSignatures": [
@@ -5405,7 +5542,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 74,
                     "character": 5,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L74"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L74"
                   }
                 ],
                 "typeInfo": {
@@ -5454,7 +5591,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 39,
                 "character": 7,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L39"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L39"
               }
             ],
             "callSignatures": [
@@ -5471,7 +5608,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 39,
                     "character": 7,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L39"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L39"
                   }
                 ],
                 "typeInfo": {
@@ -5502,7 +5639,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 66,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L66"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L66"
               }
             ],
             "callSignatures": [
@@ -5519,7 +5656,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 66,
                     "character": 15,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L66"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L66"
                   }
                 ],
                 "typeInfo": {
@@ -5530,7 +5667,7 @@ var main = {
                       "isArray": false,
                       "name": "RootPropertyReference",
                       "link": {
-                        "id": "162",
+                        "id": "170",
                         "type": "class",
                         "slug": "rootpropertyreference",
                         "sources": [
@@ -5538,7 +5675,7 @@ var main = {
                             "fileName": "references.ts",
                             "line": 84,
                             "character": 34,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L84"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L84"
                           }
                         ],
                         "parent": {
@@ -5553,7 +5690,7 @@ var main = {
                       "isArray": false,
                       "name": "NestedPropertyReference",
                       "link": {
-                        "id": "181",
+                        "id": "189",
                         "type": "class",
                         "slug": "nestedpropertyreference",
                         "sources": [
@@ -5561,7 +5698,7 @@ var main = {
                             "fileName": "references.ts",
                             "line": 102,
                             "character": 36,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L102"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L102"
                           }
                         ],
                         "parent": {
@@ -5615,7 +5752,7 @@ var main = {
       }
     },
     {
-      "id": "162",
+      "id": "170",
       "type": "class",
       "attributes": {
         "name": "RootPropertyReference",
@@ -5645,7 +5782,7 @@ var main = {
             "isArray": false,
             "name": "PropertyReference",
             "link": {
-              "id": "148",
+              "id": "156",
               "type": "class",
               "slug": "propertyreference",
               "sources": [
@@ -5653,7 +5790,7 @@ var main = {
                   "fileName": "references.ts",
                   "line": 65,
                   "character": 39,
-                  "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L65"
+                  "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L65"
                 }
               ],
               "parent": {
@@ -5670,7 +5807,7 @@ var main = {
             "fileName": "references.ts",
             "line": 84,
             "character": 34,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L84"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L84"
           }
         ],
         "constructors": [
@@ -5695,7 +5832,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 87,
                 "character": 31,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L87"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L87"
               }
             ],
             "constructorSignatures": [
@@ -5712,14 +5849,14 @@ var main = {
                     "fileName": "references.ts",
                     "line": 87,
                     "character": 31,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L87"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L87"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "RootPropertyReference",
                   "link": {
-                    "id": "162",
+                    "id": "170",
                     "type": "class",
                     "slug": "rootpropertyreference",
                     "sources": [
@@ -5727,7 +5864,7 @@ var main = {
                         "fileName": "references.ts",
                         "line": 84,
                         "character": 34,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L84"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L84"
                       }
                     ],
                     "parent": {
@@ -5798,7 +5935,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 86,
                 "character": 22,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L86"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L86"
               }
             ],
             "typeInfo": {
@@ -5827,7 +5964,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 87,
                 "character": 22,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L87"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L87"
               }
             ],
             "typeInfo": {
@@ -5856,7 +5993,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 85,
                 "character": 5,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L85"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L85"
               }
             ],
             "typeInfo": {
@@ -5887,7 +6024,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 97,
                 "character": 9,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L97"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L97"
               }
             ],
             "callSignatures": [
@@ -5904,7 +6041,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 97,
                     "character": 9,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L97"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L97"
                   }
                 ],
                 "typeInfo": {
@@ -5935,7 +6072,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 74,
                 "character": 5,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L74"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L74"
               }
             ],
             "callSignatures": [
@@ -5952,7 +6089,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 74,
                     "character": 5,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L74"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L74"
                   }
                 ],
                 "typeInfo": {
@@ -6001,7 +6138,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 39,
                 "character": 7,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L39"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L39"
               }
             ],
             "callSignatures": [
@@ -6018,7 +6155,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 39,
                     "character": 7,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L39"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L39"
                   }
                 ],
                 "typeInfo": {
@@ -6049,7 +6186,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 66,
                 "character": 15,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L66"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L66"
               }
             ],
             "callSignatures": [
@@ -6066,7 +6203,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 66,
                     "character": 15,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L66"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L66"
                   }
                 ],
                 "typeInfo": {
@@ -6077,7 +6214,7 @@ var main = {
                       "isArray": false,
                       "name": "RootPropertyReference",
                       "link": {
-                        "id": "162",
+                        "id": "170",
                         "type": "class",
                         "slug": "rootpropertyreference",
                         "sources": [
@@ -6085,7 +6222,7 @@ var main = {
                             "fileName": "references.ts",
                             "line": 84,
                             "character": 34,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L84"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L84"
                           }
                         ],
                         "parent": {
@@ -6100,7 +6237,7 @@ var main = {
                       "isArray": false,
                       "name": "NestedPropertyReference",
                       "link": {
-                        "id": "181",
+                        "id": "189",
                         "type": "class",
                         "slug": "nestedpropertyreference",
                         "sources": [
@@ -6108,7 +6245,7 @@ var main = {
                             "fileName": "references.ts",
                             "line": 102,
                             "character": 36,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L102"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L102"
                           }
                         ],
                         "parent": {
@@ -6162,7 +6299,7 @@ var main = {
       }
     },
     {
-      "id": "136",
+      "id": "144",
       "type": "class",
       "attributes": {
         "name": "RootReference",
@@ -6198,7 +6335,7 @@ var main = {
             "fileName": "references.ts",
             "line": 51,
             "character": 26,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L51"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L51"
           }
         ],
         "constructors": [
@@ -6247,7 +6384,7 @@ var main = {
                   "isArray": false,
                   "name": "RootReference",
                   "link": {
-                    "id": "136",
+                    "id": "144",
                     "type": "class",
                     "slug": "rootreference",
                     "sources": [
@@ -6255,7 +6392,7 @@ var main = {
                         "fileName": "references.ts",
                         "line": 51,
                         "character": 26,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L51"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L51"
                       }
                     ],
                     "parent": {
@@ -6310,7 +6447,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 52,
                 "character": 18,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L52"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L52"
               }
             ],
             "typeInfo": {
@@ -6399,7 +6536,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 54,
                 "character": 5,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L54"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L54"
               }
             ],
             "callSignatures": [
@@ -6416,14 +6553,14 @@ var main = {
                     "fileName": "references.ts",
                     "line": 54,
                     "character": 5,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L54"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L54"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "RootPropertyReference",
                   "link": {
-                    "id": "162",
+                    "id": "170",
                     "type": "class",
                     "slug": "rootpropertyreference",
                     "sources": [
@@ -6431,7 +6568,7 @@ var main = {
                         "fileName": "references.ts",
                         "line": 84,
                         "character": 34,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L84"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L84"
                       }
                     ],
                     "parent": {
@@ -6532,7 +6669,7 @@ var main = {
         },
         "alias": "untrackedpropertyerror",
         "fullName": "UntrackedPropertyError",
-        "hierarchy": "Class UntrackedPropertyError\n  Constructor constructor\n    ConstructorSignature new UntrackedPropertyError:UntrackedPropertyError\n      Parameter target:any\n      Parameter key:string\n      Parameter message:string\n  Property key:string\n  Property target:any\n  Property Error:ErrorConstructor\n  Property message:string\n  Property name:string\n  Property stack:string",
+        "hierarchy": "Class UntrackedPropertyError\n  Constructor constructor\n    ConstructorSignature new UntrackedPropertyError:UntrackedPropertyError\n      Parameter target:any\n      Parameter key:string\n      Parameter message:string\n  Property key:string\n  Property target:any\n  Property Error:ErrorConstructor\n  Property message:string\n  Property name:string\n  Property stack:string\n  Method for\n    CallSignature for:UntrackedPropertyError\n      Parameter obj:any\n      Parameter key:string",
         "kindString": "Class",
         "extendedTypes": [
           {
@@ -6545,7 +6682,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 211,
             "character": 35,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L211"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L211"
           }
         ],
         "constructors": [
@@ -6568,9 +6705,9 @@ var main = {
             "sources": [
               {
                 "fileName": "tracked.ts",
-                "line": 211,
-                "character": 51,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L211"
+                "line": 214,
+                "character": 3,
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L214"
               }
             ],
             "constructorSignatures": [
@@ -6585,9 +6722,9 @@ var main = {
                 "sources": [
                   {
                     "fileName": "tracked.ts",
-                    "line": 211,
-                    "character": 51,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L211"
+                    "line": 214,
+                    "character": 3,
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L214"
                   }
                 ],
                 "typeInfo": {
@@ -6602,7 +6739,7 @@ var main = {
                         "fileName": "tracked.ts",
                         "line": 211,
                         "character": 35,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L211"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L211"
                       }
                     ],
                     "parent": {
@@ -6687,9 +6824,9 @@ var main = {
             "sources": [
               {
                 "fileName": "tracked.ts",
-                "line": 212,
+                "line": 216,
                 "character": 44,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L212"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L216"
               }
             ],
             "typeInfo": {
@@ -6716,9 +6853,9 @@ var main = {
             "sources": [
               {
                 "fileName": "tracked.ts",
-                "line": 212,
+                "line": 216,
                 "character": 27,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L212"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L216"
               }
             ],
             "typeInfo": {
@@ -6842,11 +6979,114 @@ var main = {
               "name": "string"
             }
           }
+        ],
+        "methods": [
+          {
+            "name": "for",
+            "slug": "for",
+            "flags": {
+              "isExported": true,
+              "isExternal": true,
+              "isOptional": false,
+              "isPrivate": false,
+              "isPublic": false,
+              "isProtected": false,
+              "isStatic": true
+            },
+            "alias": "for",
+            "fullName": "UntrackedPropertyError.for",
+            "hierarchy": "Method for\n  CallSignature for:UntrackedPropertyError\n    Parameter obj:any\n    Parameter key:string",
+            "kindString": "Method",
+            "sources": [
+              {
+                "fileName": "tracked.ts",
+                "line": 212,
+                "character": 12,
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L212"
+              }
+            ],
+            "callSignatures": [
+              {
+                "name": "for",
+                "slug": "for-1",
+                "flags": {},
+                "alias": "for-1",
+                "fullName": "UntrackedPropertyError.for.for",
+                "hierarchy": "CallSignature for:UntrackedPropertyError\n  Parameter obj:any\n  Parameter key:string",
+                "kindString": "Call signature",
+                "sources": [
+                  {
+                    "fileName": "tracked.ts",
+                    "line": 212,
+                    "character": 12,
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L212"
+                  }
+                ],
+                "typeInfo": {
+                  "isArray": false,
+                  "name": "UntrackedPropertyError",
+                  "link": {
+                    "id": "18",
+                    "type": "class",
+                    "slug": "untrackedpropertyerror",
+                    "sources": [
+                      {
+                        "fileName": "tracked.ts",
+                        "line": 211,
+                        "character": 35,
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L211"
+                      }
+                    ],
+                    "parent": {
+                      "id": "0",
+                      "type": "0",
+                      "slug": "_glimmer_component",
+                      "sources": null
+                    }
+                  }
+                },
+                "parameters": [
+                  {
+                    "name": "obj",
+                    "slug": "obj",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "obj",
+                    "fullName": "UntrackedPropertyError.for.for.obj",
+                    "hierarchy": "Parameter obj:any",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "any"
+                    }
+                  },
+                  {
+                    "name": "key",
+                    "slug": "key-2",
+                    "flags": {
+                      "isOptional": false,
+                      "isRest": false
+                    },
+                    "alias": "key-2",
+                    "fullName": "UntrackedPropertyError.for.for.key",
+                    "hierarchy": "Parameter key:string",
+                    "kindString": "Parameter",
+                    "typeInfo": {
+                      "isArray": false,
+                      "name": "string"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
         ]
       }
     },
     {
-      "id": "201",
+      "id": "209",
       "type": "class",
       "attributes": {
         "name": "UpdatableReference",
@@ -6876,7 +7116,7 @@ var main = {
             "isArray": false,
             "name": "ComponentPathReference",
             "link": {
-              "id": "114",
+              "id": "122",
               "type": "class",
               "slug": "componentpathreference",
               "sources": [
@@ -6884,7 +7124,7 @@ var main = {
                   "fileName": "references.ts",
                   "line": 24,
                   "character": 44,
-                  "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L24"
+                  "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L24"
                 }
               ],
               "parent": {
@@ -6901,7 +7141,7 @@ var main = {
             "fileName": "references.ts",
             "line": 140,
             "character": 31,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L140"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L140"
           }
         ],
         "typeParameters": [
@@ -6937,7 +7177,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 142,
                 "character": 20,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L142"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L142"
               }
             ],
             "constructorSignatures": [
@@ -6954,14 +7194,14 @@ var main = {
                     "fileName": "references.ts",
                     "line": 142,
                     "character": 20,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L142"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L142"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "UpdatableReference",
                   "link": {
-                    "id": "201",
+                    "id": "209",
                     "type": "class",
                     "slug": "updatablereference",
                     "sources": [
@@ -6969,7 +7209,7 @@ var main = {
                         "fileName": "references.ts",
                         "line": 140,
                         "character": 31,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L140"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L140"
                       }
                     ],
                     "parent": {
@@ -7024,7 +7264,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 142,
                 "character": 16,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L142"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L142"
               }
             ],
             "typeInfo": {
@@ -7053,7 +7293,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 141,
                 "character": 12,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L141"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L141"
               }
             ],
             "typeInfo": {
@@ -7084,7 +7324,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 28,
                 "character": 5,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L28"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L28"
               }
             ],
             "callSignatures": [
@@ -7101,7 +7341,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 28,
                     "character": 5,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L28"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L28"
                   }
                 ],
                 "typeInfo": {
@@ -7150,7 +7390,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 155,
                 "character": 8,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L155"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L155"
               }
             ],
             "callSignatures": [
@@ -7167,7 +7407,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 155,
                     "character": 8,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L155"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L155"
                   }
                 ],
                 "typeInfo": {
@@ -7216,7 +7456,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 151,
                 "character": 7,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L151"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L151"
               }
             ],
             "callSignatures": [
@@ -7233,7 +7473,7 @@ var main = {
                     "fileName": "references.ts",
                     "line": 151,
                     "character": 7,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L151"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L151"
                   }
                 ],
                 "typeInfo": {
@@ -7247,7 +7487,7 @@ var main = {
       }
     },
     {
-      "id": "110",
+      "id": "118",
       "type": "interface",
       "attributes": {
         "name": "ComponentFactory",
@@ -7269,9 +7509,9 @@ var main = {
         "sources": [
           {
             "fileName": "component.ts",
-            "line": 201,
+            "line": 210,
             "character": 33,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L201"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L210"
           }
         ],
         "methods": [
@@ -7294,9 +7534,9 @@ var main = {
             "sources": [
               {
                 "fileName": "component.ts",
-                "line": 202,
+                "line": 211,
                 "character": 8,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L202"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L211"
               }
             ],
             "callSignatures": [
@@ -7311,16 +7551,16 @@ var main = {
                 "sources": [
                   {
                     "fileName": "component.ts",
-                    "line": 202,
+                    "line": 211,
                     "character": 8,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L202"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L211"
                   }
                 ],
                 "typeInfo": {
                   "isArray": false,
                   "name": "Component",
                   "link": {
-                    "id": "94",
+                    "id": "98",
                     "type": "class",
                     "slug": "component",
                     "sources": [
@@ -7328,7 +7568,7 @@ var main = {
                         "fileName": "component.ts",
                         "line": 127,
                         "character": 15,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component.ts#L127"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component.ts#L127"
                       }
                     ],
                     "parent": {
@@ -7364,7 +7604,7 @@ var main = {
       }
     },
     {
-      "id": "233",
+      "id": "241",
       "type": "interface",
       "attributes": {
         "name": "ConstructorOptions",
@@ -7388,7 +7628,7 @@ var main = {
             "fileName": "component-manager.ts",
             "line": 23,
             "character": 35,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L23"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L23"
           }
         ],
         "properties": [
@@ -7413,7 +7653,7 @@ var main = {
                 "fileName": "component-manager.ts",
                 "line": 24,
                 "character": 5,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/component-manager.ts#L24"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/component-manager.ts#L24"
               }
             ],
             "typeInfo": {
@@ -7449,7 +7689,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 176,
             "character": 29,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L176"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L176"
           }
         ],
         "indexSignatures": [
@@ -7466,7 +7706,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 176,
                 "character": 31,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L176"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L176"
               }
             ],
             "typeInfo": {
@@ -7496,7 +7736,7 @@ var main = {
       }
     },
     {
-      "id": "30",
+      "id": "34",
       "type": "interface",
       "attributes": {
         "name": "UntrackedPropertyErrorThrower",
@@ -7518,9 +7758,9 @@ var main = {
         "sources": [
           {
             "fileName": "tracked.ts",
-            "line": 221,
+            "line": 225,
             "character": 46,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L221"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L225"
           }
         ],
         "comment": {
@@ -7539,9 +7779,9 @@ var main = {
             "sources": [
               {
                 "fileName": "tracked.ts",
-                "line": 221,
+                "line": 225,
                 "character": 48,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L221"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L225"
               }
             ],
             "comment": {
@@ -7591,7 +7831,7 @@ var main = {
       }
     },
     {
-      "id": "229",
+      "id": "237",
       "type": "function",
       "attributes": {
         "name": "buildError",
@@ -7615,7 +7855,7 @@ var main = {
             "fileName": "references.ts",
             "line": 79,
             "character": 19,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L79"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L79"
           }
         ],
         "callSignatures": [
@@ -7632,7 +7872,7 @@ var main = {
                 "fileName": "references.ts",
                 "line": 79,
                 "character": 19,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/references.ts#L79"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/references.ts#L79"
               }
             ],
             "typeInfo": {
@@ -7678,7 +7918,7 @@ var main = {
       }
     },
     {
-      "id": "55",
+      "id": "59",
       "type": "function",
       "attributes": {
         "name": "combinatorForComputedProperties",
@@ -7702,7 +7942,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 161,
             "character": 40,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L161"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L161"
           }
         ],
         "callSignatures": [
@@ -7719,7 +7959,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 161,
                 "character": 40,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L161"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L161"
               }
             ],
             "typeInfo": {
@@ -7750,7 +7990,7 @@ var main = {
                         "fileName": "tracked.ts",
                         "line": 103,
                         "character": 25,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L103"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L103"
                       }
                     ],
                     "parent": {
@@ -7777,7 +8017,7 @@ var main = {
                   "isArray": false,
                   "name": "Key",
                   "link": {
-                    "id": "50",
+                    "id": "54",
                     "type": "type-alias",
                     "slug": "key",
                     "sources": [
@@ -7785,7 +8025,7 @@ var main = {
                         "fileName": "tracked.ts",
                         "line": 52,
                         "character": 15,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L52"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L52"
                       }
                     ],
                     "parent": {
@@ -7816,7 +8056,7 @@ var main = {
                       "isArray": true,
                       "name": "Key",
                       "link": {
-                        "id": "50",
+                        "id": "54",
                         "type": "type-alias",
                         "slug": "key",
                         "sources": [
@@ -7824,7 +8064,7 @@ var main = {
                             "fileName": "tracked.ts",
                             "line": 52,
                             "character": 15,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L52"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L52"
                           }
                         ],
                         "parent": {
@@ -7848,7 +8088,7 @@ var main = {
       }
     },
     {
-      "id": "80",
+      "id": "84",
       "type": "function",
       "attributes": {
         "name": "defaultErrorThrower",
@@ -7870,9 +8110,9 @@ var main = {
         "sources": [
           {
             "fileName": "tracked.ts",
-            "line": 225,
+            "line": 229,
             "character": 28,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L225"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L229"
           }
         ],
         "callSignatures": [
@@ -7887,9 +8127,9 @@ var main = {
             "sources": [
               {
                 "fileName": "tracked.ts",
-                "line": 225,
+                "line": 229,
                 "character": 28,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L225"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L229"
               }
             ],
             "typeInfo": {
@@ -7904,7 +8144,7 @@ var main = {
                     "fileName": "tracked.ts",
                     "line": 211,
                     "character": 35,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L211"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L211"
                   }
                 ],
                 "parent": {
@@ -7954,7 +8194,7 @@ var main = {
       }
     },
     {
-      "id": "44",
+      "id": "48",
       "type": "function",
       "attributes": {
         "name": "descriptorForTrackedComputedProperty",
@@ -7978,7 +8218,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 35,
             "character": 45,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L35"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L35"
           }
         ],
         "callSignatures": [
@@ -7995,7 +8235,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 35,
                 "character": 45,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L35"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L35"
               }
             ],
             "typeInfo": {
@@ -8073,7 +8313,7 @@ var main = {
       }
     },
     {
-      "id": "65",
+      "id": "69",
       "type": "function",
       "attributes": {
         "name": "hasOwnProperty",
@@ -8097,7 +8337,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 192,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L192"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L192"
           }
         ],
         "callSignatures": [
@@ -8114,7 +8354,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 192,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L192"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L192"
               }
             ],
             "typeInfo": {
@@ -8160,7 +8400,7 @@ var main = {
       }
     },
     {
-      "id": "76",
+      "id": "80",
       "type": "function",
       "attributes": {
         "name": "hasTag",
@@ -8184,7 +8424,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 202,
             "character": 22,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L202"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L202"
           }
         ],
         "callSignatures": [
@@ -8201,7 +8441,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 202,
                 "character": 22,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L202"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L202"
               }
             ],
             "typeInfo": {
@@ -8247,7 +8487,7 @@ var main = {
       }
     },
     {
-      "id": "89",
+      "id": "93",
       "type": "function",
       "attributes": {
         "name": "installDevModeErrorInterceptor",
@@ -8269,9 +8509,9 @@ var main = {
         "sources": [
           {
             "fileName": "tracked.ts",
-            "line": 247,
+            "line": 251,
             "character": 39,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L247"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L251"
           }
         ],
         "callSignatures": [
@@ -8286,9 +8526,9 @@ var main = {
             "sources": [
               {
                 "fileName": "tracked.ts",
-                "line": 247,
+                "line": 251,
                 "character": 39,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L247"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L251"
               }
             ],
             "comment": {
@@ -8347,15 +8587,15 @@ var main = {
                   "isArray": false,
                   "name": "UntrackedPropertyErrorThrower",
                   "link": {
-                    "id": "30",
+                    "id": "34",
                     "type": "interface",
                     "slug": "untrackedpropertyerrorthrower",
                     "sources": [
                       {
                         "fileName": "tracked.ts",
-                        "line": 221,
+                        "line": 225,
                         "character": 46,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L221"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L225"
                       }
                     ],
                     "parent": {
@@ -8373,7 +8613,7 @@ var main = {
       }
     },
     {
-      "id": "51",
+      "id": "55",
       "type": "function",
       "attributes": {
         "name": "installTrackedProperty",
@@ -8397,7 +8637,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 63,
             "character": 31,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L63"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L63"
           }
         ],
         "callSignatures": [
@@ -8414,7 +8654,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 63,
                 "character": 31,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L63"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L63"
               }
             ],
             "comment": {
@@ -8457,7 +8697,7 @@ var main = {
                   "isArray": false,
                   "name": "Key",
                   "link": {
-                    "id": "50",
+                    "id": "54",
                     "type": "type-alias",
                     "slug": "key",
                     "sources": [
@@ -8465,7 +8705,7 @@ var main = {
                         "fileName": "tracked.ts",
                         "line": 52,
                         "character": 15,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L52"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L52"
                       }
                     ],
                     "parent": {
@@ -8483,7 +8723,7 @@ var main = {
       }
     },
     {
-      "id": "61",
+      "id": "65",
       "type": "function",
       "attributes": {
         "name": "metaFor",
@@ -8507,7 +8747,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 182,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L182"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L182"
           }
         ],
         "callSignatures": [
@@ -8524,7 +8764,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 182,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L182"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L182"
               }
             ],
             "typeInfo": {
@@ -8539,7 +8779,7 @@ var main = {
                     "fileName": "tracked.ts",
                     "line": 103,
                     "character": 25,
-                    "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L103"
+                    "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L103"
                   }
                 ],
                 "parent": {
@@ -8573,7 +8813,7 @@ var main = {
       }
     },
     {
-      "id": "69",
+      "id": "73",
       "type": "function",
       "attributes": {
         "name": "propertyDidChange",
@@ -8597,7 +8837,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 196,
             "character": 21,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L196"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L196"
           }
         ],
         "callSignatures": [
@@ -8614,7 +8854,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 196,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L196"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L196"
               }
             ],
             "typeInfo": {
@@ -8626,7 +8866,7 @@ var main = {
       }
     },
     {
-      "id": "71",
+      "id": "75",
       "type": "function",
       "attributes": {
         "name": "setPropertyDidChange",
@@ -8650,7 +8890,7 @@ var main = {
             "fileName": "tracked.ts",
             "line": 198,
             "character": 36,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L198"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L198"
           }
         ],
         "callSignatures": [
@@ -8667,7 +8907,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 198,
                 "character": 36,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L198"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L198"
               }
             ],
             "typeInfo": {
@@ -8690,7 +8930,7 @@ var main = {
                   "isArray": false,
                   "name": "function",
                   "declaration": {
-                    "id": "74",
+                    "id": "78",
                     "type": "type-literal",
                     "attributes": {
                       "name": "__type",
@@ -8705,7 +8945,7 @@ var main = {
                           "fileName": "tracked.ts",
                           "line": 198,
                           "character": 40,
-                          "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L198"
+                          "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L198"
                         }
                       ],
                       "callSignatures": [
@@ -8722,7 +8962,7 @@ var main = {
                               "fileName": "tracked.ts",
                               "line": 198,
                               "character": 40,
-                              "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L198"
+                              "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L198"
                             }
                           ],
                           "typeInfo": {
@@ -8748,7 +8988,7 @@ var main = {
                         "fileName": "tracked.ts",
                         "line": 198,
                         "character": 40,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L198"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L198"
                       }
                     ],
                     "callSignatures": [
@@ -8765,7 +9005,7 @@ var main = {
                             "fileName": "tracked.ts",
                             "line": 198,
                             "character": 40,
-                            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L198"
+                            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L198"
                           }
                         ],
                         "typeInfo": {
@@ -8783,7 +9023,7 @@ var main = {
       }
     },
     {
-      "id": "84",
+      "id": "88",
       "type": "function",
       "attributes": {
         "name": "tagForProperty",
@@ -8805,9 +9045,9 @@ var main = {
         "sources": [
           {
             "fileName": "tracked.ts",
-            "line": 229,
+            "line": 233,
             "character": 30,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L229"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L233"
           }
         ],
         "callSignatures": [
@@ -8822,9 +9062,9 @@ var main = {
             "sources": [
               {
                 "fileName": "tracked.ts",
-                "line": 229,
+                "line": 233,
                 "character": 30,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L229"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L233"
               }
             ],
             "typeInfo": {
@@ -8879,15 +9119,15 @@ var main = {
                   "isArray": false,
                   "name": "UntrackedPropertyErrorThrower",
                   "link": {
-                    "id": "30",
+                    "id": "34",
                     "type": "interface",
                     "slug": "untrackedpropertyerrorthrower",
                     "sources": [
                       {
                         "fileName": "tracked.ts",
-                        "line": 221,
+                        "line": 225,
                         "character": 46,
-                        "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L221"
+                        "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L225"
                       }
                     ],
                     "parent": {
@@ -8905,7 +9145,7 @@ var main = {
       }
     },
     {
-      "id": "34",
+      "id": "38",
       "type": "function",
       "attributes": {
         "name": "tracked",
@@ -8929,25 +9169,25 @@ var main = {
             "fileName": "tracked.ts",
             "line": 16,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L16"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L16"
           },
           {
             "fileName": "tracked.ts",
             "line": 17,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L17"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L17"
           },
           {
             "fileName": "tracked.ts",
             "line": 18,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L18"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L18"
           },
           {
             "fileName": "tracked.ts",
             "line": 19,
             "character": 23,
-            "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L19"
+            "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L19"
           }
         ],
         "callSignatures": [
@@ -8964,7 +9204,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 16,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L16"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L16"
               }
             ],
             "comment": {
@@ -9018,7 +9258,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 17,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L17"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L17"
               }
             ],
             "typeInfo": {
@@ -9073,7 +9313,7 @@ var main = {
                 "fileName": "tracked.ts",
                 "line": 18,
                 "character": 23,
-                "url": "https://github.com/glimmerjs/glimmer-component/blob/cef9070/src/tracked.ts#L18"
+                "url": "https://github.com/glimmerjs/glimmer-component/blob/41fb764/src/tracked.ts#L18"
               }
             ],
             "typeInfo": {
@@ -9178,7 +9418,7 @@ var main = {
             "@glimmer/util": "^0.23.0-alpha.6"
           },
           "devDependencies": {
-            "@glimmer/build": "^0.6.0",
+            "@glimmer/build": "^0.6.2",
             "@glimmer/compiler": "^0.23.0-alpha.6",
             "@glimmer/wire-format": "^0.23.0-alpha.6",
             "ember-cli": "^2.12.0",
@@ -9222,7 +9462,7 @@ var main = {
               "isArray": false,
               "name": "function",
               "declaration": {
-                "id": "671",
+                "id": "680",
                 "type": "type-literal",
                 "attributes": {
                   "name": "__type",
@@ -9405,7 +9645,7 @@ var main = {
               "isArray": false,
               "name": "function",
               "declaration": {
-                "id": "533",
+                "id": "542",
                 "type": "type-literal",
                 "attributes": {
                   "name": "__type",
@@ -9619,7 +9859,7 @@ var main = {
               "isArray": false,
               "name": "EmptyIterator",
               "link": {
-                "id": "410",
+                "id": "419",
                 "type": "class",
                 "slug": "emptyiterator",
                 "sources": [
@@ -9631,7 +9871,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "317",
+                  "id": "326",
                   "type": "0",
                   "slug": "_glimmer_application",
                   "sources": null
@@ -9698,7 +9938,7 @@ var main = {
                   "isArray": false,
                   "name": "buildAction",
                   "link": {
-                    "id": "491",
+                    "id": "500",
                     "type": "function",
                     "slug": "buildaction",
                     "sources": [
@@ -9710,7 +9950,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -9732,51 +9972,51 @@ var main = {
           "data": [
             {
               "type": "class",
-              "id": "698"
+              "id": "707"
             },
             {
               "type": "class",
-              "id": "318"
+              "id": "327"
             },
             {
               "type": "class",
-              "id": "384"
+              "id": "393"
             },
             {
               "type": "class",
-              "id": "543"
+              "id": "552"
             },
             {
               "type": "class",
-              "id": "456"
+              "id": "465"
             },
             {
               "type": "class",
-              "id": "370"
+              "id": "379"
             },
             {
               "type": "class",
-              "id": "410"
+              "id": "419"
             },
             {
               "type": "class",
-              "id": "554"
+              "id": "563"
             },
             {
               "type": "class",
-              "id": "519"
+              "id": "528"
             },
             {
               "type": "class",
-              "id": "415"
+              "id": "424"
             },
             {
               "type": "class",
-              "id": "396"
+              "id": "405"
             },
             {
               "type": "class",
-              "id": "505"
+              "id": "514"
             }
           ]
         },
@@ -9784,27 +10024,27 @@ var main = {
           "data": [
             {
               "type": "interface",
-              "id": "693"
+              "id": "702"
             },
             {
               "type": "interface",
-              "id": "685"
+              "id": "694"
             },
             {
               "type": "interface",
-              "id": "450"
+              "id": "459"
             },
             {
               "type": "interface",
-              "id": "540"
+              "id": "549"
             },
             {
               "type": "interface",
-              "id": "445"
+              "id": "454"
             },
             {
               "type": "interface",
-              "id": "688"
+              "id": "697"
             }
           ]
         },
@@ -9812,58 +10052,58 @@ var main = {
           "data": [
             {
               "type": "function",
-              "id": "470"
+              "id": "479"
             },
             {
               "type": "function",
-              "id": "491"
+              "id": "500"
             },
             {
               "type": "function",
-              "id": "537"
+              "id": "546"
             },
             {
               "type": "function",
-              "id": "682"
+              "id": "691"
             },
             {
               "type": "function",
-              "id": "499"
+              "id": "508"
             },
             {
               "type": "function",
-              "id": "502"
+              "id": "511"
             },
             {
               "type": "function",
-              "id": "483"
+              "id": "492"
             },
             {
               "type": "function",
-              "id": "488"
+              "id": "497"
             },
             {
               "type": "function",
-              "id": "477"
+              "id": "486"
             },
             {
               "type": "function",
-              "id": "367"
+              "id": "376"
             },
             {
               "type": "function",
-              "id": "678"
+              "id": "687"
             },
             {
               "type": "function",
-              "id": "495"
+              "id": "504"
             }
           ]
         }
       }
     },
     {
-      "id": "698",
+      "id": "707",
       "type": "class",
       "attributes": {
         "name": "Application",
@@ -9942,7 +10182,7 @@ var main = {
                   "isArray": false,
                   "name": "Application",
                   "link": {
-                    "id": "698",
+                    "id": "707",
                     "type": "class",
                     "slug": "application",
                     "sources": [
@@ -9954,7 +10194,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -9977,7 +10217,7 @@ var main = {
                       "isArray": false,
                       "name": "ApplicationOptions",
                       "link": {
-                        "id": "685",
+                        "id": "694",
                         "type": "interface",
                         "slug": "applicationoptions",
                         "sources": [
@@ -9989,7 +10229,7 @@ var main = {
                           }
                         ],
                         "parent": {
-                          "id": "317",
+                          "id": "326",
                           "type": "0",
                           "slug": "_glimmer_application",
                           "sources": null
@@ -10089,7 +10329,7 @@ var main = {
               "isArray": true,
               "name": "Initializer",
               "link": {
-                "id": "688",
+                "id": "697",
                 "type": "interface",
                 "slug": "initializer",
                 "sources": [
@@ -10101,7 +10341,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "317",
+                  "id": "326",
                   "type": "0",
                   "slug": "_glimmer_application",
                   "sources": null
@@ -10228,7 +10468,7 @@ var main = {
               "isArray": true,
               "name": "AppRoot",
               "link": {
-                "id": "693",
+                "id": "702",
                 "type": "interface",
                 "slug": "approot",
                 "sources": [
@@ -10240,7 +10480,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "317",
+                  "id": "326",
                   "type": "0",
                   "slug": "_glimmer_application",
                   "sources": null
@@ -10338,7 +10578,7 @@ var main = {
               "isArray": false,
               "name": "Environment",
               "link": {
-                "id": "554",
+                "id": "563",
                 "type": "class",
                 "slug": "environment",
                 "sources": [
@@ -10350,7 +10590,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "317",
+                  "id": "326",
                   "type": "0",
                   "slug": "_glimmer_application",
                   "sources": null
@@ -10530,7 +10770,7 @@ var main = {
       }
     },
     {
-      "id": "318",
+      "id": "327",
       "type": "class",
       "attributes": {
         "name": "ApplicationRegistry",
@@ -10609,7 +10849,7 @@ var main = {
                   "isArray": false,
                   "name": "ApplicationRegistry",
                   "link": {
-                    "id": "318",
+                    "id": "327",
                     "type": "class",
                     "slug": "applicationregistry",
                     "sources": [
@@ -10621,7 +10861,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -11601,7 +11841,7 @@ var main = {
       }
     },
     {
-      "id": "384",
+      "id": "393",
       "type": "class",
       "attributes": {
         "name": "ArrayIterator",
@@ -11680,7 +11920,7 @@ var main = {
                   "isArray": false,
                   "name": "ArrayIterator",
                   "link": {
-                    "id": "384",
+                    "id": "393",
                     "type": "class",
                     "slug": "arrayiterator",
                     "sources": [
@@ -11692,7 +11932,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -11731,7 +11971,7 @@ var main = {
                       "isArray": false,
                       "name": "KeyFor",
                       "link": {
-                        "id": "439",
+                        "id": "448",
                         "type": "type-alias",
                         "slug": "keyfor",
                         "sources": [
@@ -11749,7 +11989,7 @@ var main = {
                           }
                         ],
                         "parent": {
-                          "id": "317",
+                          "id": "326",
                           "type": "0",
                           "slug": "_glimmer_application",
                           "sources": null
@@ -11820,7 +12060,7 @@ var main = {
               "isArray": false,
               "name": "KeyFor",
               "link": {
-                "id": "439",
+                "id": "448",
                 "type": "type-alias",
                 "slug": "keyfor",
                 "sources": [
@@ -11838,7 +12078,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "317",
+                  "id": "326",
                   "type": "0",
                   "slug": "_glimmer_application",
                   "sources": null
@@ -11977,7 +12217,7 @@ var main = {
       }
     },
     {
-      "id": "543",
+      "id": "552",
       "type": "class",
       "attributes": {
         "name": "DefaultComponentDefinition",
@@ -12056,7 +12296,7 @@ var main = {
                   "isArray": false,
                   "name": "DefaultComponentDefinition",
                   "link": {
-                    "id": "543",
+                    "id": "552",
                     "type": "class",
                     "slug": "defaultcomponentdefinition",
                     "sources": [
@@ -12068,7 +12308,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -12123,12 +12363,12 @@ var main = {
                       "isArray": false,
                       "name": "ComponentClass",
                       "link": {
-                        "id": "553",
+                        "id": "562",
                         "type": "parameter",
                         "slug": "componentclass",
                         "sources": null,
                         "parent": {
-                          "id": "550",
+                          "id": "559",
                           "type": "constructor-signature",
                           "slug": "new_defaultcomponentdefinition",
                           "sources": [
@@ -12177,7 +12417,7 @@ var main = {
               "isArray": false,
               "name": "ComponentClass",
               "link": {
-                "id": "548",
+                "id": "557",
                 "type": "property",
                 "slug": "componentclass-1",
                 "sources": [
@@ -12189,7 +12429,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "543",
+                  "id": "552",
                   "type": "class",
                   "slug": "defaultcomponentdefinition",
                   "sources": [
@@ -12316,7 +12556,7 @@ var main = {
       }
     },
     {
-      "id": "456",
+      "id": "465",
       "type": "class",
       "attributes": {
         "name": "DynamicComponentReference",
@@ -12395,7 +12635,7 @@ var main = {
                   "isArray": false,
                   "name": "DynamicComponentReference",
                   "link": {
-                    "id": "456",
+                    "id": "465",
                     "type": "class",
                     "slug": "dynamiccomponentreference",
                     "sources": [
@@ -12407,7 +12647,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -12687,7 +12927,7 @@ var main = {
       }
     },
     {
-      "id": "370",
+      "id": "379",
       "type": "class",
       "attributes": {
         "name": "DynamicScope",
@@ -12766,7 +13006,7 @@ var main = {
                   "isArray": false,
                   "name": "DynamicScope",
                   "link": {
-                    "id": "370",
+                    "id": "379",
                     "type": "class",
                     "slug": "dynamicscope",
                     "sources": [
@@ -12778,7 +13018,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -12884,7 +13124,7 @@ var main = {
                   "isArray": false,
                   "name": "DynamicScope",
                   "link": {
-                    "id": "370",
+                    "id": "379",
                     "type": "class",
                     "slug": "dynamicscope",
                     "sources": [
@@ -12896,7 +13136,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -13058,7 +13298,7 @@ var main = {
       }
     },
     {
-      "id": "410",
+      "id": "419",
       "type": "class",
       "attributes": {
         "name": "EmptyIterator",
@@ -13192,7 +13432,7 @@ var main = {
       }
     },
     {
-      "id": "554",
+      "id": "563",
       "type": "class",
       "attributes": {
         "name": "Environment",
@@ -13271,7 +13511,7 @@ var main = {
                   "isArray": false,
                   "name": "Environment",
                   "link": {
-                    "id": "554",
+                    "id": "563",
                     "type": "class",
                     "slug": "environment",
                     "sources": [
@@ -13283,7 +13523,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -13306,7 +13546,7 @@ var main = {
                       "isArray": false,
                       "name": "EnvironmentOptions",
                       "link": {
-                        "id": "540",
+                        "id": "549",
                         "type": "interface",
                         "slug": "environmentoptions",
                         "sources": [
@@ -13318,7 +13558,7 @@ var main = {
                           }
                         ],
                         "parent": {
-                          "id": "317",
+                          "id": "326",
                           "type": "0",
                           "slug": "_glimmer_application",
                           "sources": null
@@ -14934,7 +15174,7 @@ var main = {
                   "isArray": false,
                   "name": "object",
                   "declaration": {
-                    "id": "616",
+                    "id": "625",
                     "type": "type-literal",
                     "attributes": {
                       "name": "__type",
@@ -15208,7 +15448,7 @@ var main = {
                   "isArray": false,
                   "name": "object",
                   "declaration": {
-                    "id": "668",
+                    "id": "677",
                     "type": "type-literal",
                     "attributes": {
                       "name": "__type",
@@ -15930,7 +16170,7 @@ var main = {
                   "isArray": false,
                   "name": "Environment",
                   "link": {
-                    "id": "554",
+                    "id": "563",
                     "type": "class",
                     "slug": "environment",
                     "sources": [
@@ -15942,7 +16182,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -15965,7 +16205,7 @@ var main = {
                       "isArray": false,
                       "name": "EnvironmentOptions",
                       "link": {
-                        "id": "540",
+                        "id": "549",
                         "type": "interface",
                         "slug": "environmentoptions",
                         "sources": [
@@ -15977,7 +16217,7 @@ var main = {
                           }
                         ],
                         "parent": {
-                          "id": "317",
+                          "id": "326",
                           "type": "0",
                           "slug": "_glimmer_application",
                           "sources": null
@@ -15993,7 +16233,7 @@ var main = {
       }
     },
     {
-      "id": "519",
+      "id": "528",
       "type": "class",
       "attributes": {
         "name": "HelperReference",
@@ -16072,7 +16312,7 @@ var main = {
                   "isArray": false,
                   "name": "HelperReference",
                   "link": {
-                    "id": "519",
+                    "id": "528",
                     "type": "class",
                     "slug": "helperreference",
                     "sources": [
@@ -16084,7 +16324,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -16107,7 +16347,7 @@ var main = {
                       "isArray": false,
                       "name": "UserHelper",
                       "link": {
-                        "id": "532",
+                        "id": "541",
                         "type": "type-alias",
                         "slug": "userhelper",
                         "sources": [
@@ -16119,7 +16359,7 @@ var main = {
                           }
                         ],
                         "parent": {
-                          "id": "317",
+                          "id": "326",
                           "type": "0",
                           "slug": "_glimmer_application",
                           "sources": null
@@ -16206,7 +16446,7 @@ var main = {
               "isArray": false,
               "name": "UserHelper",
               "link": {
-                "id": "532",
+                "id": "541",
                 "type": "type-alias",
                 "slug": "userhelper",
                 "sources": [
@@ -16218,7 +16458,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "317",
+                  "id": "326",
                   "type": "0",
                   "slug": "_glimmer_application",
                   "sources": null
@@ -16302,7 +16542,7 @@ var main = {
                   "isArray": false,
                   "name": "SimplePathReference",
                   "link": {
-                    "id": "505",
+                    "id": "514",
                     "type": "class",
                     "slug": "simplepathreference",
                     "sources": [
@@ -16314,7 +16554,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -16394,7 +16634,7 @@ var main = {
       }
     },
     {
-      "id": "415",
+      "id": "424",
       "type": "class",
       "attributes": {
         "name": "Iterable",
@@ -16473,7 +16713,7 @@ var main = {
                   "isArray": false,
                   "name": "Iterable",
                   "link": {
-                    "id": "415",
+                    "id": "424",
                     "type": "class",
                     "slug": "iterable",
                     "sources": [
@@ -16485,7 +16725,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -16524,7 +16764,7 @@ var main = {
                       "isArray": false,
                       "name": "KeyFor",
                       "link": {
-                        "id": "439",
+                        "id": "448",
                         "type": "type-alias",
                         "slug": "keyfor",
                         "sources": [
@@ -16542,7 +16782,7 @@ var main = {
                           }
                         ],
                         "parent": {
-                          "id": "317",
+                          "id": "326",
                           "type": "0",
                           "slug": "_glimmer_application",
                           "sources": null
@@ -16584,7 +16824,7 @@ var main = {
               "isArray": false,
               "name": "KeyFor",
               "link": {
-                "id": "439",
+                "id": "448",
                 "type": "type-alias",
                 "slug": "keyfor",
                 "sources": [
@@ -16602,7 +16842,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "317",
+                  "id": "326",
                   "type": "0",
                   "slug": "_glimmer_application",
                   "sources": null
@@ -17018,7 +17258,7 @@ var main = {
       }
     },
     {
-      "id": "396",
+      "id": "405",
       "type": "class",
       "attributes": {
         "name": "ObjectKeysIterator",
@@ -17097,7 +17337,7 @@ var main = {
                   "isArray": false,
                   "name": "ObjectKeysIterator",
                   "link": {
-                    "id": "396",
+                    "id": "405",
                     "type": "class",
                     "slug": "objectkeysiterator",
                     "sources": [
@@ -17109,7 +17349,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -17164,7 +17404,7 @@ var main = {
                       "isArray": false,
                       "name": "KeyFor",
                       "link": {
-                        "id": "439",
+                        "id": "448",
                         "type": "type-alias",
                         "slug": "keyfor",
                         "sources": [
@@ -17182,7 +17422,7 @@ var main = {
                           }
                         ],
                         "parent": {
-                          "id": "317",
+                          "id": "326",
                           "type": "0",
                           "slug": "_glimmer_application",
                           "sources": null
@@ -17224,7 +17464,7 @@ var main = {
               "isArray": false,
               "name": "KeyFor",
               "link": {
-                "id": "439",
+                "id": "448",
                 "type": "type-alias",
                 "slug": "keyfor",
                 "sources": [
@@ -17242,7 +17482,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "317",
+                  "id": "326",
                   "type": "0",
                   "slug": "_glimmer_application",
                   "sources": null
@@ -17439,7 +17679,7 @@ var main = {
       }
     },
     {
-      "id": "505",
+      "id": "514",
       "type": "class",
       "attributes": {
         "name": "SimplePathReference",
@@ -17529,7 +17769,7 @@ var main = {
                   "isArray": false,
                   "name": "SimplePathReference",
                   "link": {
-                    "id": "505",
+                    "id": "514",
                     "type": "class",
                     "slug": "simplepathreference",
                     "sources": [
@@ -17541,7 +17781,7 @@ var main = {
                       }
                     ],
                     "parent": {
-                      "id": "317",
+                      "id": "326",
                       "type": "0",
                       "slug": "_glimmer_application",
                       "sources": null
@@ -17794,7 +18034,7 @@ var main = {
       }
     },
     {
-      "id": "693",
+      "id": "702",
       "type": "interface",
       "attributes": {
         "name": "AppRoot",
@@ -17952,7 +18192,7 @@ var main = {
       }
     },
     {
-      "id": "685",
+      "id": "694",
       "type": "interface",
       "attributes": {
         "name": "ApplicationOptions",
@@ -18042,7 +18282,7 @@ var main = {
       }
     },
     {
-      "id": "450",
+      "id": "459",
       "type": "interface",
       "attributes": {
         "name": "ComponentDefinitionCreator",
@@ -18172,7 +18412,7 @@ var main = {
       }
     },
     {
-      "id": "540",
+      "id": "549",
       "type": "interface",
       "attributes": {
         "name": "EnvironmentOptions",
@@ -18262,7 +18502,7 @@ var main = {
       }
     },
     {
-      "id": "445",
+      "id": "454",
       "type": "interface",
       "attributes": {
         "name": "ExtendedTemplateMeta",
@@ -18416,7 +18656,7 @@ var main = {
       }
     },
     {
-      "id": "688",
+      "id": "697",
       "type": "interface",
       "attributes": {
         "name": "Initializer",
@@ -18545,7 +18785,7 @@ var main = {
       }
     },
     {
-      "id": "470",
+      "id": "479",
       "type": "function",
       "attributes": {
         "name": "blockComponentMacro",
@@ -18680,7 +18920,7 @@ var main = {
       }
     },
     {
-      "id": "491",
+      "id": "500",
       "type": "function",
       "attributes": {
         "name": "buildAction",
@@ -18767,7 +19007,7 @@ var main = {
       }
     },
     {
-      "id": "537",
+      "id": "546",
       "type": "function",
       "attributes": {
         "name": "buildUserHelper",
@@ -18838,7 +19078,7 @@ var main = {
       }
     },
     {
-      "id": "682",
+      "id": "691",
       "type": "function",
       "attributes": {
         "name": "canCreateComponentDefinition",
@@ -18906,7 +19146,7 @@ var main = {
                       "isArray": false,
                       "name": "ComponentDefinitionCreator",
                       "link": {
-                        "id": "450",
+                        "id": "459",
                         "type": "interface",
                         "slug": "componentdefinitioncreator",
                         "sources": [
@@ -18918,7 +19158,7 @@ var main = {
                           }
                         ],
                         "parent": {
-                          "id": "317",
+                          "id": "326",
                           "type": "0",
                           "slug": "_glimmer_application",
                           "sources": null
@@ -18938,7 +19178,7 @@ var main = {
       }
     },
     {
-      "id": "499",
+      "id": "508",
       "type": "function",
       "attributes": {
         "name": "debugInfoForReference",
@@ -19009,7 +19249,7 @@ var main = {
       }
     },
     {
-      "id": "502",
+      "id": "511",
       "type": "function",
       "attributes": {
         "name": "debugName",
@@ -19080,7 +19320,7 @@ var main = {
       }
     },
     {
-      "id": "483",
+      "id": "492",
       "type": "function",
       "attributes": {
         "name": "dynamicComponentFor",
@@ -19128,7 +19368,7 @@ var main = {
               "isArray": false,
               "name": "DynamicComponentReference",
               "link": {
-                "id": "456",
+                "id": "465",
                 "type": "class",
                 "slug": "dynamiccomponentreference",
                 "sources": [
@@ -19140,7 +19380,7 @@ var main = {
                   }
                 ],
                 "parent": {
-                  "id": "317",
+                  "id": "326",
                   "type": "0",
                   "slug": "_glimmer_application",
                   "sources": null
@@ -19202,7 +19442,7 @@ var main = {
       }
     },
     {
-      "id": "488",
+      "id": "497",
       "type": "function",
       "attributes": {
         "name": "hashToArgs",
@@ -19273,7 +19513,7 @@ var main = {
       }
     },
     {
-      "id": "477",
+      "id": "486",
       "type": "function",
       "attributes": {
         "name": "inlineComponentMacro",
@@ -19392,7 +19632,7 @@ var main = {
       }
     },
     {
-      "id": "367",
+      "id": "376",
       "type": "function",
       "attributes": {
         "name": "isTypeSpecifier",
@@ -19463,7 +19703,7 @@ var main = {
       }
     },
     {
-      "id": "678",
+      "id": "687",
       "type": "function",
       "attributes": {
         "name": "populateMacros",
@@ -19550,7 +19790,7 @@ var main = {
       }
     },
     {
-      "id": "495",
+      "id": "504",
       "type": "function",
       "attributes": {
         "name": "throwNoActionError",
