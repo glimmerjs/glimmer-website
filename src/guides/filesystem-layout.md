@@ -88,7 +88,7 @@ This then allows us to use that component as a top-level component in our `my-ap
   <conference-speakers />
 </div>
 ```
-Whenever we invoke a component, we need it to be inside of a html element (i.e `<div><my-component></div>`).
+All content in a template must be inside a unique html element (i.e `<div><my-component></ div>`).
 
 But we can also add sub-components to our app to nest those components more deeply in our folder tree. Let's generate one more component:
 
