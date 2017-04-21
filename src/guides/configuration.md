@@ -3,15 +3,18 @@
 Glimmer apps work right out of the box, but you can configure them to fit your needs.
 
 ## Root Container
-Glimmer apps contain an `index.html` file that has the following div, which is where all your markup will reside in.
+
+Glimmer apps contain an `index.html` file that has the following `div#app`, which is where your app will be anchored at runtime.
+
 ```html
 <!-- ui/index.html -->
 <div id="app">
-  <!--Your app will render here at runtime-->
+  <!--Your app will be anchored within #app at runtime-->
 </div>
 ```
 
 If you'd like to change the container, open `ui/index.ts` and change
+
 ```js
 const containerElement = document.getElementById('app');
 
@@ -25,6 +28,7 @@ const containerElement = document.getElementById('conference-speaker-app');
 ```
 
 Your host page can now hold multiple glimmer apps if you'd like. It can even point to other hosted scripts (that you trust) that other teams might host so you can get the latest updates without integration.
+
 ```html
 <!-- ui/index.html -->
 <div id="conference-speaker-app">
@@ -42,12 +46,9 @@ Your host page can now hold multiple glimmer apps if you'd like. It can even poi
 If you're using Glimmer as Web Components, make sure to wrap your components in containing element.
 ```html
 <!-- ui/index.html -->
-<div>
-  <conference-speaker />
-</div>
-<div>
-  <some-other-teams-hotel-finder-app />
-</div>
+<conference-speaker></conference-speaker>
+<some-other-teams-hotel-finder-app></some-other-teams-hotel-finder-app />
+
 
 <script src="my-new-container-name.js"></script>
 <script src="https://www.otherteam.com/assets/some-other-teams-hotel-finder-app.js"></script>
