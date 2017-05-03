@@ -616,14 +616,20 @@ body, html {
   bottom: 0px;
   top: 0px;
   background-color: #FFF;
-  flex: 3; }
+  flex: 3;
+  margin-bottom: 48px; }
 
 #footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border-top: 1px solid #DDD;
   padding: 10px 16px;
   min-height: 28px;
   color: #999;
-  font-size: 85%; }
+  font-size: 85%;
+  background-color: #fff; }
   #footer .copyright {
     float: right; }
   #footer .links {
