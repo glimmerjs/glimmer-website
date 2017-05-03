@@ -545,11 +545,10 @@ li, ul, ol {
     font-family: Roboto,-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,Arial,sans-serif;
     line-height: 1.5; }
     #top-menu h1::before {
-      background-color: #F5835F;
-      background-image: url(https://glimmerjs.com/images/logo.png);
+      background-image: url(/api/assets/images/logo.png);
       background-position: center;
       background-repeat: no-repeat;
-      background-size: 2rem;
+      background-size: 2.75rem;
       border-radius: 50%;
       content: '';
       display: inline-block;
