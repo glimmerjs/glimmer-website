@@ -2,6 +2,9 @@
   "index": {
     "layout": false
   },
+  "introduction": {
+    "title": "Introduction"
+  },
   "installing": {
     "title": "Installing"
   },
