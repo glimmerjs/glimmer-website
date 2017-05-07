@@ -1,5 +1,18 @@
 <ul class="sidebar">
-  <% for (let slug in public.guides._data) { %>
-    <li><a href="/guides/<%= slug %>"><%= public.guides._data[slug].title %></a></li>
+  <% let data = public.guides._data %>
+  <% let sections = [] %>
+
+  <% for (let slug in data) { %>
+    <% if (sections.indexOf(data[slug].section) === -1) sections.push(data[slug].section) %>
+  <% }; %>
+
+  <% for (let index in sections) { %>
+    <h3><%= sections[index] %></h3>
+
+    <% for (let slug in data) { %>
+      <% if (data[slug].section === sections[index]) {%>
+        <li><a href="/guides/<%= slug %>"><%= public.guides._data[slug].title %></a></li>
+      <% }; %>
+    <% }; %>
   <% }; %>
 </ul>
