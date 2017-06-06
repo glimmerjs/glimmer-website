@@ -41,8 +41,6 @@ As you can see, Glimmer has rendered the person's first and last name. Because t
 
 Let's say that we want to update our component to fetch data about the person over the network, instead of hardcoding it. We'll use `fetch` to grab some JSON and render it:
 
-**Note**: To get async/await to work you must create your project with the ```--web-component``` option, or add ```@glimmer/web-component``` to your **package.json**.
-
 ```ts
 import Component from '@glimmer/component';
 
