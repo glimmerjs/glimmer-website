@@ -108,10 +108,10 @@ export default class extends Component {
     this.loadPerson();
   }
 
-  async loadPerson() {
-    let request = await fetch('https://api.example.com/person.json');
-    let json = await request.json();
-    this.person = json.person;
+  loadPerson() {
+    fetch('https://api.example.com/person.json')
+      .then(request => request.json())
+      .then(({ person }) => this.person = person);
   }
 }
 ```
