@@ -13,7 +13,7 @@ ember new display-tile -b @glimmer/blueprint --web-component
 When we add the `--web-component` flag, we reconfigure our app to expose our `display-tile` component as a Web Component to browsers. That in turn allows us to render markup like the following from a backend:
 
 ```hbs
-<display-tile></display-title>
+<display-tile></display-tile>
 ```
 
 Once we add our `app.js` file to the page, our browser will automatically load our Glimmer component into the DOM using the options provided by the backend and will boot each Glimmer app.
