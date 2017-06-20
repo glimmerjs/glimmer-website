@@ -54,5 +54,3 @@ For more information about web components, browser support and various polyfills
 - [https://www.webcomponents.org/introduction](https://www.webcomponents.org/introduction)
 - [https://www.webcomponents.org/polyfills](https://www.webcomponents.org/polyfills)
 - [http://jonrimmer.github.io/are-we-componentized-yet/](http://jonrimmer.github.io/are-we-componentized-yet/)
-
-*Note* You cannot currently pass arguments to top-level Glimmer components due to technical limitations. We are working on removing this restriction.
