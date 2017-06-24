@@ -29,5 +29,9 @@
   "tracked-properties": {
     "title": "Change Tracking with Tracked Properties",
     "section": "In Depth"
+  },
+  "configuration": {
+    "title": "Configuration",
+    "section": "In Depth"
   }
 }
