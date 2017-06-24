@@ -81,11 +81,15 @@ my-app
 
 ... snipped ...
 ```
+
 This then allows us to use that component as a top-level component in our `my-app/template.hbs` file:
 
 ```hbs
-<conference-speakers />
+<div>
+  <conference-speakers />
+</div>
 ```
+
 But we can also add sub-components to our app to nest those components more deeply in our folder tree. Let's generate one more component:
 
 ```sh
@@ -117,7 +121,9 @@ my-app
 Our new component then is only useable from inside our `conference-speakers/template.hbs` file:
 
 ```hbs
-<conference-speaker />
+<div>
+  <conference-speaker />
+</div>
 ```
 
 Glimmer uses a "local resolution" with nested components where the following syntax will not work in our main component (`my-app/template.hbs`):
