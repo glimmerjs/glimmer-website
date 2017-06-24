@@ -44,7 +44,8 @@ Your host page can now hold multiple glimmer apps if you'd like. It can even poi
 
 ### Web Components
 
-If you're using Glimmer as Web Components, make sure to wrap your components in containing element.
+If you're [using Glimmer as Web Components](using-glimmer-as-web-components), make sure to wrap your components in containing element.
+
 ```html
 <!-- ui/index.html -->
 <conference-speaker></conference-speaker>
