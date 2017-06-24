@@ -3,27 +3,35 @@
     "layout": false
   },
   "installing": {
-    "title": "Installing"
+    "title": "Installing",
+    "section": "Quickstart"
   },
   "getting-started": {
-    "title": "Getting Started"
+    "title": "Getting Started",
+    "section": "Quickstart"
   },
   "filesystem-layout": {
-    "title": "Filesystem Layout"
+    "title": "Filesystem Layout",
+    "section": "Quickstart"
   },
   "templates-and-helpers": {
-    "title": "Templates and Helpers"
+    "title": "Templates and Helpers",
+    "section": "Quickstart"
   },
   "components-and-actions": {
-    "title": "Components and Actions"
+    "title": "Components and Actions",
+    "section": "Quickstart"
   },
   "using-glimmer-as-web-components": {
-    "title": "Using Glimmer as Web Components"
+    "title": "Using Glimmer as Web Components",
+    "section": "Recipes"
   },
   "tracked-properties": {
-    "title": "Change Tracking with Tracked Properties"
+    "title": "Change Tracking with Tracked Properties",
+    "section": "In Depth"
   },
   "configuration": {
-    "title": "Configuration"
+    "title": "Configuration",
+    "section": "In Depth"
   }
 }

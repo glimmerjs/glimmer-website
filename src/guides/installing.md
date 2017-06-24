@@ -46,18 +46,18 @@ You can follow their <a href="https://yarnpkg.com/en/docs/install">installation 
 
 ## Installing
 
-To generate new projects, we will need an experimental feature that is only available in the Canary release channel.
+To generate new projects, we will need an experimental feature that is only available in the Beta release channel.
 
-To install Ember CLI Canary, run the following command to install it from the `master` branch on GitHub:
+To install Ember CLI Beta, run the following command:
 
 ```bash
-yarn global add ember-cli/ember-cli
+yarn global add ember-cli@2.14.0-beta.1
 ```
 
 Alternatively, you can do:
 
 ```bash
-npm install -g ember-cli/ember-cli
+npm install -g ember-cli@2.14.0-beta.1
 ```
 
 To verify that it's correctly installed, run the following command:
@@ -66,4 +66,4 @@ To verify that it's correctly installed, run the following command:
 ember -v
 ```
 
-You should see a version number with `beta`. Don't worry, this should be correct! Ember CLI doesn't have the concept of Canary versions, so it will show the latest beta release.
+You should see a version number with `beta`.
