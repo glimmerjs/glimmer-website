@@ -218,3 +218,30 @@ So how does Glimmer accomplish the automatic `shouldComponentUpdate()`? Because
 every input into a component is either immutable or a tracked property, it just
 looks at the revision counter of each input value. If none of them are greater
 than the last render, the entire component can be bypassed.
+
+## Tracking Component Arguments
+
+A component can also track arguments passed in from a parent.
+
+```ts
+import Component from '@glimmer/component';
+
+export default class MultiplyByTwo extends Component {
+  @tracked('args')
+  get multiplied() {
+    return this.args.number * 2;
+  }
+}
+```
+
+```hbs
+<!-- my-parent/template.hbs -->
+<multiply-by-two @number={{myNumber} />}
+```
+
+```hbs
+<!-- my-parent/template.hbs -->
+{{multiplied}}
+```
+
+Whenever the parent's `myNumber` property changes, `multiply-by-two`'s `multiplied` computed property will also change.
