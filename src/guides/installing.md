@@ -51,13 +51,13 @@ To generate new projects, we will need an experimental feature that is only avai
 To install Ember CLI Beta, run the following command:
 
 ```bash
-yarn global add ember-cli@2.14.0-beta.1
+yarn global add ember-cli@2.14.0-beta.2
 ```
 
 Alternatively, you can do:
 
 ```bash
-npm install -g ember-cli@2.14.0-beta.1
+npm install -g ember-cli@2.14.0-beta.2
 ```
 
 To verify that it's correctly installed, run the following command:
