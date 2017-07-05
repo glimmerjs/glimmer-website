@@ -1,0 +1,23 @@
+{
+  "name": "glimmer-website",
+  "scripts": {
+  },
+  "env": {
+    "NODE_MODULES_CACHE": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
+  ]
+}
