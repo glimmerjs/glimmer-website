@@ -22,9 +22,11 @@ code {
 }
 
 code:not([class]) {
-  padding: 0.25rem 0.5rem;
+  padding: 0.25em 0.45rem;
   font-size: 0.8rem;
   background: #f5f2f0;
+  line-height: 1.5;
   border-radius: 3px;
-  vertical-align: middle;
+  vertical-align: top;
+  display: inline-block;
 }
