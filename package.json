@@ -9,6 +9,6 @@
     "heroku-postbuild": "harp compile src www"
   },
   "dependencies": {
-    "harp": "^0.23.0"
+    "harp": "^0.24.0"
   }
 }
