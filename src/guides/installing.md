@@ -46,18 +46,18 @@ You can follow their <a href="https://yarnpkg.com/en/docs/install">installation 
 
 ## Installing
 
-To generate new projects, we will need an experimental feature that is only available in the Beta release channel.
+To generate new projects, we will need Ember CLI.
 
-To install Ember CLI Beta, run the following command:
+To install Ember CLI, run the following command:
 
 ```bash
-yarn global add ember-cli@2.14.0-beta.2
+yarn global add ember-cli
 ```
 
 Alternatively, you can do:
 
 ```bash
-npm install -g ember-cli@2.14.0-beta.2
+npm install -g ember-cli
 ```
 
 To verify that it's correctly installed, run the following command:
@@ -65,5 +65,3 @@ To verify that it's correctly installed, run the following command:
 ```bash
 ember -v
 ```
-
-You should see a version number with `beta`.
