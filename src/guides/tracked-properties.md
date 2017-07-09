@@ -236,7 +236,7 @@ export default class MultiplyByTwo extends Component {
 
 ```hbs
 <!-- my-parent/template.hbs -->
-<multiply-by-two @number={{myNumber} />}
+<multiply-by-two @number={{myNumber}} />
 ```
 
 ```hbs
