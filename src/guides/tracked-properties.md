@@ -224,7 +224,7 @@ than the last render, the entire component can be bypassed.
 A component can also track arguments passed in from a parent.
 
 ```ts
-import Component from '@glimmer/component';
+import Component, { tracked } from '@glimmer/component';
 
 export default class MultiplyByTwo extends Component {
   @tracked('args')
