@@ -99,5 +99,32 @@ export default class ConferenceSpeakers extends Component {
 
 Using the `{{each}}` helper, we loop over our speakers array and then make the current value available as `speaker`. In the Glimmer VM, an array needs to be keyed on a unique value of some kind (in this case the array `@index`) so that the VM properly tracks value updates.
 
+### Looping with an index
+
+Sometimes you might want to know the index of the current item being looped.
+
+Thankfully, the `{{each}}` helper already comes prepared and it provides you with the index as the second block argument.
+Note that the index will start at zero.
+
+For an example, let's make each speaker announce their index:
+
+```hbs
+<ul>
+  {{#each speakers key="@index" as |speaker index|}}
+    <li>Hi, I'm speaker {{speaker}}, and my index is {{index}}.</li>
+  {{/each}}
+</ul>
+```
+
+Which turns into:
+
+```hbs
+<ul>
+  <li>Hi, I'm speaker Tom, and my index is 0.</li>
+  <li>Hi, I'm speaker Yehuda, and my index is 1.</li>
+  <li>Hi, I'm speaker Ed, and my index is 2.</li>
+</ul>
+```
+
 These types of simple templates are quite handy, but they become
 far more powerful once we add event handling and conditionals. Let's keep going.
