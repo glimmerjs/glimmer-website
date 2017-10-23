@@ -1,9 +1,12 @@
+var rootURL = '/api/';
+var documentRegExp = new RegExp('/api/($|projects)');
 var CACHE_NAME = 'glimmer-api-docs';
-var urlsToCache = [
+var URLS_TO_CACHE = [
     '/api/',
     'app.css',
     'app.js',
     'assets/docs/main.js',
+    'assets/images/logo.png',
     'https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.3.1/markdown-it.js',
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
     'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/typescript.min.js',
@@ -14,20 +17,32 @@ self.addEventListener('install', function (event) {
     event.waitUntil(caches.open(CACHE_NAME)
         .then(function (cache) {
         console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+        return cache.addAll(URLS_TO_CACHE);
     }));
 });
 self.addEventListener('fetch', function (event) {
     let request = event.request;
-    if (/api\/projects\//.test(request.url)) {
-        request = new Request('/api/');
+    if (documentRegExp.test(request.url)) {
+        // map all document requests to the root URL
+        // (as routes are only handled once the app is loaded)
+        request = new Request(rootURL);
+        // document requests are using the cache as a
+        // fallback so we can ship new version of the app
+        event.respondWith(fetch(request)
+            .catch(function () {
+            return caches.match(request);
+        }));
     }
-    event.respondWith(caches.match(request)
-        .then(function (response) {
-        // Cache hit - return response
-        if (response) {
-            return response;
-        }
-        return fetch(request);
-    }));
+    else {
+        // asset requests can be handled using via the cache
+        // first as URLs are fingerprinted
+        event.respondWith(caches.match(request)
+            .then(function (response) {
+            // Cache hit - return response
+            if (response) {
+                return response;
+            }
+            return fetch(request);
+        }));
+    }
 });
