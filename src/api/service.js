@@ -7,9 +7,6 @@ var URLS_TO_CACHE = [
     'app.js',
     'assets/docs/main.js',
     'assets/images/logo.png',
-    'https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.3.1/markdown-it.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/languages/typescript.min.js',
     'https://fonts.googleapis.com/css?family=Roboto|Robot+Mono'
 ];
 self.addEventListener('install', function (event) {
