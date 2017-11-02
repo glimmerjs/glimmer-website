@@ -12,7 +12,7 @@ my-app
 ├── src
 │   ├── ui
 │   │   ├── components
-│   │   │   └── my-app
+│   │   │   └── MyApp
 │   │   │       ├── component.ts
 │   │   │       └── template.hbs
 │   │   ├── styles
@@ -37,26 +37,28 @@ However, where we'll spend most of our time is in the `my-app/src/ui` folder.
 
 ## The UI folder
 
-As you can see, Glimmer puts all our components in the `my-app/src/ui/components` folder with the `my-app` component being where our app logic really begins. All other logic and components should be referenced in the `my-app/template.hbs` file (and we can nest them as deeply as we desire).
+As you can see, Glimmer puts all our components in the `my-app/src/ui/components` folder with the `MyApp` component being where our app logic really begins. All other logic and components should be referenced in the `MyApp/template.hbs` file (and we can nest them as deeply as we desire).
 
 So let's add a new component in Glimmer. To do so, we'll run the following command to generate an initial blueprint for a component:
 
 ```sh
-$ ember g glimmer-component hello-glimmer
+$ ember g glimmer-component HelloGlimmer
 installing component
-  create src/ui/components/hello-glimmer/component.ts
-  create src/ui/components/hello-glimmer/template.hbs
+  create src/ui/components/HelloGlimmer/component.ts
+  create src/ui/components/HelloGlimmer/component-test.ts
+  create src/ui/components/HelloGlimmer/template.hbs
 ```
 
-As you can see, we generate two files (`component.ts` and `template.hbs`) in the newly created `src/ui/components/hello-glimmer` folder. A Glimmer component uses a template to generate all our HTML (using a [Handlebars](http://handlebarsjs.com) template with Glimmer/Ember additions) and a Typescript/Javascript file that provides additional properties and event handlers (known as actions) to our template. We'll cover more details about how Handlebars works on subsequent pages.
+As you can see, we generate two files (`component.ts` and `template.hbs`) in the newly created `src/ui/components/HelloGlimmer` folder. A Glimmer component uses a template to generate all our HTML (using a [Handlebars](http://handlebarsjs.com) template with Glimmer/Ember additions) and a Typescript/Javascript file that provides additional properties and event handlers (known as actions) to our template. We'll cover more details about how Handlebars works on subsequent pages.
 
-All other components will also live in `src/ui/components` unless we deliberately nest them. So for example, if we add a second component called `conference-speakers`:
+All other components will also live in `src/ui/components` unless we deliberately nest them. So for example, if we add a second component called `ConferenceSpeakers`:
 
 ```sh
-$ ember g glimmer-component conference-speakers
+$ ember g glimmer-component ConferenceSpeakers
 installing component
-  create src/ui/components/conference-speakers/component.ts
-  create src/ui/components/conference-speakers/template.hbs
+  create src/ui/components/ConferenceSpeakers/component.ts
+  create src/ui/components/ConferenceSpeakers/component-test.ts
+  create src/ui/components/ConferenceSpeakers/template.hbs
 ```
 
 we will see our new `conference-speakers` component added to our UI folder:
@@ -69,11 +71,13 @@ my-app
 └── src
     └── ui
         ├── components
-        │   ├── conference-speakers
+        │   ├── ConferenceSpeakers
         │   │   ├── component.ts
+        │   │   ├── component-test.ts
         │   │   └── template.hbs
-        │   └── hello-glimmer
+        │   └── HelloGlimmer
         │       ├── component.ts
+        │       ├── component-test.ts
         │       └── template.hbs
         ├── styles
         │   └── app.css
@@ -82,24 +86,25 @@ my-app
 ... snipped ...
 ```
 
-This then allows us to use that component as a top-level component in our `my-app/template.hbs` file:
+This then allows us to use that component as a top-level component in our `MyApp/template.hbs` file:
 
 ```hbs
 <div>
-  <conference-speakers />
+  <ConferenceSpeakers />
 </div>
 ```
 
 But we can also add sub-components to our app to nest those components more deeply in our folder tree. Let's generate one more component:
 
 ```sh
-$ ember g glimmer-component conference-speakers/conference-speaker
+$ ember g glimmer-component ConferenceSpeakers/ConferenceSpeaker
 installing component
-  create src/ui/components/conference-speakers/conference-speaker/component.ts
-  create src/ui/components/conference-speakers/conference-speaker/template.hbs
+  create src/ui/components/ConferenceSpeakers/ConferenceSpeaker/component.ts
+  create src/ui/components/ConferenceSpeakers/ConferenceSpeaker/component-test.ts
+  create src/ui/components/ConferenceSpeakers/ConferenceSpeaker/template.hbs
 ```
 
-This generates our component inside our `conference-speakers` folder:
+This generates our component inside our `ConferenceSpeakers` folder:
 
 ```sh
 my-app
@@ -109,28 +114,29 @@ my-app
 └── src
     └── ui
         └── components
-            └── conference-speakers
-                ├── conference-speaker
+            └── ConferenceSpeakers
+                ├── ConferenceSpeaker
                 │   ├── component.ts
+                │   ├── component-test.ts
                 │   └── template.hbs
                 ├── component.ts
                 └── template.hbs
 
 ... snipped ...
 ```
-Our new component then is only useable from inside our `conference-speakers/template.hbs` file:
+Our new component then is only useable from inside our `ConferenceSpeakers/template.hbs` file:
 
 ```hbs
 <div>
-  <conference-speaker />
+  <ConferenceSpeaker />
 </div>
 ```
 
-Glimmer uses a "local resolution" with nested components where the following syntax will not work in our main component (`my-app/template.hbs`):
+Glimmer uses a "local resolution" with nested components where the following syntax will not work in our main component (`MyApp/template.hbs`):
 
 ```hbs
 {{!-- invalid --}}
-<conference-speakers/conference-speaker />
+<ConferenceSpeakers/ConferenceSpeaker />
 ```
 
 More details on the "local resolution" strategy will be posted shortly.

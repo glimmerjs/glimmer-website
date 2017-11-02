@@ -1,9 +1,9 @@
 # Components and Actions
 
-Let's start making our `conference-speakers` component more interactive.
+Let's start making our `ConferenceSpeakers` component more interactive.
 
 ```js
-// my-app/src/ui/components/conference-speakers/component.ts
+// my-app/src/ui/components/ConferenceSpeakers/component.ts
 import Component, { tracked } from "@glimmer/component";
 
 export default class ConferenceSpeakers extends Component {
@@ -27,7 +27,7 @@ export default class ConferenceSpeakers extends Component {
 ```
 
 ```hbs
-{{!-- my-app/src/ui/components/conference-speakers/template.hbs --}}
+{{!-- my-app/src/ui/components/ConferenceSpeakers/template.hbs --}}
 <div>
   <p>Speaking: {{currentlySpeaking}}</p>
   <ul>

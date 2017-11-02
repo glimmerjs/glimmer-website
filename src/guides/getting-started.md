@@ -15,8 +15,9 @@ installing blueprint
   create src/config/resolver-configuration.ts
   create src/index.ts
   create src/main.ts
-  create src/ui/components/my-app/component.ts
-  create src/ui/components/my-app/template.hbs
+  create src/ui/components/MyApp/component.ts
+  create src/ui/components/MyApp/component-test.ts
+  create src/ui/components/MyApp/template.hbs
   create src/ui/index.html
   create tmp/.metadata_never_index
   create tsconfig.json

@@ -9,13 +9,13 @@ Components have two different kinds of data, or state, that can be displayed in 
 - Arguments
 - Properties
 
-Arguments are data that we pass in to a component from its parent component. For example, if we have a `conference-speaker` component, we can pass it a `name` and `status` to use:
+Arguments are data that we pass in to a component from its parent component. For example, if we have a `ConferenceSpeaker` component, we can pass it a `name` and `status` to use:
 
 ```hbs
-<conference-speaker @name="Tom" @status="Speaking" />
+<ConferenceSpeaker @name="Tom" @status="Speaking" />
 ```
 
-Inside our `conference-speaker` template, we can access the `@name` and `@status` arguments that we've been given:
+Inside our `ConferenceSpeaker` template, we can access the `@name` and `@status` arguments that we've been given:
 
 ```hbs
 {{@name}} is {{@status}}
@@ -50,7 +50,7 @@ Hello, {{user.name}}!
 We can also take that property and pass it as an argument to the conference-speaker component we defined before:
 
 ```hbs
-<conference-speaker @name={{user.name}} />
+<ConferenceSpeaker @name={{user.name}} />
 ```
 
 ## Arguments vs. Properties
