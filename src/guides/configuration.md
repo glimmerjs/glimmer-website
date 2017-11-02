@@ -48,8 +48,8 @@ If you're [using Glimmer as Web Components](using-glimmer-as-web-components), ma
 
 ```html
 <!-- ui/index.html -->
-<conference-speaker></conference-speaker>
-<some-other-teams-hotel-finder-app></some-other-teams-hotel-finder-app />
+<ConferenceSpeaker></ConferenceSpeaker>
+<SomeOtherTeamsHotelFinderApp></SomeOtherTeamsHotelFinderApp />
 
 <script src="my-new-container-name.js"></script>
 <script src="https://www.otherteam.com/assets/some-other-teams-hotel-finder-app.js"></script>

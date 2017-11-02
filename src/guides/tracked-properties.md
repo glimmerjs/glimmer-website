@@ -235,13 +235,13 @@ export default class MultiplyByTwo extends Component {
 ```
 
 ```hbs
-<!-- my-parent/template.hbs -->
-<multiply-by-two @number={{myNumber}} />
+<!-- MyParent/template.hbs -->
+<MultiplyByTwo @number={{myNumber}} />
 ```
 
 ```hbs
-<!-- multiply-by-two/template.hbs -->
+<!-- MultiplyByTwo/template.hbs -->
 {{multiplied}}
 ```
 
-Whenever the parent's `myNumber` property changes, `multiply-by-two`'s `multiplied` computed property will also change.
+Whenever the parent's `myNumber` property changes, `MultiplyByTwo`'s `multiplied` computed property will also change.
