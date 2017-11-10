@@ -5,7 +5,11 @@
   text-transform: lowercase;
 }
 
-.logo::before {
+.logo a {
+  color: inherit;
+}
+
+.logo a::before {
   background-color: $tint-color;
   background-image: url(/images/logo.png);
   background-position: center;
@@ -18,8 +22,4 @@
   margin-right: 0.75rem;
   vertical-align: middle;
   width: 2.75rem;
-}
-
-.logo a {
-  color: inherit;
 }
