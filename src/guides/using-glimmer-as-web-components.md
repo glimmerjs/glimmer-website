@@ -7,8 +7,13 @@ In addition to using Glimmer for a widget on one section on a page, you can also
 Let's do another new app setup. Instead of doing an installation like we did originally, we'll now run the following command:
 
 ```sh
-ember new DisplayTile -b @glimmer/blueprint --web-component
+ember new DisplayTile -b @glimmer/blueprint --web-component=display-title
 ```
+
+> Note: there is currently a bug in ember-cli (@2.17.0) that reports
+> > The option '--web-component' is not registered with the new command. Run `ember new --help` for a list of supported options.
+>
+> This is just a messaging error. Your component project will still be created.
 
 When we add the `--web-component` flag, we reconfigure our app to expose our `display-tile` component as a Web Component to browsers. That in turn allows us to render markup like the following from a backend:
 
