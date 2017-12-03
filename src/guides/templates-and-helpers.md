@@ -128,3 +128,64 @@ Which turns into:
 
 These types of simple templates are quite handy, but they become
 far more powerful once we add event handling and conditionals. Let's keep going.
+
+## Custom Helpers
+Customer Helpers can be added to transform raw values you would like to display in your template to something more suitable for your users.
+To demonstrate, the following command will create a new date format helper:
+```sh
+$ ember g glimmer-helper format-date
+installing glimmer-helper
+  create src/ui/components/format-date/helper.ts
+installing glimmer-helper-test
+  create src/ui/components/format-date/helper-test.ts
+```
+
+This will create the following structure:
+```sh
+my-app
+│
+... snipped ...
+
+└── src
+    └── ui
+        ├── components
+        |   ... snipped ...
+        │   ├── format-date
+        │   │   ├── helper.ts
+        │   │   └── helper-test.ts
+        ├── styles
+        │   └── app.css
+        └── index.html
+```
+
+The generated content of the `helper.ts` is simply:
+```js
+export default function formatDate(params) {
+}
+```
+Note: `params` is an array based on the parameters passed into the helper.  For example, in our example if we want our helper to format a Javascript Date
+object for display and optionally show the time, we might do something like this:
+```js
+export default function dateFormat([date, showTime]: [Date, boolean]) {
+  const monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June', 'July',
+    'August', 'September', 'October', 'November', 'December'
+  ];
+
+  const formattedDate = `${date.getDate()} ${monthNames[date.getMonth()]}
+    ${date.getFullYear()}`;
+  if (!showTime) {
+    return formattedDate;
+  }
+
+  return `${formattedDate} - ${date.getHours()}:${date.getMinutes()}`;
+}
+```
+
+We can then use this helper in our template as per the example below:
+```hbs
+The time now is {{format-date now true}}
+// outputs: The time now is 3 December 2017 - 14:30
+```
+
+Note that the helper is always dasherised like the folder name, and not pascal case like the helper's function name.
