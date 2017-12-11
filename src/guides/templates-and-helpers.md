@@ -9,7 +9,8 @@ Components have two different kinds of data, or state, that can be displayed in 
 - Arguments
 - Properties
 
-Arguments are data that we pass in to a component from its parent component. For example, if we have a `ConferenceSpeaker` component, we can pass it a `name` and `status` to use:
+Arguments are data that we pass in to a component from its parent component.
+For example, if we have a `ConferenceSpeaker` component, we can pass it a `name` and `status` to use:
 
 ```hbs
 <ConferenceSpeaker @name="Tom" @status="Speaking" />
@@ -27,7 +28,8 @@ Those arguments are also available inside our components:
 console.log(this.args.name); // prints "Tom"
 ```
 
-Properties, on the other hand, are internal to the component and declared in the class. We can use properties to store data that we want to show in the template, or pass to another component as an argument.
+Properties, on the other hand, are internal to the component and declared in the class.
+We can use properties to store data that we want to show in the template, or pass to another component as an argument.
 
 ```js
 import Component from '@glimmer/component';
@@ -47,7 +49,7 @@ We can render that property in our template:
 Hello, {{user.name}}!
 ```
 
-We can also take that property and pass it as an argument to the conference-speaker component we defined before:
+We can also take that property and pass it as an argument to the `ConferenceSpeaker` component we defined before:
 
 ```hbs
 <ConferenceSpeaker @name={{user.name}} />
@@ -55,7 +57,8 @@ We can also take that property and pass it as an argument to the conference-spea
 
 ## Arguments vs. Properties
 
-Remember, arguments are data that was given to your component by its parent component, and properties are data your component has defined for itself.
+Remember, arguments are data that was given to your component by its parent component,
+and properties are data your component has defined for itself.
 
 You can tell the difference between arguments and properties in templates because arguments always start with an @ sign (think "A is for arguments"):
 
@@ -63,7 +66,8 @@ You can tell the difference between arguments and properties in templates becaus
 {{@firstName}}
 ```
 
-We know that `@firstName` came from the parent component, not the current component, because it starts with @ and is therefore an argument.
+We know that `@firstName` came from the parent component, not the current component,
+because it starts with `@` and is therefore an argument.
 
 On the other hand, if we see:
 
@@ -71,13 +75,16 @@ On the other hand, if we see:
 {{name}}
 ```
 
-We know that name is a property on the component. If we want to know where the data is coming from, we can go look at our component class to find out.
+We know that name is a property on the component.
+If we want to know where the data is coming from, we can go look at our component class to find out.
 
-Inside the component itself, arguments always show up inside the component's `args` property. For example, if `{{@firstName}}` is Tom in the template, inside the component `this.args.firstName` would also be Tom.
+Inside the component itself, arguments always show up inside the component's `args` property.
+For example, if `{{@firstName}}` is Tom in the template, inside the component `this.args.firstName` would also be Tom.
 
 ## A Simple Loop
 
-As mentioned earlier, Glimmer uses [Handlebars](http://handlebarsjs.com) as its template language. In addition to simple property references as shown above, it also allows us to setup loops, conditionals and event handlers.
+As mentioned earlier, Glimmer uses [Handlebars](http://handlebarsjs.com) as its template language.
+In addition to simple property references as shown above, it also allows us to setup loops, conditionals, and event handlers.
 
 Let's start with a simple loop over an array:
 
@@ -97,7 +104,8 @@ export default class ConferenceSpeakers extends Component {
 </ul>
 ```
 
-Using the `{{each}}` helper, we loop over our speakers array and then make the current value available as `speaker`. In the Glimmer VM, an array needs to be keyed on a unique value of some kind (in this case the array `@index`) so that the VM properly tracks value updates.
+Using the `{{each}}` helper, we loop over our speakers array and then make the current value available as `speaker`.
+In the Glimmer VM, an array needs to be keyed on a unique value of some kind (in this case the array `@index`) so that the VM properly tracks value updates.
 
 ### Looping with an index
 
@@ -126,10 +134,12 @@ Which turns into:
 </ul>
 ```
 
-These types of simple templates are quite handy, but they become
-far more powerful once we add event handling and conditionals. Let's keep going.
+These types of simple templates are quite handy,
+but they become far more powerful once we add event handling and conditionals.
+Let's keep going.
 
 ## Custom Helpers
+
 Customer Helpers can be added to transform raw values you would like to display in your template to something more suitable for your users.
 To demonstrate, the following command will create a new date format helper:
 
@@ -141,8 +151,9 @@ installing glimmer-helper-test
   create src/ui/components/format-date/helper-test.ts
 ```
 
-Regardless of whether we use `ember g glimmer-helper format-date` or `ember g glimmer-helper formatDate`, the folder name and the helper itself will
-be dasherized.  As an example, either command will create the following structure:
+Regardless of whether we use `ember g glimmer-helper format-date` or `ember g glimmer-helper formatDate`,
+the folder name and the helper itself will be dasherized.
+As an example, either command will create the following structure:
 
 ```sh
 my-app
@@ -161,24 +172,25 @@ my-app
         └── index.html
 ```
 
-The generated content of the `helper.ts` is simply:
+And the generated content of the `helper.ts` will be:
 
 ```js
 export default function formatDate(params) {
 }
 ```
-`params` is an array based on the parameters passed into the helper. In our example if we want our helper to format a Javascript Date
-object for display and optionally show the time, we might do something like this:
+
+`params` is an array based on the parameters passed into the helper.
+If we want to make `format-data` show a formatted JavaScript Date object, and optionally show the time,
+we can do the following:
 
 ```js
-export default function dateFormat([date, showTime]: [Date, boolean]) {
-  const monthNames = [
+export default function formatDate([date, showTime]: [Date, boolean]) {
+  let monthNames = [
     'January', 'February', 'March', 'April', 'May', 'June', 'July',
     'August', 'September', 'October', 'November', 'December'
   ];
 
-  const formattedDate = `${date.getDate()} ${monthNames[date.getMonth()]}
-    ${date.getFullYear()}`;
+  let formattedDate = `${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}`;
   if (!showTime) {
     return formattedDate;
   }
