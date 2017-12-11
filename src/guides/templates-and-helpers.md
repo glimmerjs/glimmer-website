@@ -132,6 +132,7 @@ far more powerful once we add event handling and conditionals. Let's keep going.
 ## Custom Helpers
 Customer Helpers can be added to transform raw values you would like to display in your template to something more suitable for your users.
 To demonstrate, the following command will create a new date format helper:
+
 ```sh
 $ ember g glimmer-helper format-date
 installing glimmer-helper
@@ -140,7 +141,9 @@ installing glimmer-helper-test
   create src/ui/components/format-date/helper-test.ts
 ```
 
-This will create the following structure:
+Regardless of whether we use `ember g glimmer-helper format-date` or `ember g glimmer-helper formatDate`, the folder name and the helper itself will
+be dasherized.  As an example, either command will create the following structure:
+
 ```sh
 my-app
 │
@@ -159,12 +162,14 @@ my-app
 ```
 
 The generated content of the `helper.ts` is simply:
+
 ```js
 export default function formatDate(params) {
 }
 ```
-Note: `params` is an array based on the parameters passed into the helper.  For example, in our example if we want our helper to format a Javascript Date
+`params` is an array based on the parameters passed into the helper. In our example if we want our helper to format a Javascript Date
 object for display and optionally show the time, we might do something like this:
+
 ```js
 export default function dateFormat([date, showTime]: [Date, boolean]) {
   const monthNames = [
@@ -182,10 +187,14 @@ export default function dateFormat([date, showTime]: [Date, boolean]) {
 }
 ```
 
-We can then use this helper in our template as per the example below:
+We can then use this helper in our template, always dasherized, as per the example below:
+
 ```hbs
 The time now is {{format-date now true}}
-// outputs: The time now is 3 December 2017 - 14:30
 ```
 
-Note that the helper is always dasherised like the folder name, and not pascal case like the helper's function name.
+This renders the html:
+
+```html
+The time now is 3 December 2017 - 14:30
+```
