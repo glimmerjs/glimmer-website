@@ -7,10 +7,10 @@ In addition to using Glimmer for a widget on one section on a page, you can also
 Let's do another new app setup. Instead of doing an installation like we did originally, we'll now run the following command:
 
 ```sh
-ember new DisplayTile -b @glimmer/blueprint --web-component
+ember new DisplayTile -b @glimmer/blueprint --web-component=display-table
 ```
 
-When we add the `--web-component` flag, we reconfigure our app to expose our `display-tile` component as a Web Component to browsers. That in turn allows us to render markup like the following from a backend:
+When we add the `--web-component=display-table` flag, we reconfigure our app to expose our `display-tile` component as a Web Component to browsers. That in turn allows us to render markup like the following from a backend:
 
 ```hbs
 <DisplayTile></DisplayTile>
