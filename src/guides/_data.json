@@ -33,5 +33,9 @@
   "configuration": {
     "title": "Configuration",
     "section": "In Depth"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "section": "In Depth"
   }
 }
