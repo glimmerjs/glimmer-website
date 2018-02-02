@@ -10,7 +10,7 @@ Let's do another new app setup. Instead of doing an installation like we did ori
 ember new DisplayTile -b @glimmer/blueprint --web-component=display-table
 ```
 
-When we add the `--web-component=display-table` flag, we reconfigure our app to expose our `display-tile` component as a Web Component to browsers. That in turn allows us to render markup like the following from a backend:
+When we add the `--web-component=display-table` flag, we reconfigure our app to expose our `display-table` component as a Web Component to browsers. That in turn allows us to render markup like the following from a backend:
 
 ```hbs
 <DisplayTile></DisplayTile>
