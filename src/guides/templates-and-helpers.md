@@ -140,7 +140,7 @@ Let's keep going.
 
 ## Custom Helpers
 
-Customer Helpers can be added to transform raw values you would like to display in your template to something more suitable for your users.
+Custom Helpers can be added to transform raw values you would like to display in your template to something more suitable for your users.
 To demonstrate, the following command will create a new date format helper:
 
 ```sh
