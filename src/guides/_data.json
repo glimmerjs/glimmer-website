@@ -22,6 +22,10 @@
     "title": "Components and Actions",
     "section": "Quickstart"
   },
+  "testing": {
+    "title": "Testing",
+    "section": "Quickstart"
+  },
   "using-glimmer-as-web-components": {
     "title": "Using Glimmer as Web Components",
     "section": "Recipes"
