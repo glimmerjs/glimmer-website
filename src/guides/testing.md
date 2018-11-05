@@ -68,6 +68,4 @@ surrounding context of our component at point of invocation. This makes it
 possible for us to send `@` arguments through to our component's invocation.
 
 In this case the data we are sending is a string, but this mechanism allows
-for any data to be passed in this fashion. This feature was added in
-`@glimmer/test-helpers` version `0.31.0`, if you have trouble passing data to
-Components under test please bump this dependency
+for any data to be passed in this fashion.
