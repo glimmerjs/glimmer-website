@@ -10,12 +10,12 @@ export default class ConferenceSpeakers extends Component {
   @tracked current = 0;
   speakers = ['Tom', 'Yehuda', 'Ed'];
 
-  @tracked('current')
+  @tracked
   get currentlySpeaking() {
     return this.speakers[this.current];
   }
 
-  @tracked('current')
+  @tracked
   get moreSpeakers() {
     return (this.speakers.length - 1) > this.current;
   }
@@ -50,11 +50,13 @@ We're using the `{{action}}` helper to call our `next()` method/event handler to
 
 But there are two "interesting" syntax wrinkles in the component that may be unfamiliar.  We use the ES2015 `get` in front of our `currentlySpeaking()` method to define another property for our template (`{{currentlySpeaking}}`).
 
-And we use `@tracked` notations in two different ways. First, we are adding it to our `current` property and then we use it again differently above `currentlySpeaking` and `moreSpeakers` (`@tracked('current')`). What's going on there?
+And we use `@tracked` notations in two different ways. First, we are adding it to our `current` property to signify that this property may change and then we use it above `currentlySpeaking` and `moreSpeakers` to signify that these getters will be recomputed if any of the dependent keys like `current` changes.
 
 These "annotations", known as decorators, are a relatively new feature of Javascript.  In Glimmer they are used to track which of our properties change (so that Glimmer will watch for changes to those properties).
 
-Because Glimmer watches for changes to `current` and then knows which values we want updated if it changes (due to our `@tracked('current')` annotation), it can quickly and efficiently re-compute the values for `currentlySpeaking` and `moreSpeakers` and update those locations in our template.
+Using `@tracked` annotations signify that the property can change. Glimmer will auto track any dependent keys for the tracked getters. The auto tracking feature was added in version 0.11.1. If you are using an older version of Glimmer, you should use `@tracked('current')` for `currentlySpeaking` and `moreSpeakers` to specific the dependent keys.
+
+Because Glimmer watches for changes to `current` and then knows which values we want updated if it changes (due to our `@tracked` annotation and auto-tracking of dependent keys for getters), it can quickly and efficiently re-compute the values for `currentlySpeaking` and `moreSpeakers` and update those locations in our template.
 
 ## Lifecycle Hooks
 
