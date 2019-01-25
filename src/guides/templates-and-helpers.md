@@ -46,13 +46,13 @@ In the above example, we've defined a component with a `user` property that cont
 We can render that property in our template:
 
 ```hbs
-Hello, {{user.name}}!
+Hello, {{this.user.name}}!
 ```
 
 We can also take that property and pass it as an argument to the `ConferenceSpeaker` component we defined before:
 
 ```hbs
-<ConferenceSpeaker @name={{user.name}} />
+<ConferenceSpeaker @name={{this.user.name}} />
 ```
 
 ## Arguments vs. Properties
@@ -72,7 +72,7 @@ because it starts with `@` and is therefore an argument.
 On the other hand, if we see:
 
 ```hbs
-{{name}}
+{{this.name}}
 ```
 
 We know that name is a property on the component.
@@ -98,7 +98,7 @@ export default class ConferenceSpeakers extends Component {
 
 ```hbs
 <ul>
-  {{#each speakers key="@index" as |speaker|}}
+  {{#each this.speakers key="@index" as |speaker|}}
     <li>{{speaker}}</li>
   {{/each}}
 </ul>
@@ -118,7 +118,7 @@ For an example, let's make each speaker announce their index:
 
 ```hbs
 <ul>
-  {{#each speakers key="@index" as |speaker index|}}
+  {{#each this.speakers key="@index" as |speaker index|}}
     <li>Hi, I'm speaker {{speaker}}, and my index is {{index}}.</li>
   {{/each}}
 </ul>

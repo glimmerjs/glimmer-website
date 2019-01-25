@@ -29,14 +29,14 @@ export default class ConferenceSpeakers extends Component {
 ```hbs
 {{!-- my-app/src/ui/components/ConferenceSpeakers/template.hbs --}}
 <div>
-  <p>Speaking: {{currentlySpeaking}}</p>
+  <p>Speaking: {{this.currentlySpeaking}}</p>
   <ul>
-    {{#each speakers key="@index" as |speaker|}}
+    {{#each this.speakers key="@index" as |speaker|}}
       <li>{{speaker}}</li>
     {{/each}}
   </ul>
 
-  {{#if moreSpeakers}}
+  {{#if this.moreSpeakers}}
     <button onclick={{action next}}>Next</button>
   {{else}}
     <p>All finished!</p>  
@@ -48,7 +48,7 @@ In the template above, we add the use of both the `{{if}}`/`{{else}}` and `{{act
 
 We're using the `{{action}}` helper to call our `next()` method/event handler to advance our current location in the speaker array (also known as our component's "state")
 
-But there are two "interesting" syntax wrinkles in the component that may be unfamiliar.  We use the ES2015 `get` in front of our `currentlySpeaking()` method to define another property for our template (`{{currentlySpeaking}}`).
+But there are two "interesting" syntax wrinkles in the component that may be unfamiliar.  We use the ES2015 `get` in front of our `currentlySpeaking()` method to define another property for our template (`{{this.currentlySpeaking}}`).
 
 And we use `@tracked` notations in two different ways. First, we are adding it to our `current` property to signify that this property may change and then we use it above `currentlySpeaking` and `moreSpeakers` to signify that these getters will be recomputed if any of the dependent keys like `current` changes.
 
