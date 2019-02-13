@@ -23,7 +23,7 @@ export default class extends Component {
 
 ```hbs
 <div>
-  Hello, {{person.firstName}} {{person.lastName}}!
+  Hello, {{this.person.firstName}} {{this.person.lastName}}!
 </div>
 ```
 
@@ -62,7 +62,7 @@ export default class extends Component {
 
 ```hbs
 <div>
-  Hello, {{person.firstName}} {{person.lastName}}!
+  Hello, {{this.person.firstName}} {{this.person.lastName}}!
 </div>
 ```
 
@@ -241,7 +241,7 @@ export default class MultiplyByTwo extends Component {
 
 ```hbs
 <!-- MultiplyByTwo/template.hbs -->
-{{multiplied}}
+{{this.multiplied}}
 ```
 
 Whenever the parent's `myNumber` property changes, `MultiplyByTwo`'s `multiplied` computed property will also change.
