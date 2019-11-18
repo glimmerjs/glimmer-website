@@ -1,3 +1,10 @@
+# Welcome to Glimmer!
+
+These guides will help you get started building your own Glimmer app and components!
+
+If you want to learn how to build Glimmer Components for an Ember.js app, please visit
+[the Ember Guides](https://guides.emberjs.com) instead.
+
 # Installing
 
 Glimmer uses [Ember CLI](https://ember-cli.com/), the battle-tested command-line interface tool (CLI) from the Ember project, to help you create and manage your applications.

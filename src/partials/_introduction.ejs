@@ -1,8 +1,7 @@
 <section class="page-section introduction">
   <div class="clearfix mxn2">
     <div class="md-col md-col-6 px2">
-      <h2>Quickstart</h2>
-
+      <h2>Glimmer App Quickstart</h2>
       <ol>
         <li>
           <small>Install the Ember build tool:</small><br>
@@ -20,12 +19,39 @@
         </li>
       </ol>
 
-
       <% if (showGuides) { %>
-        <a class="button" href="/guides/installing">Getting Started Guide</a>
+        <a class="button guides-button" href="/guides/installing">Getting Started Guide</a>
       <% } else { %>
         <a class="button" href="/api">Browse API Docs</a>
       <% } %>
+
+      <h2>Use in Ember.js:</h2>
+
+      <ol>
+        <li>
+          <small>Install Glimmer packages in your Ember app:</small><br>
+          <code>npm install --dev @glimmer/component @glimmer/tracking</code>
+        </li>
+
+        <li>
+          <small>Generate a Glimmer Component</small><br>
+          <code>ember generate my-component -gc</code>
+        </li>
+        <li>
+          See the Ember API docs for 
+          <a href="https://api.emberjs.com/ember/release/modules/@glimmer%2Fcomponent">
+            @glimmer/component
+          </a>
+          and
+          <a href="https://api.emberjs.com/ember/release/modules/@glimmer%2F">
+            @glimmer/tracking
+          </a>, and read the
+          <a href="https://guides.emberjs.com">
+            Ember Guides
+          </a>
+          to learn more!
+        </li>
+      </ol>
     </div>
 
     <div class="md-col md-col-6 px2">
