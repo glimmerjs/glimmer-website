@@ -17,20 +17,15 @@
           <small>Start the development server</small><br>
           <code>cd my-app/ &amp;&amp; ember s</code>
         </li>
-        <li>
-          See the 
-          <a href="https://glimmerjs.com/api/">
-            Glimmer API docs
-          </a>
-            and
-          <a href="https://glimmerjs.com/guides/">
-            Guides
-          </a>
-          to learn more!
-        </li>
       </ol>
 
-      <h2>Use in Ember.js</h2>
+      <% if (showGuides) { %>
+        <a class="button guides-button" href="/guides/installing">Getting Started Guide</a>
+      <% } else { %>
+        <a class="button" href="/api">Browse API Docs</a>
+      <% } %>
+
+      <h2>Use in Ember.js:</h2>
 
       <ol>
         <li>
@@ -57,12 +52,6 @@
           to learn more!
         </li>
       </ol>
-
-      <% if (showGuides) { %>
-        <a class="button" href="/guides/installing">Getting Started Guide</a>
-      <% } else { %>
-        <a class="button" href="/api">Browse API Docs</a>
-      <% } %>
     </div>
 
     <div class="md-col md-col-6 px2">
