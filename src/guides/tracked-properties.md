@@ -182,7 +182,7 @@ While constructing virtual DOM is fast and applying diff updates can be
 optimized, it's far from instanteous, particularly as the size of your
 application grows. [As your virtual DOM-based app grows, you will have to do
 more work to make sure it stays
-performant.](https://marmelab.com/blog/2017/02/06/react-is-slow-react-is-fast.html).
+performant.](https://marmelab.com/blog/2017/02/06/react-is-slow-react-is-fast.html)
 
 The best weapon for optimizing a virtual DOM-based library is something like
 React's `shouldComponentUpdate` hook, which lets you quickly tell React that a
