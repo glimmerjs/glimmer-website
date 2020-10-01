@@ -21,3 +21,5 @@ yarn run dev
 ## Deploying to production
 
 Through the magic of the ☁️, `master` deploys automatically.
+Thank You
+Keep Learning Keep Supporting
