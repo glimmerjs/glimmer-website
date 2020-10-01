@@ -1,4 +1,4 @@
-# Glimmer Website
+# Glimmer - An Astonishing Website
 
 The source for the [Glimmer website](https://glimmerjs.com/).
 
